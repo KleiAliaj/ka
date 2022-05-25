@@ -1,30 +1,72 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '@/lib/constants'
+import Container from "./layout/container";
+import { EXAMPLE_PATH } from "@/lib/constants";
 
 export default function Footer() {
+  let date = new Date().getFullYear();
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+    <footer className="relative ">
+      {/* <footer className=" bg-gradient-to-t from-[#3CA0CB] via-[#3CA0CB] relative"> */}
+      <div className="flex flex-col items-center lg:flex-row">
+        <div className="flex flex-col items-center w-full gap-5 bg-clear-pl4">
+          <p className="text-[18px] ">
+            Made with Next.js, Tailwind CSS, and Cosmic CMS
+          </p>
+          <p className="text-[11px]">Copyright © {date} Ty Fiero</p>
         </div>
-      </Container>
+      </div>
+
+      {/* <div class="header"> */}
+      <div className="absolute w-full -top-[240px] ">
+        <svg
+          className="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shapeRendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="0"
+              fill="hsla(206, 91%, 44%, 0.31)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="3"
+              fill="hsla(206, 91%, 64%, 0.21)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="5"
+              fill="hsla(206, 91%, 64%, 0.41)"
+            />
+            <use
+              xlinkHref="#gentle-wave"
+              x="48"
+              y="7"
+              fill="hsla(206, 91%, 64%, 1)"
+            />
+          </g>
+        </svg>
+      </div>
+      {/* </div> */}
+
+      {/* <div className="-translate-y-56 min-h-[10em] max-h-[10em] ocean  brightness-150 w-full absolute top-0">
+        <div class="bgwave blur-sm brightness-150"></div>
+        <div class="wave blur-sm brightness-125 min-h-[10em] max-h-[10em]"></div>
+        <div class="wave blur-md brightness-150 min-h-[10em] max-h-[10em]"></div>
+      </div> */}
+      {/* <div className="wave"></div> */}
     </footer>
-  )
+  );
 }
