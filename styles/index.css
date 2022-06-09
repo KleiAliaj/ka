@@ -16,6 +16,17 @@ body {
   overflow-y: auto;
 }
 
+@layer components {
+  .page-container {
+    @apply h-full w-full flex flex-col items-center p-5 mb-[20em] fade-effect-quick;
+  }
+}
+
+@layer components {
+  .textarea-tw {
+    @apply bg-[hsla(200,0%,100%,1)]  dark:bg-[hsla(200,0%,10%,1)]  placeholder:text-slate-400 dark:placeholder:text-slate-300 text-slate-800 dark:text-slate-100 rounded-lg dark:!shadow-white textarea-box;
+  }
+}
 .fade-effect {
   -webkit-animation: fadeIn 4s;
   -moz-animation: fadeIn 4s;
@@ -352,4 +363,13 @@ body {
     width: 350%;
     height: 35vh;
   }
+}
+
+.textarea-box {
+  /* background: rgb(243, 243, 243); */
+  box-shadow: inset 2px 2px 4px #c2c2c2, inset -2px -2px 4px #d6d6d69f;
+  border: none;
+  padding: 10px;
+  /* width: 40em; */
+  border-radius: 0.7em;
 }

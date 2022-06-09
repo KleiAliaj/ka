@@ -182,6 +182,29 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <Link href="/photography">
+                <a
+                 className={
+                    "   " +
+                    (selected === "photography"
+                      ? " bg-sky-500 font-bold text-xl rounded-2xl text-white px-2 py-1"
+                      : " hover:text-gray-500 text-base text-gray-400")
+                  }
+                  href="#"
+                  onClick={() => {
+                    if (isToggled && isMobile) {
+                      setIsToggled(false);
+                    }
+                    // if(selected !== "music") {
+                    //   setSelected("music");
+                    // }
+                  }}
+                >
+                  Photography
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href="/blog">
                 <a
                  className={

@@ -6,6 +6,11 @@ import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import Navbar from "./navbar";
 
 export default function Layout({ preview, children }) {
+
+
+
+
+
   return (
     <>
       <Meta />
