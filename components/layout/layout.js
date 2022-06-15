@@ -6,27 +6,25 @@ import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import Navbar from "./navbar";
 
 export default function Layout({ preview, children }) {
-
-
-
-
-
   return (
     <>
       <Meta />
       <div className="min-h-screen min-w-screen">
-        {/* <div class="absolute top-0 left-0 h-full w-full flex items-center justify-center px-16 -z-50 animate-rotateAnimation">
-          <div class="relative w-full max-w-lg">
-            <div class="absolute top-0 -left-4 w-[20em] h-[20em] bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob "></div>
-            <div class="absolute top-0 -right-4 w-[20em] h-[20em] bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
-            <div class="absolute -bottom-8 left-20 w-[20em] h-[20em] bg-sky-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
-            <div class="m-8 relative space-y-4"></div>
+        <div className="fixed left-0 right-0 flex items-center justify-center ml-auto mr-auto sm:w-[30em] md:w-[70em] -z-50  mt-[25em] rounded-full ">
+          <div className="relative w-full max-w-lg boundss">
+            <div className="absolute top-0 -left-4 w-[20em] h-[20em] bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70  dot"></div>
+            <div className="absolute top-0 -right-4 w-[20em] h-[20em] bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70   dot2"></div>
+            <div className="absolute -bottom-8 left-20 w-[20em] h-[20em] bg-sky-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70   dot3"></div>
+            <div className="absolute -top-20 -left-[250px] w-[10em] h-[10em] bg-indigo-600 rounded-full mix-blend-multiply filter blur-2xl opacity-70  dot"></div>
+            <div className="absolute -bottom-[500px] right-[150px] w-[10em] h-[10em] bg-blue-600 rounded-full mix-blend-multiply filter blur-2xl opacity-70   dot2"></div>
+            <div className="absolute bottom-[50px] -right-[250px] w-[10em] h-[10em] bg-sky-600 rounded-full mix-blend-multiply filter blur-2xl opacity-70   dot3"></div>
+            <div className="relative m-8 space-y-4"></div>
           </div>
-        </div> */}
+        </div>
 
         <Navbar className="w-full" />
         {/* <Alert preview={preview} /> */}
-        <main className="fade-effect-quick">{children}</main>
+        <main className="w-full h-full fade-effect-quick">{children}</main>
       </div>
       <Footer />
     </>

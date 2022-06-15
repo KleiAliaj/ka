@@ -7,16 +7,19 @@ export default function Footer() {
     <footer className="relative ">
       {/* <footer className=" bg-gradient-to-t from-[#3CA0CB] via-[#3CA0CB] relative"> */}
       <div className="flex flex-col items-center lg:flex-row">
-        <div className="flex flex-col items-center w-full gap-5 bg-clear-pl4">
-          <p className="text-[18px] ">
+        <div className="flex flex-col items-center w-full gap-2 bg-clear-pl4">
+          <p className="text-[18px] text-white font-bold">
             Made with Next.js, Tailwind CSS, and Cosmic CMS
           </p>
-          <p className="text-[11px]">Copyright © {date} Ty Fiero</p>
+          <p className="text-[11px] text-slate-300">
+            Copyright © {date} Ty Fiero
+          </p>
         </div>
       </div>
 
       {/* <div class="header"> */}
-      <div className="absolute w-full -top-[240px] ">
+      {/* <div className="absolute w-full -top-[240px] "> */}
+      <div className="absolute bottom-0 w-full -z-10">
         <svg
           className="waves"
           xmlns="http://www.w3.org/2000/svg"

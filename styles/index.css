@@ -16,17 +16,36 @@ body {
   overflow-y: auto;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 @layer components {
   .page-container {
     @apply h-full w-full flex flex-col items-center p-5 mb-[20em] fade-effect-quick;
   }
-}
-
-@layer components {
+  .heading-lg {
+    @apply text-center text-5xl mb-10 font-bold text-sky-600 dark:text-sky-100 f1;
+  }
+  .heading-md {
+    @apply text-center text-3xl mb-5 font-bold text-sky-600 dark:text-sky-100;
+  }
+  .heading-sm {
+    @apply text-center text-xl mb-2 font-bold text-sky-600 dark:text-sky-100;
+  }
   .textarea-tw {
     @apply bg-[hsla(200,0%,100%,1)]  dark:bg-[hsla(200,0%,10%,1)]  placeholder:text-slate-400 dark:placeholder:text-slate-300 text-slate-800 dark:text-slate-100 rounded-lg dark:!shadow-white textarea-box;
   }
+  .button-1 {
+    @apply flex items-center gap-2 px-10 py-2 text-white transition rounded-full shadow-lg bg-sky-500 shadow-sky-300 hover:bg-sky-600 hover:shadow-sky-400 hover:shadow-xl hover:scale-105 active:scale-90;
+  }
+  p {
+    @apply text-slate-800 dark:text-slate-50 f1;
+  }
 }
+
+.f1 {
+  font-family: "Varela Round", sans-serif;
+}
+
 .fade-effect {
   -webkit-animation: fadeIn 4s;
   -moz-animation: fadeIn 4s;
@@ -372,4 +391,189 @@ body {
   padding: 10px;
   /* width: 40em; */
   border-radius: 0.7em;
+}
+
+.image-container {
+  position: relative !important;
+}
+
+.image {
+  object-fit: contain;
+  /*width: 100% !important;*/
+  position: relative !important;
+  height: unset !important;
+}
+
+.menu-content {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px; /* Need a specific value to work */
+}
+
+.fade-m1 {
+  -webkit-animation: fadeMenu 0.5s;
+  -moz-animation: fadeMenu 0.5s;
+  -o-animation: fadeMenu 0.5s;
+  -ms-animation: fadeMenu 0.5s;
+  animation: fadeMenu 0.5s;
+}
+.fade-m2 {
+  -webkit-animation: fadeMenu 1s;
+  -moz-animation: fadeMenu 1s;
+  -o-animation: fadeMenu 1s;
+  -ms-animation: fadeMenu 1s;
+  animation: fadeMenu 1s;
+}
+.fade-m3 {
+  -webkit-animation: fadeMenu 1.5s;
+  -moz-animation: fadeMenu 1.5s;
+  -o-animation: fadeMenu 1.5s;
+  -ms-animation: fadeMenu 1.5s;
+  animation: fadeMenu 1.5s;
+}
+.fade-m4 {
+  -webkit-animation: fadeMenu 2s;
+  -moz-animation: fadeMenu 2s;
+  -o-animation: fadeMenu 2s;
+  -ms-animation: fadeMenu 2s;
+  animation: fadeMenu 2s;
+}
+.fade-m5 {
+  -webkit-animation: fadeMenu 2.5s;
+  -moz-animation: fadeMenu 2.5s;
+  -o-animation: fadeMenu 2.5s;
+  -ms-animation: fadeMenu 2.5s;
+  animation: fadeMenu 2.5s;
+}
+.fade-m6 {
+  -webkit-animation: fadeMenu 3s;
+  -moz-animation: fadeMenu 3s;
+  -o-animation: fadeMenu 3s;
+  -ms-animation: fadeMenu 3s;
+  animation: fadeMenu 3s;
+}
+.fade-m7 {
+  -webkit-animation: fadeMenu 3.5s;
+  -moz-animation: fadeMenu 3.5s;
+  -o-animation: fadeMenu 3.5s;
+  -ms-animation: fadeMenu 3.5s;
+  animation: fadeMenu 3.5s;
+}
+@keyframes fadeMenu {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+    scale: 0.6;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@-moz-keyframes fadeMenu {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+
+    scale: 0.6;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@-webkit-keyframes fadeMenu {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+
+    scale: 0.6;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@-o-keyframes fadeMenu {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+
+    scale: 0.6;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@-ms-keyframes fadeMenu {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+
+    scale: 0.6;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.dot {
+  animation: dot1 92.5s infinite ease-in-out;
+}
+.dot2 {
+  animation: dot1 122.5s infinite ease-in-out;
+}
+.dot3 {
+  animation: dot1 142.5s infinite ease-in-out;
+}
+@keyframes dot1 {
+  0% {
+    transform: translate3d(0) translateX(0) translateY(0px) translateZ(0)
+      scale(1);
+  }
+  50% {
+    transform: translateX(200px) translateY(-100px) translateZ(-100px)
+      scale(0.2);
+  }
+  100% {
+    transform: translate3d(0) translateY(0px) translateZ(0) scale(1);
+  }
+}
+
+.bounds {
+  /* Some layout code… */
+  animation: bounds 92.5s infinite linear;
+}
+
+@keyframes bounds {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
