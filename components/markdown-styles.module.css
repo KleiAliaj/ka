@@ -10,9 +10,16 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug f1;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug f1;
+}
+.f1 {
+  /* font-family: "Varela Round", sans-serif; */
+  font-weight: bolder;
+  font-family: "Baloo Thambi 2", cursive;
+
+  /* font-family: "Gochi Hand", cursive; */
 }

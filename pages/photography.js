@@ -120,41 +120,46 @@ function Photography({ tyImages, tyStats }) {
     <div className="page-container">
       <h2 className="text-left heading-lg ">Photography</h2>
       <div className="flex justify-center gap-10 sm:flex-col-reverse md:flex-row sm:items-center">
-        <div className="md:w-1/2 sm:w-full">
+        <div className="md:w-1/2 sm:w-full ">
           <p className="font-bold heading-sm !text-left">Why I take pictures</p>
-          <p>
-            Photography is my creative outlet that gets me outside, and helps me
-            notice and appreciate the beauty of the Pacific Northwest (and some
-            of my pets). I am by no means a professional, far from it. But I do
-            have a decent Nikon camera, an eye for nature photography, and the
-            patience to find the right shot. Little by little, I feel myself
-            getting better. <br />
-            <br /> I don't ever expect to be famous for my photography, or even
-            make a single dollar. I do this for me. My mind is so much clearer
-            when I spend time every week to bask in the glory of what nature has
-            to offer, and capture it for all to see. I share all my best work to{" "}
-            <a
-              href="https://unsplash.com/@tyfiero"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline text-sky-500 "
-            >
-              unsplash
-            </a>{" "}
-            for the world to see and use for their creative projects. I LOVE
-            putting my work out there, even if no one was to see it.
-          </p>
+          <div className="glass-box bg-white/80 dark:bg-black/80">
+            <p>
+              Photography is my creative outlet that gets me outside, and helps
+              me notice and appreciate the beauty of the Pacific Northwest (and
+              some of my pets). I am by no means a professional, far from it.
+              But I do have a decent Nikon camera, an eye for nature
+              photography, and the patience to find the right shot. Little by
+              little, I feel myself getting better. <br />
+              <br /> I don't ever expect to be famous for my photography, or
+              even make a single dollar. I do this for me. My mind is so much
+              clearer when I spend time every week to bask in the glory of what
+              nature has to offer, and capture it for all to see. I share all my
+              best work to
+              <a
+                href="https://unsplash.com/@tyfiero"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-sky-500 "
+              >
+                unsplash
+              </a>{" "}
+              for the world to see and use for their creative projects. I LOVE
+              putting my work out there, even if no one was to see it.
+            </p>
+          </div>
           <br />
-          <div className="max-w-4xl p-4 !pb-2 text-gray-800  rounded-lg shadow-xl shadow-sky-600/30 bg-sky-50">
+          <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-sky-600/30 bg-sky-50 dark:bg-sky-700/90">
             <div className="mb-2">
-              <div className="h-3 text-3xl text-left text-gray-600">“</div>
-              <blockquote className="px-4 text-base italic text-center text-gray-600 ">
+              <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
+                “
+              </div>
+              <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
                 We cannot predict the value our work will provide to the world.
                 That’s fine. It is not our job to judge our own work. It is our
                 job to create it, to pour ourselves into it, and to master our
                 craft as best we can. &nbsp; &nbsp;-James Clear
               </blockquote>
-              <div className="h-3 mb-2 text-3xl text-right text-gray-600">
+              <div className="h-3 mb-2 text-3xl text-right text-gray-600 dark:text-slate-200">
                 “
               </div>
             </div>

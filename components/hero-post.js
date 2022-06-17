@@ -1,7 +1,7 @@
-import Avatar from './avatar'
-import Date from './date'
-import CoverImage from './layout/cover-image'
-import Link from 'next/link'
+import Avatar from "./avatar";
+import Date from "./date";
+import CoverImage from "./layout/cover-image";
+import Link from "next/link";
 
 export default function HeroPost({
   title,
@@ -12,29 +12,33 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} url={coverImage.imgix_url} slug={slug} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+    <section className="glass-box bg-white/80 dark:bg-slate-900/80 w-[50%] group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
+      <Link href={`/posts/${slug}`}>
         <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link href={`/posts/${slug}`}>
-              <a className="hover:underline">{title}</a>
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <Date dateString={date} />
+          <div className="mb-0 md:mb-4 !rounded-xl">
+            <CoverImage title={title} url={coverImage.imgix_url} slug={slug} />
+          </div>
+          <div className="flex flex-col items-center px-5 mb-10 md:mb-5">
+            <div>
+              <h3 className="mb-2 text-4xl leading-tight lg:text-6xl">
+                <a className="transition duration-500 group-hover:text-sky-400 text-sky-800 dark:text-sky-300 f1">
+                  {title}
+                </a>
+              </h3>
+              <div className="mb-4 text-lg italic text-slate-500 f2 dark:text-slate-300">
+                <Date dateString={date} />
+              </div>
+            </div>
+            <div>
+              <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+              <Avatar
+                name={author.title}
+                picture={author.metadata.picture.imgix_url}
+              />
+            </div>
           </div>
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar
-            name={author.title}
-            picture={author.metadata.picture.imgix_url}
-          />
-        </div>
-      </div>
+      </Link>
     </section>
-  )
+  );
 }

@@ -6,8 +6,21 @@ import { FaArrowRight } from "react-icons/fa";
 function Projects() {
   return (
     <div className="page-container">
-      <h2 className="text-left heading-lg ">Projects</h2>
-
+      <h2 className="text-left heading-lg ">Code</h2>
+      <p className="pb-3 text-2xl font-bold text-sky-600">Learning Journey</p>
+      <p className="pb-3 font-bold text-sky-600">
+        What I have learned thus far, perhaps in a timeline format
+      </p>
+      <p className="pb-3 font-bold text-sky-600">What I want to learn</p>
+      <p className="pb-3 text-2xl font-bold text-sky-600">Resources</p>
+      <p className="pb-3 font-bold text-sky-600">
+        Links, websites, courses, books Ive read, really just a place to flex
+        all the stuff I have learned.
+      </p>
+      <p className="pb-3 text-2xl font-bold text-sky-600">Crypto</p>
+      <p className="pb-3 font-bold text-sky-600">
+        Write up on the crypto stuff I have learned, and what I want to learn.
+      </p>
       <div className="relative flex flex-wrap items-center justify-center  px-20 py-5 mt-2 transition duration-[1400ms] ring-2 hover:ring-8 ring-sky-200 bg-sky-200/30 rounded-2xl hover:bg-sky-500/50 ">
         <div className="absolute top-1 left-3">
           <p className="pb-3 font-bold text-sky-600">Coding Projects</p>
@@ -138,9 +151,9 @@ const ProjectCard = ({
       </div>
 
       <div className="flex flex-col justify-between items-center h-[15em] px-5 py-2 inner-element">
-        <h3 className={"m-0 text-2xl  " + textColor}>{title}</h3>
+        <h3 className={"m-0 text-2xl f1  " + textColor}>{title}</h3>
 
-        <p className="text-sm text-left">{description}</p>
+        <p className="text-sm text-left ">{description}</p>
         <button
           onClick={() => {
             router.push(route);
@@ -152,7 +165,7 @@ const ProjectCard = ({
             bColor
           }
         >
-          <p className="m-0 dark:text-slate-800">Launch</p>{" "}
+          <p className="m-0 dark:text-slate-800 f2">Launch</p>{" "}
           <FaArrowRight className={textColor} />
         </button>
       </div>

@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { FaHome, FaRegUser } from "react-icons/fa";
 import {
   TbCamera,
+  TbCode,
   TbFileText,
   TbFolders,
   TbHome2,
@@ -84,17 +85,20 @@ function Navbar() {
       setIsToggled(true);
     }
   };
+  let postSlice = router.asPath.slice(0, 6);
+
+  // console.log(postSlice);
 
   React.useEffect(() => {
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
-    } else if (router.asPath === "/projects") {
-      setSelected("projects");
+    } else if (router.asPath === "/code") {
+      setSelected("code");
     } else if (router.asPath === "/music") {
       setSelected("music");
     } else if (router.asPath === "/photography") {
       setSelected("photography");
-    } else if (router.asPath === "/blog") {
+    } else if (router.asPath === "/blog" || postSlice === "/posts") {
       setSelected("blog");
     } else if (router.asPath === "/about") {
       setSelected("about");
@@ -121,7 +125,7 @@ function Navbar() {
                   height={48}
                 />
               </div>
-              <h1 className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo ">
+              <h1 className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1">
                 Ty Fiero
               </h1>
             </a>
@@ -148,7 +152,7 @@ function Navbar() {
           <>
             <div className="absolute top-0 left-0 z-10 w-full h-[100vh] bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden"></div>
 
-            <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 ">
+            <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1">
               <li>
                 <Link href="/">
                   <a
@@ -202,11 +206,11 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/projects">
+                <Link href="/code">
                   <a
                     className={
                       " fade-m3   flex gap-2 items-center " +
-                      (selected === "projects"
+                      (selected === "code"
                         ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
                         : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
@@ -220,10 +224,10 @@ function Navbar() {
                       // }
                     }}
                   >
-                    {selected === "projects" && (
-                      <TbFolders className="scale-110 fade-effect-quick" />
+                    {selected === "code" && (
+                      <TbCode className="scale-125 fade-effect-quick" />
                     )}
-                    Projects
+                    Code
                   </a>
                 </Link>
               </li>
