@@ -9,9 +9,9 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen min-w-screen">
+      <div className="w-full h-full ">
         <div className="fixed left-0 right-0 flex items-center justify-center ml-auto mr-auto sm:w-[30em] md:w-[70em] -z-50  mt-[25em] rounded-full ">
-          <div className="relative w-full max-w-lg boundss">
+          <div className="relative w-full max-w-lg bounds">
             <div className="absolute top-0 -left-4 w-[20em] h-[20em] bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70  dot"></div>
             <div className="absolute top-0 -right-4 w-[20em] h-[20em] bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70   dot2"></div>
             <div className="absolute -bottom-8 left-20 w-[20em] h-[20em] bg-sky-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70   dot3"></div>
