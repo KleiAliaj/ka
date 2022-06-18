@@ -134,7 +134,7 @@ function Photography({ tyImages, tyStats }) {
               even make a single dollar. I do this for me. My mind is so much
               clearer when I spend time every week to bask in the glory of what
               nature has to offer, and capture it for all to see. I share all my
-              best work to
+              best work to{" "}
               <a
                 href="https://unsplash.com/@tyfiero"
                 target="_blank"
