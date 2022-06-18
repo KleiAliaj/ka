@@ -21,7 +21,28 @@ export default function Layout({ preview, children }) {
             <div className="relative m-8 space-y-4"></div>
           </div> */}
         {/* </div> */}
-
+        <div class="background -z-50 fixed left-0 top-0">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <Navbar className="w-full" />
         {/* <Alert preview={preview} /> */}
         <main className="w-full h-full fade-effect-quick">{children}</main>

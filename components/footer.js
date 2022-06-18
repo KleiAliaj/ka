@@ -19,7 +19,8 @@ export default function Footer() {
 
       {/* <div class="header"> */}
       {/* <div className="absolute w-full -top-[240px] "> */}
-      <div className="absolute bottom-0 w-full -z-10">
+
+      {/* <div className="absolute bottom-0 w-full -z-10">
         <svg
           className="waves"
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +62,8 @@ export default function Footer() {
             />
           </g>
         </svg>
-      </div>
+      </div> */}
+
       {/* </div> */}
 
       {/* <div className="-translate-y-56 min-h-[10em] max-h-[10em] ocean  brightness-150 w-full absolute top-0">

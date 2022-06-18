@@ -1,4 +1,6 @@
 import "@/styles/index.css";
+import "@/styles/global.scss";
+
 import Layout from "@/components/layout/layout";
 import React from "react";
 import { ThemeProvider } from "next-themes";
