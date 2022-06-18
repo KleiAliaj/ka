@@ -150,7 +150,7 @@ function Navbar() {
 
         {isToggled && (
           <>
-            <div className="absolute top-0 left-0 z-10 w-full h-[100vh] bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden"></div>
+            <div className="absolute top-0 left-0 z-10 w-full h-[100vh] bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden !overflow-hidden"></div>
 
             <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1">
               <li>
@@ -159,8 +159,8 @@ function Navbar() {
                     className={
                       " fade-m1 flex gap-2 items-center   " +
                       (selected === "home"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1 "
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 dark:text-sky-50 md:text-gray-400")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1 "
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 dark:text-sky-50 md:text-gray-400")
                     }
                     href="#"
                     onClick={() => {
@@ -185,8 +185,8 @@ function Navbar() {
                     className={
                       " fade-m2  flex gap-2 items-center " +
                       (selected === "about"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
                     href="#"
                     onClick={() => {
@@ -211,8 +211,8 @@ function Navbar() {
                     className={
                       " fade-m3   flex gap-2 items-center " +
                       (selected === "code"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
                     href="#"
                     onClick={() => {
@@ -237,8 +237,8 @@ function Navbar() {
                     className={
                       "  fade-m4  flex gap-2 items-center " +
                       (selected === "music"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
                     href="#"
                     onClick={() => {
@@ -263,8 +263,8 @@ function Navbar() {
                     className={
                       " fade-m5  flex gap-2 items-center  " +
                       (selected === "photography"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
                     href="#"
                     onClick={() => {
@@ -289,8 +289,8 @@ function Navbar() {
                     className={
                       " fade-m6  flex gap-2 items-center  " +
                       (selected === "blog"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
                     href="#"
                     onClick={() => {
@@ -317,8 +317,8 @@ function Navbar() {
                     className={
                       "  fade-m7  flex gap-2 items-center " +
                       (selected === "contact"
-                        ? " bg-sky-500 font-bold sm:text-5xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-5xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
                     href="#"
                     onClick={() => {
