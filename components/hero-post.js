@@ -12,7 +12,7 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section className="glass-box bg-white/80 dark:bg-slate-900/80 w-[50%] group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
+    <section className="glass-box bg-white/80 dark:bg-slate-900/80 md:w-[50%] sm:w-[95%] group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
       <Link href={`/posts/${slug}`}>
         <div>
           <div className="mb-0 md:mb-4 !rounded-xl">
