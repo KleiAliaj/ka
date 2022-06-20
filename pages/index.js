@@ -79,84 +79,84 @@ export default function Index({ allPosts }) {
                 <div className="flex flex-wrap justify-center ring-2 rounded-xl w-[98%] gap-2">
                   <CodeLogo
                     title="React"
-                    img="/react.png"
+                    img="/assets/CodeLogos/react.png"
                     alt="React logo"
                     url="https://reactjs.org/"
                     imgStyle=" scale-[90%] hover:!scale-[100%] translate-y-2"
                   />
                   <CodeLogo
                     title="Next.js"
-                    img="/nextjs.png"
+                    img="/assets/CodeLogos/nextjs.png"
                     alt="Next logo"
                     url="https://nextjs.org/"
                     imgStyle="  translate-y-3 invert-0 dark:invert"
                   />
                   <CodeLogo
                     title="Javascript"
-                    img="/js.png"
+                    img="/assets/CodeLogos/js.png"
                     alt="Js logo"
                     url="https://developer.mozilla.org/en-US/docs/Web/javascript"
                     imgStyle=" scale-[90%] hover:!scale-[100%] translate-y-2"
                   />
                   <CodeLogo
                     title="Tailwind CSS"
-                    img="/tailwind.png"
+                    img="/assets/CodeLogos/tailwind.png"
                     alt="Tailwind logo"
                     url="https://tailwindcss.com/"
                     imgStyle="  translate-y-3"
                   />
                   <CodeLogo
                     title="Redux"
-                    img="/redux.png"
+                    img="/assets/CodeLogos/redux.png"
                     alt="Redux logo"
                     url="https://redux.js.org/"
                     imgStyle=" scale-[80%] hover:!scale-[90%] translate-y-3"
                   />
                   <CodeLogo
                     title="node.js"
-                    img="/express.png"
+                    img="/assets/CodeLogos/express.png"
                     alt="Express logo"
                     url="https://nodejs.org/"
                     imgStyle=" translate-y-4"
                   />
                   <CodeLogo
                     title="Firebase"
-                    img="/firebase.png"
+                    img="/assets/CodeLogos/firebase.png"
                     alt="Firebase logo"
                     url="https://firebase.google.com/"
                     imgStyle=" scale-[70%] hover:!scale-[80%] translate-y-3"
                   />
                   <CodeLogo
                     title="HTML5"
-                    img="/html.png"
+                    img="/assets/CodeLogos/html.png"
                     alt="HTML5 logo"
                     url="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
                     imgStyle=" scale-[100%] hover:!scale-[110%] translate-y-3"
                   />
                   <CodeLogo
                     title="CSS3"
-                    img="/css.png"
+                    img="/assets/CodeLogos/css.png"
                     alt="CSS3 logo"
                     url="https://developer.mozilla.org/en-US/docs/Web/CSS"
                     imgStyle=" scale-[72%] hover:!scale-[85%] translate-y-3"
                   />
                   <CodeLogo
                     title="D3.js"
-                    img="/d3.png"
+                    img="/assets/CodeLogos/d3.png"
                     alt="D3 logo"
                     url="https://d3js.org/"
                     imgStyle=" scale-[85%]  hover:!scale-[95%] translate-y-2"
                   />
                   <CodeLogo
                     title="p5.js"
-                    img="/p5.png"
+                    img="/assets/CodeLogos/p5.png"
                     alt="p5 logo"
                     url="https://p5js.org/"
                     imgStyle=" translate-y-3"
                   />
                   <CodeLogo
                     title="Chart.js"
-                    img="/chartjs.png"
+                    img="/assets/CodeLogos/chartjs.png"
                     alt="chart.js logo"
                     url="https://www.chartjs.org/"
                     imgStyle=" scale-[75%]  hover:!scale-[85%] translate-y-2"
@@ -168,21 +168,28 @@ export default function Index({ allPosts }) {
                 <div className="flex flex-wrap justify-center gap-2 ring-2 rounded-xl w-fit">
                   <CodeLogo
                     title="TypeScript"
-                    img="/ts.png"
+                    img="/assets/CodeLogos/ts.png"
                     alt="TypeScript logo"
                     url="https://www.typescriptlang.org/"
                     imgStyle=" scale-[75%] bg-white hover:!scale-[85%] translate-y-2"
                   />
                   <CodeLogo
+                    title="Sass"
+                    img="/assets/CodeLogos/Sass.png"
+                    alt="Sass logo"
+                    url="https://sass-lang.com/"
+                    imgStyle=" scale-[125%]  hover:!scale-[135%] translate-y-3"
+                  />
+                  <CodeLogo
                     title="React Three"
-                    img="/three.png"
+                    img="/assets/CodeLogos/three.png"
                     alt="three logo"
                     url="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
                     imgStyle=" scale-[75%] hover:!scale-[85%] translate-y-3"
                   />
                   <CodeLogo
                     title="Python"
-                    img="/python.png"
+                    img="/assets/CodeLogos/python.png"
                     alt="Python logo"
                     url="https://www.python.org/"
                     imgStyle=" scale-[75%] hover:!scale-[85%] translate-y-2"
@@ -286,7 +293,7 @@ export async function getStaticProps({ preview }) {
 
 function CodeLogo(props) {
   return (
-    <div className="flex flex-col gap-1 transition hover:ring-2 ring-sky-500 max-w-[8em] items-center rounded-xl duration-500 px-3 py-2 hover:bg-sky-200/50 cursor-pointer">
+    <div className="flex flex-col gap-1 transition hover:ring-2 ring-sky-500 max-w-[8em] items-center rounded-xl duration-500 px-3 py-2 hover:bg-gradient-to-b dark:from-black/10 from-white/10 to-sky-300/80 cursor-pointer">
       <a
         href={props.url}
         target="_blank"

@@ -12,21 +12,28 @@ import PostTitle from "@/components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
-
+import dynamic from "next/dynamic";
+import { createRef } from "react";
+// import ReadingBar from "@/components/ReadingBar";
+const ReadingBar = dynamic(() => import("@/components/ReadingBar"), {
+  ssr: false,
+});
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
+  const target = createRef();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
     // <Layout preview={preview}>
     <Container>
+      <ReadingBar target={target} />
       {/* <Header /> */}
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article className="mt-16">
+          <article className="mt-16" ref={target}>
             <Head>
               <title>
                 {post.title} Ty Fiero Blog on Life, Code, and Music.
