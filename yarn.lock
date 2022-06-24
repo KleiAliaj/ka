@@ -76,14 +76,6 @@
   dependencies:
     "deepmerge" "^4.2.2"
 
-"@sendgrid/mail@^7.7.0":
-  "integrity" "sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw=="
-  "resolved" "https://registry.npmjs.org/@sendgrid/mail/-/mail-7.7.0.tgz"
-  "version" "7.7.0"
-  dependencies:
-    "@sendgrid/client" "^7.7.0"
-    "@sendgrid/helpers" "^7.7.0"
-
 "@types/content-type@^1.1.3":
   "integrity" "sha512-dgMN+syt1xb7Hk8LU6AODOfPlvz5z1CbXpPuJE5ZrX9STfBOIXF09pEB8N7a97WT9dbngt3ksDCm6GW6yMrxfQ=="
   "resolved" "https://registry.npmjs.org/@types/content-type/-/content-type-1.1.5.tgz"
@@ -306,14 +298,6 @@
   "resolved" "https://registry.npmjs.org/content-type/-/content-type-1.0.4.tgz"
   "version" "1.0.4"
 
-"cosmicjs@^3.2.43":
-  "integrity" "sha512-3QMZKik52H/pSHzyaABBg7NLjGgkffMq+zgJQxZiv043G0x2LXqqsMxL4u+huQZTj5vBAAKh/CIKTNunHcE7Sg=="
-  "resolved" "https://registry.npmjs.org/cosmicjs/-/cosmicjs-3.4.4.tgz"
-  "version" "3.4.4"
-  dependencies:
-    "axios" "^0.21.1"
-    "form-data" "^3.0.0"
-
 "crypt@0.0.2":
   "integrity" "sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs="
   "resolved" "https://registry.npmjs.org/crypt/-/crypt-0.0.2.tgz"
@@ -479,19 +463,6 @@
   "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   "version" "4.2.0"
 
-"framer-motion@^6.3.11":
-  "integrity" "sha512-xQLk+ZSklNs5QNCUmdWPpKMOuWiB8ZETsvcIOWw8xvri9K3TamuifgCI/B6XpaEDR0/V2ZQF2Wm+gUAZrXo+rw=="
-  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-6.3.11.tgz"
-  "version" "6.3.11"
-  dependencies:
-    "framesync" "6.0.1"
-    "hey-listen" "^1.0.8"
-    "popmotion" "11.0.3"
-    "style-value-types" "5.0.0"
-    "tslib" "^2.1.0"
-  optionalDependencies:
-    "@emotion/is-prop-valid" "^0.8.2"
-
 "framesync@6.0.1":
   "integrity" "sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA=="
   "resolved" "https://registry.npmjs.org/framesync/-/framesync-6.0.1.tgz"
@@ -647,11 +618,6 @@
   "resolved" "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-4.0.0.tgz"
   "version" "4.0.0"
 
-"jotai@^1.7.1":
-  "integrity" "sha512-Ucighxm0GwjvMpnLn7//CrHFSgLoL7LxHhXm7ofUNIktsRE4TAAhzrwsBb0LjJ0DuBJqQEJq9/jbHFfjO0ylYQ=="
-  "resolved" "https://registry.npmjs.org/jotai/-/jotai-1.7.1.tgz"
-  "version" "1.7.1"
-
 "js-base64@~3.7.0":
   "integrity" "sha512-NnRs6dsyqUXejqk/yv2aiXlAvOs56sLkX6nUdeaNezI5LFFLlsZjOThmwnrcwh5ZZRwZlCMnVAY3CvhIhoVEKQ=="
   "resolved" "https://registry.npmjs.org/js-base64/-/js-base64-3.7.2.tgz"
@@ -666,11 +632,6 @@
   "integrity" "sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA=="
   "resolved" "https://registry.npmjs.org/kleur/-/kleur-4.1.4.tgz"
   "version" "4.1.4"
-
-"lazysizes@^5.2.1-rc2":
-  "integrity" "sha512-22UzWP+Vedi/sMeOr8O7FWimRVtiNJV2HCa+V8+peZOw6QbswN9k58VUhd7i6iK5bw5QkYrF01LJbeJe0PV8jg=="
-  "resolved" "https://registry.npmjs.org/lazysizes/-/lazysizes-5.3.2.tgz"
-  "version" "5.3.2"
 
 "lilconfig@^2.0.5":
   "integrity" "sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg=="
@@ -1169,18 +1130,6 @@
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   "version" "5.1.1"
 
-"react-datocms@1.6.3":
-  "integrity" "sha512-/6+3ogPYFA9lE9MZ7kqhSAcqFq9SAdiFW+/IDtLv8v8j8ApxRx/gEU96xiWFC+iBVL/8SwQoEVO0FFXCMeF31g=="
-  "resolved" "https://registry.npmjs.org/react-datocms/-/react-datocms-1.6.3.tgz"
-  "version" "1.6.3"
-  dependencies:
-    "datocms-listen" "^0.1.3"
-    "datocms-structured-text-generic-html-renderer" "^1.1.0"
-    "datocms-structured-text-utils" "^1.1.0"
-    "intersection-observer" "^0.12.0"
-    "react-intersection-observer" "^8.31.1"
-    "use-deep-compare-effect" "^1.6.1"
-
 "react-dom@*", "react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16", "react-dom@>=16.8 || ^17.0.0 || ^18.0.0", "react-dom@>0.13.0", "react-dom@15.x || 16.x || 17.x || 18.x":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
@@ -1195,28 +1144,10 @@
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
   "version" "3.2.0"
 
-"react-hot-toast@^2.2.0":
-  "integrity" "sha512-248rXw13uhf/6TNDVzagX+y7R8J183rp7MwUMNkcrBRyHj/jWOggfXTGlM8zAOuh701WyVW+eUaWG2LeSufX9g=="
-  "resolved" "https://registry.npmjs.org/react-hot-toast/-/react-hot-toast-2.2.0.tgz"
-  "version" "2.2.0"
-  dependencies:
-    "goober" "^2.1.1"
-
 "react-icons@^4.4.0":
   "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.4.0.tgz"
   "version" "4.4.0"
-
-"react-imgix@^9.0.2":
-  "integrity" "sha512-p/pOvp3k4j68AjuWYl37av6TFbK/ZpanT/+TEzPCA+Z3rUl9Aay9zbiVGyVhAGa12yVnhxLCsQ1ONytJl3dCGQ=="
-  "resolved" "https://registry.npmjs.org/react-imgix/-/react-imgix-9.5.1.tgz"
-  "version" "9.5.1"
-  dependencies:
-    "@imgix/js-core" "^3.1.3"
-    "prop-types" "^15.8.1"
-    "react-measure" "^2.3.0"
-    "shallowequal" "^1.1.0"
-    "warning" "^4.0.1"
 
 "react-intersection-observer@^8.31.1":
   "integrity" "sha512-TYKh52Zc0Uptp5/b4N91XydfSGKubEhgZRtcg1rhTKABXijc4Sdr1uTp5lJ8TN27jwUsdXxjHXtHa0kPj704sw=="
@@ -1238,22 +1169,6 @@
     "prop-types" "^15.6.2"
     "resize-observer-polyfill" "^1.5.0"
 
-"react-parallax-tilt@^1.7.40":
-  "integrity" "sha512-bXbju8K/CH63RTgIdtvEFb+dPoozrAfvLtKOVdLRzDjSR0F9evLvtn1t8m/MGyEK5sjMRYQilsaYtVFRr3bOhA=="
-  "resolved" "https://registry.npmjs.org/react-parallax-tilt/-/react-parallax-tilt-1.7.40.tgz"
-  "version" "1.7.40"
-
-"react-player@^2.10.1":
-  "integrity" "sha512-ova0jY1Y1lqLYxOehkzbNEju4rFXYVkr5rdGD71nsiG4UKPzRXQPTd3xjoDssheoMNjZ51mjT5ysTrdQ2tEvsg=="
-  "resolved" "https://registry.npmjs.org/react-player/-/react-player-2.10.1.tgz"
-  "version" "2.10.1"
-  dependencies:
-    "deepmerge" "^4.0.0"
-    "load-script" "^1.0.0"
-    "memoize-one" "^5.1.1"
-    "prop-types" "^15.7.2"
-    "react-fast-compare" "^3.0.1"
-
 "react@*", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0", "react@^16.8 || ^17 || ^18", "react@^17.0.2", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.12.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16", "react@>=16.13", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0 || ^18.0.0", "react@>0.13.0", "react@15.x || 16.x || 17.x || 18.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
@@ -1274,17 +1189,6 @@
   "resolved" "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
   "version" "0.13.9"
 
-"remark-html@15.0.1":
-  "integrity" "sha512-7ta5UPRqj8nP0GhGMYUAghZ/DRno7dgq7alcW90A7+9pgJsXzGJlFgwF8HOP1b1tMgT3WwbeANN+CaTimMfyNQ=="
-  "resolved" "https://registry.npmjs.org/remark-html/-/remark-html-15.0.1.tgz"
-  "version" "15.0.1"
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    "hast-util-sanitize" "^4.0.0"
-    "hast-util-to-html" "^8.0.0"
-    "mdast-util-to-hast" "^12.0.0"
-    "unified" "^10.0.0"
-
 "remark-parse@^10.0.0":
   "integrity" "sha512-1fUyHr2jLsVOkhbvPRBJ5zTKZZyD6yZzYaWCS6BPBdQ8vEMBCH+9zNCDA6tET/zHCi/jLqjCWtlJZUPk+DbnFw=="
   "resolved" "https://registry.npmjs.org/remark-parse/-/remark-parse-10.0.1.tgz"
@@ -1301,16 +1205,6 @@
   dependencies:
     "@types/mdast" "^3.0.0"
     "mdast-util-to-markdown" "^1.0.0"
-    "unified" "^10.0.0"
-
-"remark@14.0.2":
-  "integrity" "sha512-A3ARm2V4BgiRXaUo5K0dRvJ1lbogrbXnhkJRmD0yw092/Yl0kOCZt1k9ZeElEwkZsWGsMumz6qL5MfNJH9nOBA=="
-  "resolved" "https://registry.npmjs.org/remark/-/remark-14.0.2.tgz"
-  "version" "14.0.2"
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    "remark-parse" "^10.0.0"
-    "remark-stringify" "^10.0.0"
     "unified" "^10.0.0"
 
 "resize-observer-polyfill@^1.5.0":
@@ -1530,14 +1424,6 @@
     "@types/unist" "^2.0.0"
     "unist-util-is" "^5.0.0"
     "unist-util-visit-parents" "^5.0.0"
-
-"unsplash-js@^7.0.15":
-  "integrity" "sha512-WGqKp9wl2m2tAUPyw2eMZs/KICR+A52tCaRapzVXWxkA4pjHqsaGwiJXTEW7hBy4Pu0QmP6KxTt2jST3tluawA=="
-  "resolved" "https://registry.npmjs.org/unsplash-js/-/unsplash-js-7.0.15.tgz"
-  "version" "7.0.15"
-  dependencies:
-    "@types/content-type" "^1.1.3"
-    "content-type" "^1.0.4"
 
 "use-deep-compare-effect@^1.6.1":
   "integrity" "sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q=="
