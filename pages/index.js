@@ -113,6 +113,13 @@ export default function Index({ allPosts }) {
                     imgStyle=" scale-[80%] hover:!scale-[90%] translate-y-3"
                   />
                   <CodeLogo
+                    title="Recoil js"
+                    img="/assets/CodeLogos/recoil.png"
+                    alt="Recoil logo"
+                    url="https://recoiljs.org/"
+                    imgStyle=" scale-[70%] hover:!scale-[80%] translate-y-3"
+                  />
+                  <CodeLogo
                     title="node.js"
                     img="/assets/CodeLogos/express.png"
                     alt="Express logo"
