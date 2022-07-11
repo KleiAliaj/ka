@@ -32,6 +32,7 @@ export async function getStaticProps(context) {
   let tyImages = [];
   let tyStats;
   let allViews;
+  let altDescription;
 
   const axiosImages = await axios
     .get(
@@ -45,13 +46,27 @@ export async function getStaticProps(context) {
     .then(function (response) {
       if (response) {
         // console.log(response.data);
-
+        let alt = response.data.map((image) => {
+          return image.description;
+        });
+        let dimensions = response.data.map((image) => {
+          return image.width / image.height;
+        });
+        // console.log(altDescription);
         let urls = response.data.map(function (i) {
           return i.urls;
         });
-        // console.log(urls);
         let oneUrl = urls.map(function (i) {
-          return i.full;
+          return [i.regular, i.raw];
+        });
+
+        let dataArray = oneUrl.map(function (value, index) {
+          return {
+            displaySrc: value[0],
+            src: value[1],
+            alt: alt[index],
+            ratio: dimensions[index],
+          };
         });
 
         let stats = response.data.map(function (i) {
@@ -64,8 +79,8 @@ export async function getStaticProps(context) {
 
         allViews = totalViews;
 
-        //   console.log(oneUrl);
-        tyImages = oneUrl;
+        tyImages = dataArray;
+        altDescription = alt;
         return tyImages;
       } else {
         // console.log("Success!");
@@ -108,13 +123,14 @@ export async function getStaticProps(context) {
   //   console.log(tyImages);
 
   return {
-    props: { tyImages, tyStats }, // will be passed to the page component as props
+    props: { tyImages, tyStats, altDescription }, // will be passed to the page component as props
   };
 }
 
-function Photography({ tyImages, tyStats }) {
+function Photography({ tyImages, tyStats, altDescription }) {
   //   console.log(tyStats);
   const [pics, setPics] = React.useState(tyImages);
+  const [altText, setAltText] = React.useState(altDescription);
   //   console.log(pics[0]);
   return (
     <div className="page-container">
@@ -244,22 +260,32 @@ function Photography({ tyImages, tyStats }) {
       <div className="flex flex-wrap justify-center w-full gap-3 my-5">
         {pics.map((pic, index) => {
           //   console.log(pic);
+          let width =
+            pic.ratio > 1
+              ? " md:w-[640px] sm:w-[320px]"
+              : " md:w-[320px] sm:w-[640px]";
+
           return (
             <div
               key={index}
-              className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px]  relative shadow-xl rounded-xl shadow-sky-600/30"
+              className={
+                "relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[423px] sm:h-[211px] " +
+                width
+              }
             >
-              <a href={pic}>
-                <Image
-                  src={pic}
-                  alt="Aerial view of the Pacific Northwest"
-                  layout="fill"
-                  className=" rounded-xl"
-                  onClick={() => {
-                    console.log(pic);
-                  }}
-                />
-              </a>
+              <Image
+                src={pic.displaySrc}
+                alt={pic.alt}
+                layout="fill"
+                className="cursor-pointer  rounded-xl"
+                placeholder="blur"
+                blurDataURL="/react.png"
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.open(pic.src, "_blank");
+                  }
+                }}
+              />
               {/* <p>{pic}</p> */}
             </div>
           );

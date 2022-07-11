@@ -11,6 +11,10 @@ function Projects() {
       <p className="pb-3 font-bold text-sky-600">
         What I have learned thus far, perhaps in a timeline format
       </p>
+      <p className="pb-3 font-bold text-sky-600">
+        Completed couses, fireship.io NextJs/git/vscode/firebase
+        security/firebase data/etc, udemy, books
+      </p>
       <p className="pb-3 font-bold text-sky-600">What I want to learn</p>
       <p className="pb-3 text-2xl font-bold text-sky-600">Resources</p>
       <p className="pb-3 font-bold text-sky-600">

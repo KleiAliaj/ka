@@ -15,6 +15,7 @@ import {
   TbMusic,
 } from "react-icons/tb";
 import Image from "next/image";
+import { AiOutlineRobot } from "react-icons/ai";
 
 function Navbar() {
   const [isMobile, setIsMobile] = React.useState(false);
@@ -94,6 +95,8 @@ function Navbar() {
       setSelected("home");
     } else if (router.asPath === "/code") {
       setSelected("code");
+    } else if (router.asPath === "/ai") {
+      setSelected("ai");
     } else if (router.asPath === "/music") {
       setSelected("music");
     } else if (router.asPath === "/photography") {
@@ -228,6 +231,32 @@ function Navbar() {
                       <TbCode className="scale-125 fade-effect-quick" />
                     )}
                     Code
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai">
+                  <a
+                    className={
+                      " fade-m3   flex gap-2 items-center " +
+                      (selected === "ai"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={() => {
+                      if (isToggled && isMobile) {
+                        setIsToggled(false);
+                      }
+                      // if(selected !== "projects") {
+                      //   setSelected("projects");
+                      // }
+                    }}
+                  >
+                    {selected === "ai" && (
+                      <AiOutlineRobot className="scale-125 fade-effect-quick" />
+                    )}
+                    AI
                   </a>
                 </Link>
               </li>
