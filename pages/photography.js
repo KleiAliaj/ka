@@ -277,9 +277,8 @@ function Photography({ tyImages, tyStats, altDescription }) {
                 src={pic.displaySrc}
                 alt={pic.alt}
                 layout="fill"
-                className="cursor-pointer  rounded-xl"
-                placeholder="blur"
-                blurDataURL="/react.png"
+                className="cursor-pointer rounded-xl"
+                // placeholder="blur"
                 onClick={() => {
                   if (typeof window !== "undefined") {
                     window.open(pic.src, "_blank");
