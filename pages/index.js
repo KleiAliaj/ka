@@ -1,20 +1,11 @@
-import Container from "@/components/layout/container";
-import MoreStories from "@/components/more-stories";
-import HeroPost from "@/components/hero-post";
-import Intro from "@/components/intro";
 import Layout from "@/components/layout/layout";
-import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "@/lib/constants";
-import Image from "next/image";
 
 export default function Index({ allPosts }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
   return (
     <>
       <Head>
-        <title>Ty Fiero's blog on code, music, and life.</title>
+        <title>GENERIC TITLE</title>
       </Head>
       <div className="fade-effect-quick page-container !items-start">
         <Intro />

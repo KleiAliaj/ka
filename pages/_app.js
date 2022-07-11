@@ -5,7 +5,6 @@ import Layout from "@/components/layout/layout";
 import React from "react";
 import { ThemeProvider } from "next-themes";
 
-import { Toaster } from "react-hot-toast";
 import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   return (
@@ -70,7 +69,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#ffffff" />
       </Head>
       <Layout>
-        <Toaster />
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>

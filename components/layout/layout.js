@@ -1,8 +1,4 @@
-import Alert from "../alert";
-import Footer from "../footer";
-import Meta from "../meta";
-import "lazysizes";
-import "lazysizes/plugins/parent-fit/ls.parent-fit";
+import Footer from "./footer";
 import Navbar from "./navbar";
 
 export default function Layout({ preview, children }) {
@@ -47,6 +43,11 @@ export default function Layout({ preview, children }) {
         {/* <Alert preview={preview} /> */}
         <main className="w-full h-full fade-effect-quick">{children}</main>
       </div>
+      {/* <Meta /> */}
+      <div className="w-full h-full sm:overflow-x-hidden md:overflow-auto"></div>
+      <Navbar className="w-full" />
+      {/* <Alert preview={preview} /> */}
+      <main className="w-full h-full fade-effect-quick">{children}</main>
       <Footer />
     </>
   );
