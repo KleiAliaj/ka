@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;800&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +11,7 @@
 
 body {
   height: 100vh;
+  /* background-color: #000; */
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -43,20 +38,25 @@ body {
   p {
     @apply text-slate-800 dark:text-slate-50 f2;
   }
+  label {
+    @apply text-slate-800 dark:text-slate-50 f2;
+  }
 }
 
 .f1 {
+  /* font-family: "Varela Round", sans-serif; */
   font-weight: bolder;
   font-family: "Baloo Thambi 2", sans-serif;
   font-display: block;
+  /* font-family: "Gochi Hand", cursive; */
 }
 .f2 {
   font-family: "Varela Round", sans-serif;
   font-weight: bolder;
   /* font-family: "Baloo Thambi 2", cursive; */
+  font-display: block;
 
   /* font-family: "Gochi Hand", cursive; */
-  font-display: block;
 }
 
 .glass-box {
@@ -269,6 +269,149 @@ body {
   }
 }
 
+/* .wave,
+.wave::before,
+.wave::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 100vw;
+  height: 100vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50%;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw var(--blue);
+  animation: spin 16s infinite linear;
+  mix-blend-mode: multiply;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -25vw;
+  transform-origin: 49% 51%;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw var(--blue-d);
+  animation: spin 13s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 98%;
+  margin-top: -125vw;
+  transform-origin: 51% 49%;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw var(--blue-l);
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+/* 
+.ocean {
+
+  width: 150%;
+  position: relative;
+  bottom: 0;
+  left: -100px;
+
+  filter: hue-rotate(10deg);
+}
+
+.bgwave {
+  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg);
+  transform: rotate(180deg) scaleY(200%);
+}
+
+.wave {
+  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg)
+    repeat-x;
+  position: absolute;
+  top: 0px;
+  width: 6400px;
+  height: 198px;
+
+  animation: wave 57s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0) scaleY(125%);
+}
+
+.wave:nth-of-type(2) {
+  top: -1px;
+  animation: wave 27s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 17s ease -1.25s infinite;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scaleY(125%);
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, 45px, 0);
+  }
+}
+.endWave {
+  display: none;
+} */
+.waves {
+  position: relative;
+  width: 350%;
+  height: 30vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  /* max-height: 150px; */
+}
+
+.parallax > use {
+  animation: move-forever 40s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 17s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 30s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 43s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 60s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    width: 350%;
+    height: 35vh;
+  }
+}
+
 .textarea-box {
   /* background: rgb(243, 243, 243); */
   -webkit-appearance: none;
@@ -465,3 +608,4 @@ body {
     transform: rotate(360deg);
   }
 }
+

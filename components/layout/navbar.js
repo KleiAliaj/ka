@@ -2,10 +2,18 @@ import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { BsSun, BsMoon } from "react-icons/bs";
+import { BsSun, BsMoon, BsChatLeftText } from "react-icons/bs";
 import { useTheme } from "next-themes";
-import { FaRegUser } from "react-icons/fa";
-import { TbHome2 } from "react-icons/tb";
+import { FaHome, FaRegUser } from "react-icons/fa";
+import {
+  TbCamera,
+  TbCode,
+  TbFileText,
+  TbFolders,
+  TbHome2,
+  TbMail,
+  TbMusic,
+} from "react-icons/tb";
 import Image from "next/image";
 
 function Navbar() {
@@ -84,8 +92,18 @@ function Navbar() {
   React.useEffect(() => {
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
+    } else if (router.asPath === "/code") {
+      setSelected("code");
+    } else if (router.asPath === "/music") {
+      setSelected("music");
+    } else if (router.asPath === "/photography") {
+      setSelected("photography");
+    } else if (router.asPath === "/blog" || postSlice === "/posts") {
+      setSelected("blog");
     } else if (router.asPath === "/about") {
       setSelected("about");
+    } else if (router.asPath === "/contact") {
+      setSelected("contact");
     }
   }, [router.asPath]);
 
@@ -108,7 +126,7 @@ function Navbar() {
                 />
               </div>
               <h1 className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1">
-                Template
+                Ty Fiero
               </h1>
             </a>
           </Link>
@@ -187,7 +205,139 @@ function Navbar() {
                   </a>
                 </Link>
               </li>
+              <li>
+                <Link href="/code">
+                  <a
+                    className={
+                      " fade-m3   flex gap-2 items-center " +
+                      (selected === "code"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={() => {
+                      if (isToggled && isMobile) {
+                        setIsToggled(false);
+                      }
+                      // if(selected !== "projects") {
+                      //   setSelected("projects");
+                      // }
+                    }}
+                  >
+                    {selected === "code" && (
+                      <TbCode className="scale-125 fade-effect-quick" />
+                    )}
+                    Code
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/music">
+                  <a
+                    className={
+                      "  fade-m4  flex gap-2 items-center " +
+                      (selected === "music"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={() => {
+                      if (isToggled && isMobile) {
+                        setIsToggled(false);
+                      }
+                      // if(selected !== "music") {
+                      //   setSelected("music");
+                      // }
+                    }}
+                  >
+                    {selected === "music" && (
+                      <TbMusic className="scale-110 fade-effect-quick" />
+                    )}
+                    Music
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/photography">
+                  <a
+                    className={
+                      " fade-m5  flex gap-2 items-center  " +
+                      (selected === "photography"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={() => {
+                      if (isToggled && isMobile) {
+                        setIsToggled(false);
+                      }
+                      // if(selected !== "music") {
+                      //   setSelected("music");
+                      // }
+                    }}
+                  >
+                    {selected === "photography" && (
+                      <TbCamera className="scale-110 fade-effect-quick" />
+                    )}
+                    Photography
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">
+                  <a
+                    className={
+                      " fade-m6  flex gap-2 items-center  " +
+                      (selected === "blog"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={() => {
+                      if (isToggled && isMobile) {
+                        setIsToggled(false);
+                      }
+                      // if(selected !== "blog") {
+                      //   setSelected("blog");
+                      // }
+                    }}
+                  >
+                    {selected === "blog" && (
+                      <TbFileText className="scale-110 fade-effect-quick" />
+                      // <BsChatLeftText className=" fade-effect-quick" />
+                    )}
+                    Blog
+                  </a>
+                </Link>
+              </li>
 
+              <li>
+                <Link href="/contact">
+                  <a
+                    className={
+                      "  fade-m7  flex gap-2 items-center " +
+                      (selected === "contact"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={() => {
+                      if (isToggled && isMobile) {
+                        setIsToggled(false);
+                      }
+                      // if(selected !== "contact") {
+                      //   setSelected("contact");
+                      // }
+                    }}
+                  >
+                    {selected === "contact" && (
+                      <TbMail className="scale-110 fade-effect-quick" />
+                      // <BsChatLeftText className=" fade-effect-quick" />
+                    )}
+                    Contact
+                  </a>
+                </Link>
+              </li>
               <li>{renderThemeChanger()}</li>
             </ul>
           </>
