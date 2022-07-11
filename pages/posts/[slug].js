@@ -21,6 +21,7 @@ const ReadingBar = dynamic(() => import("@/components/ReadingBar"), {
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const target = createRef();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -78,8 +79,11 @@ export async function getStaticProps({ params, preview = null }) {
 
 export async function getStaticPaths() {
   const allPosts = (await getAllPostsWithSlug()) || [];
+
+  // add "404" as default
+  //  const paths = allPosts.map(({ slug }) => ({ params: { slug: slug || "404" } }));
   return {
-    paths: allPosts.map((post) => `/posts/${post.slug}`),
+    paths: allPosts.map((post) => `/posts/${post.slug}` || "404"),
     fallback: true,
   };
 }

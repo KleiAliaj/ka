@@ -21,7 +21,7 @@ export default function Layout({ preview, children }) {
             <div className="relative m-8 space-y-4"></div>
           </div> */}
         {/* </div> */}
-        <div class="background -z-50 fixed left-0 top-0">
+        <div className="fixed top-0 left-0 background -z-50">
           {/* Inspiration from https://codepen.io/Mamboleoo/pen/BxMQYQ */}
           <span></span>
           <span></span>
