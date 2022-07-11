@@ -22,7 +22,6 @@ export default function Layout({ preview, children }) {
           </div> */}
         {/* </div> */}
         <div class="background -z-50 fixed left-0 top-0">
-          {/* Inspiration from https://codepen.io/Mamboleoo/pen/BxMQYQ */}
           <span></span>
           <span></span>
           <span></span>
