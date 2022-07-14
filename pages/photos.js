@@ -200,7 +200,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
         >
           <div className="w-20 h-20 rounded-full shadow-lg">
             <img
-              src={"/unsplash-profile.png"}
+              src={"/assets/other/unsplash-profile.png"}
               alt="Aerial view of the Pacific Northwest"
               className="rounded-full "
             />

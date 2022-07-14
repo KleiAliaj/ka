@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import { AiOutlineRobot } from "react-icons/ai";
 
+
 function Navbar() {
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
@@ -99,8 +100,8 @@ function Navbar() {
       setSelected("ai");
     } else if (router.asPath === "/music") {
       setSelected("music");
-    } else if (router.asPath === "/photography") {
-      setSelected("photography");
+    } else if (router.asPath === "/photos") {
+      setSelected("photos");
     } else if (router.asPath === "/blog" || postSlice === "/posts") {
       setSelected("blog");
     } else if (router.asPath === "/about") {
@@ -121,7 +122,7 @@ function Navbar() {
             >
               <div className="z-20 w-12 h-12 transition ">
                 <Image
-                  src="/ty-circle-image.png"
+                  src="/assets/other/ty-circle-image.png"
                   alt="Ty Fiero"
                   className="z-20"
                   width={48}
@@ -287,11 +288,11 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/photography">
+                <Link href="/photos">
                   <a
                     className={
                       " fade-m5  flex gap-2 items-center  " +
-                      (selected === "photography"
+                      (selected === "photos"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
                         : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
                     }
@@ -305,10 +306,10 @@ function Navbar() {
                       // }
                     }}
                   >
-                    {selected === "photography" && (
+                    {selected === "photos" && (
                       <TbCamera className="scale-110 fade-effect-quick" />
                     )}
-                    Photography
+                    Photos
                   </a>
                 </Link>
               </li>

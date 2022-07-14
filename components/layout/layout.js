@@ -9,7 +9,7 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <div className="w-full h-full sm:overflow-x-hidden md:overflow-auto">
+      <div className="w-full h-full min-h-screen sm:overflow-x-hidden md:overflow-auto">
         {/* <div className="fixed left-0 right-0 flex items-center justify-center ml-auto mr-auto sm:w-[30em] md:w-[70em] -z-50  mt-[25em] rounded-full "> */}
         {/* <div className="relative w-full max-w-lg bounds">
             <div className="absolute top-0 -left-4 w-[20em] h-[20em] bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70  dot"></div>

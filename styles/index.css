@@ -609,3 +609,39 @@ body {
   }
 }
 
+.ReactCollapse--collapse {
+  transition: height 200ms ease-in-out;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateb {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+svg * {
+  transform-origin: 50%;
+}
+
+.loader-text {
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: smokeOut 2s ease-in-out infinite alternate;
+  text-shadow: 2px 3px 6px white;
+  z-index: 120;
+}
+.loader-text:before {
+  content: "Loading";
+}
+
+@keyframes smokeOut {
+  100% {
+    opacity: 0.9;
+    filter: blur(1px);
+    letter-spacing: 4px;
+  }
+}

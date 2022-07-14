@@ -7,7 +7,29 @@ import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "react-hot-toast";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import FullLoader from "@/components/FullLoader";
 function MyApp({ Component, pageProps }) {
+  const [loading, setLoading] = React.useState(false);
+
+  const router = useRouter();
+
+  //Loading animation logic
+  React.useEffect(() => {
+    const handleStart = (url) => {
+      url !== router.pathname ? setLoading(true) : setLoading(false);
+    };
+    const handleComplete = (url) => {
+      setLoading(false);
+    };
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+    return () => {
+      router.events.off("routeChangeComplete", handleComplete);
+    };
+  }, [router]);
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <Head>
@@ -25,23 +47,23 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:site" content="@FieroTy" />
         <meta name="twitter:title" content="FieroTy" />
         <meta name="twitter:description" content="The Blog of Ty Fiero." />
-        <meta name="twitter:image" content="./Ty-lofi.jpeg" />
+        <meta name="twitter:image" content="./assets/other/Ty-lofi.jpeg" />
         <link
           rel="apple-touch-icon"
           sizes="76x76"
-          href="/apple-touch-icon.png"
+          href="/assets/other/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/assets/other/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/assets/other/favicon-16x16.png"
         />
 
         {/* <!-- Disable tap highlight on IE --> */}
@@ -53,24 +75,26 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="icon"
           sizes="192x192"
-          href="images/touch/chrome-touch-icon-192x192.png"
+          href="/assets/other/chrome-touch-icon-192x192.png"
         />
 
         {/* Add to homescreen for Safari on iOS --> */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="apple-mobile-web-app-title" content="Ty Fiero" />
-        <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/assets/otherapple-touch-icon.png" />
 
         {/* <!-- Tile icon for Win8 (144x144 + tile color) --> */}
         <meta
           name="msapplication-TileImage"
-          content="images/touch/ms-touch-icon-144x144-precomposed.png"
+          content="/assets/other/ms-touch-icon-144x144-precomposed.png"
         />
         <meta name="msapplication-TileColor" content="#ffffff" />
       </Head>
       <Layout>
         <Toaster />
+        <FullLoader show={loading} />
+
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>

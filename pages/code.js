@@ -48,7 +48,7 @@ function Projects() {
               textColor=" text-pink-600"
               title="ideaisland"
               description="A web application for idea generation. Built with Next.js, Tailwind, Firebase, and GPT-3."
-              imgSrc="/ii.png"
+              imgSrc="/assets/other/ii.png"
             />
           </Tilt>
           <Tilt
@@ -68,7 +68,7 @@ function Projects() {
               textColor=" text-sky-600"
               title="PriceArt ETH"
               description="Generative art NFT project using real Ethereum price data. Built with P5.js, Polygon blockchain, and vanilla JavaScript."
-              imgSrc="/71.jpg"
+              imgSrc="/assets/other/71.jpg"
             />
           </Tilt>
 
@@ -89,7 +89,7 @@ function Projects() {
               textColor=" text-green-600"
               title="PriceArt ADA"
               description="Generative art NFT project using real Cardano price data. Built with P5.js, Cardano blockchain, GLSL shaders and vanilla JavaScript."
-              imgSrc="/45.jpg"
+              imgSrc="/assets/other/45.jpg"
             />
           </Tilt>
 

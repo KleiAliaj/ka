@@ -7,6 +7,7 @@ import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import Image from "next/image";
+import Loader from "@/components/Loader";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -20,14 +21,17 @@ export default function Index({ allPosts }) {
         <Intro />
         <div className="w-[80%] h-[30em] rounded-lg drop-shadow-2xl">
           <Image
-            src="/Ty-lofi.jpeg"
+            src="/assets/other/Ty-lofi.jpeg"
             alt="Lofi Style image of Ty"
             className="!rounded-lg"
             layout="fill"
             objectFit="contain"
           />
         </div>
-
+        {/* <div className="w-full h-[20em] flex justify-center">
+          {" "}
+          <Loader />
+        </div> */}
         <div className="flex flex-col gap-10 my-10">
           {/* DEV SECTION */}
           <div className="flex justify-center gap-10 sm:flex-col md:flex-row sm:items-center">
@@ -56,7 +60,7 @@ export default function Index({ allPosts }) {
                   <div className="w-[10em] dark:invert-0 invert h-[3em]">
                     {" "}
                     <Image
-                      src="/u-logo.png"
+                      src="/assets/other/u-logo.png"
                       alt="unsplash button"
                       layout="fill"
                       objectFit="contain"
@@ -229,7 +233,7 @@ export default function Index({ allPosts }) {
                 <div className="w-[10em] dark:invert-0 invert h-[3em]">
                   {" "}
                   <Image
-                    src="/u-logo.png"
+                    src="/assets/other/u-logo.png"
                     alt="unsplash button"
                     layout="fill"
                     objectFit="contain"
@@ -265,7 +269,7 @@ export default function Index({ allPosts }) {
                 <div className="w-[10em]  h-[3em]">
                   {" "}
                   <Image
-                    src="/spotify.png"
+                    src="/assets/other/spotify.png"
                     alt="spotify button"
                     className=""
                     layout="fill"

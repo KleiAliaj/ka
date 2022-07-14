@@ -27,7 +27,7 @@ function About() {
 
         <div className="w-[640px] h-[423px] relative shadow-xl rounded-xl shadow-sky-600/30">
           <Image
-            src="/profileshot.jpg"
+            src="/assets/other/profileshot.jpg"
             alt="Ty Fiero image"
             layout="fill"
             className=" rounded-xl"
