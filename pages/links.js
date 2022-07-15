@@ -12,7 +12,7 @@ function Links({ links }) {
     <div className="page-container">
       <h3>Links</h3>
 
-      <Category title="Code" cn="">
+      {/* <Category title="Code" cn="">
         {linksList.code.map((link, index) => {
           return (
             <Resource
@@ -109,7 +109,7 @@ function Links({ links }) {
             />
           );
         })}
-      </Category>
+      </Category> */}
     </div>
   );
 }
@@ -197,7 +197,7 @@ export async function getStaticProps(context) {
 
   const axiosRequest = await axios({
     method: "POST",
-    //url: "http://localhost:3000/api/airtable-links",
+    // url: "http://localhost:3000/api/airtable-links",
     url: "http://tyfiero.com/api/airtable-links",
   })
     .then((response) => {

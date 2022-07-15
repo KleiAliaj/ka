@@ -6,7 +6,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 export default function AI({ aiImages }) {
-  console.log(aiImages);
+  // console.log(aiImages);
 
   const [pics, setPics] = React.useState(aiImages);
   return (

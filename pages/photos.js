@@ -123,7 +123,8 @@ export async function getStaticProps(context) {
   //   console.log(tyImages);
 
   return {
-    props: { tyImages, tyStats, altDescription }, // will be passed to the page component as props
+    props: { tyImages, tyStats, altDescription },
+    revalidate: 21600,
   };
 }
 
