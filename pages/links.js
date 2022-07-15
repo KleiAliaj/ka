@@ -5,14 +5,14 @@ import { FaCaretRight, FaStar } from "react-icons/fa";
 import axios from "axios";
 
 function Links({ links }) {
-  console.log(links);
+  // console.log(links);
   //   console.log(errors);
   const [linksList, setLinksList] = React.useState(links);
   return (
     <div className="page-container">
       <h3>Links</h3>
 
-      {/* <Category title="Code" cn="">
+      <Category title="Code" cn="">
         {linksList.code.map((link, index) => {
           return (
             <Resource
@@ -109,7 +109,7 @@ function Links({ links }) {
             />
           );
         })}
-      </Category> */}
+      </Category>
     </div>
   );
 }
