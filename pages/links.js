@@ -7,12 +7,12 @@ import axios from "axios";
 function Links({ links }) {
   console.log(links);
   //   console.log(errors);
-  const [linksList, setLinksList] = React.useState(links);
+  const [linksList, setLinksList] = React.useState(null);
   return (
     <div className="page-container">
       <h3>Links</h3>
 
-      <Category title="Code" cn="">
+      {/* <Category title="Code" cn="">
         {linksList.code.map((link, index) => {
           return (
             <Resource
@@ -109,7 +109,7 @@ function Links({ links }) {
             />
           );
         })}
-      </Category>
+      </Category> */}
     </div>
   );
 }
@@ -192,79 +192,81 @@ function Category({ children, title, cn }) {
 
 export default Links;
 
-export async function getStaticProps(context) {
-  let links = {};
+// export async function getStaticProps(context) {
+//   let links = {};
 
-  const axiosRequest = await axios({
-    method: "POST",
-    //url: "http://localhost:3000/api/airtable-links",
-    url: "http://tyfiero.com/api/airtable-links",
-  })
-    .then((response) => {
-      let data = response.data;
+//   const axiosRequest = await axios({
+//     method: "POST",
+//     //url: "http://localhost:3000/api/airtable-links",
+//     url: "http://tyfiero.com/api/airtable-links",
+//   })
+//     .then((response) => {
+//       let data = response.data;
 
-      let codeArray = data.filter((item) => item.type === "Code");
-      codeArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
+//       let codeArray = data.filter((item) => item.type === "Code");
+//       codeArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
 
-      let personalDevArray = data.filter(
-        (item) => item.type === "Personal Development"
-      );
-      personalDevArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
-      let aiArray = data.filter((item) => item.type === "AI");
-      aiArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
-      let innovationArray = data.filter((item) => item.type === "Innovation");
-      innovationArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
-      let toolsArray = data.filter((item) => item.type === "Tools");
-      toolsArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
-      let funArray = data.filter((item) => item.type === "Fun");
-      funArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
-      let cryptoArray = data.filter((item) => item.type === "Crypto");
-      cryptoArray.sort(function (a, b) {
-        return b.fav - a.fav;
-      });
+//       let personalDevArray = data.filter(
+//         (item) => item.type === "Personal Development"
+//       );
+//       personalDevArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
+//       let aiArray = data.filter((item) => item.type === "AI");
+//       aiArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
+//       let innovationArray = data.filter((item) => item.type === "Innovation");
+//       innovationArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
+//       let toolsArray = data.filter((item) => item.type === "Tools");
+//       toolsArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
+//       let funArray = data.filter((item) => item.type === "Fun");
+//       funArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
+//       let cryptoArray = data.filter((item) => item.type === "Crypto");
+//       cryptoArray.sort(function (a, b) {
+//         return b.fav - a.fav;
+//       });
 
-      let dataToPass = {
-        code: codeArray,
-        personalDev: personalDevArray,
-        ai: aiArray,
-        innovation: innovationArray,
-        tools: toolsArray,
-        fun: funArray,
-        crypto: cryptoArray,
-      };
-      links = dataToPass;
-    })
-    .catch((error) => {
-      console.log(error);
-      //   if (error.response) {
-      //     // Request made and server responded
-      //     console.log(error.response.data);
-      //     console.log(error.response.status);
-      //     console.log(error.response.headers);
-      //   } else if (error.request) {
-      //     // The request was made but no response was received
-      //     console.log(error.request);
-      //   } else {
-      //     // Something happened in setting up the request that triggered an Error
-      //     console.log("Error", error.message);
-      //   }
-      //   errors = JSON.stringify(error);
-    });
+//       let dataToPass = {
+//         code: codeArray,
+//         personalDev: personalDevArray,
+//         ai: aiArray,
+//         innovation: innovationArray,
+//         tools: toolsArray,
+//         fun: funArray,
+//         crypto: cryptoArray,
+//       };
+//       links = dataToPass;
+//     })
+//     .catch((error) => {
+//       console.log(error);
 
-  return {
-    props: { links },
-    revalidate: 21600,
-  };
-}
+//     });
+
+//   return {
+//     props: { links },
+//     revalidate: 21600,
+//   };
+// }
+
+//   if (error.response) {
+//     // Request made and server responded
+//     console.log(error.response.data);
+//     console.log(error.response.status);
+//     console.log(error.response.headers);
+//   } else if (error.request) {
+//     // The request was made but no response was received
+//     console.log(error.request);
+//   } else {
+//     // Something happened in setting up the request that triggered an Error
+//     console.log("Error", error.message);
+//   }
+//   errors = JSON.stringify(error);
