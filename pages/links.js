@@ -197,7 +197,7 @@ export async function getStaticProps(context) {
 
   const axiosRequest = await axios({
     method: "POST",
-    url: "http://localhost:3000/api/airtable-links",
+    //url: "http://localhost:3000/api/airtable-links",
   })
     .then((response) => {
       let data = response.data;
@@ -263,6 +263,7 @@ export async function getStaticProps(context) {
     });
 
   return {
-    props: { links }, // will be passed to the page component as props
+    props: { links },
+    revalidate: 21600,
   };
 }

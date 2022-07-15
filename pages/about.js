@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { FaLink } from "react-icons/fa";
 
 function About() {
   return (
@@ -24,6 +26,11 @@ function About() {
             that people love.
           </p>
         </div>
+        <Link href="/links">
+          <a className="text-xl font-bold button-1">
+            View my links <FaLink />
+          </a>
+        </Link>
 
         <div className="w-[640px] h-[423px] relative shadow-xl rounded-xl shadow-sky-600/30">
           <Image
