@@ -198,6 +198,7 @@ export async function getStaticProps(context) {
   const axiosRequest = await axios({
     method: "POST",
     //url: "http://localhost:3000/api/airtable-links",
+    url: "http://tyfiero.com/api/airtable-links",
   })
     .then((response) => {
       let data = response.data;
