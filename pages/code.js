@@ -42,6 +42,48 @@ function Projects() {
             glareColor="#ffffff5e"
           >
             <ProjectCard
+              route="https://www.deliberatedesign.art"
+              color={"bg-teal-200"}
+              bColor="md:hover:ring-teal-500"
+              textColor=" text-teal-600 whitespace-nowrap"
+              title="Deliberate Design"
+              description="A web app to generate creative, detailed text prompts for AI image generators. Built with Next.js, Tailwind, and Recoil."
+              imgSrc="/assets/other/deliberate.png"
+            />
+          </Tilt>
+          <Tilt
+            className="parallax-effect-glare-scale"
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            perspective={500}
+            transitionSpeed={1000}
+            scale={1.02}
+            glareEnable={true}
+            glarePosition="top"
+            glareColor="#ffffff5e"
+          >
+            <ProjectCard
+              route="/"
+              color={"bg-indigo-200"}
+              bColor="md:hover:ring-indigo-500"
+              textColor=" text-indigo-600"
+              title="tyfiero.com"
+              description="My personal website built with Next.js, Tailwind, and Cosmic CMS."
+              imgSrc="/assets/other/Ty-lofi.jpeg"
+            />
+          </Tilt>
+          <Tilt
+            className="parallax-effect-glare-scale"
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            perspective={500}
+            transitionSpeed={1000}
+            scale={1.02}
+            glareEnable={true}
+            glarePosition="top"
+            glareColor="#ffffff5e"
+          >
+            <ProjectCard
               route="https://www.ideaisland.app/"
               color={"bg-pink-200"}
               bColor="md:hover:ring-pink-500"

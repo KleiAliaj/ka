@@ -51,19 +51,19 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="apple-touch-icon"
           sizes="76x76"
-          href="/assets/other/apple-touch-icon.png"
+          href="/assets/icons/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/assets/other/favicon-32x32.png"
+          href="/assets/icons/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/assets/other/favicon-16x16.png"
+          href="/assets/icons/favicon-16x16.png"
         />
 
         {/* <!-- Disable tap highlight on IE --> */}
@@ -75,19 +75,22 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="icon"
           sizes="192x192"
-          href="/assets/other/chrome-touch-icon-192x192.png"
+          href="/assets/icons/chrome-touch-icon-192x192.png"
         />
 
         {/* Add to homescreen for Safari on iOS --> */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="apple-mobile-web-app-title" content="Ty Fiero" />
-        <link rel="apple-touch-icon" href="/assets/otherapple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          href="/assets/icons/apple-touch-icon.png"
+        />
 
         {/* <!-- Tile icon for Win8 (144x144 + tile color) --> */}
         <meta
           name="msapplication-TileImage"
-          content="/assets/other/ms-touch-icon-144x144-precomposed.png"
+          content="/assets/icons/ms-touch-icon-144x144-precomposed.png"
         />
         <meta name="msapplication-TileColor" content="#ffffff" />
       </Head>

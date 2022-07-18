@@ -21,7 +21,7 @@ export default function HeroPost({
           <div className="flex flex-col items-center px-5 mb-10 md:mb-5">
             <div>
               <h3 className="mb-2 text-4xl leading-tight lg:text-6xl">
-                <a className="transition duration-500 group-hover:text-sky-400 text-sky-800 dark:text-sky-300 f1">
+                <a className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
                   {title}
                 </a>
               </h3>
