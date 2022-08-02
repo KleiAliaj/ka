@@ -4,6 +4,7 @@ import axios from "axios";
 import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Link from "next/link";
 
 export default function AI({ aiImages }) {
   // console.log(aiImages);
@@ -12,6 +13,10 @@ export default function AI({ aiImages }) {
   return (
     <div className="page-container">
       <h2 className="text-left heading-lg ">AI Experiments</h2>
+
+      <Link href="/ai/Oliver">
+        <a className="button-1">Oliver</a>
+      </Link>
       <p>
         AI has always fascinated me, the idea that a computer can make an
         informed decision based on information it has learned is game changing.
@@ -70,11 +75,11 @@ export default function AI({ aiImages }) {
                 <div className="absolute top-0 z-50 w-full h-full bg-slate-800/70 rounded-xl  opacity-0 group-hover:!opacity-100 transition duration-300 flex justify-center items-center p-2">
                   <p
                     className={
-                      " text-white  opacity-0 group-hover:!opacity-100 duration-200 " +
+                      " text-white  opacity-0 group-hover:!opacity-100 duration-200  " +
                       textSize
                     }
                   >
-                    {pic.name}
+                    {pic.name.charAt(0).toUpperCase() + pic.name.slice(1)}
                   </p>
                 </div>
               )}

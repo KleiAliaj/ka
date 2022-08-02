@@ -4,12 +4,20 @@ import { BsArrow90DegDown } from "react-icons/bs";
 import { FaCaretRight, FaList, FaStar } from "react-icons/fa";
 import axios from "axios";
 import { TbRectangleVertical } from "react-icons/tb";
+import { getLinkPreview } from "link-preview-js";
 
 function Links({ links }) {
   // console.log(links);
   //   console.log(errors);
   const [linksList, setLinksList] = React.useState(links);
   const [cardOrList, setCardOrList] = React.useState(true);
+
+  // React.useEffect(() => {
+  //   if (typeof window !== "undefined") {
+
+  //   }
+  // }, []);
+
   return (
     <div className="page-container">
       <h2 className="text-left heading-lg ">Links</h2>
@@ -460,7 +468,7 @@ export async function getStaticProps(context) {
   })
     .then((response) => {
       let data = response.data;
-
+      // console.log(data);
       let codeArray = data.filter((item) => item.type === "Code");
       codeArray.sort(function (a, b) {
         return b.fav - a.fav;

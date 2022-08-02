@@ -134,7 +134,26 @@ function Projects() {
               imgSrc="/assets/other/45.jpg"
             />
           </Tilt>
-
+          <Tilt
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            perspective={1000}
+            transitionSpeed={1000}
+            scale={1.02}
+            glareEnable={true}
+            glarePosition="top"
+            glareColor="#ffffff5e"
+          >
+            <ProjectCard
+              route="https://gateway.pinata.cloud/ipfs/QmWu8pRddADic3jj4djqUQwz9SCJN8iCipYcj6x1VL2eio/"
+              color={"bg-green-200"}
+              bColor="md:hover:ring-green-500"
+              textColor=" text-green-600"
+              title="Idea Combinator"
+              description="A simple web app to combine words for combinatorial ideation. Built with vanilla JavaScript, P5.js, library, and hosted on ipfs."
+              imgSrc="/assets/other/45.jpg"
+            />
+          </Tilt>
           {/* <ProjectCard
               route="/next-steps/mrr-calculator"
               color={"bg-blues-100"}

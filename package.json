@@ -17,6 +17,7 @@
     "hamburger-react": "^2.5.0",
     "jotai": "^1.7.1",
     "lazysizes": "^5.2.1-rc2",
+
     "next": "latest",
     "next-themes": "^0.2.0",
     "react": "^17.0.2",
