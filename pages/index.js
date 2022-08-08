@@ -48,26 +48,6 @@ export default function Index({ allPosts }) {
                 applications in Next.js.
               </p>
 
-              <a
-                href="https://unsplash.com/@tyfiero"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90">
-                  <span className="text-xs font-bold text-white dark:text-black">
-                    View my photos on:
-                  </span>
-                  <div className="w-[10em] dark:invert-0 invert h-[3em]">
-                    {" "}
-                    <Image
-                      src="/assets/other/u-logo.png"
-                      alt="unsplash button"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                </button>
-              </a>
               <br />
             </div>
             <div className="relative shadow-xl  md:min-w-[30em] rounded-xl shadow-sky-600/30 flex flex-wrap items-center justify-center gap-2 bg-gradient-to-t from-sky-500/40 to-white/20 dark:to-black/20 p-1">
@@ -232,21 +212,19 @@ export default function Index({ allPosts }) {
               href="https://unsplash.com/@tyfiero"
               target="_blank"
               rel="noreferrer"
+              className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
             >
-              <button className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg">
-                <span className="text-xs font-bold text-white dark:text-black">
-                  View my photos on:
-                </span>
-                <div className="w-[10em] dark:invert-0 invert h-[3em]">
-                  {" "}
-                  <Image
-                    src="/assets/other/u-logo.png"
-                    alt="unsplash button"
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-              </button>
+              <span className="text-xs font-bold text-white dark:text-black">
+                View my photos on:
+              </span>
+              <div className="w-[8em]  dark:invert-0 invert h-[3em]">
+                {" "}
+                <img
+                  src="/assets/other/u-logo.png"
+                  alt="unsplash button"
+                  className="object-contain"
+                />
+              </div>
             </a>
             <br />
           </div>
@@ -264,10 +242,11 @@ export default function Index({ allPosts }) {
         {/* Music SECTION */}
         <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
           <div className="md:w-1/2 sm:w-full">
-            <p className="font-bold heading-md !text-left">Latest From the blog</p>
+            <p className="font-bold heading-md !text-left">
+              Latest From the blog
+            </p>
             <p>Most recent blog post here</p>
 
-            
             <br />
           </div>
           <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 ">

@@ -75,7 +75,7 @@ export default function AI({ aiImages }) {
             <div
               key={index}
               className={
-                "group relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[250px] md:w-[250px] sm:w-[200px] sm:h-[200px] hover:scale-105 transition "
+                "group relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[250px] md:w-[250px] sm:w-[180px] sm:h-[180px] hover:scale-105 transition "
               }
             >
               {imageLoading ? (

@@ -43,12 +43,10 @@ function Music() {
             className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm sm:mt-5"
           >
             <div className="w-[10em]  h-[3em]">
-              <Image
+              <img
                 src="/assets/other/spotify.png"
                 alt="spotify button"
-                className=""
-                layout="fill"
-                objectFit="contain"
+                className="object-contain"
               />
             </div>
           </a>

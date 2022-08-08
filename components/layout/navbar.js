@@ -37,7 +37,7 @@ function Navbar() {
     if (currentTheme === "dark") {
       return (
         <BsMoon
-          className="text-white transition md:w-5 md:h-5 sm:w-16 sm:h-16 hover:text-sky-200"
+          className="text-white transition md:w-5 md:h-5 sm:w-10 sm:h-10 hover:text-sky-200"
           role="button"
           onClick={() => setTheme("light")}
         />
@@ -45,7 +45,7 @@ function Navbar() {
     } else {
       return (
         <BsSun
-          className="text-yellow-500 transition md:w-5 md:h-5 sm:w-16 sm:h-16 hover:text-yellow-700"
+          className="text-yellow-500 transition md:w-5 md:h-5 sm:w-10 sm:h-10 hover:text-yellow-700"
           role="button"
           onClick={() => setTheme("dark")}
         />
@@ -155,7 +155,7 @@ function Navbar() {
           <>
             <div className="absolute top-0 left-0 z-10 w-full h-screen bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden !overflow-hidden"></div>
 
-            <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1">
+            <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-6 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1">
               <li>
                 <Link href="/">
                   <a

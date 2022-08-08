@@ -136,7 +136,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
   return (
     <div className="page-container">
       <h2 className="text-left heading-lg ">Photography</h2>
-      <div className="flex justify-center gap-10 sm:flex-col-reverse md:flex-row sm:items-center">
+      <div className="flex justify-center gap-10 md:items-start sm:flex-col-reverse md:flex-row sm:items-center">
         <div className="md:w-1/2 sm:w-full ">
           <p className="font-bold heading-sm !text-left">Why I take pictures</p>
           <div className="glass-box bg-white/80 dark:bg-black/80">
@@ -181,8 +181,28 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
             </div>
           </div>
+          <div className="flex justify-start w-full mt-5">
+            <a
+              href="https://unsplash.com/@tyfiero"
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
+            >
+              <span className="text-xs font-bold text-white dark:text-black">
+                View my photos on:
+              </span>
+              <div className="w-[8em]  dark:invert-0 invert h-[3em]">
+                {" "}
+                <img
+                  src="/assets/other/u-logo.png"
+                  alt="unsplash button"
+                  className="object-contain"
+                />
+              </div>
+            </a>
+          </div>
         </div>
-        <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30">
+        <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 md:mt-8">
           {/* <div className="w-1/4 !h-auto shadow-xl rounded-xl shadow-sky-600/30 image-container flex flex-col justify-center items-start"> */}
           <Image
             src="https://images.unsplash.com/photo-1653794280522-96224d9338c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"

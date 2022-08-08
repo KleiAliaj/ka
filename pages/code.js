@@ -84,12 +84,12 @@ function Projects() {
           />
         </div>
       </section>
-      <div className="relative flex flex-wrap items-center justify-center px-20 py-0 mt-4 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 rounded-2xl ">
+      <div className="relative flex flex-wrap items-center justify-center py-0 mt-4 transition duration-1000 sm:px-5 md:px-20 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 rounded-2xl ">
         <div className="absolute top-1 left-3">
           <p className="pb-3 font-bold text-sky-600">Coding Projects</p>
         </div>
         <Atropos shadow={false} activeOffset={0} rotateXMax={0} rotateYMax={2}>
-          <div className="flex flex-wrap items-center justify-center gap-5 py-5 mt-3">
+          <div className="flex flex-wrap items-center justify-center w-full gap-5 py-5 mt-3">
             <Tilt
               tiltMaxAngleX={10}
               tiltMaxAngleY={10}
@@ -119,7 +119,7 @@ function Projects() {
               <ProjectCard
                 route="tyfiero.com/ai/Oliver"
                 color={"bg-red-400"}
-                bColor="md:hover:ring-red-500"
+                bColor="hover:ring-red-500"
                 textColor=" text-red-600"
                 title="Oliver"
                 description="Interactive AI life advice app built with Next.js, tailwind, GPT-3, and CSS illustration."
@@ -139,7 +139,7 @@ function Projects() {
               <ProjectCard
                 route="https://www.deliberatedesign.art"
                 color={"bg-teal-400"}
-                bColor="md:hover:ring-teal-500"
+                bColor="hover:ring-teal-500"
                 textColor=" text-teal-600 whitespace-nowrap"
                 title="Deliberate Design"
                 description="A web app to generate creative, detailed text prompts for AI image generators. Built with Next.js, Tailwind, and Recoil."
@@ -158,7 +158,7 @@ function Projects() {
               <ProjectCard
                 route="/"
                 color={"bg-indigo-400"}
-                bColor="md:hover:ring-indigo-500"
+                bColor="hover:ring-indigo-500"
                 textColor=" text-indigo-500"
                 title="tyfiero.com"
                 description="My personal website built with Next.js, Tailwind, and Cosmic CMS."
@@ -178,7 +178,7 @@ function Projects() {
               <ProjectCard
                 route="https://www.ideaisland.app/"
                 color={"bg-pink-400"}
-                bColor="md:hover:ring-pink-500"
+                bColor="hover:ring-pink-500"
                 textColor=" text-pink-600"
                 title="ideaisland"
                 description="A web application for idea generation. Built with Next.js, Tailwind, Firebase, and GPT-3."
@@ -198,7 +198,7 @@ function Projects() {
               <ProjectCard
                 route="https://priceart.xyz/eth-explorer/"
                 color={"bg-sky-400"}
-                bColor="md:hover:ring-sky-500 "
+                bColor="hover:ring-sky-500 "
                 textColor=" text-sky-600"
                 title="PriceArt ETH"
                 description="Generative art NFT project using real Ethereum price data. Built with P5.js, Polygon blockchain, and vanilla JavaScript."
@@ -218,7 +218,7 @@ function Projects() {
               <ProjectCard
                 route="https://priceart.xyz/ada-explorer/"
                 color={"bg-green-400"}
-                bColor="md:hover:ring-green-500"
+                bColor="hover:ring-green-500"
                 textColor=" text-green-600"
                 title="PriceArt ADA"
                 description="Generative art NFT project using real Cardano price data. Built with P5.js, Cardano blockchain, GLSL shaders and vanilla JavaScript."
@@ -237,7 +237,7 @@ function Projects() {
               <ProjectCard
                 route="https://editor.p5js.org/tyfiero/full/mvmllsRDI"
                 color={"bg-green-400"}
-                bColor="md:hover:ring-green-500"
+                bColor="hover:ring-green-500"
                 textColor=" text-green-600"
                 title="Idea Combinator"
                 description="A simple web app to combine words for combinatorial ideation. Built with vanilla JavaScript and P5.js, library."
@@ -257,7 +257,7 @@ function Projects() {
               <ProjectCard
                 route="https://codesandbox.io/embed/intelligent-joliot-p99m2g?fontsize=14&hidenavigation=1&theme=dark&view=preview"
                 color={"bg-yellow-400"}
-                bColor="md:hover:ring-yellow-500"
+                bColor="hover:ring-yellow-500"
                 textColor=" text-yellow-600"
                 title="JS Drum Set"
                 description="Drum set from a tutorial from Wes Bos, one of my first JS projects."
@@ -293,23 +293,23 @@ const ProjectCard = ({
       shadow={false}
       activeOffset={40}
       className={
-        "my-atropos md:hover:ring-4 rounded-xl  transition duration-500  bg-gradient-to-br from-white via-slate-50 to-slate-100 dark:from-slate-500 dark:via-slate-700 dark:to-slate-900 dark:bg-slate-800 shadow-lg hover:shadow-2xl " +
+        "my-atropos hover:ring-4 rounded-xl  transition duration-500  bg-gradient-to-br from-white via-slate-50 to-slate-100 dark:from-slate-500 dark:via-slate-700 dark:to-slate-900 dark:bg-slate-800 shadow-lg hover:shadow-2xl " +
         bColor
       }
     >
       <div
         className={
-          "flex flex-col group  items-center justify-center w-[15em] h-[25em] p-2   z-0 hover:z-10   "
+          "flex flex-col group  items-center justify-center sm:w-[22em] md:w-[15em] h-[25em] p-2   z-0 hover:z-10   "
         }
       >
         <div
           data-atropos-offset="2"
-          className="w-full h-[10em] bg-white/40  rounded-lg  "
+          className="w-full sm:h-[14em] md:h-[10em] bg-white/40  rounded-lg  "
         >
           <img
             src={imgSrc}
             alt="logo"
-            className="object-cover group-hover:scale-105 h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
+            className="object-cover group-hover:scale-105 sm:h-[14em] md:h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
           />
         </div>
 
