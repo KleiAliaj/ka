@@ -8,7 +8,7 @@ function Music() {
       <h2 className="text-left heading-lg ">Music</h2>
       <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
         <div className="md:w-1/2 sm:w-full ">
-          <h3 className="heading-md">Cool, mellow Lo-Fi beats.</h3>
+          <h3 className="heading-md">Warm, mellow Lo-Fi beats.</h3>
           <div className=" glass-box bg-white/80 dark:bg-black/80">
             <p className="pb-3 font-bold text-sky-600">
               I was listening to Lo-Fi Hip Hop before it was cool (on go the
@@ -36,20 +36,50 @@ function Music() {
               you enjoy it.
             </p>
           </div>
-          <a
-            href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm sm:mt-5"
-          >
-            <div className="w-[10em]  h-[3em]">
-              <img
-                src="/assets/other/spotify.png"
-                alt="spotify button"
-                className="object-contain"
-              />
-            </div>
-          </a>
+          <div className="flex items-center gap-2 sm:mt-5">
+            <a
+              href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
+            >
+              <div className="w-[10em]  h-[5em]">
+                <img
+                  src="/assets/other/spotify.png"
+                  alt="spotify button"
+                  className="object-contain"
+                />
+              </div>
+            </a>
+            <a
+              href="https://music.apple.com/us/artist/ty-the-creator/1626735693"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
+            >
+              <div className="w-[10em]  h-[5em]">
+                <img
+                  src="/assets/other/appleMusic.png"
+                  alt="Apple Music button"
+                  className="object-contain"
+                />
+              </div>
+            </a>
+            <a
+              href="https://soundcloud.com/ty-the-creatorr"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
+            >
+              <div className="w-[10em]  h-[5em]">
+                <img
+                  src="/assets/other/soundcloud.png"
+                  alt="Soundcloud button"
+                  className="object-contain"
+                />
+              </div>
+            </a>
+          </div>
         </div>{" "}
         <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12">
           <ReactPlayer
