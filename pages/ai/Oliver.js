@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function Oliver() {
-  return (
-    <div>Oliver</div>
-  )
+import OliverPage from "@/components/ai/OliverPage";
+
+function AiPageOliver() {
+  return <OliverPage />;
 }
 
-export default Oliver
+export default AiPageOliver;

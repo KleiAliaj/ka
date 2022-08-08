@@ -8,39 +8,41 @@ function About() {
     <div className="page-container">
       <h2 className="text-left heading-lg ">About Me</h2>
 
-      <p className="pb-3 text-2xl font-bold text-sky-600">Resume</p>
-      <p className="pb-3 font-bold text-sky-600">Link to my pdf resume.</p>
-      <p className="pb-3 text-2xl font-bold text-sky-600">Interests</p>
-      <p className="pb-3 font-bold text-sky-600">
-        List out concepts that I find interesting
-      </p>
-
-      <div className="flex justify-center gap-10 sm:flex-col-reverse md:flex-row sm:items-center">
+      <div className="flex justify-center w-full gap-10 sm:flex-col-reverse md:flex-row sm:items-center">
         <div className="md:w-1/2 sm:w-full ">
           <p className="pb-3 text-2xl font-bold text-sky-600">
-            Why am I interesting?
+            Hi 👋🏻, I'm Ty, a web developer, artist, and AI enthusiast based out
+            of Seattle.{" "}
           </p>
-          <p className="pb-3 font-bold text-sky-600">
-            Keep it short and sweet. Less than two paragraphs of who I am as a
-            person. I am a software engineer with a passion for building things
-            that people love.
-          </p>
+          <div className="w-full glass-box bg-white/80 dark:bg-black/80">
+            <p className="pb-3 font-bold text-sky-600">
+              I have always been a science geek, I love learning how the world
+              works and thinking about how it might work better. Initially, I
+              was fascinated with the natural sciences and biology, which led me
+              to getting a B.S. in Microbiology with a minor in Zoology from
+              Colorado State University. While I still enjoy biology, I made a
+              decision to pivot my career to pursue computer science with an
+              emphasis on distributed technologies. There is something so
+              profound about the power of computation to create more fair and
+              equitable financial systems, I had to be a part of it. Follow
+              along on my journey to see what I create next!
+            </p>
+          </div>
         </div>
-        <Link href="/links">
-          <a className="text-xl font-bold button-1">
-            View my links <FaLink />
-          </a>
-        </Link>
 
-        <div className="w-[640px] h-[423px] relative shadow-xl rounded-xl shadow-sky-600/30">
-          <Image
+        <div className="relative shadow-xl sm:w-full md:w-1/2 rounded-xl shadow-sky-600/30">
+          <img
             src="/assets/other/profileshot.jpg"
             alt="Ty Fiero image"
-            layout="fill"
             className=" rounded-xl"
           />
         </div>
       </div>
+      <Link href="/links">
+        <a className="mt-10 text-xl font-bold button-1">
+          My Fav Links & Resources <FaLink />
+        </a>
+      </Link>
     </div>
   );
 }

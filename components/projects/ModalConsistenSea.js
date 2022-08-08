@@ -1,0 +1,76 @@
+import React from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import Carousel from "./Carousel";
+
+function ModalConsistenSea() {
+  return (
+    <div>
+      <div className="flex flex-col items-center">
+        <h2 className="w-full text-left heading-sm !mb-0 !mt-2">Description</h2>
+        <p>
+          This was a fun project to build. I wanted to create a habit tracker
+          that I would actually remember to use, so I decided to make a new tab
+          chrome extension so that I would see my habits on every single new
+          tab. Turns out React plays well with chrome extensions, and there is
+          so much you can do with the Chrome Extension API. This project took me
+          about a week to build.
+        </p>
+      </div>
+      <section className="flex gap-4 lg:flex-row sm:flex-col">
+        <div className="flex flex-col items-center w-full lg:w-1/2">
+          <div className="flex flex-row-reverse lg:flex-col">
+            <div className="w-full">
+              {" "}
+              <h2 className="w-full text-left heading-sm !mb-0 !mt-2 ">
+                Tech Stack
+              </h2>
+              <ul className="ml-6 font-bold list-disc f2">
+                <li>React</li>
+                <li>Tailwind</li>
+                <li>Framer Motion</li>
+                <li>Chrome Extension API</li>
+              </ul>
+            </div>
+
+            <div className="w-full">
+              <h2 className="w-full text-left !mb-0 !mt-2 heading-sm">
+                Learnings
+              </h2>
+              <ol className="ml-6 font-bold list-decimal f2 text-sky-600 dark:text-sky-200">
+                <li>Chrome extensions are simpler than I imagined.</li>
+                <li>
+                  The possibilities for extensions are endless due to the
+                  feature-rich Chrome API , and I will definitely make more
+                  extensions in the future.
+                </li>
+                <li>Framer motion is a joy to work with.</li>
+                <li>
+                  Building cool things you want for yourself makes coding way
+                  more fun.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div className="flex justify-center w-full mt-4">
+            <a href="" className="button-1 w-fit f2">
+              Link <FaExternalLinkAlt />
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col items-center w-full lg:w-1/2">
+          <h2 className="w-full text-left heading-sm !mb-0">Images</h2>
+          <Carousel
+            imgs={[
+              "/assets/other/projects/consistensea/cs2.webp",
+              "/assets/other/projects/consistensea/cs4.webp",
+              "/assets/other/projects/consistensea/cs3.webp",
+              "/assets/other/projects/consistensea/cs1.webp",
+            ]}
+          />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default ModalConsistenSea;

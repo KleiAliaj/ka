@@ -160,8 +160,8 @@ function Photography({ tyImages, tyStats, altDescription }) {
               >
                 unsplash
               </a>{" "}
-              for the world to see and use for their creative projects. I LOVE
-              putting my work out there, even if no one was to see it.
+              for the world to use in their creative projects. I love putting my
+              work out there, even if no one was to see it.
             </p>
           </div>
           <br />
@@ -264,7 +264,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
           let width =
             pic.ratio > 1
               ? " md:w-[640px] sm:w-[320px]"
-              : " md:w-[320px] sm:w-[640px]";
+              : " md:w-[320px] sm:w-[170px]";
 
           return (
             <div

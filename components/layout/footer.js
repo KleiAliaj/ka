@@ -1,4 +1,4 @@
-import Container from "./layout/container";
+import Container from "./container";
 import { EXAMPLE_PATH } from "@/lib/constants";
 
 export default function Footer() {
@@ -8,12 +8,16 @@ export default function Footer() {
       {/* <footer className=" bg-gradient-to-t from-[#3CA0CB] via-[#3CA0CB] relative"> */}
       <div className="flex flex-col items-center lg:flex-row">
         <div className="flex flex-col items-center w-full gap-2 bg-clear-pl4">
-          <p className="text-[18px] text-white font-bold">
-            Made with Next.js, Tailwind CSS, and Cosmic CMS
-          </p>
           <p className="text-[11px] text-slate-300">
             Copyright © {date} Ty Fiero
           </p>
+          <a
+            href="https://www.termsfeed.com/live/666072e9-81d8-43ef-8a29-7547a11f7700"
+            target="_blank"
+            className="text-[11px] text-slate-300 mb-2 hover:underline hover:text-white"
+          >
+            Privacy Policy
+          </a>
         </div>
       </div>
 

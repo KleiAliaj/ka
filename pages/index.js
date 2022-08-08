@@ -1,6 +1,6 @@
 import Container from "@/components/layout/container";
-import MoreStories from "@/components/more-stories";
-import HeroPost from "@/components/hero-post";
+import MoreStories from "@/components/blog/more-stories";
+import HeroPost from "@/components/blog/hero-post";
 import Intro from "@/components/intro";
 import Layout from "@/components/layout/layout";
 import { getAllPostsForHome } from "@/lib/api";
@@ -172,6 +172,13 @@ export default function Index({ allPosts }) {
                     url="https://www.chartjs.org/"
                     imgStyle=" scale-[75%]  hover:!scale-[85%] translate-y-2"
                   />
+                  <CodeLogo
+                    title="Chrome Extensions"
+                    img="/assets/CodeLogos/chrome.png"
+                    alt="chrome logo"
+                    url="https://developer.chrome.com/docs/extensions/"
+                    imgStyle=" scale-[75%]  hover:!scale-[85%] translate-y-2"
+                  />
                 </div>
               </div>
               <div className="flex flex-col items-center w-full gap-2">
@@ -257,27 +264,10 @@ export default function Index({ allPosts }) {
         {/* Music SECTION */}
         <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
           <div className="md:w-1/2 sm:w-full">
-            <p className="font-bold heading-md !text-left">Musician</p>
-            <p>I make chill beats to delight the ears</p>
+            <p className="font-bold heading-md !text-left">Latest From the blog</p>
+            <p>Most recent blog post here</p>
 
-            <a
-              href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm">
-                <div className="w-[10em]  h-[3em]">
-                  {" "}
-                  <Image
-                    src="/assets/other/spotify.png"
-                    alt="spotify button"
-                    className=""
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-              </button>
-            </a>
+            
             <br />
           </div>
           <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 ">

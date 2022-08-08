@@ -1,21 +1,21 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "@/components/layout/container";
-import PostBody from "@/components/post-body";
-import MoreStories from "@/components/more-stories";
-import Header from "@/components/header";
-import PostHeader from "@/components/post-header";
-import SectionSeparator from "@/components/section-separator";
+import PostBody from "@/components/blog/post-body";
+import MoreStories from "@/components/blog/more-stories";
+import Header from "@/components/blog/header";
+import PostHeader from "@/components/blog/post-header";
+import SectionSeparator from "@/components/blog/section-separator";
 import Layout from "@/components/layout/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "@/lib/api";
-import PostTitle from "@/components/post-title";
+import PostTitle from "@/components/blog/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import dynamic from "next/dynamic";
 import { createRef } from "react";
 // import ReadingBar from "@/components/ReadingBar";
-const ReadingBar = dynamic(() => import("@/components/ReadingBar"), {
+const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
   ssr: false,
 });
 export default function Post({ post, morePosts, preview }) {

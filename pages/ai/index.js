@@ -10,42 +10,60 @@ export default function AI({ aiImages }) {
   // console.log(aiImages);
 
   const [pics, setPics] = React.useState(aiImages);
+  const experiments = [
+    {
+      name: "Oliver - AI life advice",
+      description:
+        "GPT-3 powered life advice character that takes on various topics.",
+      path: "/ai/Oliver",
+      imgSrc: "/assets/other/projects/oliver/OliThumb.png",
+    },
+  ];
   return (
     <div className="page-container">
       <h2 className="text-left heading-lg ">AI Experiments</h2>
+      <div className="glass-box bg-white/80 dark:bg-black/80 sm:w-full md:w-2/3">
+        <p>
+          AI has always fascinated me, the idea that a computer can make an
+          informed decision based on information it has learned is game
+          changing. The first time I used GPT3 back in 2020, it was massively
+          inspiring. It felt like magic, almost anything I'd ask it, it would
+          send back a reply that made sense, both contextually and
+          grammatically. I spent hours having conversations about philosophy,
+          politics, and technology with a non-sentient computer. It will always
+          be something I'm fascinated with.{" "}
+        </p>
+      </div>
+      <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
+        <div className="flex flex-wrap justify-center w-full gap-3">
+          {experiments.map((experiment) => (
+            <Experiment
+              key={experiment.name}
+              name={experiment.name}
+              description={experiment.description}
+              path={experiment.path}
+              imgSrc={experiment.imgSrc}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
+        <h3 className="heading-md">AI Art Showcase</h3>
+        <div className="glass-box bg-white/80 dark:bg-black/80">
+          <p>
+            When the DALLE-2 was first released to the media, I knew right then
+            how big AI image generation would be. Input one sentence and get a
+            customized beautiful image back? Seemed too good to be true. I still
+            have yet to get access to DALLE-2, but I've been having a ton of fun
+            playing with <a>Midjourney</a>, which some label as the "artsy"
+            DALLE. Its really impressive what it makes, and I've been enjoying
+            the discord first approach more than I though I would. Here is a
+            collection of some of my favorite AI artwork that I've made.
+          </p>
+        </div>
+      </div>
 
-      <Link href="/ai/Oliver">
-        <a className="button-1">Oliver</a>
-      </Link>
-      <p>
-        AI has always fascinated me, the idea that a computer can make an
-        informed decision based on information it has learned is game changing.
-        The first time I used GPT3 back in 2020, it was massively inspiring. It
-        felt like magic, almost anything I'd ask it, it would send back a reply
-        that made sense, both contextually and grammatically. I spent hours
-        having conversations about philosophy, politics, and technology with a
-        non-sentient computer. It will always be something I'm fascinated with.{" "}
-      </p>
-      <p>
-        GPT3 experiments: (Maybe I can write up 3 to 5 gpt3 text experiments to
-        showcase my AI credibility)
-      </p>
-      <p>
-        MidJourney/DALLE-2 experiments: (Maybe I can write up 3 to 5 image AI
-        experiments to showcase my AI credibility)
-      </p>
-      <p>
-        When the DALLE-2 was first released to the media, I knew right then how
-        big AI image generation would be. Input one sentence and get a
-        customized beatiful image back? Seemed too good to be true. I still have
-        yet to get access to DALLE-2, but I've been having a ton of fun playing
-        with <a>Midjourney</a>, which some label as the "artsy" DALLE. Its
-        really impressive what it makes, and I've been enjoying the discord
-        first approach more than I though I would. Here is a collection of some
-        of my favorite AI artwork that I've made.
-      </p>
-
-      <div className="flex flex-wrap justify-center w-full gap-3 my-5">
+      <div className="flex flex-wrap justify-center w-full gap-3 my-5 ">
         {pics.map((pic, index) => {
           //   console.log(pic);
           const [imageLoading, setImageLoading] = React.useState(false);
@@ -57,7 +75,7 @@ export default function AI({ aiImages }) {
             <div
               key={index}
               className={
-                "group relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[250px] md:w-[250px] sm:h-[300px] hover:scale-105 transition "
+                "group relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[250px] md:w-[250px] sm:w-[200px] sm:h-[200px] hover:scale-105 transition "
               }
             >
               {imageLoading ? (
@@ -110,6 +128,26 @@ export default function AI({ aiImages }) {
         })}
       </div>
     </div>
+  );
+}
+
+function Experiment({ path, imgSrc, name, description }) {
+  return (
+    <Link href={path}>
+      <a className="flex items-center px-2 py-1 transition sm:w-full md:w-1/2 ring-2 ring-sky-400 hover:ring-4 hover:scale-110 rounded-xl active:scale-95 bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 dark:from-sky-700 dark:via-sky-800 dark:to-black">
+        <div className="flex flex-col justify-between items-between">
+          <h4 className="heading-sm">Oliver - AI life advice</h4>
+          <p>
+            I've been working on a project to create an AI art showcase. The
+          </p>
+        </div>
+        <img
+          src={"/assets/other/projects/oliver/OliThumb.png"}
+          alt="logo"
+          className="object-cover group-hover:scale-105 h-[10em] w-full transition duration-500 rounded-lg"
+        />
+      </a>
+    </Link>
   );
 }
 

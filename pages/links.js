@@ -4,7 +4,6 @@ import { BsArrow90DegDown } from "react-icons/bs";
 import { FaCaretRight, FaList, FaStar } from "react-icons/fa";
 import axios from "axios";
 import { TbRectangleVertical } from "react-icons/tb";
-import { getLinkPreview } from "link-preview-js";
 
 function Links({ links }) {
   // console.log(links);

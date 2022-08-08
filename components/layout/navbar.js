@@ -17,7 +17,6 @@ import {
 import Image from "next/image";
 import { AiOutlineRobot } from "react-icons/ai";
 
-
 function Navbar() {
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
@@ -96,7 +95,7 @@ function Navbar() {
       setSelected("home");
     } else if (router.asPath === "/code") {
       setSelected("code");
-    } else if (router.asPath === "/ai") {
+    } else if (router.asPath === "/ai" || router.asPath === "/ai/Oliver") {
       setSelected("ai");
     } else if (router.asPath === "/music") {
       setSelected("music");
@@ -129,7 +128,7 @@ function Navbar() {
                   height={48}
                 />
               </div>
-              <h1 className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1">
+              <h1 className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1 whitespace-nowrap">
                 Ty Fiero
               </h1>
             </a>
@@ -154,7 +153,7 @@ function Navbar() {
 
         {isToggled && (
           <>
-            <div className="absolute top-0 left-0 z-10 w-full h-[100vh] bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden !overflow-hidden"></div>
+            <div className="absolute top-0 left-0 z-10 w-full h-screen bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden !overflow-hidden"></div>
 
             <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1">
               <li>
