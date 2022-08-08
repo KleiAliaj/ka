@@ -85,7 +85,7 @@ function Music() {
           <ReactPlayer
             width={"100%"}
             height={"100%"}
-            url="https://soundcloud.com/user-977088049-503240331/sets/reflections?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+            url="https://soundcloud.com/ty-the-creatorr/sets/reflections"
           />
         </div>
       </div>
