@@ -93,7 +93,7 @@ function Navbar() {
   React.useEffect(() => {
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
-    } else if (router.asPath === "/code") {
+    } else if (router.asPath === "/code" || router.asPath === "/code/art") {
       setSelected("code");
     } else if (router.asPath === "/ai" || router.asPath === "/ai/Oliver") {
       setSelected("ai");
