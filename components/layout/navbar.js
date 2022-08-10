@@ -110,6 +110,11 @@ function Navbar() {
     }
   }, [router.asPath]);
 
+  const handleClick = () => {
+    if (isToggled && isMobile) {
+      setIsToggled(false);
+    }
+  };
   return (
     <>
       <nav className="relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
@@ -163,17 +168,10 @@ function Navbar() {
                       " fade-m1 flex gap-2 items-center   " +
                       (selected === "home"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1 "
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 dark:text-sky-50 md:text-gray-400")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "home") {
-                      //   setSelected("home");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "home" && (
                       <TbHome2 className="scale-110 fade-effect-quick" />
@@ -189,17 +187,10 @@ function Navbar() {
                       " fade-m2  flex gap-2 items-center " +
                       (selected === "about"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "about") {
-                      //   setSelected("about");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "about" && (
                       <FaRegUser className="fade-effect-quick" />
@@ -215,17 +206,10 @@ function Navbar() {
                       " fade-m3   flex gap-2 items-center " +
                       (selected === "code"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "projects") {
-                      //   setSelected("projects");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "code" && (
                       <TbCode className="scale-125 fade-effect-quick" />
@@ -241,17 +225,10 @@ function Navbar() {
                       " fade-m3   flex gap-2 items-center " +
                       (selected === "ai"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "projects") {
-                      //   setSelected("projects");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "ai" && (
                       <AiOutlineRobot className="scale-125 fade-effect-quick" />
@@ -267,17 +244,10 @@ function Navbar() {
                       "  fade-m4  flex gap-2 items-center " +
                       (selected === "music"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "music") {
-                      //   setSelected("music");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "music" && (
                       <TbMusic className="scale-110 fade-effect-quick" />
@@ -293,17 +263,10 @@ function Navbar() {
                       " fade-m5  flex gap-2 items-center  " +
                       (selected === "photos"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "music") {
-                      //   setSelected("music");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "photos" && (
                       <TbCamera className="scale-110 fade-effect-quick" />
@@ -319,17 +282,10 @@ function Navbar() {
                       " fade-m6  flex gap-2 items-center  " +
                       (selected === "blog"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "blog") {
-                      //   setSelected("blog");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "blog" && (
                       <TbFileText className="scale-110 fade-effect-quick" />
@@ -347,21 +303,13 @@ function Navbar() {
                       "  fade-m7  flex gap-2 items-center " +
                       (selected === "contact"
                         ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-gray-500 sm:text-3xl md:text-base sm:text-sky-900 md:text-gray-400 dark:text-sky-50 ")
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
                     }
                     href="#"
-                    onClick={() => {
-                      if (isToggled && isMobile) {
-                        setIsToggled(false);
-                      }
-                      // if(selected !== "contact") {
-                      //   setSelected("contact");
-                      // }
-                    }}
+                    onClick={handleClick}
                   >
                     {selected === "contact" && (
                       <TbMail className="scale-110 fade-effect-quick" />
-                      // <BsChatLeftText className=" fade-effect-quick" />
                     )}
                     Contact
                   </a>

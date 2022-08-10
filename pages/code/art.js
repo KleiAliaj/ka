@@ -3,21 +3,21 @@ import React from "react";
 import Select from "react-select";
 
 const DancingWaves = dynamic(
-  () => import("../components/projects/DancingWaves"),
+  () => import("../../components/projects/DancingWaves"),
   {
     ssr: false,
   }
 );
-const Spirals = dynamic(() => import("../components/projects/Spirals"), {
+const Spirals = dynamic(() => import("../../components/projects/Spirals"), {
   ssr: false,
 });
-const SineFlower = dynamic(() => import("../components/projects/SineFlower"), {
+const SineFlower = dynamic(() => import("../../components/projects/SineFlower"), {
   ssr: false,
 });
-const CubeWave = dynamic(() => import("../components/projects/CubeWave"), {
+const CubeWave = dynamic(() => import("../../components/projects/CubeWave"), {
   ssr: false,
 });
-const ETHArt = dynamic(() => import("../components/projects/ETHArt"), {
+const ETHArt = dynamic(() => import("../../components/projects/ETHArt"), {
   ssr: false,
 });
 function Art() {

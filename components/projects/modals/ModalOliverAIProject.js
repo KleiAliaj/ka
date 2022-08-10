@@ -1,8 +1,12 @@
+import Link from "next/link";
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Carousel from "./Carousel";
+import TechChip from "./TechChip";
 
 function ModalOliverAIProject() {
+  let tech = ["Next.js", "Tailwind CSS", "React", "VoiceRSS", "OpenAI"];
+
   return (
     <div>
       <div className="flex flex-col items-center">
@@ -26,13 +30,11 @@ function ModalOliverAIProject() {
               <h2 className="w-full text-left heading-sm !mb-0 !mt-2 ">
                 Tech Stack
               </h2>
-              <ul className="ml-6 font-bold list-disc f2">
-                <li>Next.js</li>
-                <li>Tailwind</li>
-                <li>React</li>
-                <li>Voice RSS</li>
-                <li>Open AI</li>
-              </ul>
+              <div className="flex flex-wrap gap-2 px-3 py-1">
+                {tech.map((tech) => (
+                  <TechChip key={tech} content={tech} />
+                ))}
+              </div>
             </div>
 
             <div className="w-full">
@@ -62,9 +64,11 @@ function ModalOliverAIProject() {
             </div>
           </div>
           <div className="flex justify-center w-full mt-4">
-            <a href="" className="button-1 w-fit f2">
-              Link <FaExternalLinkAlt />
-            </a>
+            <Link href={"/ai/Oliver"}>
+              <a className="button-1 w-fit f2">
+                Link <FaExternalLinkAlt />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2">

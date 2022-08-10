@@ -1,19 +1,22 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Carousel from "./Carousel";
+import TechChip from "./TechChip";
 
-function ModalConsistenSea() {
+function ModalPAWeb() {
+  let tech = ["Wordpress"];
   return (
     <div>
       <div className="flex flex-col items-center">
         <h2 className="w-full text-left heading-sm !mb-0 !mt-2">Description</h2>
         <p>
-          This was a fun project to build. I wanted to create a habit tracker
-          that I would actually remember to use, so I decided to make a new tab
-          chrome extension so that I would see my habits on every single new
-          tab. Turns out React plays well with chrome extensions, and there is
-          so much you can do with the Chrome Extension API. This project took me
-          about a week to build.
+          This is the project that turned me from a student to a developer. It
+          took me three months to build this project out.
+          <br />
+          <br />
+          Maybe one day I'll make an improved version of this in React that is
+          more interactive with more fun features. But for now, it's a reminder
+          of how far I have come with JavaScript.
         </p>
       </div>
       <section className="flex gap-4 lg:flex-row sm:flex-col">
@@ -24,12 +27,11 @@ function ModalConsistenSea() {
               <h2 className="w-full text-left heading-sm !mb-0 !mt-2 ">
                 Tech Stack
               </h2>
-              <ul className="ml-6 font-bold list-disc f2">
-                <li>React</li>
-                <li>Tailwind</li>
-                <li>Framer Motion</li>
-                <li>Chrome Extension API</li>
-              </ul>
+              <div className="flex flex-wrap gap-2 px-3 py-1">
+                {tech.map((tech) => (
+                  <TechChip key={tech} content={tech} />
+                ))}
+              </div>
             </div>
 
             <div className="w-full">
@@ -37,22 +39,24 @@ function ModalConsistenSea() {
                 Learnings
               </h2>
               <ol className="ml-6 font-bold list-decimal f2 text-sky-600 dark:text-sky-200">
-                <li>Chrome extensions are simpler than I imagined.</li>
                 <li>
-                  The possibilities for extensions are endless due to the
-                  feature-rich Chrome API , and I will definitely make more
-                  extensions in the future.
+                  Adding/removing class names using JavaScript to apply CSS.
                 </li>
-                <li>Framer motion is a joy to work with.</li>
+                <li>Keyboard events in JS.</li>
                 <li>
-                  Building cool things you want for yourself makes coding way
-                  more fun.
+                  Using the <code>this</code> keyword.
                 </li>
+                <li>JavaScript is fun!</li>
               </ol>
             </div>
           </div>
           <div className="flex justify-center w-full mt-4">
-            <a href="" className="button-1 w-fit f2">
+            <a
+              href="https://priceart.xyz/ada-explorer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-1 w-fit f2"
+            >
               Link <FaExternalLinkAlt />
             </a>
           </div>
@@ -61,10 +65,10 @@ function ModalConsistenSea() {
           <h2 className="w-full text-left heading-sm !mb-0">Images</h2>
           <Carousel
             imgs={[
-              "/assets/other/projects/consistensea/cs2.webp",
-              "/assets/other/projects/consistensea/cs4.webp",
-              "/assets/other/projects/consistensea/cs3.webp",
-              "/assets/other/projects/consistensea/cs1.webp",
+              "/assets/other/projects/PA/paweb1.png",
+              "/assets/other/projects/PA/paweb3.jpg",
+              "/assets/other/projects/PA/paweb2.png",
+              "/assets/other/projects/PA/paweb4.jpg",
             ]}
           />
         </div>
@@ -73,4 +77,4 @@ function ModalConsistenSea() {
   );
 }
 
-export default ModalConsistenSea;
+export default ModalPAWeb;

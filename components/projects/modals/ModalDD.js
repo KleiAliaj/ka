@@ -1,8 +1,10 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Carousel from "./Carousel";
+import TechChip from "./TechChip";
 
 function ModalDD() {
+  let tech = ["Next.js", "Tailwind CSS", "React", "Recoil.js"];
   return (
     <div>
       <div className="flex flex-col items-center">
@@ -31,12 +33,11 @@ function ModalDD() {
               <h2 className="w-full text-left heading-sm !mb-0 !mt-2 ">
                 Tech Stack
               </h2>
-              <ul className="ml-6 font-bold list-disc f2">
-                <li>Next.js</li>
-                <li>Tailwind</li>
-                <li>React</li>
-                <li>Recoil</li>
-              </ul>
+              <div className="flex flex-wrap gap-2 px-3 py-1">
+                {tech.map((tech) => (
+                  <TechChip key={tech} content={tech} />
+                ))}
+              </div>
             </div>
 
             <div className="w-full">

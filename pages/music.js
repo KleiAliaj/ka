@@ -11,16 +11,16 @@ function Music() {
           <h3 className="heading-md">Warm, mellow Lo-Fi beats.</h3>
           <div className=" glass-box bg-white/80 dark:bg-black/80">
             <p className="pb-3 font-bold text-sky-600">
-              I was listening to Lo-Fi Hip Hop before it was cool (on go the
-              hipster glasses lol). For real though, for as long as I can
-              remember this genre has been the soundtrack to my life. I can
-              listen to it on a run, while coding, or even napping. The magic of
-              Lo-Fi is that it conveys the mood of the moment, the same song can
-              make you feel happy, determined or melancholic, depending on how
-              you feel. The lack of vocals and the use of soft piano and drum
-              beats makes it the perfect music for, well, anything. When I'm not
-              listening to Lo-Fi, I enjoy rap, classic rock, smooth jazz, and
-              classical music. But Lo-Fi will always have my heart.
+              I was listening to Lo-Fi Hip Hop before it was cool (*puts on
+              hipster glasses*). For real though, for as long as I can remember
+              this genre has been the soundtrack to my life. I can listen to it
+              on a run, while coding, or even napping. The magic of Lo-Fi is
+              that it conveys the mood of the moment, the same song can make you
+              feel happy, reminiscent or melancholic, depending on how you feel.
+              The lack of vocals and the use of soft piano and drum beats makes
+              it the perfect music for, well, anything. When I'm not listening
+              to Lo-Fi, I enjoy rap, classic rock, smooth jazz, and classical
+              music. But Lo-Fi will always have my heart.
               <br />
               <br />
               My love for Lo-Fi became even stronger in 2019, when I began to
@@ -36,14 +36,14 @@ function Music() {
               you enjoy it.
             </p>
           </div>
-          <div className="flex items-center gap-2 sm:mt-5">
+          <div className="flex items-center content-center w-full gap-2 sm:mt-5 sm:scale-90">
             <a
               href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
               target="_blank"
               rel="noreferrer"
               className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
             >
-              <div className="w-[10em]  h-[5em]">
+              <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
                 <img
                   src="/assets/other/spotify.png"
                   alt="spotify button"
@@ -57,7 +57,7 @@ function Music() {
               rel="noreferrer"
               className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
             >
-              <div className="w-[10em]  h-[5em]">
+              <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
                 <img
                   src="/assets/other/appleMusic.png"
                   alt="Apple Music button"
@@ -71,7 +71,7 @@ function Music() {
               rel="noreferrer"
               className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
             >
-              <div className="w-[10em]  h-[5em]">
+              <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
                 <img
                   src="/assets/other/soundcloud.png"
                   alt="Soundcloud button"

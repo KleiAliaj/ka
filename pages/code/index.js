@@ -2,13 +2,20 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import { useRouter } from "next/router";
 import { FaArrowRight } from "react-icons/fa";
-import ProjectModal from "@/components/projects/ProjectModal";
-import ModalConsistenSea from "@/components/projects/ModalConsistenSea";
-import ModalOliverAIProject from "@/components/projects/ModalOliverAIProject";
-import ModalDD from "@/components/projects/ModalDD";
+import ProjectModal from "@/components/projects/modals/ProjectModal";
+import ModalConsistenSea from "@/components/projects/modals/ModalConsistenSea";
+import ModalOliverAIProject from "@/components/projects/modals/ModalOliverAIProject";
+import ModalDD from "@/components/projects/modals/ModalDD";
 import Atropos from "atropos/react";
 import Link from "next/link";
 import Image from "next/image";
+import ModalCombinator from "@/components/projects/modals/ModalCombinator";
+import ModalDrum from "@/components/projects/modals/ModalDrum";
+import ModalPAAda from "@/components/projects/modals/ModalPAAda";
+import ModalPAeth from "@/components/projects/modals/ModalPAeth";
+import ModalTy from "@/components/projects/modals/ModalTy";
+import ModalPAWeb from "@/components/projects/modals/ModalPAWeb";
+import ModalIdeaIsland from "@/components/projects/modals/Modalideaisland";
 
 function Projects() {
   const [modalOpen, setModalOpen] = React.useState(false);
@@ -43,6 +50,62 @@ function Projects() {
           selected={selected}
         />
       ) : null}
+      {modalOpen && selected === "Formulata" ? (
+        <ProjectModal
+          content={<ModalCombinator />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
+      {modalOpen && selected === "JS Drum Set" ? (
+        <ProjectModal
+          content={<ModalDrum />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
+      {modalOpen && selected === "PriceArt ADA" ? (
+        <ProjectModal
+          content={<ModalPAAda />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
+      {modalOpen && selected === "PriceArt ETH" ? (
+        <ProjectModal
+          content={<ModalPAeth />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
+      {modalOpen && selected === "PriceArt Website" ? (
+        <ProjectModal
+          content={<ModalPAWeb />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
+      {modalOpen && selected === "tyfiero.com" ? (
+        <ProjectModal
+          content={<ModalTy />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
+      {modalOpen && selected === "ideaisland" ? (
+        <ProjectModal
+          content={<ModalIdeaIsland />}
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          selected={selected}
+        />
+      ) : null}
       <h2 className="text-left heading-lg ">Code</h2>
 
       <section className="flex items-center w-full sm:gap-5 md:gap-10 md:flex-row sm:flex-col md:justify-center">
@@ -68,7 +131,7 @@ function Projects() {
             </p>
           </div>
           <div className="flex w-full md:justify-start sm:justify-center">
-            <Link href="/art">
+            <Link href="/code/art">
               <a className="mt-2 text-xl font-bold button-1 w-fit">
                 View Generative Art <FaArrowRight />
               </a>
@@ -84,7 +147,7 @@ function Projects() {
           />
         </div>
       </section>
-      <div className="relative flex flex-wrap items-center justify-center py-0 mt-4 transition duration-1000 sm:px-5 md:px-20 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 rounded-2xl ">
+      <div className="relative flex flex-wrap items-center justify-center px-5 py-0 mt-4 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 rounded-2xl ">
         <div className="absolute top-1 left-3">
           <p className="pb-3 font-bold text-sky-600">Coding Projects</p>
         </div>
@@ -187,6 +250,7 @@ function Projects() {
                 setSelected={setSelected}
               />
             </Tilt>
+
             <Tilt
               className="parallax-effect-glare-scale"
               tiltMaxAngleX={5}
@@ -202,7 +266,7 @@ function Projects() {
                 textColor=" text-sky-600"
                 title="PriceArt ETH"
                 description="Generative art NFT project using real Ethereum price data. Built with P5.js, Polygon blockchain, and vanilla JavaScript."
-                imgSrc="/assets/other/71.jpg"
+                imgSrc="/assets/other/projects/PA/eth6.jpg"
                 setModalOpen={setModalOpen}
                 setSelected={setSelected}
               />
@@ -222,7 +286,26 @@ function Projects() {
                 textColor=" text-green-600"
                 title="PriceArt ADA"
                 description="Generative art NFT project using real Cardano price data. Built with P5.js, Cardano blockchain, GLSL shaders and vanilla JavaScript."
-                imgSrc="/assets/other/45.jpg"
+                imgSrc="/assets/other/projects/PA/ada7.jpg"
+                setModalOpen={setModalOpen}
+                setSelected={setSelected}
+              />
+            </Tilt>
+            <Tilt
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
+              perspective={1000}
+              transitionSpeed={1000}
+              scale={1.02}
+            >
+              <ProjectCard
+                route="https://priceart.xyz"
+                color={"bg-lime-400"}
+                bColor="hover:ring-lime-500"
+                textColor=" text-lime-600"
+                title="PriceArt Website"
+                description="Home page for the PriceArt NFT project built with WordPress."
+                imgSrc="/assets/other/projects/PA/paweb1.png"
                 setModalOpen={setModalOpen}
                 setSelected={setSelected}
               />
@@ -236,12 +319,12 @@ function Projects() {
             >
               <ProjectCard
                 route="https://editor.p5js.org/tyfiero/full/mvmllsRDI"
-                color={"bg-green-400"}
-                bColor="hover:ring-green-500"
-                textColor=" text-green-600"
-                title="Idea Combinator"
+                color={"bg-teal-400"}
+                bColor="hover:ring-teal-500"
+                textColor=" text-teal-600"
+                title="Formulata"
                 description="A simple web app to combine words for combinatorial ideation. Built with vanilla JavaScript and P5.js, library."
-                imgSrc="/assets/other/formulata.png"
+                imgSrc="/assets/other/projects/combinator/formulata.png"
                 setModalOpen={setModalOpen}
                 setSelected={setSelected}
               />
@@ -319,36 +402,56 @@ const ProjectCard = ({
             transformStyle: "preserve-3d",
           }}
         >
-          <div className="transition duration-500 group-hover:scale-125">
+          <div className="relative transition duration-500 group-hover:scale-110">
             <h3
-              className={"m-0 text-2xl f1   " + textColor}
+              className={"m-0 text-2xl f1 z-10  " + textColor}
               data-atropos-offset="-7"
+            >
+              {title}
+            </h3>
+            <h3
+              className={
+                "m-0 text-xl f1 z-0 absolute top-2 -left-1 opacity-0 group-hover:opacity-100 text-slate-400/30 !transition !duration-500 filter blur-[2px] "
+              }
+              data-atropos-offset="-3"
             >
               {title}
             </h3>
           </div>
 
-          <div className={"   transition duration-300 "}>
+          <div className={" flex-grow  transition duration-300 pt-2"}>
             <p className="text-sm text-left card-text" data-atropos-offset="-2">
               {description}
             </p>
           </div>
-          <div className="transition duration-500 group-hover:scale-125">
+          <div className="relative transition duration-500 group-hover:scale-110 md:hover:!scale-125  md:active:scale-95 ">
             <button
               data-atropos-offset="-8"
-              data-atropos-opacity="0.8;1"
               onClick={() => {
                 setSelected(title);
                 setModalOpen(true);
               }}
               className={
-                " flex gap-1 items-center rounded-full justify-center p-1   md:hover:!scale-125 md:active:scale-95 whitespace-nowrap transition duration-500 shadow-md cursor-pointer  text-white group-hover:shadow-lg  " +
+                " flex gap-1 items-center rounded-full justify-center py-2 px-5 z-50 !opacity-100 whitespace-nowrap transition duration-500 shadow-md cursor-pointer  text-white group-hover:shadow-lg " +
                 color +
                 " " +
                 bColor
               }
             >
-              <p className="m-0 text-white f2 ">More Info</p> <FaArrowRight />
+              <p className="m-0 text-white f2 !opacity-100 ">More Info</p>{" "}
+              <FaArrowRight />
+            </button>
+            <button
+              data-atropos-offset="0"
+              onClick={() => {
+                setSelected(title);
+                setModalOpen(true);
+              }}
+              className={
+                " absolute top-2 -left-1   rounded-full justify-center py-1 px-4 whitespace-no-wrap    text-xl f1 !z-0 !opacity-0 group-hover:!opacity-100 bg-slate-400/20 text-slate-400/0 !transition !duration-500 filter blur-[3px]   "
+              }
+            >
+              More info d
             </button>
           </div>
         </div>

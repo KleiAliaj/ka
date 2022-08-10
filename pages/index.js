@@ -8,10 +8,9 @@ import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import Image from "next/image";
 import Loader from "@/components/Loader";
+import HomePosts from "@/components/blog/homePosts";
 
 export default function Index({ allPosts }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
   return (
     <>
       <Head>
@@ -241,22 +240,13 @@ export default function Index({ allPosts }) {
 
         {/* Music SECTION */}
         <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
-          <div className="md:w-1/2 sm:w-full">
+          <div className="w-full">
             <p className="font-bold heading-md !text-left">
               Latest From the blog
             </p>
-            <p>Most recent blog post here</p>
+            {allPosts.length > 0 && <HomePosts posts={allPosts} />}
 
             <br />
-          </div>
-          <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 ">
-            {/* <div className="w-1/4 !h-auto shadow-xl rounded-xl shadow-sky-600/30 image-container flex flex-col justify-center items-start"> */}
-            <Image
-              src="https://images.unsplash.com/photo-1653794280522-96224d9338c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-              alt="A plant in the Pacific Northwest"
-              layout="fill"
-              className=" rounded-xl"
-            />
           </div>
         </div>
       </div>
