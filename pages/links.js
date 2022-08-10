@@ -49,6 +49,7 @@ function Links({ links }) {
             {linksList.code.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -63,6 +64,7 @@ function Links({ links }) {
             {linksList.code.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -85,6 +87,7 @@ function Links({ links }) {
             {linksList.crypto.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -99,6 +102,7 @@ function Links({ links }) {
             {linksList.crypto.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -120,6 +124,7 @@ function Links({ links }) {
             {linksList.personalDev.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -134,6 +139,7 @@ function Links({ links }) {
             {linksList.personalDev.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -155,6 +161,7 @@ function Links({ links }) {
             {linksList.ai.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -169,6 +176,7 @@ function Links({ links }) {
             {linksList.ai.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -190,6 +198,7 @@ function Links({ links }) {
             {linksList.tools.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -204,6 +213,7 @@ function Links({ links }) {
             {linksList.tools.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -225,6 +235,7 @@ function Links({ links }) {
             {linksList.innovation.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -239,6 +250,7 @@ function Links({ links }) {
             {linksList.innovation.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -261,6 +273,7 @@ function Links({ links }) {
             {linksList.tools.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -275,6 +288,7 @@ function Links({ links }) {
             {linksList.tools.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -296,6 +310,7 @@ function Links({ links }) {
             {linksList.fun.map((link, index) => {
               return (
                 <ResourceCard
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
@@ -310,6 +325,7 @@ function Links({ links }) {
             {linksList.fun.map((link, index) => {
               return (
                 <Resource
+                  key={index}
                   name={link.title}
                   fav={link.fav}
                   url={link.url}
