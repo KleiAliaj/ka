@@ -1,17 +1,18 @@
+import Image from "next/image";
 import React from "react";
 
 function TechStack() {
   return (
     <div className="relative shadow-xl  md:min-w-[30em] rounded-xl shadow-sky-600/30 flex flex-wrap items-center justify-center gap-2 bg-gradient-to-t from-sky-500/40 to-white/20 dark:to-black/20 p-1">
       <div className="flex flex-col items-center gap-2">
-        <p>Technologies I'm comfortable with:</p>
-        <div className="flex flex-wrap justify-center ring-2 rounded-xl w-[98%] gap-2">
+        <h4 className="heading-sm !mb-0">Technologies I'm comfortable with:</h4>
+        <div className=" flex flex-wrap justify-center ring-2 rounded-xl w-[98%] gap-2">
           <CodeLogo
             title="React"
             img="/assets/CodeLogos/react.png"
             alt="React logo"
             url="https://reactjs.org/"
-            imgStyle=" scale-[90%] hover:!scale-[100%] translate-y-2"
+            imgStyle=" scale-[90%] hover:!scale-[100%] translate-y-2 border "
           />
           <CodeLogo
             title="Next.js"
@@ -107,7 +108,9 @@ function TechStack() {
         </div>
       </div>
       <div className="flex flex-col items-center w-full gap-2">
-        <p>Technologies I'm learning right now:</p>
+        <h4 className="heading-sm !mb-0">
+          Technologies I'm learning now:
+        </h4>
         <div className="flex flex-wrap justify-center gap-2 ring-2 rounded-xl w-fit">
           <CodeLogo
             title="TypeScript"
@@ -139,6 +142,28 @@ function TechStack() {
           />
         </div>
       </div>
+    </div>
+  );
+}
+
+function CodeLogo(props) {
+  return (
+    <div className="flex flex-col gap-1 transition hover:ring-2 ring-sky-500 max-w-[8em] items-center rounded-xl duration-500 px-3 py-2 hover:bg-gradient-to-b dark:from-black/10 from-white/10 to-sky-300/80 cursor-pointer">
+      <a
+        href={props.url}
+        target="_blank"
+        className={
+          "w-20 h-20 transition hover:scale-110 relative " + props.imgStyle
+        }
+      >
+        <Image
+          src={props.img}
+          alt={props.alt}
+          layout="fill"
+          objectFit="contain"
+        />
+      </a>
+      <p className="font-bold text-center">{props.title}</p>
     </div>
   );
 }

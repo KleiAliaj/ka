@@ -16,6 +16,7 @@ import ModalPAeth from "@/components/projects/modals/ModalPAeth";
 import ModalTy from "@/components/projects/modals/ModalTy";
 import ModalPAWeb from "@/components/projects/modals/ModalPAWeb";
 import ModalIdeaIsland from "@/components/projects/modals/Modalideaisland";
+import TechStack from "@/components/projects/TechStack";
 
 function Projects() {
   const [modalOpen, setModalOpen] = React.useState(false);
@@ -108,6 +109,7 @@ function Projects() {
       ) : null}
       <h2 className="text-left heading-lg ">Code</h2>
 
+      <TechStack />
       <section className="flex items-center w-full sm:gap-5 md:gap-10 md:flex-row sm:flex-col md:justify-center">
         {" "}
         <div className="flex flex-col gap-2 sm:items-center sm:w-full md:w-1/3 md:items-start">

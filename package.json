@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-three/fiber": "^7.0.26",
     "@sendgrid/mail": "^7.7.0",
     "airtable": "^0.11.4",
     "atropos": "^1.0.2",
