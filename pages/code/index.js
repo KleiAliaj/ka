@@ -15,7 +15,7 @@ import ModalPAAda from "@/components/projects/modals/ModalPAAda";
 import ModalPAeth from "@/components/projects/modals/ModalPAeth";
 import ModalTy from "@/components/projects/modals/ModalTy";
 import ModalPAWeb from "@/components/projects/modals/ModalPAWeb";
-import ModalIdeaIsland from "@/components/projects/modals/Modalideaisland";
+import ModalIdeaIsland from "@/components/projects/modals/ModalIdeaIsland";
 import TechStack from "@/components/projects/TechStack";
 
 function Projects() {
