@@ -3,11 +3,13 @@ import React, { useEffect } from "react";
 // import LoaderOli from "./LoaderOli";
 
 function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
-  const [imgSrc, setImgSrc] = React.useState("../oli-therapist.webp");
+  const [imgSrc, setImgSrc] = React.useState(
+    "../assets/other/projects/oliver/oli-therapist.webp"
+  );
 
   useEffect(() => {
     if (kind === "therapist") {
-      setImgSrc("../oli-therapist.webp");
+      setImgSrc("../assets/other/projects/oliver/oli-therapist.webp");
       document.querySelector(":root").style.setProperty("--shirt", "#38bdf8");
       document
         .querySelector(":root")
@@ -21,7 +23,7 @@ function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
       document.getElementById("cross").style.display = "none";
       document.getElementById("cross2").style.display = "none";
     } else if (kind === "ceo") {
-      setImgSrc("../oli-ceo.webp");
+      setImgSrc("../assets/other/projects/oliver/oli-ceo.webp");
       document.querySelector(":root").style.setProperty("--shirt", "#050505");
       document
         .querySelector(":root")
@@ -36,7 +38,7 @@ function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
       document.getElementById("cross").style.display = "none";
       document.getElementById("cross2").style.display = "none";
     } else if (kind === "relationship") {
-      setImgSrc("../oli-love.webp");
+      setImgSrc("../assets/other/projects/oliver/oli-love.webp");
       document.querySelector(":root").style.setProperty("--shirt", "#d651bb");
       document
         .querySelector(":root")
@@ -50,7 +52,7 @@ function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
       document.getElementById("cross").style.display = "none";
       document.getElementById("cross2").style.display = "none";
     } else if (kind === "friend") {
-      setImgSrc("../oli-bar.webp");
+      setImgSrc("../assets/other/projects/oliver/oli-bar.webp");
       document.querySelector(":root").style.setProperty("--shirt", "#3f54db");
       document
         .querySelector(":root")
@@ -64,7 +66,7 @@ function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
       document.getElementById("cross").style.display = "none";
       document.getElementById("cross2").style.display = "none";
     } else if (kind === "speaker") {
-      setImgSrc("../oli-stage.webp");
+      setImgSrc("../assets/other/projects/oliver/oli-stage.webp");
       document.querySelector(":root").style.setProperty("--shirt", "#71ff49");
       document
         .querySelector(":root")
@@ -78,7 +80,7 @@ function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
       document.getElementById("cross").style.display = "none";
       document.getElementById("cross2").style.display = "none";
     } else if (kind === "doctor") {
-      setImgSrc("../oli-hospital.webp");
+      setImgSrc("../assets/other/projects/oliver/oli-hospital.webp");
       document.querySelector(":root").style.setProperty("--shirt", "#fff");
       document
         .querySelector(":root")
