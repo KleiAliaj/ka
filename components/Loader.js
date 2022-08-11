@@ -1,6 +1,6 @@
-import Goo from "gooey-react";
+// import Goo from "gooey-react";
 import React from "react";
-
+import Goo from "./layout/Gooey";
 function Loader() {
   return (
     <Goo intensity="weak">

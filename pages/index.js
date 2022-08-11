@@ -19,12 +19,13 @@ export default function Index({ allPosts }) {
       </Head>
       <div className="fade-effect-quick page-container !items-start">
         <Intro />
-        <div className="w-[80%] h-[30em] rounded-lg drop-shadow-2xl">
+        <div className="w-[80%] h-[30em] rounded-lg drop-shadow-2xl relative">
           <Image
             src="/assets/other/Ty-lofi.jpeg"
             alt="Lofi Style image of Ty"
             className="!rounded-lg"
             layout="fill"
+            priority={true}
             objectFit="contain"
           />
         </div>
@@ -40,12 +41,12 @@ export default function Index({ allPosts }) {
               <p>
                 I'm a developer with a passion for building things that are
                 useful to people. My journey in software development started
-                during the covid lock down of 2020. I began taking online courses
-                for web development, starting with basic HTML and CSS. In May of
-                2021 I left my job as a public health microbiologist to learn
-                full time. Since then, I've worked on a variety of projects,
-                from small vanilla javascript projects to full stack web
-                applications in Next.js.
+                during the covid lock down of 2020. I began taking online
+                courses for web development, starting with basic HTML and CSS.
+                In May of 2021 I left my job as a public health microbiologist
+                to learn full time. Since then, I've worked on a variety of
+                projects, from small vanilla javascript projects to full stack
+                web applications in Next.js.
               </p>
 
               <br />

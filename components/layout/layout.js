@@ -1,6 +1,6 @@
 import Alert from "../blog/alert";
 import Footer from "./footer";
-import Meta from "../meta";
+import Meta from "./meta";
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import Navbar from "./navbar";
@@ -8,7 +8,7 @@ import Navbar from "./navbar";
 export default function Layout({ preview, children }) {
   return (
     <>
-      <Meta />
+      {/* <Meta /> */}
       <div className="w-full h-full min-h-screen sm:overflow-x-hidden md:overflow-auto">
         {/* <div className="fixed left-0 right-0 flex items-center justify-center ml-auto mr-auto sm:w-[30em] md:w-[70em] -z-50  mt-[25em] rounded-full "> */}
         {/* <div className="relative w-full max-w-lg bounds">
