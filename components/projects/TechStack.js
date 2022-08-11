@@ -5,7 +5,7 @@ function TechStack() {
   return (
     <div className="relative shadow-xl  md:min-w-[30em] rounded-xl shadow-sky-600/30 flex flex-wrap items-center justify-center gap-2 bg-gradient-to-t from-sky-500/40 to-white/20 dark:to-black/20 p-1">
       <div className="flex flex-col items-center gap-2">
-        <h4 className="heading-sm !mb-0">Technologies I'm comfortable with:</h4>
+        <h4 className="heading-sm !mb-0">Technologies I&apos;m comfortable with:</h4>
         <div className=" flex flex-wrap justify-center ring-2 rounded-xl w-[98%] gap-2">
           <CodeLogo
             title="React"
@@ -109,7 +109,7 @@ function TechStack() {
       </div>
       <div className="flex flex-col items-center w-full gap-2">
         <h4 className="heading-sm !mb-0">
-          Technologies I'm learning now:
+          Technologies I&apos;m learning now:
         </h4>
         <div className="flex flex-wrap justify-center gap-2 ring-2 rounded-xl w-fit">
           <CodeLogo
@@ -152,6 +152,7 @@ function CodeLogo(props) {
       <a
         href={props.url}
         target="_blank"
+        rel="noopener noreferrer"
         className={
           "w-20 h-20 transition hover:scale-110 relative " + props.imgStyle
         }

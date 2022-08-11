@@ -13,7 +13,7 @@ function ModalCombinator() {
           For several years, my friend and I were using an excel spreadsheet
           filled with columns of random words and concepts. You would read
           across the row and try to create an idea by jamming together words
-          that don't really belong together. This was a great way to make wild
+          that don&apos;t really belong together. This was a great way to make wild
           ideas that I never would have come up with otherwise, so I decided to
           make a simple web app that displayed each row of the spreadsheet on
           the screen with buttons to individually randomize each word. I
@@ -22,9 +22,9 @@ function ModalCombinator() {
           select a word from the array and display it to the screen.
           <br />
           <br />
-          This was my first real "web app", and I learned a lot about JS, CSS,
+          This was my first real &quot;web app&quot;, and I learned a lot about JS, CSS,
           and the DOM. I was super proud of my creation at the time, even though
-          it took longer than I'd like to admit lol. It was the seed for the
+          it took longer than I&apos;d like to admit lol. It was the seed for the
           idea that would become ideaisland several months later. In hindsight,
           before turning it into a larger application, I should have shared this
           tool with others to see if they found value in it, in which I would
@@ -57,8 +57,8 @@ function ModalCombinator() {
                   technique.
                 </li>
                 <li>
-                  P5.js makes for a decent JS "framework" for creating simple
-                  websites, although I'd never use it again.
+                  P5.js makes for a decent JS &quot;framework&quot; for creating simple
+                  websites, although I&apos;d never use it again.
                 </li>
                 <li>So much practice with DOM manipulation with javascript.</li>
                 <li>I learned a lot about randomizing arrays of values.</li>

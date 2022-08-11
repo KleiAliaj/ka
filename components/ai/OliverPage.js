@@ -117,7 +117,7 @@ function OliverPage() {
           <div className="flex flex-col items-center w-full h-full gap-3 p-3 ">
             <div className="flex sm:gap-2 md:gap-10 md:items-end md:flex-row sm:flex-col-reverse sm:items-center">
               <div className="flex flex-col items-start w-fit">
-                <p className="whitespace-nowrap">What's your first name?</p>
+                <p className="whitespace-nowrap">What&apos;s your first name?</p>
                 <input
                   className="w-40 p-2 border-2 border-gray-300 rounded-lg placeholder:text-slate-200 f2"
                   type="text"
@@ -127,7 +127,7 @@ function OliverPage() {
                 />
               </div>
               <div className="flex flex-col ">
-                <p>Oli's Profession</p>
+                <p>Oli&apos;s Profession</p>
                 <Select
                   options={options}
                   className="min-w-[15em] f2 react-select-container "
@@ -143,11 +143,11 @@ function OliverPage() {
                   setOliModal(!oliModal);
                 }}
               >
-                Who's Oliver?
+                Who&apos;s Oliver?
               </button>
             </div>
             <div className="flex flex-col items-start w-full">
-              <p>What's your question?</p>
+              <p>What&apos;s your question?</p>
               <div className="flex items-center w-full gap-2">
                 <input
                   className="w-full p-2 border-2 border-gray-300 rounded-lg placeholder:text-slate-200 f2"

@@ -11,8 +11,8 @@ function About() {
       <div className="flex justify-center w-full gap-10 sm:flex-col-reverse md:flex-row sm:items-center">
         <div className="md:w-1/2 sm:w-full ">
           <p className="pb-3 text-2xl font-bold text-sky-600">
-            Hi 👋🏻, I'm Ty, a web developer, artist, and AI enthusiast based out
-            of Seattle.{" "}
+            Hi 👋🏻, I&apos;m Ty, a web developer, artist, and AI enthusiast based
+            out of Seattle.{" "}
           </p>
           <div className="w-full glass-box bg-white/80 dark:bg-black/80">
             <p className="pb-3 font-bold text-sky-600">

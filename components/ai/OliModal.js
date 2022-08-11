@@ -23,7 +23,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
         >
           <div className={"modalHeader"}>
             <h3 className="text-4xl f1 text-sky-700 dark:text-sky-100">
-              Who's Oliver?
+              Who&apos;s Oliver?
             </h3>
           </div>
           <button
@@ -38,7 +38,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               **OLIVER IS AN AI, NOT A REAL PERSON**
             </h4>
             <h4 className="mb-4 text-xl font-bold text-center underline f1">
-              Please don't take the advice seriously, this is NOT a substitute
+              Please don&apos;t take the advice seriously, this is NOT a substitute
               for a real therapist, doctor, or other professional, and is
               intended for entertainment purposes only!!
             </h4>
@@ -48,6 +48,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
                 href="https://openai.com/"
                 className="underline text-sky-400"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 openAI
               </a>
@@ -73,6 +74,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               <a
                 href="https://codepen.io/alvaromontoro/pen/ExyvEJY"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="underline text-sky-400"
               >
                 &nbsp;Alvaro Montoro&nbsp;
@@ -80,12 +82,13 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               (with permission from him) and I adjusted it to my liking, then I
               added images from midJourney AI as backgrounds. I also added css
               animations to the mouth, eyes and head to make Oliver come to
-              life. I know, the talking animation isn't great, it makes me
+              life. I know, the talking animation isn&apos;t great, it makes me
               giggle too. But I wanted to make it more fun and interactive. To
               give him a voice, I fed the response into the free
               <a
                 href="https://codepen.io/alvaromontoro/pen/ExyvEJY"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="underline text-sky-400"
               >
                 &nbsp;VoiceRSS&nbsp;
@@ -102,6 +105,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               <a
                 href="https://www.buymeacoffee.com/tyfiero"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="underline text-sky-500"
               >
                 buying me a coffee

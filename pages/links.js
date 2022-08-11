@@ -21,14 +21,14 @@ function Links({ links }) {
     <div className="page-container">
       <h2 className="text-left heading-lg ">Links</h2>
       <p>
-        This is a list of the best links on the internet I've come across, since
+        This is a list of the best links on the internet I&apos;ve come across, since
         I started keeping track in 2020. Lots of cool resources and articles in
         here.
       </p>
       <div className="flex items-center gap-1">
-        <p>Favorite Links are labelled with a "</p>
+        <p>Favorite Links are labelled with a &quot;</p>
         <FaStar className="text-sky-500" />
-        <p>"</p>
+        <p>&quot;</p>
       </div>
       <div className="flex justify-end w-full my-3">
         <button

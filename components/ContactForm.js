@@ -50,7 +50,7 @@ export default function ContactForm() {
         {thanks ? (
           <div className="flex flex-col items-center justify-center w-full h-[50vh] gap-4">
             <p className="text-xl font-bold ">
-              Thanks for reaching out! I'll get back to you soon. 😊
+              Thanks for reaching out! I&apos;ll get back to you soon. 😊
             </p>
             <Link href="/">
               <a className="text-xl font-bold button-1">
@@ -64,10 +64,10 @@ export default function ContactForm() {
             <div className="flex flex-col gap-2">
               <h2 className="heading-md !mb-2 mt-10">
                 {" "}
-                Want to work together? Let's chat!
+                Want to work together? Let&apos;s chat!
               </h2>
               <p className="mb-2">
-                Send me a message using the form below and I'll get back to you
+                Send me a message using the form below and I&apos;ll get back to you
                 as soon as I can.
               </p>
             </div>

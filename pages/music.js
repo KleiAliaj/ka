@@ -18,20 +18,20 @@ function Music() {
               that it conveys the mood of the moment, the same song can make you
               feel happy, reminiscent or melancholic, depending on how you feel.
               The lack of vocals and the use of soft piano and drum beats makes
-              it the perfect music for, well, anything. When I'm not listening
+              it the perfect music for, well, anything. When I&apos;m not listening
               to Lo-Fi, I enjoy rap, classic rock, smooth jazz, and classical
               music. But Lo-Fi will always have my heart.
               <br />
               <br />
               My love for Lo-Fi became even stronger in 2019, when I began to
               learn how to play the piano and make beats on my computer using
-              Logic Pro. It's one thing to listen to a song and feel some way,
+              Logic Pro. It&apos;s one thing to listen to a song and feel some way,
               but creating a song with your own two hands is another. Playing
               along with the rhythm of your soul is an experience that I wish
               everyone could have.
               <br />
               <br />
-              My music is far from platinum, but I'm proud of it. And it conveys
+              My music is far from platinum, but I&apos;m proud of it. And it conveys
               the feelings I felt in those moments behind the keyboard. I hope
               you enjoy it.
             </p>

@@ -7,7 +7,7 @@ function Custom500() {
       <div className="w-fit h-fit">
         <div className="flex flex-col items-center ">
           <p className="text-3xl">An UnGnome error has occurred.</p>
-          <p>The server didn't like that... Try refreshing maybe? </p>
+          <p>The server didn&apos;t like that... Try refreshing maybe? </p>
           <img
             src="/assets/other/gnome.png"
             alt="ungnome error occured"

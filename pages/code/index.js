@@ -117,18 +117,19 @@ function Projects() {
           <div className="w-full glass-box bg-white/80 dark:bg-black/80">
             <p>
               Javascript art in P5.js is what made me fall in love with coding.
-              It's an excellent medium to start learning code, as it helps to
+              It&apos;s an excellent medium to start learning code, as it helps to
               visualize how loops, functions, and other concepts work. The
               instant visual feedback is amazing. Shout out to Daniel Shiffman
               of the{" "}
               <a
                 href="https://thecodingtrain.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="underline text-sky-400"
               >
                 Coding Train
               </a>{" "}
-              for the incredible tutorials. I don't make generative art as much
+              for the incredible tutorials. I don&apos;t make generative art as much
               anymore, but it will always have a place in my heart.
             </p>
           </div>
