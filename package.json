@@ -38,6 +38,7 @@
     "remark": "14.0.2",
     "remark-html": "15.0.1",
     "sass": "^1.52.3",
+    "three": "^0.143.0",
     "unsplash-js": "^7.0.15"
   },
   "devDependencies": {
