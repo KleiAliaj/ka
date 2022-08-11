@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "node ./scripts/generate-sitemap.mjs",
     "lint": "next lint",
     "start": "next start"
   },
