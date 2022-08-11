@@ -1,6 +1,5 @@
 import React from "react";
 import Cosmic from "cosmicjs";
-import { globby } from "globby";
 
 const BUCKET_SLUG = process.env.COSMIC_BUCKET_SLUG;
 const READ_KEY = process.env.COSMIC_READ_KEY;
