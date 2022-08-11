@@ -25,11 +25,11 @@ export default function AI({ aiImages }) {
           AI has always fascinated me, the idea that a computer can make an
           informed decision based on information it has learned is game
           changing. The first time I used GPT3 back in 2020, it was massively
-          inspiring. It felt like magic, almost anything I'd ask it, it would
-          send back a reply that made sense, both contextually and
+          inspiring. It felt like magic, almost anything I&apos;d ask it, it
+          would send back a reply that made sense, both contextually and
           grammatically. I spent hours having conversations about philosophy,
           politics, and technology with a non-sentient computer. It will always
-          be something I'm fascinated with.{" "}
+          be something I&apos;m fascinated with.{" "}
         </p>
       </div>
       <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
