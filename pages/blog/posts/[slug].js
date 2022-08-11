@@ -83,7 +83,7 @@ export async function getStaticPaths() {
   // add "404" as default
   //  const paths = allPosts.map(({ slug }) => ({ params: { slug: slug || "404" } }));
   return {
-    paths: allPosts.map((post) => `/posts/${post.slug}` || "404"),
+    paths: allPosts.map((post) => `/blog/posts/${post.slug}` || "404"),
     fallback: true,
   };
 }
