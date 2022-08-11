@@ -13,14 +13,14 @@ function ModalDrum() {
           Simple drum machine project that you can play with your keyboard. It
           was from a tutorial from Wes Bos, and one of my very first JS
           projects. I was so excited about it that I added my own custom
-          designed drum samples to really personalize it. It's hilariously
-          simple, I read through the code recently and it's so funny that I
+          designed drum samples to really personalize it. It&apos;s hilariously
+          simple, I read through the code recently and it&apos;s so funny that I
           thought this code was hard back then. But, it was the first project I
           was really proud of with JS, so I had to include it here.
           <br />
           <br />
-          Maybe one day I'll make an improved version of this in React that is
-          more interactive with more fun features. But for now, it's a reminder
+          Maybe one day I&apos;ll make an improved version of this in React that is
+          more interactive with more fun features. But for now, it&apos;s a reminder
           of how far I have come with JavaScript.
         </p>
       </div>

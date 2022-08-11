@@ -12,10 +12,10 @@ function ModalOliverAIProject() {
       <div className="flex flex-col items-center">
         <h2 className="w-full text-left heading-sm !mb-0 !mt-2">Description</h2>
         <p>
-          I&#39;ve had some experience with openAI's GPT-3 before, and I thought
+          I&#39;ve had some experience with openAI&apos;s GPT-3 before, and I thought
           it would be so cool if I could ask it for life advice. I wrote a
           fairly detailed text prompt for it, and the results were astounding.
-          Give it a try if you haven't already. It started with just therapist
+          Give it a try if you haven&apos;t already. It started with just therapist
           life advice, but I recently wrote new prompts and added a drop down
           menu to change the &quot;proffession&quot; of Oliver. This will not be
           my last GPT-3 project, especially now that I have boilerplate code for
@@ -55,7 +55,7 @@ function ModalOliverAIProject() {
                   CSS is a medium for art just as much as painting or Photoshop
                   is.
                 </li>
-                <li>Text to speech API's are easy to work with, and free!</li>
+                <li>Text to speech API&apos;s are easy to work with, and free!</li>
                 <li>
                   Learned how to stream text to make it look like he was writing
                   it as it was coming in.{" "}

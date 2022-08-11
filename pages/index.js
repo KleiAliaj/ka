@@ -15,7 +15,7 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Head>
-        <title>Ty Fiero's blog on code, music, and life.</title>
+        <title>Ty Fiero&apos;s blog on code, music, and life.</title>
       </Head>
       <div className="fade-effect-quick page-container !items-start">
         <Intro />
@@ -39,12 +39,12 @@ export default function Index({ allPosts }) {
             <div className="md:w-1/2 sm:w-full">
               <p className="font-bold heading-md !text-left">Developer</p>
               <p>
-                I'm a developer with a passion for building things that are
+                I&apos;m a developer with a passion for building things that are
                 useful to people. My journey in software development started
                 during the covid lock down of 2020. I began taking online
                 courses for web development, starting with basic HTML and CSS.
                 In May of 2021 I left my job as a public health microbiologist
-                to learn full time. Since then, I've worked on a variety of
+                to learn full time. Since then, I&apos;ve worked on a variety of
                 projects, from small vanilla javascript projects to full stack
                 web applications in Next.js.
               </p>

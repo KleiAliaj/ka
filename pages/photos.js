@@ -147,7 +147,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               But I do have a decent Nikon camera, an eye for nature
               photography, and the patience to find the right shot. Little by
               little, I feel myself getting better. <br />
-              <br /> I don't ever expect to be famous for my photography, or
+              <br /> I don&apos;t ever expect to be famous for my photography, or
               even make a single dollar. I do this for me. My mind is so much
               clearer when I spend time every week to bask in the glory of what
               nature has to offer, and capture it for all to see. I share all my
@@ -172,7 +172,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
               <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
                 We cannot predict the value our work will provide to the world.
-                That’s fine. It is not our job to judge our own work. It is our
+                That&apos;s fine. It is not our job to judge our own work. It is our
                 job to create it, to pour ourselves into it, and to master our
                 craft as best we can. &nbsp; &nbsp;-James Clear
               </blockquote>
@@ -217,6 +217,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
         <a
           href="https://unsplash.com/@tyfiero"
           target="_blank"
+          rel="noreferrer"
           className="flex flex-col items-center"
         >
           <div className="w-20 h-20 rounded-full shadow-lg">

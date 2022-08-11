@@ -14,6 +14,7 @@ export default function Footer() {
           <a
             href="https://www.termsfeed.com/live/666072e9-81d8-43ef-8a29-7547a11f7700"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-[11px] text-slate-300 mb-2 hover:underline hover:text-white"
           >
             Privacy Policy

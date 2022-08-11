@@ -12,7 +12,7 @@ function ModalDD() {
         <p>
           This started off as just a simple project that I could learn Recoil.js
           with, and it ended up being way more than that. I wanted to create a
-          unique, walk-through wizard style prompt designer for image AI's,
+          unique, walk-through wizard style prompt designer for image AI&apos;s,
           specifically for MidJourney. When I started using MidJourney, I
           noticed that I was having image prompt writers block. The AI could
           make <strong>anything</strong> you wanted, and that lead me to
@@ -63,7 +63,7 @@ function ModalDD() {
                   system first. It made styling decisions a lot easier.
                 </li>
                 <li>
-                  I wrote what felt like a million array.map()'s, what a
+                  I wrote what felt like a million array.map()&apos;s, what a
                   powerful tool to build numerous UI components from a single
                   array in React.
                 </li>

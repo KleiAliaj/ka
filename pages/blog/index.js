@@ -13,7 +13,7 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Head>
-        <title>Ty Fiero's blog posts on code, music, and life.</title>
+        <title>Ty Fiero&apos;s blog posts on code, music, and life.</title>
       </Head>
       <Container>
         {/* <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-8xl md:pr-8 f1">

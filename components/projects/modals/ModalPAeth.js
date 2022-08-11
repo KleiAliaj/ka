@@ -36,7 +36,7 @@ function ModalPAeth() {
                 Learnings
               </h2>
               <ol className="ml-6 font-bold list-decimal f2 text-sky-600 dark:text-sky-200">
-                <li>How to mint NFT's on the Polygon Blockchain.</li>
+                <li>How to mint NFT&apos;s on the Polygon Blockchain.</li>
               </ol>
             </div>
           </div>
