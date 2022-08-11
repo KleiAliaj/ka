@@ -13,7 +13,7 @@ export default function PostPreview({
 }) {
   return (
     <div className="glass-box bg-white/80 dark:bg-slate-900/80 w-[70%]  group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
-      <Link href={`/posts/${slug}`}>
+      <Link href={`/blog/posts/${slug}`}>
         <div>
           <div className="mb-5">
             <CoverImage slug={slug} title={title} url={coverImage.imgix_url} />
