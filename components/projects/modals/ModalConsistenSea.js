@@ -53,7 +53,10 @@ function ModalConsistenSea() {
             </div>
           </div>
           <div className="flex justify-center w-full mt-4">
-            <a href="" className="button-1 w-fit f2">
+            <a
+              href="https://chrome.google.com/webstore/detail/consistensea-new-tab-page/kknggaienefkejfafpgdnjgokkangnhc"
+              className="button-1 w-fit f2"
+            >
               Link <FaExternalLinkAlt />
             </a>
           </div>
