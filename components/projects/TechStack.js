@@ -5,14 +5,16 @@ function TechStack() {
   return (
     <div className="relative shadow-xl  md:min-w-[30em] rounded-xl shadow-sky-600/30 flex flex-wrap items-center justify-center gap-2 bg-gradient-to-t from-sky-500/40 to-white/20 dark:to-black/20 p-1">
       <div className="flex flex-col items-center gap-2">
-        <h4 className="heading-sm !mb-0">Technologies I&apos;m comfortable with:</h4>
+        <h4 className="heading-sm !mb-0">
+          Technologies I&apos;m comfortable with:
+        </h4>
         <div className=" flex flex-wrap justify-center ring-2 rounded-xl w-[98%] gap-2">
           <CodeLogo
             title="React"
             img="/assets/CodeLogos/react.png"
             alt="React logo"
             url="https://reactjs.org/"
-            imgStyle=" scale-[90%] hover:!scale-[100%] translate-y-2 border "
+            imgStyle=" scale-[90%] hover:!scale-[100%] translate-y-2  "
           />
           <CodeLogo
             title="Next.js"
@@ -34,6 +36,13 @@ function TechStack() {
             alt="Tailwind logo"
             url="https://tailwindcss.com/"
             imgStyle="  translate-y-3"
+          />
+          <CodeLogo
+            title="Framer Motion"
+            img="/assets/CodeLogos/framer.png"
+            alt="Framer Motion logo"
+            url="https://www.framer.com/motion/"
+            imgStyle=" scale-[70%]  hover:!scale-[80%] translate-y-3"
           />
           <CodeLogo
             title="Redux"
@@ -77,6 +86,7 @@ function TechStack() {
             url="https://developer.mozilla.org/en-US/docs/Web/CSS"
             imgStyle=" scale-[72%] hover:!scale-[85%] translate-y-3"
           />
+
           <CodeLogo
             title="D3.js"
             img="/assets/CodeLogos/d3.png"

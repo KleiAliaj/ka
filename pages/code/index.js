@@ -117,8 +117,8 @@ function Projects() {
           <div className="w-full glass-box bg-white/80 dark:bg-black/80">
             <p>
               Javascript art in P5.js is what made me fall in love with coding.
-              It&apos;s an excellent medium to start learning code, as it helps to
-              visualize how loops, functions, and other concepts work. The
+              It&apos;s an excellent medium to start learning code, as it helps
+              to visualize how loops, functions, and other concepts work. The
               instant visual feedback is amazing. Shout out to Daniel Shiffman
               of the{" "}
               <a
@@ -129,8 +129,8 @@ function Projects() {
               >
                 Coding Train
               </a>{" "}
-              for the incredible tutorials. I don&apos;t make generative art as much
-              anymore, but it will always have a place in my heart.
+              for the incredible tutorials. I don&apos;t make generative art as
+              much anymore, but it will always have a place in my heart.
             </p>
           </div>
           <div className="flex w-full md:justify-start sm:justify-center">
@@ -150,7 +150,7 @@ function Projects() {
           />
         </div>
       </section>
-      <div className="relative flex flex-wrap items-center justify-center px-5 py-0 mt-4 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 rounded-2xl ">
+      <div className="relative flex flex-wrap items-center justify-center px-5 py-0 mt-4 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 dark:ring-sky-600 dark:bg-sky-900/30 rounded-2xl ">
         <div className="absolute top-1 left-3">
           <p className="pb-3 font-bold text-sky-600">Coding Projects</p>
         </div>
@@ -414,7 +414,7 @@ const ProjectCard = ({
             </h3>
             <h3
               className={
-                "m-0 text-xl f1 z-0 absolute top-2 -left-1 opacity-0 group-hover:opacity-100 text-slate-400/30 !transition !duration-500 filter blur-[2px] "
+                "m-0 text-xl f1 z-0 absolute top-2 -left-1 opacity-0 group-hover:opacity-100 text-slate-400/30 dark:text-slate-900/50 !transition !duration-500 filter blur-[2px] "
               }
               data-atropos-offset="-3"
             >

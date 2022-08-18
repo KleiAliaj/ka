@@ -18,7 +18,7 @@ function ProjectModal({ modalOpen, setModalOpen, content, selected }) {
         <div
           ref={menuRef}
           className={
-            " glass-box md:h-[80vh] h-[92vh]   shadow-2xl flex flex-col lg:w-2/3 md:w-4/5 sm:w-[95%]  items-center !px-10 !pt-5 !pb-10 z-100 bg-white/80 dark:bg-slate-600/80 grow-effect overflow-auto"
+            " glass-box md:h-[80vh] h-[92vh]   shadow-2xl flex flex-col lg:w-2/3 md:w-4/5 sm:w-[95%]  items-center !px-10 !pt-5 !pb-10 z-100 bg-white/90 dark:bg-slate-800/90 grow-effect overflow-auto"
           }
         >
           <div className={"modalHeader"}>
