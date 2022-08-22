@@ -1,15 +1,21 @@
 import { useClickOutside } from "@/lib/hooks/useClickOutside";
+import { useKeyPress } from "@/lib/hooks/useKeyPress";
 
-import React, { createRef } from "react";
+import React, { createRef, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 
 function ProjectModal({ modalOpen, setModalOpen, content, selected }) {
   const menuRef = createRef();
-
   const onClickOutside = (e) => {
     setModalOpen(false);
   };
   useClickOutside(menuRef, onClickOutside);
+  const esc = useKeyPress("Escape");
+  useEffect(() => {
+    if (esc) {
+      setModalOpen(false);
+    }
+  }, [esc]);
 
   return (
     <>
