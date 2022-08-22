@@ -1,11 +1,12 @@
 import { Cloud, Text3D, Text, Image, Float, Sparkles } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import React, { Suspense, useRef } from "react";
 
-function IntroSection() {
+function IntroSection({ data }) {
   const { width: w, height: h } = useThree((state) => state.viewport);
-  console.log(w, h);
 
+  //   console.log(w, h);
+  //   console.log(data.visible(1 / 7, 1 / 2));
   return (
     <>
       {/* <Cloud
@@ -23,6 +24,7 @@ function IntroSection() {
         floatingRange={[-1, 1.5]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
       >
         <group
+          visible={true}
           scale={w > 38 ? 20 : 15}
           position={[w > 38 ? w / 4 : w / -120, w > 38 ? h / 6 : h / 9, -4]}
           rotation={[0, w > 38 ? -0.1 : 0, -0.005]}
@@ -36,8 +38,8 @@ function IntroSection() {
         rotation={[0, 0.1, -0.005]}
         scale={w > 38 ? 1 : 0.7}
       >
-        <Cloud scale={4} position={[34, 2, -45]} speed={0.8} opacity={0.5} />
-        <Cloud position={[14, 2, -14]} speed={0.8} opacity={1} />
+        <Cloud scale={4} position={[34, 2, -55]} speed={0.8} opacity={0.5} />
+        <Cloud position={[14, 2, -18]} speed={0.8} opacity={1} />
         <Cloud position={[4, -2, -35]} speed={0.8} opacity={0.5} />
         <Cloud position={[4, 2, -30]} speed={0.8} opacity={0.75} />
         <Float

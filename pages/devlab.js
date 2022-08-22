@@ -1,6 +1,11 @@
-import ScrollThree from "@/components/devlab/scrollThree";
-import ThreeTest from "@/components/devlab/three";
+// import ScrollThree from "@/components/devlab/scrollThree";
+
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
+
+const ThreeTest = dynamic(() => import("@/components/devlab/three"), {
+  ssr: false,
+});
 
 function DevLab() {
   return (

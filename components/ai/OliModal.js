@@ -1,6 +1,7 @@
 import { useClickOutside } from "@/lib/hooks/useClickOutside";
+import { useKeyPress } from "@/lib/hooks/useKeyPress";
 
-import React, { createRef } from "react";
+import React, { createRef, useEffect } from "react";
 import { FaArrowRight, FaCoffee, FaTimes } from "react-icons/fa";
 
 function OliverModal({ oliModal, setOliModal, children, header, className }) {
@@ -10,6 +11,13 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
     setOliModal(false);
   };
   useClickOutside(menuRef, onClickOutside);
+
+  const esc = useKeyPress("Escape");
+  useEffect(() => {
+    if (esc) {
+      setOliModal(false);
+    }
+  }, [esc]);
 
   return (
     <>
@@ -38,9 +46,9 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               **OLIVER IS AN AI, NOT A REAL PERSON**
             </h4>
             <h4 className="mb-4 text-xl font-bold text-center underline f1">
-              Please don&apos;t take the advice seriously, this is NOT a substitute
-              for a real therapist, doctor, or other professional, and is
-              intended for entertainment purposes only!!
+              Please don&apos;t take the advice seriously, this is NOT a
+              substitute for a real therapist, doctor, or other professional,
+              and is intended for entertainment purposes only!!
             </h4>
             <p>
               The AI powered by GPT-3 from openAI. The API provided by&nbsp;
