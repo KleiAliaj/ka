@@ -1,7 +1,6 @@
 import "@/styles/index.css";
 import "@/styles/global.scss";
 
-
 import Layout from "@/components/layout/layout";
 import React from "react";
 import { ThemeProvider } from "next-themes";
@@ -46,7 +45,7 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@FieroTy" />
-        <meta name="twitter:title" content="FieroTy" />
+        <meta name="twitter:title" content="Ty Fiero" />
         <meta name="twitter:description" content="The Blog of Ty Fiero." />
         <meta name="twitter:image" content="./assets/other/Ty-lofi.jpeg" />
         <link
