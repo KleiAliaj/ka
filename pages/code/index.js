@@ -109,8 +109,49 @@ function Projects() {
       ) : null}
       <h2 className="text-left heading-lg ">Code</h2>
 
-      <TechStack />
-      <section className="flex items-center w-full sm:gap-5 md:gap-10 md:flex-row sm:flex-col md:justify-center">
+      <section className="flex items-center w-full sm:gap-5 md:gap-10 md:flex-row-reverse sm:flex-col md:justify-center">
+        {" "}
+        <div className="flex flex-col gap-2 sm:items-center sm:w-full md:w-1/3 md:items-start">
+          <h3 className="heading-md !mb-1">Tech Stack</h3>
+          <div className="w-full glass-box bg-white/80 dark:bg-black/80">
+            <p>
+              Learning new technologies is a rush for me. I try to learn
+              something new every week that I can apply to projects in the
+              future. My favorite technologies thus far are React, Next.js,
+              Tailwind CSS, p5.js and Framer Motion, I have the confidence and
+              the know-how to wield these tools to create awesome web
+              experiences for users. <br />
+              <br /> I&apos;m learning Typescript right now and I can tell that
+              it will be a game changer for my workflow. I&apos;d like to learn
+              SQL, machine learning, and backend frameworks down the line, but
+              for now I want to focus on getting good at front end.{" "}
+              <Link href={"/contact"}>
+                <a className="underline text-sky-500">Let me know</a>
+              </Link>{" "}
+              if you want to share a cool technology for me to explore!
+            </p>
+          </div>
+          <div className="flex w-full md:justify-start sm:justify-center">
+            <a
+              href="https://github.com/tyfiero/ETH-PriceArt-explorer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="z-10 button-bw w-fit f2"
+            >
+              Github Profile
+              <img
+                src="assets/CodeLogos/github.png"
+                alt="github logo"
+                className="w-6 h-6 dark:invert invert-0"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="relative max-w-[60%] mt-4 shadow-xl rounded-xl shadow-sky-600/30 ">
+          <TechStack />
+        </div>
+      </section>
+      <section className="flex items-center w-full mt-8 sm:gap-5 md:gap-10 md:flex-row sm:flex-col md:justify-center">
         {" "}
         <div className="flex flex-col gap-2 sm:items-center sm:w-full md:w-1/3 md:items-start">
           <h3 className="heading-md !mb-1">Generative Art</h3>
