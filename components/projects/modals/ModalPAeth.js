@@ -47,7 +47,7 @@ function ModalPAeth() {
               rel="noopener noreferrer"
               className="button-1 w-fit f2"
             >
-              Explorer Link <FaExternalLinkAlt />
+              Explorer <FaExternalLinkAlt />
             </a>
             <a
               href="https://opensea.io/collection/ethusd"
@@ -55,12 +55,25 @@ function ModalPAeth() {
               rel="noopener noreferrer"
               className="button-1 w-fit f2"
             >
-              OpenSea Link <FaExternalLinkAlt />
+              OpenSea <FaExternalLinkAlt />
+            </a>
+            <a
+              href="https://github.com/tyfiero/ETH-PriceArt-explorer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-bw w-fit f2"
+            >
+              Github
+              <img
+                src="assets/CodeLogos/github.png"
+                alt="github logo"
+                className="w-6 h-6 dark:invert invert-0"
+              />
             </a>
           </div>
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2">
-          <h2 className="w-full text-left heading-sm !mb-0">Images</h2>
+          <h2 className="w-full  text-left heading-sm !mb-0">Images</h2>
           <Carousel
             imgs={[
               "/assets/other/projects/PA/eth1.png",
