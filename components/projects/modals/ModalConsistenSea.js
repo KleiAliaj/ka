@@ -52,12 +52,27 @@ function ModalConsistenSea() {
               </ol>
             </div>
           </div>
-          <div className="flex justify-center w-full mt-4">
+          <div className="flex justify-center w-full gap-3 mt-4">
             <a
               href="https://chrome.google.com/webstore/detail/consistensea-new-tab-page/kknggaienefkejfafpgdnjgokkangnhc"
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-1 w-fit f2"
             >
               Link <FaExternalLinkAlt />
+            </a>
+            <a
+              href="https://github.com/tyfiero/consistensea"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-bw w-fit f2"
+            >
+              Github
+              <img
+                src="assets/CodeLogos/github.png"
+                alt="github logo"
+                className="w-6 h-6 dark:invert invert-0"
+              />
             </a>
           </div>
         </div>

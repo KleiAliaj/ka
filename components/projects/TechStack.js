@@ -86,6 +86,13 @@ function TechStack() {
             url="https://developer.mozilla.org/en-US/docs/Web/CSS"
             imgStyle=" scale-[72%] hover:!scale-[85%] translate-y-3"
           />
+          <CodeLogo
+            title="Sass"
+            img="/assets/CodeLogos/Sass.png"
+            alt="Sass logo"
+            url="https://sass-lang.com/"
+            imgStyle=" scale-[125%]  hover:!scale-[135%] translate-y-3"
+          />
 
           <CodeLogo
             title="D3.js"
@@ -129,13 +136,7 @@ function TechStack() {
             url="https://www.typescriptlang.org/"
             imgStyle=" scale-[75%] bg-white hover:!scale-[85%] translate-y-2"
           />
-          <CodeLogo
-            title="Sass"
-            img="/assets/CodeLogos/Sass.png"
-            alt="Sass logo"
-            url="https://sass-lang.com/"
-            imgStyle=" scale-[125%]  hover:!scale-[135%] translate-y-3"
-          />
+
           <CodeLogo
             title="React Three"
             img="/assets/CodeLogos/three.png"

@@ -14,9 +14,9 @@ function ModalTy() {
           took me three months to build this project out.
           <br />
           <br />
-          Maybe one day I&apos;ll make an improved version of this in React that is
-          more interactive with more fun features. But for now, it&apos;s a reminder
-          of how far I have come with JavaScript.
+          Maybe one day I&apos;ll make an improved version of this in React that
+          is more interactive with more fun features. But for now, it&apos;s a
+          reminder of how far I have come with JavaScript.
         </p>
       </div>
       <section className="flex gap-4 lg:flex-row sm:flex-col">
@@ -50,7 +50,7 @@ function ModalTy() {
               </ol>
             </div>
           </div>
-          <div className="flex justify-center w-full mt-4">
+          <div className="flex justify-center w-full gap-3 mt-4">
             <a
               href="https://priceart.xyz/ada-explorer/"
               target="_blank"
@@ -58,6 +58,19 @@ function ModalTy() {
               className="button-1 w-fit f2"
             >
               Link <FaExternalLinkAlt />
+            </a>
+            <a
+              href="https://github.com/tyfiero/tyfiero-blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-bw w-fit f2"
+            >
+              Github
+              <img
+                src="assets/CodeLogos/github.png"
+                alt="github logo"
+                className="w-6 h-6 dark:invert invert-0"
+              />
             </a>
           </div>
         </div>

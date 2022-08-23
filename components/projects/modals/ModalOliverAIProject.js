@@ -12,14 +12,14 @@ function ModalOliverAIProject() {
       <div className="flex flex-col items-center">
         <h2 className="w-full text-left heading-sm !mb-0 !mt-2">Description</h2>
         <p>
-          I&#39;ve had some experience with openAI&apos;s GPT-3 before, and I thought
-          it would be so cool if I could ask it for life advice. I wrote a
-          fairly detailed text prompt for it, and the results were astounding.
-          Give it a try if you haven&apos;t already. It started with just therapist
-          life advice, but I recently wrote new prompts and added a drop down
-          menu to change the &quot;proffession&quot; of Oliver. This will not be
-          my last GPT-3 project, especially now that I have boilerplate code for
-          it.
+          I&#39;ve had some experience with openAI&apos;s GPT-3 before, and I
+          thought it would be so cool if I could ask it for life advice. I wrote
+          a fairly detailed text prompt for it, and the results were astounding.
+          Give it a try if you haven&apos;t already. It started with just
+          therapist life advice, but I recently wrote new prompts and added a
+          drop down menu to change the &quot;proffession&quot; of Oliver. This
+          will not be my last GPT-3 project, especially now that I have
+          boilerplate code for it.
         </p>
       </div>
       <section className="flex gap-4 lg:flex-row sm:flex-col">
@@ -55,7 +55,9 @@ function ModalOliverAIProject() {
                   CSS is a medium for art just as much as painting or Photoshop
                   is.
                 </li>
-                <li>Text to speech API&apos;s are easy to work with, and free!</li>
+                <li>
+                  Text to speech API&apos;s are easy to work with, and free!
+                </li>
                 <li>
                   Learned how to stream text to make it look like he was writing
                   it as it was coming in.{" "}
@@ -63,12 +65,25 @@ function ModalOliverAIProject() {
               </ol>
             </div>
           </div>
-          <div className="flex justify-center w-full mt-4">
+          <div className="flex justify-center w-full gap-3 mt-4">
             <Link href={"/ai/Oliver"}>
               <a className="button-1 w-fit f2">
                 Link <FaExternalLinkAlt />
               </a>
             </Link>
+            <a
+              href="https://github.com/tyfiero/tyfiero-blog/tree/main/components/ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-bw w-fit f2"
+            >
+              Github
+              <img
+                src="assets/CodeLogos/github.png"
+                alt="github logo"
+                className="w-6 h-6 dark:invert invert-0"
+              />
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2">
