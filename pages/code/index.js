@@ -109,7 +109,7 @@ function Projects() {
       ) : null}
       <h2 className="text-left heading-lg ">Code</h2>
 
-      <section className="flex items-center w-full sm:gap-5 md:gap-10 md:flex-row-reverse sm:flex-col md:justify-center">
+      <section className="flex items-center w-full sm:gap-5 md:gap-10 md:flex-row sm:flex-col md:justify-center">
         {" "}
         <div className="flex flex-col gap-2 sm:items-center sm:w-full md:w-1/3 md:items-start">
           <h3 className="heading-md !mb-1">Tech Stack</h3>

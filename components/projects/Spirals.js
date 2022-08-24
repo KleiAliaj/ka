@@ -55,17 +55,20 @@ function Spirals() {
 
   return (
     <div className="flex w-full h-full sm:items-center sm:justify-start lg:items-start lg:justify-center lg:flex-row sm:flex-col fade-effect-quick">
-      <div className="flex flex-col items-center justify-start p-5 opacity-0 lg:mr-8 rounded-xl ring-2 ring-sky-400 h-fit w-fit lg:mb-0 sm:mb-4">
-        <h3 className="heading-sm">Controls</h3>
-
-        <button
-          className="button-1"
-          onClick={() => {
-            setIsReset(!reset);
-          }}
+      <div className="flex flex-col items-center justify-start p-5 lg:mr-8 rounded-xl ring-2 ring-sky-400 h-fit w-fit lg:mb-0 sm:mb-4">
+        <a
+          href="https://github.com/tyfiero/tyfiero-blog/blob/main/components/projects/Spirals.js"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-bw w-fit f2"
         >
-          Apply
-        </button>
+          Github
+          <img
+            src="/assets/CodeLogos/github.png"
+            alt="github logo"
+            className="w-6 h-6 dark:invert invert-0"
+          />
+        </a>
       </div>
       <div
         className="flex items-center justify-center rounded-xl"
