@@ -133,7 +133,7 @@ function Projects() {
           </div>
           <div className="flex w-full md:justify-start sm:justify-center">
             <a
-              href="https://github.com/tyfiero/ETH-PriceArt-explorer"
+              href="https://github.com/tyfiero/"
               target="_blank"
               rel="noopener noreferrer"
               className="z-10 button-bw w-fit f2"
