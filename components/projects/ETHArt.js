@@ -67,7 +67,6 @@ function sketch(p) {
   };
 
   p.draw = function () {
-    p.orbitControl();
     p.noStroke();
     p.background(p5BG);
     let colorMod = 1;
@@ -289,6 +288,19 @@ function ETHArt() {
         >
           Reset
         </button>
+        <a
+          href="https://github.com/tyfiero/tyfiero-blog/blob/main/components/projects/ETHArt.js"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 button-bw w-fit f2"
+        >
+          Github
+          <img
+            src="/assets/CodeLogos/github.png"
+            alt="github logo"
+            className="w-6 h-6 dark:invert invert-0"
+          />
+        </a>
       </div>
       <div
         className="flex items-center justify-center rounded-xl"

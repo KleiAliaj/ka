@@ -21,11 +21,9 @@ function About() {
               was fascinated with the natural sciences and biology, which led me
               to getting a B.S. in Microbiology with a minor in Zoology from
               Colorado State University. While I still enjoy biology, I made a
-              decision to pivot my career to pursue computer science with an
-              emphasis on distributed technologies. There is something so
-              profound about the power of computation to create more fair and
-              equitable financial systems, I had to be a part of it. Follow
-              along on my journey to see what I create next!
+              decision to pivot my career to pursue computer science for more
+              opportunities to express my creativity and to build useful things.
+              Follow along on my journey to see what I create next!
             </p>
           </div>
         </div>
