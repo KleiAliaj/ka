@@ -52,15 +52,16 @@ function ModalConsistenSea() {
               </ol>
             </div>
           </div>
-          <div className="flex justify-center w-full gap-3 mt-4">
+          <div className="flex justify-center w-full gap-2 mt-4">
             <a
               href="https://chrome.google.com/webstore/detail/consistensea-new-tab-page/kknggaienefkejfafpgdnjgokkangnhc"
               target="_blank"
               rel="noopener noreferrer"
               className="button-1 w-fit f2"
             >
-              Link <FaExternalLinkAlt />
+              Install <FaExternalLinkAlt />
             </a>
+
             <a
               href="https://github.com/tyfiero/consistensea"
               target="_blank"
@@ -72,6 +73,22 @@ function ModalConsistenSea() {
                 src="assets/CodeLogos/github.png"
                 alt="github logo"
                 className="w-6 h-6 dark:invert invert-0"
+              />
+            </a>
+            <a
+              href="https://www.producthunt.com/posts/consistensea?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-consistensea"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 transition scale-110 hover:scale-125"
+            >
+              <img
+                src={
+                  "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=357189&theme=light"
+                }
+                alt="ConsistenSea - Chrome&#0032;extension&#0032;for&#0032;fun&#0032;habit&#0045;tracking&#0032;on&#0032;every&#0032;new&#0032;tab&#0032; | Product Hunt"
+                style={{ width: "250px", height: "54px" }}
+                width="250"
+                height="54"
               />
             </a>
           </div>
