@@ -15,7 +15,8 @@ function ModalConsistenSea() {
           chrome extension so that I would see my habits on every single new
           tab. Turns out React plays well with chrome extensions, and there is
           so much you can do with the Chrome Extension API. This project took me
-          about a week to build.
+          about a week to build. I launched it on ProductHunt, and learned a lot
+          from the process of launching a product!
         </p>
       </div>
       <section className="flex gap-4 lg:flex-row sm:flex-col">
