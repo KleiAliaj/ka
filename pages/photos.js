@@ -7,86 +7,94 @@ import {
   FaHeart,
   FaImage,
   FaPeopleArrows,
+  FaRedo,
   FaRegHeart,
   FaUserAlt,
 } from "react-icons/fa";
 
 export async function getStaticProps(context) {
-  //   let images;
-
-  //   axios({
-  //     method: "POST",
-  //     url: "/api/unsplashTy",
-  //     // headers: headers,
-  //   })
-  //     .then((response) => {
-  //       console.log("index response");
-  //       console.log(response);
-
-  //       images = response.data.results.photos;
-  //       console.log(images);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
   let tyImages = [];
   let tyStats;
-  let allViews;
+  let allViews = 0;
   let altDescription;
 
-  const axiosImages = await axios
-    .get(
-      "https://api.unsplash.com/users/tyfiero/photos?per_page=50&stats=true",
-      {
-        headers: {
-          Authorization: "Client-ID " + process.env.UNSPLASH_ACCESS_KEY,
-        },
-      }
-    )
+  const getImages = async (page = 1) => {
+    const axiosImages = await axios
+      .get(
+        `https://api.unsplash.com/users/tyfiero/photos?per_page=30&page=${page}&stats=true`,
+        {
+          headers: {
+            Authorization: "Client-ID " + process.env.UNSPLASH_ACCESS_KEY,
+          },
+        }
+      )
+      .then(function (response) {
+        if (response) {
+          let alt = response.data.map((image) => {
+            return image.description;
+          });
+          let dimensions = response.data.map((image) => {
+            return image.width / image.height;
+          });
+          let urls = response.data.map(function (i) {
+            return i.urls;
+          });
+          let oneUrl = urls.map(function (i) {
+            return [i.regular, i.raw];
+          });
+
+          let dataArray = oneUrl.map(function (value, index) {
+            return {
+              displaySrc: value[0],
+              src: value[1],
+              alt: alt[index],
+              ratio: dimensions[index],
+            };
+          });
+
+          let stats = response.data.map(function (i) {
+            return i.statistics.views.total;
+          });
+
+          let totalViews = stats.reduce(function (accumVariable, curValue) {
+            return accumVariable + curValue;
+          }, 0);
+          allViews = allViews + totalViews;
+          if (page === 1) {
+            tyImages = dataArray;
+          } else {
+            tyImages = [...tyImages, ...dataArray];
+          }
+          altDescription = alt;
+          return tyImages;
+        } else {
+          console.log("Something went wrong...");
+        }
+      });
+  };
+
+  //This gets the total number of images
+  let totalImages = await axios
+    .get(`https://api.unsplash.com/users/tyfiero/photos?per_page=1`, {
+      headers: {
+        Authorization: "Client-ID " + process.env.UNSPLASH_ACCESS_KEY,
+      },
+    })
     .then(function (response) {
       if (response) {
-        // console.log(response.data);
-        let alt = response.data.map((image) => {
-          return image.description;
-        });
-        let dimensions = response.data.map((image) => {
-          return image.width / image.height;
-        });
-        // console.log(altDescription);
-        let urls = response.data.map(function (i) {
-          return i.urls;
-        });
-        let oneUrl = urls.map(function (i) {
-          return [i.regular, i.raw];
-        });
-
-        let dataArray = oneUrl.map(function (value, index) {
-          return {
-            displaySrc: value[0],
-            src: value[1],
-            alt: alt[index],
-            ratio: dimensions[index],
-          };
-        });
-
-        let stats = response.data.map(function (i) {
-          return i.statistics.views.total;
-        });
-
-        let totalViews = stats.reduce(function (accumVariable, curValue) {
-          return accumVariable + curValue;
-        }, 0);
-
-        allViews = totalViews;
-
-        tyImages = dataArray;
-        altDescription = alt;
-        return tyImages;
-      } else {
-        // console.log("Success!");
+        return response.data[0].user.total_photos;
       }
     });
 
+  //This determines how many pages to get based on total images and a max load of 30
+  let totalPagesToGet = Math.ceil(totalImages / 30);
+
+  //this loop runs the get images function as many times as there are pages.
+  for (let i = 0; i < totalPagesToGet; i++) {
+    await getImages(i + 1);
+  }
+
+  //This gathers all of the stats.
   const axiosStats = await axios
     .get("https://api.unsplash.com/users/tyfiero/", {
       headers: {
@@ -95,16 +103,6 @@ export async function getStaticProps(context) {
     })
     .then(function (response) {
       if (response) {
-        // console.log(response.data);
-
-        // let urls = response.data.map(function (i) {
-        //   return i.urls;
-        // });
-        // // console.log(urls);
-        // let oneUrl = urls.map(function (i) {
-        //   return i.full;
-        // });
-
         let data = {
           likes: response.data.total_likes,
           followers: response.data.followers_count,
@@ -112,16 +110,12 @@ export async function getStaticProps(context) {
           photoNum: response.data.total_photos,
           views: allViews,
         };
-        // console.log(data);
         tyStats = data;
         return tyStats;
       } else {
-        // console.log("Success!");
+        console.log("Something went wrong...");
       }
     });
-
-  //   console.log(tyImages);
-
   return {
     props: { tyImages, tyStats, altDescription },
     revalidate: 21600,
@@ -129,10 +123,10 @@ export async function getStaticProps(context) {
 }
 
 function Photography({ tyImages, tyStats, altDescription }) {
-  //   console.log(tyStats);
   const [pics, setPics] = React.useState(tyImages);
   const [altText, setAltText] = React.useState(altDescription);
-  //   console.log(pics[0]);
+
+  const getMoreImages = async () => {};
   return (
     <div className="page-container">
       <h2 className="text-left heading-lg ">Photography</h2>
@@ -147,8 +141,8 @@ function Photography({ tyImages, tyStats, altDescription }) {
               But I do have a decent Nikon camera, an eye for nature
               photography, and the patience to find the right shot. Little by
               little, I feel myself getting better. <br />
-              <br /> I don&apos;t ever expect to be famous for my photography, or
-              even make a single dollar. I do this for me. My mind is so much
+              <br /> I don&apos;t ever expect to be famous for my photography,
+              or even make a single dollar. I do this for me. My mind is so much
               clearer when I spend time every week to bask in the glory of what
               nature has to offer, and capture it for all to see. I share all my
               best work to{" "}
@@ -172,9 +166,9 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
               <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
                 We cannot predict the value our work will provide to the world.
-                That&apos;s fine. It is not our job to judge our own work. It is our
-                job to create it, to pour ourselves into it, and to master our
-                craft as best we can. &nbsp; &nbsp;-James Clear
+                That&apos;s fine. It is not our job to judge our own work. It is
+                our job to create it, to pour ourselves into it, and to master
+                our craft as best we can. &nbsp; &nbsp;-James Clear
               </blockquote>
               <div className="h-3 mb-2 text-3xl text-right text-gray-600 dark:text-slate-200">
                 “
