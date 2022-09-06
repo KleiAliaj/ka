@@ -10,30 +10,30 @@ function Music() {
         <div className="md:w-1/2 sm:w-full ">
           <h3 className="heading-md">Warm, mellow Lo-Fi beats.</h3>
           <div className=" glass-box bg-white/80 dark:bg-black/80">
-            <p className="pb-3 font-bold text-sky-600">
+            <p className="pb-3 font-bold">
               I was listening to Lo-Fi Hip Hop before it was cool (*puts on
               hipster glasses*). For real though, for as long as I can remember
               this genre has been the soundtrack to my life. I can listen to it
               on a run, while coding, or even napping. The magic of Lo-Fi is
               that it conveys the mood of the moment, the same song can make you
-              feel happy, reminiscent or melancholic, depending on how you feel.
-              The lack of vocals and the use of soft piano and drum beats makes
-              it the perfect music for, well, anything. When I&apos;m not listening
-              to Lo-Fi, I enjoy rap, classic rock, smooth jazz, and classical
-              music. But Lo-Fi will always have my heart.
+              feel happy, reminiscent or melancholic, depending on how
+              you&apos;re feel that day. The lack of vocals and the use of soft
+              piano and drum beats makes it the perfect music for, well,
+              anything. When I&apos;m not listening to Lo-Fi, I enjoy rap,
+              classic rock, smooth jazz, and classical music. But Lo-Fi will
+              always have my heart 💙.
               <br />
               <br />
-              My love for Lo-Fi became even stronger in 2019, when I began to
-              learn how to play the piano and make beats on my computer using
-              Logic Pro. It&apos;s one thing to listen to a song and feel some way,
-              but creating a song with your own two hands is another. Playing
-              along with the rhythm of your soul is an experience that I wish
-              everyone could have.
+              My love for Lo-Fi grew stronger in 2019, when I began to learn how
+              to play the piano and make beats on my computer using Logic Pro.
+              Feeling an emotion from a song is one thing, but expressing a
+              emotion through your own song is another. Playing along with the
+              rhythm of your soul is something I wish everyone could experience.
               <br />
               <br />
-              My music is far from platinum, but I&apos;m proud of it. And it conveys
-              the feelings I felt in those moments behind the keyboard. I hope
-              you enjoy it.
+              My music is far from platinum, but I&apos;m proud of it. And it
+              conveys the feelings I felt in those moments behind the keyboard.
+              I hope you enjoy it!
             </p>
           </div>
           <div className="flex items-center content-center w-full gap-2 sm:mt-5 sm:scale-90">
