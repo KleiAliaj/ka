@@ -135,17 +135,16 @@ function Photography({ tyImages, tyStats, altDescription }) {
           <p className="font-bold heading-sm !text-left">Why I take pictures</p>
           <div className="glass-box bg-white/80 dark:bg-black/80">
             <p>
-              Photography is my creative outlet that gets me outside, and helps
-              me notice and appreciate the beauty of the Pacific Northwest (and
-              some of my pets). I am by no means a professional, far from it.
-              But I do have a decent Nikon camera, an eye for nature
+              Photography is my creative outlet that gets me outside, and it
+              helps me notice the small things, while appreciating the beauty of
+              the Pacific Northwest. I am by no means a professional, far from
+              it. But I do have a decent Nikon camera, an eye for nature
               photography, and the patience to find the right shot. Little by
               little, I feel myself getting better. <br />
               <br /> I don&apos;t ever expect to be famous for my photography,
-              or even make a single dollar. I do this for me. My mind is so much
-              clearer when I spend time every week to bask in the glory of what
-              nature has to offer, and capture it for all to see. I share all my
-              best work to{" "}
+              or even make a single dollar, it&apos;s just so fun! My mind is so
+              much clearer when I spend time in nature every week. I share all
+              my best work to{" "}
               <a
                 href="https://unsplash.com/@tyfiero"
                 target="_blank"
@@ -154,8 +153,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               >
                 unsplash
               </a>{" "}
-              for the world to use in their creative projects. I love putting my
-              work out there, even if no one was to see it.
+              for anyone to use in their creative projects.
             </p>
           </div>
           <br />
@@ -199,7 +197,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
         <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 md:mt-8">
           {/* <div className="w-1/4 !h-auto shadow-xl rounded-xl shadow-sky-600/30 image-container flex flex-col justify-center items-start"> */}
           <Image
-            src="https://images.unsplash.com/photo-1653794280522-96224d9338c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+            src="/assets/other/typhotography.jpg"
             alt="A plant in the Pacific Northwest"
             layout="fill"
             className=" rounded-xl"
@@ -240,7 +238,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             <p>
               Total Views:&nbsp;{"  "}
               <span className="text-lg font-bold text-sky-600">
-                {tyStats.views}
+                {tyStats.views.toLocaleString("en-US")}
               </span>
             </p>
           </div>
