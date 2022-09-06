@@ -4,13 +4,14 @@ import { useState } from "react";
 import { FaHome, FaRegPaperPlane } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
-  console.log("RERENDER");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [thanks, setThanks] = useState(false);
+  const [verified, setVerified] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -67,8 +68,8 @@ export default function ContactForm() {
                 Want to work together? Let&apos;s chat!
               </h2>
               <p className="mb-2">
-                Send me a message using the form below and I&apos;ll get back to you
-                as soon as I can.
+                Send me a message using the form below and I&apos;ll get back to
+                you as soon as I can.
               </p>
             </div>
             <form
@@ -106,8 +107,14 @@ export default function ContactForm() {
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
+              <ReCAPTCHA
+                sitekey="6LcISdshAAAAACMLWFnSN9ASpd5U8lUVukrD5Z7V"
+                onChange={() => {
+                  setVerified(true);
+                }}
+              />
               <button
-                // type="submit"
+                type="submit"
                 className="button-1"
                 onClick={() => {
                   setName("");
