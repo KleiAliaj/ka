@@ -108,7 +108,7 @@ export default function ContactForm() {
                 />
               </div>
               <ReCAPTCHA
-                sitekey="6LcISdshAAAAACMLWFnSN9ASpd5U8lUVukrD5Z7V"
+                sitekey="6Ld6T9shAAAAALBkXovooVihStYeAFV1kr1ZBoW3"
                 onChange={() => {
                   setVerified(true);
                 }}
