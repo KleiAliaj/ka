@@ -6,10 +6,15 @@ import Layout from "@/components/layout/layout";
 import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import CustomForm from "@/components/blog/NewsletterForm";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+  const url =
+    "https://tyfiero.us13.list-manage.com/subscribe/post?u=81ddc1bd6ec9ec4e48aa4e4b7&amp;id=4de0cd91bb&amp;f_id=00ccc3e2f0";
+
   return (
     <>
       <Head>
@@ -21,6 +26,19 @@ export default function Index({ allPosts }) {
         </h1> */}
         <div className="page-container">
           <h2 className="text-left heading-lg ">Blog</h2>
+
+          <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+              <div>
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={(formData) => subscribe(formData)}
+                />
+              </div>
+            )}
+          />
           {/* <Intro /> */}
           <h3 className="mb-4 text-2xl f1 text-sky-800 dark:text-sky-300">
             Latest Post:
