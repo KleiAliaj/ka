@@ -17,13 +17,7 @@ function ModalPAAda() {
       <div className="flex flex-col items-center">
         <h2 className="w-full text-left heading-sm !mb-0 !mt-2">Description</h2>
         <p>
-          This is the project that turned me from a student to a developer. It
-          took me three months to build this project out.
-          <br />
-          <br />
-          Maybe one day I&apos;ll make an improved version of this in React that
-          is more interactive with more fun features. But for now, it&apos;s a
-          reminder of how far I have come with JavaScript.
+          Write up coming soon...
         </p>
       </div>
       <section className="flex gap-4 lg:flex-row sm:flex-col">
