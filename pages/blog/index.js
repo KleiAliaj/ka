@@ -1,7 +1,7 @@
 import Container from "@/components/layout/container";
 import MoreStories from "@/components/blog/more-stories";
 import HeroPost from "@/components/blog/hero-post";
-import Intro from "@/components/intro";
+
 import Layout from "@/components/layout/layout";
 import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
@@ -39,7 +39,7 @@ export default function Index({ allPosts }) {
               </div>
             )}
           />
-          {/* <Intro /> */}
+
           <h3 className="mb-4 text-2xl f1 text-sky-800 dark:text-sky-300">
             Latest Post:
           </h3>
