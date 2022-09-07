@@ -22,7 +22,7 @@ function About() {
               to getting a B.S. in Microbiology with a minor in Zoology from
               Colorado State University. While I still enjoy biology, I made a
               decision to pivot my career to pursue computer science for more
-              opportunities to express my creativity and to build useful things.
+              opportunities to express my creativity and to build useful things. This scientific background has given me a unique lens on computer science, and helped me to appreciate the 
               Follow along on my journey to see what I create next!
             </p>
           </div>
