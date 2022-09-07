@@ -16,33 +16,35 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setName("");
-    setEmail("");
-    setMessage("");
+    if (verified) {
+      const data = {
+        name,
+        email,
+        message,
+      };
 
-    const data = {
-      name,
-      email,
-      message,
-    };
-
-    console.log(data);
-
-    await fetch("/api/contact", {
-      method: "post",
-      body: JSON.stringify(data),
-    })
-      .then(() => {
-        toast.success("Message sent! ✉️");
-        // console.log("HI THERE BITCH");
-
-        // console.log("why no work?");
+      console.log(data);
+      setName("");
+      setEmail("");
+      setMessage("");
+      await fetch("/api/contact", {
+        method: "post",
+        body: JSON.stringify(data),
       })
-      .catch(() => {
-        toast.error("Message failed to send :( ");
-      });
-    setThanks(true);
-    // toast.success("Message sent! ✉️");
+        .then(() => {
+          toast.success("Message sent! ✉️");
+          // console.log("HI THERE BITCH");
+
+          // console.log("why no work?");
+        })
+        .catch(() => {
+          toast.error("Message failed to send :( ");
+        });
+      setThanks(true);
+      // toast.success("Message sent! ✉️");
+    } else {
+      toast.error("Please complete reCAPTCHA first!");
+    }
   };
 
   return (
@@ -67,14 +69,21 @@ export default function ContactForm() {
                 {" "}
                 Want to work together? Let&apos;s chat!
               </h2>
-              <p className="mb-2">
-                Send me a message using the form below and I&apos;ll get back to
-                you as soon as I can.
+              <p>
+                Send me a message using the form below, or{" "}
+                <a
+                  href="http://twitter.com/FieroTy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DM me
+                </a>{" "}
+                on Twitter.
               </p>
             </div>
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col items-center justify-center w-full h-full gap-4 mt-10"
+              className="flex flex-col items-center justify-center w-full h-full gap-4 mt-5"
             >
               <div className="flex flex-col items-start w-[70%]">
                 <label htmlFor="name">Name:</label>
@@ -87,17 +96,20 @@ export default function ContactForm() {
               </div>
 
               <div className="flex flex-col items-start w-[70%]">
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">
+                  <span className="text-rose-400">* </span>Email:
+                </label>
                 <input
                   id="email"
                   className="w-full mt-1 textarea-tw "
+                  required
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex flex-col items-start w-[70%]">
                 <label htmlFor="message" className="">
-                  Message:
+                  <span className="text-rose-400">* </span>Message:
                 </label>
                 <textarea
                   id="message"
@@ -109,18 +121,22 @@ export default function ContactForm() {
               </div>
               <ReCAPTCHA
                 sitekey="6Ld6T9shAAAAALBkXovooVihStYeAFV1kr1ZBoW3"
+                // size="compact"
                 onChange={() => {
                   setVerified(true);
                 }}
               />
               <button
-                type="submit"
+                // type="submit"
                 className="button-1"
-                onClick={() => {
-                  setName("");
-                  setEmail("");
-                  setMessage("");
-                }}
+                // onClick={() => {
+                //   console.log(verified);
+                //   if (verified) {
+                //     setName("");
+                //     setEmail("");
+                //     setMessage("");
+                //   }
+                // }}
               >
                 Send
                 <FaRegPaperPlane />
