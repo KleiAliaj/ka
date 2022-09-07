@@ -11,6 +11,9 @@ import {
   FaRegHeart,
   FaUserAlt,
 } from "react-icons/fa";
+import ImageSection from "@/components/layout/ImageSection";
+import DualSection from "@/components/layout/DualSection";
+import TextSection from "@/components/layout/TextSection";
 
 export async function getStaticProps(context) {
   let tyImages = [];
@@ -129,18 +132,16 @@ function Photography({ tyImages, tyStats, altDescription }) {
   const getMoreImages = async () => {};
   return (
     <div className="page-container">
-      <h2 className="text-left heading-lg ">Photography</h2>
-      <div className="flex justify-center gap-10 md:items-start sm:flex-col-reverse md:flex-row sm:items-center">
-        <div className="md:w-1/2 sm:w-full ">
-          <p className="font-bold heading-sm !text-left">Why I take pictures</p>
-          <div className="glass-box bg-white/80 dark:bg-black/80">
+      <h1 className="text-left heading-lg ">Photography</h1>
+      <DualSection>
+        <TextSection title="Why I Take Pictures">
+          <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
             <p>
               Photography is my creative outlet that gets me outside, and it
               helps me notice the small things, while appreciating the beauty of
               the Pacific Northwest. I am by no means a professional, far from
               it. But I do have a decent Nikon camera, an eye for nature
-              photography, and the patience to find the right shot. Little by
-              little, I feel myself getting better. <br />
+              photography, and the patience to find the right shot. <br />
               <br /> I don&apos;t ever expect to be famous for my photography,
               or even make a single dollar, it&apos;s just so fun! My mind is so
               much clearer when I spend time in nature every week. I share all
@@ -173,15 +174,15 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
             </div>
           </div>
-          <div className="flex justify-start w-full mt-5">
+          <div className="flex justify-center w-full mt-5">
             <a
               href="https://unsplash.com/@tyfiero"
               target="_blank"
               rel="noreferrer"
-              className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
+              className="flex h-[4em] w-[18em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
             >
               <span className="text-xs font-bold text-white dark:text-black">
-                View my photos on:
+                View my photos on
               </span>
               <div className="w-[8em]  dark:invert-0 invert h-[3em]">
                 {" "}
@@ -193,17 +194,14 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
             </a>
           </div>
-        </div>
-        <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 md:mt-8">
-          {/* <div className="w-1/4 !h-auto shadow-xl rounded-xl shadow-sky-600/30 image-container flex flex-col justify-center items-start"> */}
-          <Image
-            src="/assets/other/typhotography.jpg"
-            alt="A plant in the Pacific Northwest"
-            layout="fill"
-            className=" rounded-xl"
-          />
-        </div>
-      </div>
+        </TextSection>
+        <ImageSection
+          src="/assets/other/typhotography.jpg"
+          alt="Image of Ty taking a photo"
+        />
+      </DualSection>
+
+      <div className="flex justify-center gap-10 md:items-start sm:flex-col-reverse md:flex-row sm:items-center"></div>
 
       <div className="flex flex-col items-center px-5 pt-2 pb-2 mt-20 ring-2 rounded-xl">
         <a
