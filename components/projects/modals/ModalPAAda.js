@@ -47,13 +47,9 @@ function ModalPAAda() {
               </h2>
               <ol className="ml-6 font-bold list-decimal f2 text-sky-600 dark:text-sky-200">
                 <li>
-                  Adding/removing class names using JavaScript to apply CSS.
+                  More to come...
                 </li>
-                <li>Keyboard events in JS.</li>
-                <li>
-                  Using the <code>this</code> keyword.
-                </li>
-                <li>JavaScript is fun!</li>
+                
               </ol>
             </div>
           </div>
