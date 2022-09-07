@@ -129,14 +129,6 @@ export default function ContactForm() {
               <button
                 // type="submit"
                 className="button-1"
-                // onClick={() => {
-                //   console.log(verified);
-                //   if (verified) {
-                //     setName("");
-                //     setEmail("");
-                //     setMessage("");
-                //   }
-                // }}
               >
                 Send
                 <FaRegPaperPlane />

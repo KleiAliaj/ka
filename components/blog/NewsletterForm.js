@@ -14,10 +14,11 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   return (
     <div style={{}} className="px-5 py-2 rounded-2xl ring-2">
-      <h3 className="heading-sm">
-        Sign up for my monthly newsletter! 
-      </h3>
-      <p>Every Month I send out </p>
+      <h3 className="heading-sm">Sign up for my monthly newsletter!</h3>
+      <p className="mb-2">
+        Every Month I send out a short newsletter with fun resources, and my
+        latest blog post. No spam, ever!{" "}
+      </p>
       <div className="flex w-full gap-2">
         <input
           className="textarea-tw f2 w-full h-fit !py-2"
@@ -26,7 +27,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           placeholder="Your email"
         />
         <br />
-        <button className="button-1 !px-3 whitespace-nowrap" onClick={submit}>
+        <button className="button-1 !px-5 whitespace-nowrap" onClick={submit}>
           Sign Up <FaEnvelope />
         </button>
       </div>
