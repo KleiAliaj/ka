@@ -15,11 +15,14 @@ function Error({ statusCode }) {
             </Link>{" "}
             and I&apos;ll go bug hunting.{" "}
           </p>
-          <img
-            src="/assets/other/gnome.png"
-            alt="ungnome error occured"
-            className="h-80 rounded-3xl !m-0 !p-0"
-          />
+          <picture>
+            <source srcSet="/assets/other/gnome.png" type="image/png" />
+            <img
+              src="/assets/other/gnome.png"
+              alt="ungnome error occured"
+              className="h-80 rounded-3xl !m-0 !p-0"
+            />
+          </picture>
         </div>
       </div>
     </div>

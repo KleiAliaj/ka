@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import p5 from "p5";
+import GithubButton from "../layout/githubButton";
 
 let pCubeHeight = 190;
 let pRotationX = 0;
@@ -231,7 +232,7 @@ function CubeWave() {
           </div>
         </div>
         <button
-          className="mt-2 button-1"
+          className="my-2 button-1"
           onClick={() => {
             setIsReset(!reset);
             setColor(80);
@@ -250,19 +251,7 @@ function CubeWave() {
         >
           Reset
         </button>
-        <a
-          href="https://github.com/tyfiero/tyfiero-blog/blob/main/components/projects/CubeWave.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 button-bw w-fit f2"
-        >
-          Github
-          <img
-            src="/assets/CodeLogos/github.png"
-            alt="github logo"
-            className="w-6 h-6 dark:invert invert-0"
-          />
-        </a>
+        <GithubButton url="https://github.com/tyfiero/tyfiero-blog/blob/main/components/projects/CubeWave.js" />
       </div>
       <div
         className="flex items-center justify-center rounded-xl"

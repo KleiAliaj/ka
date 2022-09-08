@@ -79,11 +79,14 @@ function Experiment({ path, imgSrc, name, description }) {
           <h4 className="heading-sm !text-left">{name}</h4>
           <p>{description}</p>
         </div>
-        <img
-          src={imgSrc}
-          alt="logo"
-          className="object-cover group-hover:scale-105 h-[10em] w-full transition duration-500 rounded-lg"
-        />
+        <picture>
+          <source srcSet={imgSrc} type="image/png" />
+          <img
+            src={imgSrc}
+            alt="logo"
+            className="object-cover group-hover:scale-105 h-[10em] w-full transition duration-500 rounded-lg"
+          />
+        </picture>
       </a>
     </Link>
   );

@@ -139,11 +139,14 @@ function Projects() {
               className="z-10 button-bw w-fit f2"
             >
               Github Profile
-              <img
-                src="assets/CodeLogos/github.png"
-                alt="github logo"
-                className="w-6 h-6 dark:invert invert-0"
-              />
+              <picture>
+                <source srcSet="assets/CodeLogos/github.png" type="image/png" />
+                <img
+                  src="assets/CodeLogos/github.png"
+                  alt="github logo"
+                  className="w-6 h-6 invert dark:invert-0"
+                />
+              </picture>
             </a>
           </div>
         </div>
@@ -433,11 +436,14 @@ const ProjectCard = ({
           data-atropos-offset="2"
           className="w-full sm:h-[14em] md:h-[10em] bg-white/40  rounded-lg  "
         >
-          <img
-            src={imgSrc}
-            alt="logo"
-            className="object-cover group-hover:scale-105 sm:h-[14em] md:h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
-          />
+          <picture>
+            <source srcSet={imgSrc} type="image/png" />
+            <img
+              src={imgSrc}
+              alt="logo"
+              className="object-cover group-hover:scale-105 sm:h-[14em] md:h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
+            />
+          </picture>
         </div>
 
         <div

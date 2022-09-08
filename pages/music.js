@@ -44,11 +44,14 @@ function Music() {
               className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
             >
               <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                <img
-                  src="/assets/other/spotify.png"
-                  alt="spotify button"
-                  className="object-contain"
-                />
+                <picture>
+                  <source srcSet="/assets/other/spotify.png" type="image/png" />
+                  <img
+                    src="/assets/other/spotify.png"
+                    alt="spotify button"
+                    className="object-contain"
+                  />
+                </picture>
               </div>
             </a>
             <a
@@ -58,11 +61,17 @@ function Music() {
               className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
             >
               <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                <img
-                  src="/assets/other/appleMusic.png"
-                  alt="Apple Music button"
-                  className="object-contain"
-                />
+                <picture>
+                  <source
+                    srcSet="/assets/other/appleMusic.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="/assets/other/appleMusic.png"
+                    alt="Apple Music button"
+                    className="object-contain"
+                  />
+                </picture>
               </div>
             </a>
             <a
@@ -72,11 +81,17 @@ function Music() {
               className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
             >
               <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                <img
-                  src="/assets/other/soundcloud.png"
-                  alt="Soundcloud button"
-                  className="object-contain"
-                />
+                <picture>
+                  <source
+                    srcSet="/assets/other/soundcloud.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="/assets/other/soundcloud.png"
+                    alt="Soundcloud button"
+                    className="object-contain"
+                  />
+                </picture>
               </div>
             </a>
           </div>
