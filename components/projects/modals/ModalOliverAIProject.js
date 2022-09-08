@@ -1,3 +1,4 @@
+import GithubButton from "@/components/layout/githubButton";
 import Link from "next/link";
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -71,19 +72,8 @@ function ModalOliverAIProject() {
                 Link <FaExternalLinkAlt />
               </a>
             </Link>
-            <a
-              href="https://github.com/tyfiero/tyfiero-blog/tree/main/components/ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-bw w-fit f2"
-            >
-              Github
-              <img
-                src="assets/CodeLogos/github.png"
-                alt="github logo"
-                className="w-6 h-6 dark:invert invert-0"
-              />
-            </a>
+
+            <GithubButton url="https://github.com/tyfiero/tyfiero-blog/tree/main/components/ai" />
           </div>
         </div>
         <div className="flex flex-col items-center w-full lg:w-1/2">

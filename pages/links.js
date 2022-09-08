@@ -21,9 +21,9 @@ function Links({ links }) {
     <div className="page-container">
       <h2 className="text-left heading-lg ">Links</h2>
       <p>
-        This is a list of the best links on the internet I&apos;ve come across, since
-        I started keeping track in 2020. Lots of cool resources and articles in
-        here.
+        This is a list of the best links on the internet I&apos;ve come across,
+        since I started keeping track in 2020. Lots of cool resources and
+        articles in here.
       </p>
       <div className="flex items-center gap-1">
         <p>Favorite Links are labelled with a &quot;</p>
@@ -357,13 +357,23 @@ function Resource({ name, url, cn, fav, note, textColor }) {
           href={url}
         >
           <div className="flex items-center gap-2">
-            <img
-              src={
-                "https://s2.googleusercontent.com/s2/favicons?domain_url=" + url
-              }
-              alt={"Favicon for " + name}
-              className="scale-125"
-            />
+            <picture>
+              <source
+                srcSet={
+                  "https://s2.googleusercontent.com/s2/favicons?domain_url=" +
+                  url
+                }
+                type="image/png"
+              />
+              <img
+                src={
+                  "https://s2.googleusercontent.com/s2/favicons?domain_url=" +
+                  url
+                }
+                alt={"Favicon for " + name}
+                className="scale-125"
+              />
+            </picture>
             <p
               className={
                 "transition hover:underline visited:text-indigo-600 hover:text-sky-700 hover:dark:text-sky-300 " +
@@ -394,13 +404,21 @@ function ResourceCard({ name, url, cn, fav, note, textColor }) {
         href={url}
       >
         <div className="flex justify-center w-full">
-          <img
-            src={
-              "https://s2.googleusercontent.com/s2/favicons?domain_url=" + url
-            }
-            alt={"Favicon for " + name}
-            className="scale-150"
-          />
+          <picture>
+            <source
+              srcSet={
+                "https://s2.googleusercontent.com/s2/favicons?domain_url=" + url
+              }
+              type="image/png"
+            />
+            <img
+              src={
+                "https://s2.googleusercontent.com/s2/favicons?domain_url=" + url
+              }
+              alt={"Favicon for " + name}
+              className="scale-150"
+            />
+          </picture>
         </div>
         <div className="absolute flex items-center gap-2 top-2 right-2">
           {fav ? (

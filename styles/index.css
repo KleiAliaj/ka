@@ -47,7 +47,7 @@ body {
     @apply flex items-center gap-2 px-10 py-2 text-white transition rounded-full shadow-md bg-sky-500 shadow-sky-300 hover:bg-sky-600 hover:shadow-sky-400 hover:shadow-lg hover:scale-105 active:scale-90 justify-center f2;
   }
   .button-bw {
-    @apply flex items-center gap-2 px-10 py-2 text-black dark:text-white transition rounded-full shadow-md bg-white shadow-slate-300  hover:shadow-slate-400 dark:bg-slate-900 dark:shadow-slate-600 dark:hover:shadow-slate-500 hover:shadow-lg hover:scale-105 active:scale-90 justify-center f2;
+    @apply flex items-center gap-2 px-10 py-2 dark:text-black text-white transition rounded-full shadow-md dark:bg-white dark:shadow-slate-300  dark:hover:shadow-slate-400 bg-slate-900 shadow-slate-600 hover:shadow-slate-500 hover:shadow-lg hover:scale-105 active:scale-90 justify-center f2;
   }
   p {
     @apply text-slate-800 dark:text-slate-50 f2;

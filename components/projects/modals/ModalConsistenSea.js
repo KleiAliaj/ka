@@ -1,3 +1,4 @@
+import GithubButton from "@/components/layout/githubButton";
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Carousel from "./Carousel";
@@ -63,34 +64,30 @@ function ModalConsistenSea() {
               Install <FaExternalLinkAlt />
             </a>
 
-            <a
-              href="https://github.com/tyfiero/consistensea"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-bw w-fit f2"
-            >
-              Github
-              <img
-                src="assets/CodeLogos/github.png"
-                alt="github logo"
-                className="w-6 h-6 dark:invert invert-0"
-              />
-            </a>
+            <GithubButton url="https://github.com/tyfiero/consistensea" />
             <a
               href="https://www.producthunt.com/posts/consistensea?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-consistensea"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 transition scale-110 hover:scale-125"
             >
-              <img
-                src={
-                  "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=357189&theme=light"
-                }
-                alt="ConsistenSea - Chrome&#0032;extension&#0032;for&#0032;fun&#0032;habit&#0045;tracking&#0032;on&#0032;every&#0032;new&#0032;tab&#0032; | Product Hunt"
-                style={{ width: "250px", height: "54px" }}
-                width="250"
-                height="54"
-              />
+              <picture>
+                <source
+                  srcSet={
+                    "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=357189&theme=light"
+                  }
+                  type="image/svg"
+                />
+                <img
+                  src={
+                    "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=357189&theme=light"
+                  }
+                  alt="ConsistenSea - Chrome&#0032;extension&#0032;for&#0032;fun&#0032;habit&#0045;tracking&#0032;on&#0032;every&#0032;new&#0032;tab&#0032; | Product Hunt"
+                  style={{ width: "250px", height: "54px" }}
+                  width="250"
+                  height="54"
+                />
+              </picture>
             </a>
           </div>
         </div>

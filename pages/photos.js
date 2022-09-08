@@ -186,11 +186,14 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </span>
               <div className="w-[8em]  dark:invert-0 invert h-[3em]">
                 {" "}
-                <img
-                  src="/assets/other/u-logo.png"
-                  alt="unsplash button"
-                  className="object-contain"
-                />
+                <picture>
+                  <source srcSet="/assets/other/u-logo.png" type="image/png" />
+                  <img
+                    src="/assets/other/u-logo.png"
+                    alt="unsplash button"
+                    className="object-contain"
+                  />
+                </picture>
               </div>
             </a>
           </div>
@@ -211,11 +214,17 @@ function Photography({ tyImages, tyStats, altDescription }) {
           className="flex flex-col items-center"
         >
           <div className="w-20 h-20 rounded-full shadow-lg">
-            <img
-              src={"/assets/other/unsplash-profile.png"}
-              alt="Aerial view of the Pacific Northwest"
-              className="rounded-full "
-            />
+            <picture>
+              <source
+                srcSet={"/assets/other/unsplash-profile.png"}
+                type="image/png"
+              />
+              <img
+                src={"/assets/other/unsplash-profile.png"}
+                alt="Unsplash profile image"
+                className="rounded-full "
+              />
+            </picture>
           </div>
           <p className="italic text-sky-300">@tyfiero</p>
           <h3 className="heading-sm">Unsplash Stats</h3>
@@ -223,46 +232,46 @@ function Photography({ tyImages, tyStats, altDescription }) {
 
         <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
           <div className="flex items-center gap-2">
-            <FaImage className="text-sky-600" />
+            <FaImage className="text-sky-600 dark:text-sky-300" />
             <p>
               Photos:&nbsp;{"  "}
-              <span className="text-lg font-bold text-sky-600">
+              <span className="text-lg font-bold text-sky-600 dark:text-sky-300">
                 {tyStats.photoNum}
               </span>
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <FaEye className="text-sky-600" />
+            <FaEye className="text-sky-600 dark:text-sky-300" />
             <p>
               Total Views:&nbsp;{"  "}
-              <span className="text-lg font-bold text-sky-600">
+              <span className="text-lg font-bold text-sky-600 dark:text-sky-300">
                 {tyStats.views.toLocaleString("en-US")}
               </span>
             </p>
           </div>
           <div className="flex items-center gap-2 ">
-            <FaDownload className="scale-75 text-sky-600" />
+            <FaDownload className="scale-75 text-sky-600 dark:text-sky-300" />
             <p>
               Downloads:&nbsp;{"  "}
-              <span className="text-lg font-bold text-sky-600">
+              <span className="text-lg font-bold text-sky-600 dark:text-sky-300">
                 {tyStats.downloads}
               </span>
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <FaUserAlt className="text-sky-600" />
+            <FaUserAlt className="text-sky-600 dark:text-sky-300" />
             <p>
               Followers: &nbsp; {"  "}
-              <span className="text-lg font-bold text-sky-600">
+              <span className="text-lg font-bold text-sky-600 dark:text-sky-300">
                 {tyStats.followers}
               </span>
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <FaHeart className="text-sky-600" />
+            <FaHeart className="text-sky-600 dark:text-sky-300" />
             <p>
               Likes:&nbsp;{" "}
-              <span className="text-lg font-bold text-sky-600">
+              <span className="text-lg font-bold text-sky-600 dark:text-sky-300">
                 {tyStats.likes}
               </span>
             </p>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import p5 from "p5";
+import GithubButton from "../layout/githubButton";
 
 function sketch(p) {
   // p is a reference to the p5 instance this sketch is attached to
@@ -68,26 +69,15 @@ function DancingWaves() {
       <div className="flex flex-col items-center justify-start p-5 lg:mr-8 rounded-xl ring-2 ring-sky-400 h-fit w-fit lg:mb-0 sm:mb-4">
         <h3 className="heading-sm">Controls</h3>
         <button
-          className="button-1"
+          className="my-2 button-1"
           onClick={() => {
             setIsReset(!reset);
           }}
         >
           Regenerate
         </button>
-        <a
-          href="https://github.com/tyfiero/tyfiero-blog/blob/main/components/projects/DancingWaves.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 button-bw w-fit f2"
-        >
-          Github
-          <img
-            src="/assets/CodeLogos/github.png"
-            alt="github logo"
-            className="w-6 h-6 dark:invert invert-0"
-          />
-        </a>
+
+        <GithubButton url="https://github.com/tyfiero/tyfiero-blog/blob/main/components/projects/DancingWaves.js" />
       </div>
       <div
         className="flex items-center justify-center rounded-xl"
