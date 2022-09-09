@@ -12,7 +12,7 @@ function About() {
       <h2 className="text-left heading-lg ">About Me</h2>
 
       <DualSection centerText>
-        <TextSection title="Hi, I'm Ty! 👋🏻">
+        <TextSection title="Who I am">
           <p className="pb-3 text-2xl font-bold text-sky-600">
             Web developer, artist, and AI enthusiast in Seattle.{" "}
           </p>

@@ -126,7 +126,7 @@ function Navbar() {
             >
               <div className="z-20 w-12 h-12 transition ">
                 <Image
-                  src="/assets/other/ty-circle-image.png"
+                  src="/assets/other/ty-circle-image.webp"
                   alt="Ty Fiero"
                   className="z-20"
                   width={48}
@@ -177,6 +177,26 @@ function Navbar() {
                       <TbHome2 className="scale-110 fade-effect-quick" />
                     )}
                     Home
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">
+                  <a
+                    className={
+                      " fade-m6  flex gap-2 items-center  " +
+                      (selected === "blog"
+                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
+                    }
+                    href="#"
+                    onClick={handleClick}
+                  >
+                    {selected === "blog" && (
+                      <TbFileText className="scale-110 fade-effect-quick" />
+                      // <BsChatLeftText className=" fade-effect-quick" />
+                    )}
+                    Blog
                   </a>
                 </Link>
               </li>
@@ -272,26 +292,6 @@ function Navbar() {
                       <TbCamera className="scale-110 fade-effect-quick" />
                     )}
                     Photos
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a
-                    className={
-                      " fade-m6  flex gap-2 items-center  " +
-                      (selected === "blog"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "blog" && (
-                      <TbFileText className="scale-110 fade-effect-quick" />
-                      // <BsChatLeftText className=" fade-effect-quick" />
-                    )}
-                    Blog
                   </a>
                 </Link>
               </li>

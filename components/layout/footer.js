@@ -1,5 +1,6 @@
 import Container from "./container";
 import { EXAMPLE_PATH } from "@/lib/constants";
+import SocialIcons from "./SocialIcons";
 
 export default function Footer() {
   let date = new Date().getFullYear();
@@ -7,7 +8,8 @@ export default function Footer() {
     <footer className="relative ">
       {/* <footer className=" bg-gradient-to-t from-[#3CA0CB] via-[#3CA0CB] relative"> */}
       <div className="flex flex-col items-center lg:flex-row">
-        <div className="flex flex-col items-center w-full gap-2 bg-clear-pl4">
+        <div className="flex flex-col items-center w-full sm:gap-1 md:gap-2 bg-clear-pl4">
+          <SocialIcons small />
           <p className="text-[11px] text-slate-300">
             Copyright © {date} Ty Fiero
           </p>

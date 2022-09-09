@@ -25,7 +25,6 @@ import {
 import { Water } from "three-stdlib";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { PerspectiveCamera } from "three";
-import Intro from "../intro";
 import IntroSection from "./intro";
 // import { RepeatWrapping } from "three";
 extend({ Water });

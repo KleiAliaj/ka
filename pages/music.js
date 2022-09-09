@@ -9,7 +9,7 @@ function Music() {
       <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
         <div className="md:w-1/2 sm:w-full ">
           <h3 className="heading-md">Warm, mellow Lo-Fi beats.</h3>
-          <div className=" glass-box bg-white/80 dark:bg-black/80">
+          <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
             <p className="pb-3 font-bold">
               I was listening to Lo-Fi Hip Hop before it was cool (*puts on
               hipster glasses*). For real though, for as long as I can remember
@@ -21,7 +21,7 @@ function Music() {
               piano and drum beats makes it the perfect music for, well,
               anything. When I&apos;m not listening to Lo-Fi, I enjoy rap,
               classic rock, smooth jazz, and classical music. But Lo-Fi will
-              always have my heart 💙.
+              always have my heart.
               <br />
               <br />
               My love for Lo-Fi grew stronger in 2019, when I began to learn how
