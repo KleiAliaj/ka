@@ -16,7 +16,7 @@ import {
 } from "react-icons/tb";
 import Image from "next/image";
 import { AiOutlineRobot } from "react-icons/ai";
-
+import { motion } from "framer-motion";
 function Navbar() {
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
@@ -25,6 +25,34 @@ function Navbar() {
 
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  const items = [
+    { name: "home", icon: <TbHome2 className="scale-110 fade-effect-quick" /> },
+    {
+      name: "blog",
+      icon: <TbFileText className="scale-110 fade-effect-quick" />,
+    },
+    {
+      name: "about",
+      icon: <FaRegUser className="scale-110 fade-effect-quick" />,
+    },
+    { name: "code", icon: <TbCode className="scale-110 fade-effect-quick" /> },
+    {
+      name: "ai",
+      icon: <AiOutlineRobot className="scale-110 fade-effect-quick" />,
+    },
+    {
+      name: "music",
+      icon: <TbMusic className="scale-110 fade-effect-quick" />,
+    },
+    {
+      name: "photos",
+      icon: <TbCamera className="scale-110 fade-effect-quick" />,
+    },
+    {
+      name: "contact",
+      icon: <TbMail className="scale-110 fade-effect-quick" />,
+    },
+  ];
 
   React.useEffect(() => {
     setMounted(true);
@@ -115,6 +143,24 @@ function Navbar() {
       setIsToggled(false);
     }
   };
+  const menuVariant = {
+    menuStart: {
+      opacity: 0,
+      scale: 0.7,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+    menuStop: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+        duration: 1.5,
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
   return (
     <>
       <nav className="relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
@@ -149,7 +195,6 @@ function Navbar() {
             toggle={() => {
               setIsToggled(!isToggled);
             }}
-            // size={25}
             easing="ease-in"
             label="Show menu"
             rounded
@@ -160,167 +205,61 @@ function Navbar() {
           <>
             <div className="absolute top-0 left-0 z-10 w-full h-screen bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden !overflow-hidden"></div>
 
-            <ul className="z-20 flex items-center mt-4 md:gap-5 sm:gap-6 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1">
-              <li>
-                <Link href="/">
-                  <a
-                    className={
-                      " fade-m1 flex gap-2 items-center   " +
-                      (selected === "home"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1 "
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "home" && (
-                      <TbHome2 className="scale-110 fade-effect-quick" />
-                    )}
-                    Home
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a
-                    className={
-                      " fade-m6  flex gap-2 items-center  " +
-                      (selected === "blog"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "blog" && (
-                      <TbFileText className="scale-110 fade-effect-quick" />
-                      // <BsChatLeftText className=" fade-effect-quick" />
-                    )}
-                    Blog
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <a
-                    className={
-                      " fade-m2  flex gap-2 items-center " +
-                      (selected === "about"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "about" && (
-                      <FaRegUser className="fade-effect-quick" />
-                    )}
-                    About
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/code">
-                  <a
-                    className={
-                      " fade-m3   flex gap-2 items-center " +
-                      (selected === "code"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "code" && (
-                      <TbCode className="scale-125 fade-effect-quick" />
-                    )}
-                    Code
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai">
-                  <a
-                    className={
-                      " fade-m3   flex gap-2 items-center " +
-                      (selected === "ai"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "ai" && (
-                      <AiOutlineRobot className="scale-125 fade-effect-quick" />
-                    )}
-                    AI
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/music">
-                  <a
-                    className={
-                      "  fade-m4  flex gap-2 items-center " +
-                      (selected === "music"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "music" && (
-                      <TbMusic className="scale-110 fade-effect-quick" />
-                    )}
-                    Music
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/photos">
-                  <a
-                    className={
-                      " fade-m5  flex gap-2 items-center  " +
-                      (selected === "photos"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "photos" && (
-                      <TbCamera className="scale-110 fade-effect-quick" />
-                    )}
-                    Photos
-                  </a>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="/contact">
-                  <a
-                    className={
-                      "  fade-m7  flex gap-2 items-center " +
-                      (selected === "contact"
-                        ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-                        : " md:hover:text-sky-400 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
-                    }
-                    href="#"
-                    onClick={handleClick}
-                  >
-                    {selected === "contact" && (
-                      <TbMail className="scale-110 fade-effect-quick" />
-                    )}
-                    Contact
-                  </a>
-                </Link>
-              </li>
+            <motion.ul
+              variants={menuVariant}
+              initial={"menuStart"}
+              animate={"menuStop"}
+              className="z-20 flex items-center mt-4 md:gap-5 sm:gap-6 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1"
+            >
+              {items.map((item) => (
+                <MenuItem
+                  key={item.name}
+                  name={item.name}
+                  icon={item.icon}
+                  selected={selected}
+                  handleClick={handleClick}
+                />
+              ))}
               <li>{renderThemeChanger()}</li>
-            </ul>
+            </motion.ul>
           </>
         )}
       </nav>
     </>
+  );
+}
+
+function MenuItem({ selected, handleClick, name, icon }) {
+  const itemVariant = {
+    menuStart: { opacity: 0, scale: 0.4 },
+    menuStop: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+        duration: 0.4,
+      },
+    },
+  };
+  return (
+    <motion.li variants={itemVariant}>
+      <Link href={`/${name === "home" ? "" : name}`}>
+        <a
+          className={
+            "flex gap-2 items-center capitalize " +
+            (selected === name
+              ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
+              : " md:hover:text-sky-400 skew-x-0 md:hover:-skew-y-6 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
+          }
+          href="#"
+          onClick={handleClick}
+        >
+          {selected === name && icon}
+          {name}
+        </a>
+      </Link>
+    </motion.li>
   );
 }
 
