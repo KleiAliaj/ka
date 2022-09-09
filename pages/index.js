@@ -1,7 +1,6 @@
 import Container from "@/components/layout/container";
 import MoreStories from "@/components/blog/more-stories";
 import HeroPost from "@/components/blog/hero-post";
-import Intro from "@/components/intro";
 import Layout from "@/components/layout/layout";
 import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
@@ -10,34 +9,115 @@ import Image from "next/image";
 import Loader from "@/components/Loader";
 import HomePosts from "@/components/blog/homePosts";
 import TechStack from "@/components/projects/TechStack";
-
+import ImageSection from "@/components/layout/ImageSection";
+import DualSection from "@/components/layout/DualSection";
+import TextSection from "@/components/layout/TextSection";
+import Link from "next/link";
+import CustomForm from "@/components/blog/NewsletterForm";
+import SocialIcons from "@/components/layout/SocialIcons";
+import { motion, Variants } from "framer-motion";
 export default function Index({ allPosts }) {
+  const photoAnimate = {
+    offscreen: { scale: 0.6, opacity: 0 },
+    onscreen: {
+      scale: 1,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const headingAnimate = {
+    offscreen: { x: -300, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const textAnimate = {
+    offscreen: { x: -300, opacity: 0, scale: 0.2 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.2 },
+    },
+  };
+
   return (
     <>
       <Head>
         <title>Ty Fiero&apos;s blog on code, music, and life.</title>
       </Head>
       <div className="fade-effect-quick page-container !items-start">
-        <Intro />
-        <div className="w-[80%] h-[30em] rounded-lg drop-shadow-2xl relative">
-          <Image
-            src="/assets/other/Ty-lofi.jpeg"
-            alt="Lofi Style image of Ty"
-            className="!rounded-lg"
-            layout="fill"
-            priority={true}
-            objectFit="contain"
-          />
-        </div>
-        {/* <div className="w-full h-[20em] flex justify-center">
-          {" "}
-          <Loader />
-        </div> */}
-        <div className="flex flex-col gap-10 my-10">
-          {/* DEV SECTION */}
-          <div className="flex justify-center gap-10 sm:flex-col md:flex-row sm:items-center">
-            <div className="md:w-1/2 sm:w-full">
-              <p className="font-bold heading-md !text-left">Developer</p>
+        <DualSection centerText cn="w-full md:mt-10">
+          <TextSection headerClassNames="hidden">
+            <motion.section
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: false, amount: 0.5 }}
+              className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 "
+            >
+              <motion.div
+                variants={headingAnimate}
+                className="flex items-center w-full md:justify-start sm:justify-center"
+              >
+                <h1 className="font-bold leading-tight tracking-tighter sm:!text-7xl md:text-8xl pr-4 logo f1">
+                  Hi! I&apos;m Ty
+                </h1>
+                <motion.p
+                  initial={{ rotate: 40 }}
+                  animate={{
+                    rotate: -40,
+                    transition: {
+                      type: "spring",
+                      bounce: 0.2,
+                      duration: 1.5,
+                      // delay: 1.8,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    },
+                  }}
+                  className="sm:!text-6xl md:!text-7xl "
+                >
+                  ✋🏻
+                </motion.p>
+              </motion.div>
+              <motion.p
+                variants={textAnimate}
+                className="text-2xl md:text-left sm:text-center"
+              >
+                Web developer, musician, and photographer in Seattle,
+                Washington.
+              </motion.p>
+              <SocialIcons />
+            </motion.section>
+          </TextSection>
+          <motion.div
+            variants={photoAnimate}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true, amount: 0.5 }}
+            className="md:w-1/2 sm:h-[18em] sm:w-full md:h-[36em] rounded-lg drop-shadow-xl relative  "
+          >
+            <div className="absolute z-10 w-1/5 bg-teal-300/70 h-2/5 rounded-3xl dark:bg-teal-200/70 blur-3xl left-40 top-16"></div>
+            <div className="absolute z-10 w-2/5 bg-indigo-200/70 h-2/5 rounded-full dark:bg-indigo-300/70 blur-2xl right-28 top-[12rem]"></div>
+            <div className="absolute w-3/5 h-4/5 rounded-3xl bg-sky-300/70 dark:bg-sky-400/70 blur-3xl left-40 top-10"></div>
+            <Image
+              src="/assets/other/tyheadshot.webp"
+              alt="Ty Fiero image"
+              className="!rounded-lg z-50"
+              layout="fill"
+              priority={true}
+              objectFit="contain"
+            />
+          </motion.div>
+        </DualSection>
+        {/* separator */}
+        <div className="md:mb-20 md:mt-20 sm:mb-6 sm:mt-6" />
+
+        <DualSection invert centerText>
+          <TextSection title="Work">
+            <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
               <p>
                 I&apos;m a developer with a passion for building things that are
                 useful to people. My journey in software development started
@@ -48,65 +128,115 @@ export default function Index({ allPosts }) {
                 projects, from small vanilla javascript projects to full stack
                 web applications in Next.js.
               </p>
-
-              <br />
             </div>
-            <TechStack />
-          </div>
-        </div>
+          </TextSection>
+          {/* <div className="md:w-1/2 sm:w-full"></div> */}
 
-        {/* PHOTOGRAPHY SECTION */}
-        <div className="flex justify-center gap-10 sm:flex-col md:flex-row-reverse sm:items-center">
-          <div className="md:w-1/2 sm:w-full">
-            <p className="font-bold heading-md !text-left">Photographer</p>
-            <p>
-              Photography is my creative outlet that gets me outside, and helps
-              me notice and appreciate the beauty of the Pacific Northwest (and
-              some of my pets).
-            </p>
-
-            <a
-              href="https://unsplash.com/@tyfiero"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
-            >
-              <span className="text-xs font-bold text-white dark:text-black">
-                View my photos on:
-              </span>
-              <div className="w-[8em]  dark:invert-0 invert h-[3em]">
-                {" "}
-                <img
-                  src="/assets/other/u-logo.png"
-                  alt="unsplash button"
-                  className="object-contain"
-                />
-              </div>
-            </a>
+          <TechStack />
+        </DualSection>
+        {/* separator */}
+        <div className="md:mb-24 md:mt-28 sm:mb-8 sm:mt-8" />
+        {/* Play SECTION */}
+        <DualSection centerText>
+          <TextSection title="Play">
+            <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
+              <p>
+                In my free time I make{" "}
+                <Link href={"/music"}>
+                  <a className="underline text-sky-500 ">music</a>
+                </Link>
+                , take my camera out for nature{" "}
+                <Link href={"/photos"}>
+                  <a className="underline text-sky-500 "> photography</a>
+                </Link>
+                , I&apos;m an avid reader, and I experiment with{" "}
+                <Link href={"/photos"}>
+                  <a className="underline text-sky-500 ">AI&apos;s</a>
+                </Link>
+                . Hobbies are important to me, and each one has a purpose. I
+                express my creativity through my music, I get outside with my
+                photography, I read to learn more about the the world around me,
+                and I play with AI because it is fascinating to me. A
+                well-rounded balance of hobbies and interesting work makes for a
+                entertaining, fulfilled life!
+              </p>
+            </div>
             <br />
-          </div>
-          <div className="md:w-[640px] md:h-[423px] sm:w-[320px] sm:h-[211px] relative shadow-xl rounded-xl shadow-sky-600/30 ">
-            {/* <div className="w-1/4 !h-auto shadow-xl rounded-xl shadow-sky-600/30 image-container flex flex-col justify-center items-start"> */}
-            <Image
-              src="https://images.unsplash.com/photo-1653794280522-96224d9338c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-              alt="A plant in the Pacific Northwest"
-              layout="fill"
-              className=" rounded-xl"
-            />
-          </div>
-        </div>
 
-        {/* Music SECTION */}
-        <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
-          <div className="w-full">
-            <p className="font-bold heading-md !text-left">
-              Latest From the blog
-            </p>
-            {allPosts.length > 0 && <HomePosts posts={allPosts} />}
+            <div className="flex justify-center w-full ">
+              <a
+                href="https://unsplash.com/@tyfiero"
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
+              >
+                <span className="text-xs font-bold text-white dark:text-black">
+                  View my photos on
+                </span>
+                <div className="w-[8em]  dark:invert-0 invert h-[3em]">
+                  {" "}
+                  <picture>
+                    <source
+                      srcSet="/assets/other/u-logo.png"
+                      type="image/png"
+                    />
+                    <img
+                      src="/assets/other/u-logo.png"
+                      alt="unsplash button"
+                      className="object-contain"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </TextSection>
+          {/* <div className="md:w-1/2 sm:w-full"></div> */}
 
-            <br />
+          <ImageSection
+            src="/assets/other/Ty-lofi.jpeg"
+            alt="Lofi Style image of Ty"
+          />
+        </DualSection>
+        {/* separator */}
+        <div className="md:mb-24 md:mt-28 sm:mb-16 sm:mt-12" />
+        {/* Writing SECTION */}
+        <div className="flex flex-col items-center w-full gap-10">
+          <div className="flex flex-col items-center w-full">
+            <h2 className="font-bold heading-lg !mb-2">Writing</h2>
+
+            <div className="!p-4 glass-box md:w-2/3 sm:w-full bg-white/80 dark:bg-black/80">
+              <p>
+                Writing is thinking, my best thinking always comes from my
+                writing. I&apos;ve been sharing my recent writings on my{" "}
+                <Link href={"/blog"}>
+                  <a className="underline text-sky-500 ">blog</a>
+                </Link>
+                , where I write about technology and personal development every
+                few weeks. I try to pack as much helpful info as I can into each
+                post, and avoid fluff whenever I can.
+                <br />
+                <br />
+                In my monthly newsletter, Ty&apos;s Bytes, I include helpful
+                links from around the internet, a quote of the month, tech tips,
+                and my recent blog posts. Sign up below! No spam, I promise.
+              </p>
+            </div>
           </div>
+          <CustomForm />
         </div>
+        <div className="md:w-1/2 sm:w-full"></div>
+        {/* separator */}
+        <div className="mt-12 mb-12" />
+
+        <div className="w-full">
+          <h4 className="font-bold heading-lg !text-center">
+            Latest From the blog
+          </h4>
+          {allPosts.length > 0 && <HomePosts posts={allPosts} />}
+
+          <br />
+        </div>
+        <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center"></div>
       </div>
     </>
   );
