@@ -1,12 +1,6 @@
-import Container from "@/components/layout/container";
-import MoreStories from "@/components/blog/more-stories";
-import HeroPost from "@/components/blog/hero-post";
-import Layout from "@/components/layout/layout";
 import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "@/lib/constants";
 import Image from "next/image";
-import Loader from "@/components/Loader";
 import HomePosts from "@/components/blog/homePosts";
 import TechStack from "@/components/projects/TechStack";
 import ImageSection from "@/components/layout/ImageSection";
@@ -42,7 +36,56 @@ export default function Index({ allPosts }) {
       transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.2 },
     },
   };
-
+  const thirdAnimate = {
+    offscreen: { x: -300, opacity: 0, scale: 0.2 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.4 },
+    },
+  };
+  const rightSection = {
+    offscreen: { x: 300, opacity: 0, scale: 0.2 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1, delay: 0.3 },
+    },
+  };
+  const rightHeading = {
+    offscreen: { x: 300, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const upHeading = {
+    offscreen: { y: 300, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const upAnimate = {
+    offscreen: { y: 300, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5, delay: 0.4 },
+    },
+  };
+  const upThird = {
+    offscreen: { y: 500, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5, delay: 0.7 },
+    },
+  };
   return (
     <>
       <Head>
@@ -51,12 +94,7 @@ export default function Index({ allPosts }) {
       <div className="fade-effect-quick page-container !items-start">
         <DualSection centerText cn="w-full md:mt-10">
           <TextSection headerClassNames="hidden">
-            <motion.section
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: false, amount: 0.5 }}
-              className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 "
-            >
+            <section className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 ">
               <motion.div
                 variants={headingAnimate}
                 className="flex items-center w-full md:justify-start sm:justify-center"
@@ -72,7 +110,6 @@ export default function Index({ allPosts }) {
                       type: "spring",
                       bounce: 0.2,
                       duration: 1.5,
-                      // delay: 1.8,
                       repeat: Infinity,
                       repeatType: "reverse",
                     },
@@ -90,18 +127,15 @@ export default function Index({ allPosts }) {
                 Washington.
               </motion.p>
               <SocialIcons />
-            </motion.section>
+            </section>
           </TextSection>
           <motion.div
             variants={photoAnimate}
-            initial={"offscreen"}
-            whileInView={"onscreen"}
-            viewport={{ once: true, amount: 0.5 }}
             className="md:w-1/2 sm:h-[18em] sm:w-full md:h-[36em] rounded-lg drop-shadow-xl relative  "
           >
-            <div className="absolute z-10 w-1/5 bg-teal-300/70 h-2/5 rounded-3xl dark:bg-teal-200/70 blur-3xl left-40 top-16"></div>
-            <div className="absolute z-10 w-2/5 bg-indigo-200/70 h-2/5 rounded-full dark:bg-indigo-300/70 blur-2xl right-28 top-[12rem]"></div>
-            <div className="absolute w-3/5 h-4/5 rounded-3xl bg-sky-300/70 dark:bg-sky-400/70 blur-3xl left-40 top-10"></div>
+            <div className="absolute z-10 w-1/5 bg-teal-300/70 h-2/5 rounded-3xl dark:bg-teal-200/70 blur-3xl left-40 dot top-16"></div>
+            <div className="absolute z-10 w-2/5 bg-indigo-200/70 h-2/5 rounded-full dark:bg-indigo-300/70 blur-2xl right-28 top-[12rem] dot2 bounds"></div>
+            <div className="absolute w-3/5 h-4/5 rounded-3xl bg-sky-300/70 dark:bg-sky-400/70 blur-3xl left-40 top-10 dot3 bounds"></div>
             <Image
               src="/assets/other/tyheadshot.webp"
               alt="Ty Fiero image"
@@ -116,8 +150,17 @@ export default function Index({ allPosts }) {
         <div className="md:mb-20 md:mt-20 sm:mb-6 sm:mt-6" />
 
         <DualSection invert centerText>
-          <TextSection title="Work">
-            <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
+          <TextSection title="Work" headerClassNames="hidden">
+            <motion.h2
+              variants={rightHeading}
+              className={"font-bold heading-md "}
+            >
+              What I do
+            </motion.h2>
+            <motion.div
+              variants={rightSection}
+              className="!p-4 glass-box bg-white/80 dark:bg-black/80"
+            >
               <p>
                 I&apos;m a developer with a passion for building things that are
                 useful to people. My journey in software development started
@@ -128,18 +171,28 @@ export default function Index({ allPosts }) {
                 projects, from small vanilla javascript projects to full stack
                 web applications in Next.js.
               </p>
-            </div>
+            </motion.div>
           </TextSection>
           {/* <div className="md:w-1/2 sm:w-full"></div> */}
-
-          <TechStack />
+          <motion.div variants={photoAnimate}>
+            <TechStack />
+          </motion.div>
         </DualSection>
         {/* separator */}
         <div className="md:mb-24 md:mt-28 sm:mb-8 sm:mt-8" />
         {/* Play SECTION */}
         <DualSection centerText>
-          <TextSection title="Play">
-            <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
+          <TextSection headerClassNames="hidden">
+            <motion.h2
+              variants={headingAnimate}
+              className={"font-bold heading-md "}
+            >
+              Play
+            </motion.h2>
+            <motion.div
+              variants={textAnimate}
+              className="!p-4 glass-box bg-white/80 dark:bg-black/80"
+            >
               <p>
                 In my free time I make{" "}
                 <Link href={"/music"}>
@@ -160,11 +213,12 @@ export default function Index({ allPosts }) {
                 well-rounded balance of hobbies and interesting work makes for a
                 entertaining, fulfilled life!
               </p>
-            </div>
+            </motion.div>
             <br />
 
             <div className="flex justify-center w-full ">
-              <a
+              <motion.a
+                variants={thirdAnimate}
                 href="https://unsplash.com/@tyfiero"
                 target="_blank"
                 rel="noreferrer"
@@ -187,24 +241,63 @@ export default function Index({ allPosts }) {
                     />
                   </picture>
                 </div>
-              </a>
+              </motion.a>
+              <motion.a
+                variants={thirdAnimate}
+                href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
+              >
+                <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
+                  <picture>
+                    <source
+                      srcSet="/assets/other/spotify.png"
+                      type="image/png"
+                    />
+                    <img
+                      src="/assets/other/spotify.png"
+                      alt="spotify button"
+                      className="object-contain"
+                    />
+                  </picture>
+                </div>
+              </motion.a>
             </div>
           </TextSection>
           {/* <div className="md:w-1/2 sm:w-full"></div> */}
 
+          {/* <motion.div
+            className="flex justify-center w-full h-full"
+            variants={photoAnimate}
+          > */}
           <ImageSection
             src="/assets/other/Ty-lofi.jpeg"
             alt="Lofi Style image of Ty"
           />
+          {/* </motion.div> */}
         </DualSection>
         {/* separator */}
         <div className="md:mb-24 md:mt-28 sm:mb-16 sm:mt-12" />
         {/* Writing SECTION */}
-        <div className="flex flex-col items-center w-full gap-10">
+        <motion.section
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: false, amount: 0.5 }}
+          className="flex flex-col items-center w-full gap-10"
+        >
           <div className="flex flex-col items-center w-full">
-            <h2 className="font-bold heading-lg !mb-2">Writing</h2>
+            <motion.h2
+              variants={upHeading}
+              className="font-bold heading-lg !mb-2"
+            >
+              Writing
+            </motion.h2>
 
-            <div className="!p-4 glass-box md:w-2/3 sm:w-full bg-white/80 dark:bg-black/80">
+            <motion.div
+              variants={upAnimate}
+              className="!p-4 glass-box md:w-2/3 sm:w-full bg-white/80 dark:bg-black/80"
+            >
               <p>
                 Writing is thinking, my best thinking always comes from my
                 writing. I&apos;ve been sharing my recent writings on my{" "}
@@ -220,10 +313,13 @@ export default function Index({ allPosts }) {
                 links from around the internet, a quote of the month, tech tips,
                 and my recent blog posts. Sign up below! No spam, I promise.
               </p>
-            </div>
+            </motion.div>
           </div>
-          <CustomForm />
-        </div>
+          <motion.div variants={upThird}>
+            {" "}
+            <CustomForm />
+          </motion.div>
+        </motion.section>
         <div className="md:w-1/2 sm:w-full"></div>
         {/* separator */}
         <div className="mt-12 mb-12" />

@@ -308,105 +308,6 @@ body {
   }
 }
 
-/* .wave,
-.wave::before,
-.wave::after {
-  content: "";
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  width: 100vw;
-  height: 100vw;
-  margin-left: -125vw;
-  transform-origin: 50% 50%;
-  background-color: transparent;
-  border-radius: 38% 42%;
-  box-shadow: inset 0 0 10vw var(--blue);
-  animation: spin 16s infinite linear;
-  mix-blend-mode: multiply;
-}
-
-.wave::before {
-  width: 105%;
-  height: 95%;
-  margin-top: -25vw;
-  transform-origin: 49% 51%;
-  border-radius: 40% 38%;
-  box-shadow: inset 0 0 10vw var(--blue-d);
-  animation: spin 13s infinite linear;
-}
-
-.wave::after {
-  width: 102%;
-  height: 98%;
-  margin-top: -125vw;
-  transform-origin: 51% 49%;
-  border-radius: 48% 42%;
-  box-shadow: inset 0 0 10vw var(--blue-l);
-  animation: spin 10s infinite linear;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-} */
-/* 
-.ocean {
-
-  width: 150%;
-  position: relative;
-  bottom: 0;
-  left: -100px;
-
-  filter: hue-rotate(10deg);
-}
-
-.bgwave {
-  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg);
-  transform: rotate(180deg) scaleY(200%);
-}
-
-.wave {
-  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg)
-    repeat-x;
-  position: absolute;
-  top: 0px;
-  width: 6400px;
-  height: 198px;
-
-  animation: wave 57s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0) scaleY(125%);
-}
-
-.wave:nth-of-type(2) {
-  top: -1px;
-  animation: wave 27s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-    swell 17s ease -1.25s infinite;
-  opacity: 1;
-  transform: translate3d(0, 0, 0) scaleY(125%);
-}
-
-@keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -1600px;
-  }
-}
-@keyframes swell {
-  0%,
-  100% {
-    transform: translate3d(0, 0px, 0);
-  }
-  50% {
-    transform: translate3d(0, 45px, 0);
-  }
-}
-.endWave {
-  display: none;
-} */
 .waves {
   position: relative;
   width: 350%;
@@ -474,150 +375,14 @@ body {
   height: unset !important;
 }
 
-.menu-content {
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px; /* Need a specific value to work */
-}
-
-.fade-m1 {
-  -webkit-animation: fadeMenu 0.5s;
-  -moz-animation: fadeMenu 0.5s;
-  -o-animation: fadeMenu 0.5s;
-  -ms-animation: fadeMenu 0.5s;
-  animation: fadeMenu 0.5s;
-}
-.fade-m2 {
-  -webkit-animation: fadeMenu 1s;
-  -moz-animation: fadeMenu 1s;
-  -o-animation: fadeMenu 1s;
-  -ms-animation: fadeMenu 1s;
-  animation: fadeMenu 1s;
-}
-.fade-m3 {
-  -webkit-animation: fadeMenu 1.5s;
-  -moz-animation: fadeMenu 1.5s;
-  -o-animation: fadeMenu 1.5s;
-  -ms-animation: fadeMenu 1.5s;
-  animation: fadeMenu 1.5s;
-}
-.fade-m4 {
-  -webkit-animation: fadeMenu 2s;
-  -moz-animation: fadeMenu 2s;
-  -o-animation: fadeMenu 2s;
-  -ms-animation: fadeMenu 2s;
-  animation: fadeMenu 2s;
-}
-.fade-m5 {
-  -webkit-animation: fadeMenu 2.5s;
-  -moz-animation: fadeMenu 2.5s;
-  -o-animation: fadeMenu 2.5s;
-  -ms-animation: fadeMenu 2.5s;
-  animation: fadeMenu 2.5s;
-}
-.fade-m6 {
-  -webkit-animation: fadeMenu 3s;
-  -moz-animation: fadeMenu 3s;
-  -o-animation: fadeMenu 3s;
-  -ms-animation: fadeMenu 3s;
-  animation: fadeMenu 3s;
-}
-.fade-m7 {
-  -webkit-animation: fadeMenu 3.5s;
-  -moz-animation: fadeMenu 3.5s;
-  -o-animation: fadeMenu 3.5s;
-  -ms-animation: fadeMenu 3.5s;
-  animation: fadeMenu 3.5s;
-}
-@keyframes fadeMenu {
-  0% {
-    opacity: 0;
-    scale: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-    scale: 0.9;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-@-moz-keyframes fadeMenu {
-  0% {
-    opacity: 0;
-    scale: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-
-    scale: 0.9;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-@-webkit-keyframes fadeMenu {
-  0% {
-    opacity: 0;
-    scale: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-
-    scale: 0.9;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-@-o-keyframes fadeMenu {
-  0% {
-    opacity: 0;
-    scale: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-
-    scale: 0.9;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-@-ms-keyframes fadeMenu {
-  0% {
-    opacity: 0;
-    scale: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-
-    scale: 0.9;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
 .dot {
-  animation: dot1 92.5s infinite ease-in-out;
+  animation: dot1 22.5s infinite ease-in-out;
 }
 .dot2 {
-  animation: dot1 122.5s infinite ease-in-out;
+  animation: dot1 6.5s infinite ease-in-out;
 }
 .dot3 {
-  animation: dot1 142.5s infinite ease-in-out;
+  animation: dot1 12.5s infinite ease-in-out;
 }
 @keyframes dot1 {
   0% {
@@ -626,7 +391,7 @@ body {
   }
   50% {
     transform: translateX(200px) translateY(-100px) translateZ(-100px)
-      scale(0.2);
+      scale(0.9);
   }
   100% {
     transform: translate3d(0) translateY(0px) translateZ(0) scale(1);
@@ -635,7 +400,7 @@ body {
 
 .bounds {
   /* Some layout code… */
-  animation: bounds 92.5s infinite linear;
+  animation: bounds 42.5s infinite linear;
 }
 
 @keyframes bounds {
