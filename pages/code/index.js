@@ -194,10 +194,9 @@ function Projects() {
           />
         </div>
       </section>
-      <div className="relative flex flex-wrap items-center justify-center px-5 py-0 mt-4 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 dark:ring-sky-600 dark:bg-sky-900/30 rounded-2xl ">
-        <div className="absolute top-1 left-3">
-          <p className="pb-3 font-bold text-sky-600">Coding Projects</p>
-        </div>
+      <h3 className="heading-lg !mb-0 mt-20">Projects </h3>
+      <div className="relative flex flex-wrap items-center justify-center px-5 py-0 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 dark:ring-sky-600 dark:bg-sky-900/30 rounded-2xl ">
+        <div className="absolute top-1 left-3"></div>
         <Atropos shadow={false} activeOffset={0} rotateXMax={0} rotateYMax={2}>
           <div className="flex flex-wrap items-center justify-center w-full gap-5 py-5 mt-3">
             <Tilt

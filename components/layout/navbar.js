@@ -16,8 +16,10 @@ import {
 } from "react-icons/tb";
 import Image from "next/image";
 import { AiOutlineRobot } from "react-icons/ai";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
 function Navbar() {
+  const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
   const [selected, setSelected] = React.useState("home");
@@ -146,8 +148,11 @@ function Navbar() {
   const menuVariant = {
     menuStart: {
       opacity: 0,
-      scale: 0.7,
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+      scale: prefersReducedMotion ? 1 : 0.7,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.05,
+        staggerDirection: -1,
+      },
     },
     menuStop: {
       opacity: 1,
@@ -156,15 +161,15 @@ function Navbar() {
         type: "spring",
         bounce: 0.2,
         duration: 1.5,
-        staggerChildren: 0.1,
-        delayChildren: 0.1,
+        staggerChildren: prefersReducedMotion ? 0 : 0.1,
+        delayChildren: prefersReducedMotion ? 0 : 0.1,
       },
     },
   };
   return (
     <>
       <nav className="relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
-        <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 fade-m3">
+        <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 fade-effect">
           <Link href="/">
             <a
               className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95"
@@ -230,8 +235,10 @@ function Navbar() {
 }
 
 function MenuItem({ selected, handleClick, name, icon }) {
+  const prefersReducedMotion = useReducedMotion();
+
   const itemVariant = {
-    menuStart: { opacity: 0, scale: 0.4 },
+    menuStart: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.4 },
     menuStop: {
       opacity: 1,
       scale: 1,

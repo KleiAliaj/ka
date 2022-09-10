@@ -9,10 +9,13 @@ import TextSection from "@/components/layout/TextSection";
 import Link from "next/link";
 import CustomForm from "@/components/blog/NewsletterForm";
 import SocialIcons from "@/components/layout/SocialIcons";
-import { motion, Variants } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
 export default function Index({ allPosts }) {
+  const prefersReducedMotion = useReducedMotion();
+
   const photoAnimate = {
-    offscreen: { scale: 0.6, opacity: 0 },
+    offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
     onscreen: {
       scale: 1,
       opacity: 1,
@@ -20,7 +23,7 @@ export default function Index({ allPosts }) {
     },
   };
   const headingAnimate = {
-    offscreen: { x: -300, opacity: 0 },
+    offscreen: { x: prefersReducedMotion ? 0 : -300, opacity: 0 },
     onscreen: {
       x: 0,
       opacity: 1,
@@ -28,7 +31,11 @@ export default function Index({ allPosts }) {
     },
   };
   const textAnimate = {
-    offscreen: { x: -300, opacity: 0, scale: 0.2 },
+    offscreen: {
+      x: prefersReducedMotion ? 0 : -300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
     onscreen: {
       x: 0,
       opacity: 1,
@@ -37,7 +44,11 @@ export default function Index({ allPosts }) {
     },
   };
   const thirdAnimate = {
-    offscreen: { x: -300, opacity: 0, scale: 0.2 },
+    offscreen: {
+      x: prefersReducedMotion ? 0 : -300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
     onscreen: {
       x: 0,
       opacity: 1,
@@ -46,7 +57,11 @@ export default function Index({ allPosts }) {
     },
   };
   const rightSection = {
-    offscreen: { x: 300, opacity: 0, scale: 0.2 },
+    offscreen: {
+      x: prefersReducedMotion ? 0 : 300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
     onscreen: {
       x: 0,
       opacity: 1,
@@ -55,7 +70,7 @@ export default function Index({ allPosts }) {
     },
   };
   const rightHeading = {
-    offscreen: { x: 300, opacity: 0 },
+    offscreen: { x: prefersReducedMotion ? 0 : 300, opacity: 0 },
     onscreen: {
       x: 0,
       opacity: 1,
@@ -63,7 +78,7 @@ export default function Index({ allPosts }) {
     },
   };
   const upHeading = {
-    offscreen: { y: 300, opacity: 0 },
+    offscreen: { y: prefersReducedMotion ? 0 : 300, opacity: 0 },
     onscreen: {
       y: 0,
       opacity: 1,
@@ -71,7 +86,7 @@ export default function Index({ allPosts }) {
     },
   };
   const upAnimate = {
-    offscreen: { y: 300, opacity: 0 },
+    offscreen: { y: prefersReducedMotion ? 0 : 300, opacity: 0 },
     onscreen: {
       y: 0,
       opacity: 1,
@@ -79,7 +94,7 @@ export default function Index({ allPosts }) {
     },
   };
   const upThird = {
-    offscreen: { y: 500, opacity: 0 },
+    offscreen: { y: prefersReducedMotion ? 0 : 400, opacity: 0 },
     onscreen: {
       y: 0,
       opacity: 1,
@@ -216,7 +231,7 @@ export default function Index({ allPosts }) {
             </motion.div>
             <br />
 
-            <div className="flex justify-center w-full ">
+            <div className="flex items-center justify-center w-full gap-3 ">
               <motion.a
                 variants={thirdAnimate}
                 href="https://unsplash.com/@tyfiero"
@@ -249,7 +264,7 @@ export default function Index({ allPosts }) {
                 rel="noreferrer"
                 className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
               >
-                <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
+                <div className="md:w-40 sm:w-32 sm:h-16 md:h-auto">
                   <picture>
                     <source
                       srcSet="/assets/other/spotify.png"
@@ -283,7 +298,7 @@ export default function Index({ allPosts }) {
         <motion.section
           initial={"offscreen"}
           whileInView={"onscreen"}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           className="flex flex-col items-center w-full gap-10"
         >
           <div className="flex flex-col items-center w-full">
