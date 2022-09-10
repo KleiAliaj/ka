@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FaEnvelope,
   FaGithub,
   FaLinkedin,
   FaRegEnvelope,
@@ -20,7 +19,6 @@ function SocialIcons({ small }) {
       x: 0,
       opacity: 1,
       scale: 1,
-
       transition: {
         type: "spring",
         bounce: 0.2,
@@ -40,7 +38,7 @@ function SocialIcons({ small }) {
       transition: {
         type: "spring",
         bounce: 5.4,
-        duration: 0.3,
+        duration: small ? 0.1 : 0.3,
       },
     },
   };
