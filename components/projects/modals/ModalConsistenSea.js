@@ -15,9 +15,10 @@ function ModalConsistenSea() {
           that I would actually remember to use, so I decided to make a new tab
           chrome extension so that I would see my habits on every single new
           tab. Turns out React plays well with chrome extensions, and there is
-          so much you can do with the Chrome Extension API. This project took me
-          about a week to build. I launched it on ProductHunt, and learned a lot
-          from the process of launching a product!
+          so much you can do with the Chrome Extension API. Framer Motion is so
+          fun to use, and brings life into an otherwise static site! This
+          project took me about a week to build. I launched it on ProductHunt,
+          and learned a lot from the process of launching a product!
         </p>
       </div>
       <section className="flex gap-4 lg:flex-row sm:flex-col">
@@ -40,13 +41,13 @@ function ModalConsistenSea() {
                 Learnings
               </h2>
               <ol className="ml-6 font-bold list-decimal f2 text-sky-600 dark:text-sky-200">
+                <li>Framer motion is a joy to work with.</li>
                 <li>Chrome extensions are simpler than I imagined.</li>
                 <li>
                   The possibilities for extensions are endless due to the
                   feature-rich Chrome API , and I will definitely make more
                   extensions in the future.
                 </li>
-                <li>Framer motion is a joy to work with.</li>
                 <li>
                   Building cool things you want for yourself makes coding way
                   more fun.

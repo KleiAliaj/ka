@@ -1,19 +1,20 @@
 import React from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaRegEnvelope,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegEnvelope, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+
 function SocialIcons({ small }) {
+  const prefersReducedMotion = useReducedMotion();
+
   const groupAnimate = {
     offscreen: {
-      x: -200,
+      x: prefersReducedMotion ? 0 : -200,
       opacity: 0,
-      scale: 0,
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+      scale: prefersReducedMotion ? 1 : 0,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.05,
+        staggerDirection: -1,
+      },
     },
     onscreen: {
       x: 0,
@@ -24,8 +25,8 @@ function SocialIcons({ small }) {
         bounce: 0.2,
         duration: 1.5,
         delay: small ? 0 : 0.4,
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
+        staggerChildren: prefersReducedMotion ? 0 : 0.2,
+        delayChildren: prefersReducedMotion ? 0 : 0.2,
       },
     },
   };
@@ -47,7 +48,7 @@ function SocialIcons({ small }) {
       variants={groupAnimate}
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
       className={"flex md:gap-3 sm:gap-8  " + (small ? " scale-75" : " mt-4")}
     >
       <Link href="/contact">

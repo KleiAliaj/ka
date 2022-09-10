@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 function ImageSection({ src, alt }) {
+  const prefersReducedMotion = useReducedMotion();
+
   const imgAnimate = {
-    offscreen: { scale: 0.6, opacity: 0 },
+    offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
     onscreen: {
       scale: 1,
       opacity: 1,
