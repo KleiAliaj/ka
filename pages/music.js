@@ -1,15 +1,71 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
+import { motion, useReducedMotion } from "framer-motion";
+import DualSection from "@/components/layout/DualSection";
+import TextSection from "@/components/layout/TextSection";
 
 function Music() {
+  const prefersReducedMotion = useReducedMotion();
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+  const photoAnimate = {
+    offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
+    onscreen: {
+      scale: 1,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const headingAnimate = {
+    offscreen: { x: prefersReducedMotion ? 0 : -300, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const textAnimate = {
+    offscreen: {
+      x: prefersReducedMotion ? 0 : -300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.2 },
+    },
+  };
+  const thirdAnimate = {
+    offscreen: {
+      x: prefersReducedMotion ? 0 : -300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.4 },
+    },
+  };
   return (
     <div className="page-container">
-      <h2 className="text-left heading-lg ">Music</h2>
-      <div className="flex justify-center w-full gap-10 sm:flex-col md:flex-row sm:items-center">
-        <div className="md:w-1/2 sm:w-full ">
-          <h3 className="heading-md">Warm, mellow Lo-Fi beats.</h3>
-          <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
+      <h2 className="text-left heading-lg fade-effect-quick">Music</h2>
+      <DualSection centerText>
+        <TextSection title="" headerClassNames="hidden">
+          <motion.h2
+            variants={headingAnimate}
+            className={"font-bold heading-md "}
+          >
+            Warm, mellow Lo-Fi beats
+          </motion.h2>
+          <motion.div variants={textAnimate} className="text-box">
             <p className="pb-3 font-bold">
               I was listening to Lo-Fi Hip Hop before it was cool (*puts on
               hipster glasses*). For real though, for as long as I can remember
@@ -35,8 +91,12 @@ function Music() {
               conveys the feelings I felt in those moments behind the keyboard.
               I hope you enjoy it!
             </p>
-          </div>
-          <div className="flex items-center content-center w-full gap-2 sm:mt-5 sm:scale-90">
+          </motion.div>
+
+          <motion.div
+            variants={thirdAnimate}
+            className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90"
+          >
             <a
               href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
               target="_blank"
@@ -94,16 +154,21 @@ function Music() {
                 </picture>
               </div>
             </a>
-          </div>
-        </div>{" "}
-        <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12">
-          <ReactPlayer
-            width={"100%"}
-            height={"100%"}
-            url="https://soundcloud.com/ty-the-creatorr/sets/reflections"
-          />
-        </div>
-      </div>
+          </motion.div>
+        </TextSection>
+        <motion.div
+          className="md:w-1/3 sm:w-full h-[23em] md:mb-12"
+          variants={photoAnimate}
+        >
+          {domLoaded && (
+            <ReactPlayer
+              width={"100%"}
+              height={"100%"}
+              url="https://soundcloud.com/ty-the-creatorr/sets/reflections"
+            />
+          )}
+        </motion.div>
+      </DualSection>
     </div>
   );
 }

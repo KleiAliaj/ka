@@ -7,7 +7,6 @@
   --blue-l: #bae6fd;
   --blue-d: #0c4a6e;
   --teal: #33ded3;
-
   --skin: #fdd8be;
   --border-skin: #da8;
   --glasses: #333;
@@ -22,7 +21,6 @@
 
 body {
   height: 100vh;
-  /* background-color: #000; */
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -42,6 +40,9 @@ body {
   }
   .textarea-tw {
     @apply bg-[hsla(200,0%,100%,1)]  dark:bg-[hsla(200,0%,10%,1)]  placeholder:text-slate-400 dark:placeholder:text-slate-300 text-slate-800 dark:text-slate-100 rounded-lg dark:!shadow-white textarea-box;
+  }
+  .text-box {
+    @apply !p-4 glass-box shadow-lg shadow-sky-600/40 dark:shadow-sky-600 !border-0 bg-white/60 dark:bg-black/60;
   }
   .button-1 {
     @apply flex items-center gap-2 px-10 py-2 text-white transition rounded-full shadow-md bg-sky-500 shadow-sky-300 hover:bg-sky-600 hover:shadow-sky-400 hover:shadow-lg hover:scale-105 active:scale-90 justify-center f2;
@@ -83,23 +84,17 @@ body {
 }
 
 .f1 {
-  /* font-family: "Varela Round", sans-serif; */
   font-weight: bolder;
   font-family: "Baloo Thambi 2", sans-serif;
   font-display: block;
-  /* font-family: "Gochi Hand", cursive; */
 }
 .f2 {
   font-family: "Varela Round", sans-serif;
   font-weight: bolder;
-  /* font-family: "Baloo Thambi 2", cursive; */
   font-display: block;
-
-  /* font-family: "Gochi Hand", cursive; */
 }
 
 .glass-box {
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
