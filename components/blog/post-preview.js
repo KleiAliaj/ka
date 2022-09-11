@@ -2,6 +2,7 @@ import Avatar from "./avatar";
 import Date from "./date";
 import CoverImage from "../layout/cover-image";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function PostPreview({
   title,
@@ -11,8 +12,24 @@ export default function PostPreview({
   author,
   slug,
 }) {
+  const prefersReducedMotion = useReducedMotion();
+  const postsAnimate = {
+    offscreen: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.4 },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.3,
+      },
+    },
+  };
   return (
-    <div className="glass-box bg-white/80 dark:bg-slate-900/80 w-[70%]  group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
+    <motion.div
+      variants={postsAnimate}
+      className="glass-box bg-white/80 dark:bg-slate-900/80 w-[70%]  group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer"
+    >
       <Link href={`/blog/posts/${slug}`}>
         <div>
           <div className="mb-5">
@@ -35,6 +52,6 @@ export default function PostPreview({
           </div>
         </div>
       </Link>
-    </div>
+    </motion.div>
   );
 }
