@@ -65,7 +65,7 @@ export default function ContactForm() {
           <>
             {" "}
             <div className="flex flex-col gap-2">
-              <h2 className="heading-md !mb-2 mt-10">
+              <h2 className="heading-md !mb-2 mt-10 fade-effect-quick">
                 {" "}
                 Want to work together? Let&apos;s chat!
               </h2>

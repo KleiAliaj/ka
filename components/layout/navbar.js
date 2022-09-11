@@ -29,10 +29,7 @@ function Navbar() {
   const [mounted, setMounted] = React.useState(false);
   const items = [
     { name: "home", icon: <TbHome2 className="scale-110 fade-effect-quick" /> },
-    {
-      name: "blog",
-      icon: <TbFileText className="scale-110 fade-effect-quick" />,
-    },
+
     {
       name: "about",
       icon: <FaRegUser className="scale-110 fade-effect-quick" />,
@@ -49,6 +46,10 @@ function Navbar() {
     {
       name: "photos",
       icon: <TbCamera className="scale-110 fade-effect-quick" />,
+    },
+    {
+      name: "blog",
+      icon: <TbFileText className="scale-110 fade-effect-quick" />,
     },
     {
       name: "contact",
@@ -169,7 +170,7 @@ function Navbar() {
   return (
     <>
       <nav className="relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
-        <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 fade-effect">
+        <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
           <Link href="/">
             <a
               className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95"
@@ -257,13 +258,13 @@ function MenuItem({ selected, handleClick, name, icon }) {
             "flex gap-2 items-center capitalize " +
             (selected === name
               ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-              : " md:hover:text-sky-400 skew-x-0 md:hover:-skew-y-6 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
+              : " md:hover:text-sky-400 skew-x-0 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
           }
           href="#"
           onClick={handleClick}
         >
           {selected === name && icon}
-          {name}
+          {name === "ai" ? name.toUpperCase() : name}
         </a>
       </Link>
     </motion.li>

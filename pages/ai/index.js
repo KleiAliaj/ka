@@ -19,8 +19,8 @@ export default function AI({ aiImages }) {
   ];
   return (
     <div className="page-container">
-      <h2 className="text-left heading-lg ">AI Experiments</h2>
-      <div className="glass-box bg-white/80 dark:bg-black/80 sm:w-full md:w-2/3">
+      <h2 className="text-left heading-lg fade-effect-quick">AI Experiments</h2>
+      <div className="text-box sm:w-full md:w-2/3">
         <p>
           AI has always fascinated me, the idea that a computer can make an
           informed decision based on information it has learned is game
@@ -47,7 +47,7 @@ export default function AI({ aiImages }) {
       </div>
       <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
         <h3 className="heading-md">AI Art Showcase</h3>
-        <div className="glass-box bg-white/80 dark:bg-black/80">
+        <div className="text-box">
           <p>
             When the DALLE-2 was first released to the media, I knew right then
             how big AI image generation would be. Input one sentence and get a

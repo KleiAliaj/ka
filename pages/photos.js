@@ -132,10 +132,10 @@ function Photography({ tyImages, tyStats, altDescription }) {
   const getMoreImages = async () => {};
   return (
     <div className="page-container">
-      <h1 className="text-left heading-lg ">Photography</h1>
+      <h1 className="text-left heading-lg fade-effect-quick">Photography</h1>
       <DualSection>
         <TextSection title="Why I Take Pictures">
-          <div className="!p-4 glass-box bg-white/80 dark:bg-black/80">
+          <div className="text-box">
             <p>
               Photography is my creative outlet that gets me outside, and it
               helps me notice the small things, while appreciating the beauty of
@@ -158,7 +158,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             </p>
           </div>
           <br />
-          <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-sky-600/30 bg-sky-50 dark:bg-sky-700/90">
+          <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-sky-600/30 dark:shadow-sky-400/30 bg-sky-50 dark:bg-sky-700/90">
             <div className="mb-2">
               <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
                 “

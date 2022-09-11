@@ -108,7 +108,7 @@ export default function Index({ allPosts }) {
       </Head>
       <div className="fade-effect-quick page-container !items-start">
         <DualSection centerText cn="w-full md:mt-10">
-          <TextSection headerClassNames="hidden">
+          <TextSection >
             <section className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 ">
               <motion.div
                 variants={headingAnimate}
@@ -165,17 +165,14 @@ export default function Index({ allPosts }) {
         <div className="md:mb-20 md:mt-20 sm:mb-6 sm:mt-6" />
 
         <DualSection invert centerText>
-          <TextSection title="Work" headerClassNames="hidden">
+          <TextSection >
             <motion.h2
               variants={rightHeading}
               className={"font-bold heading-md "}
             >
               What I do
             </motion.h2>
-            <motion.div
-              variants={rightSection}
-              className="!p-4 glass-box bg-white/80 dark:bg-black/80"
-            >
+            <motion.div variants={rightSection} className="text-box">
               <p>
                 I&apos;m a developer with a passion for building things that are
                 useful to people. My journey in software development started
@@ -197,17 +194,14 @@ export default function Index({ allPosts }) {
         <div className="md:mb-24 md:mt-28 sm:mb-8 sm:mt-8" />
         {/* Play SECTION */}
         <DualSection centerText>
-          <TextSection headerClassNames="hidden">
+          <TextSection >
             <motion.h2
               variants={headingAnimate}
               className={"font-bold heading-md "}
             >
               Play
             </motion.h2>
-            <motion.div
-              variants={textAnimate}
-              className="!p-4 glass-box bg-white/80 dark:bg-black/80"
-            >
+            <motion.div variants={textAnimate} className="text-box">
               <p>
                 In my free time I make{" "}
                 <Link href={"/music"}>
@@ -311,7 +305,7 @@ export default function Index({ allPosts }) {
 
             <motion.div
               variants={upAnimate}
-              className="!p-4 glass-box md:w-2/3 sm:w-full bg-white/80 dark:bg-black/80"
+              className=" md:w-2/3 sm:w-full text-box"
             >
               <p>
                 Writing is thinking, my best thinking always comes from my
@@ -337,12 +331,18 @@ export default function Index({ allPosts }) {
         </motion.section>
         <div className="md:w-1/2 sm:w-full"></div>
         {/* separator */}
-        <div className="mt-12 mb-12" />
+        <div className="mt-20 mb-20" />
 
         <div className="w-full">
-          <h4 className="font-bold heading-lg !text-center">
+          <motion.h2
+            variants={upHeading}
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true, amount: 0.5 }}
+            className="font-bold heading-lg !text-center"
+          >
             Latest From the blog
-          </h4>
+          </motion.h2>
           {allPosts.length > 0 && <HomePosts posts={allPosts} />}
 
           <br />
