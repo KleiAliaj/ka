@@ -5,6 +5,7 @@ import { FaHome, FaRegPaperPlane } from "react-icons/fa";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useTheme } from "next-themes";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -12,6 +13,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [thanks, setThanks] = useState(false);
   const [verified, setVerified] = useState(false);
+  const { theme } = useTheme();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,6 +77,7 @@ export default function ContactForm() {
                   href="http://twitter.com/FieroTy"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="underline text-sky-500"
                 >
                   DM me
                 </a>{" "}
@@ -122,6 +125,7 @@ export default function ContactForm() {
               <ReCAPTCHA
                 sitekey="6Ld6T9shAAAAALBkXovooVihStYeAFV1kr1ZBoW3"
                 // size="compact"
+                theme={theme}
                 onChange={() => {
                   setVerified(true);
                 }}
