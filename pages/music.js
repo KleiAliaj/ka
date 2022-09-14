@@ -66,7 +66,7 @@ function Music() {
             Warm, mellow Lo-Fi beats
           </motion.h2>
           <motion.div variants={textAnimate} className="text-box">
-            <p className="pb-3 font-bold">
+            <p className="font-bold">
               I was listening to Lo-Fi Hip Hop before it was cool (*puts on
               hipster glasses*). For real though, for as long as I can remember
               this genre has been the soundtrack to my life. I can listen to it

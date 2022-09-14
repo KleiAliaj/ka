@@ -1,16 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import p5 from "p5";
+import { useTheme } from "next-themes";
 
-let codeCanvasHeight = 500;
 let codeCanvasWidth = 700;
-
+let codeCanvasTheme = "light";
 function sketch(p) {
-  // p is a reference to the p5 instance this sketch is attached to
   let isHovered = false;
   p.setup = function () {
-    // console.log(codeCanvasWidth);
-    console.log(codeCanvasWidth + " " + codeCanvasHeight);
-
     let canvas = p.createCanvas(codeCanvasWidth, 400, p.WEBGL);
     canvas.mouseOver(() => {
       isHovered = true;
@@ -27,12 +23,14 @@ function sketch(p) {
       console.log("resize");
       p.resizeCanvas(codeCanvasWidth, 400);
     }
-    p.background(100);
-    let bounce = p.map(p.sin(p.frameCount / 150), -1, 1, 40, -100);
+    let BoW = codeCanvasTheme === "light" ? 100 : 0;
+    p.background(BoW);
+    let bounce = p.map(p.sin(p.frameCount / 150), -1, 1, 60, -80);
+    let bounceRotateX = p.map(bounce, 60, -80, 1.3, 0.6);
     p.translate(0, isHovered ? bounce / 4 : bounce, 0);
     p.push();
     p.translate(20, -50, 0);
-    p.rotateX(1.0);
+    p.rotateX(bounceRotateX);
     p.noStroke();
 
     p.directionalLight([255], p.createVector(0, 30, -1));
@@ -51,7 +49,6 @@ function sketch(p) {
       let yoffCube = 0;
       p.rotateX(isHovered ? mouseBounceY : 0);
       p.rotateY(isHovered ? mouseBounce : 0);
-      // p.rotateZ(bounceRotate);
 
       for (var y = -50; y <= 500; y += 30) {
         var h = p.map(
@@ -61,12 +58,8 @@ function sketch(p) {
           -100,
           190
         );
-
         var hue = p.map(x, -p.width / 2, p.width / 2, 140, 270);
-
-        // hue = map(x, -width / 2, width / 2, 260, 360)
-
-        var s = p.map(y, -p.height / 2, p.height / 2, 400, 150);
+        var s = p.map(y, -p.height / 2, p.height / 2, 400, 170);
         var b = p.map(h, -100, 100, 0, 200);
         p.push();
 
@@ -85,16 +78,19 @@ function sketch(p) {
   };
 }
 function CubeWaveSketch() {
+  const { theme } = useTheme();
   const p5ContainerRef = useRef();
   const frame = useRef();
   const handleWindowSizeChange = () => {
     codeCanvasWidth = frame.current.clientWidth;
-    codeCanvasHeight = Math.round(codeCanvasWidth * 0.7);
   };
+
+  useEffect(() => {
+    codeCanvasTheme = theme;
+  }, [theme]);
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     codeCanvasWidth = frame.current.clientWidth;
-    codeCanvasHeight = Math.round(codeCanvasWidth * 0.7);
 
     const p5Instance = new p5(sketch, p5ContainerRef.current);
 
@@ -108,7 +104,7 @@ function CubeWaveSketch() {
   return (
     <div
       ref={frame}
-      className="relative w-full mt-4 h-[400px] scale-100 bg-white shadow-xl rounded-xl shadow-sky-600/30"
+      className="relative w-full mt-4 h-[400px] scale-100 dark:bg-black bg-white shadow-xl rounded-xl shadow-sky-600/30"
     >
       <div
         className="absolute top-0 flex items-center justify-center w-full h-full scale-[98%] rounded-xl"

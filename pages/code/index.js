@@ -202,7 +202,7 @@ function CodeIndex() {
             Tech Stack
           </motion.h2>
           <motion.div variants={textAnimate} className="text-box">
-            <p className="pb-3 font-bold">
+            <p className="font-bold ">
               Learning new technologies is a rush for me. I try to learn
               something new every week that I can apply to projects in the
               future. My favorite technologies thus far are React, Next.js,
@@ -259,7 +259,7 @@ function CodeIndex() {
             Generative Art
           </motion.h2>
           <motion.div variants={invertText} className="text-box">
-            <p className="pb-3 font-bold">
+            <p className="font-bold ">
               Javascript art in P5.js is what made me fall in love with coding.
               It&apos;s an excellent medium to start learning code, as it helps
               to visualize how loops, functions, and other concepts work. The
