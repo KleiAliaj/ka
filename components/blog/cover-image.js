@@ -7,10 +7,12 @@ export default function CoverImage({ title, url, slug }) {
     <Imgix
       src={url}
       alt={`Cover Image for ${title}`}
-      className={cn("lazyload shadow-small w-full rounded-2xl", {
-        "hover:shadow-medium transition-shadow duration-200": slug,
-      })}
-      sizes="70vw"
+      className={cn(
+        "lazyload shadow-lg hover:shadow-xl hover:shadow-sky-700/40 shadow-sky-700/40 h-50 w-auto rounded-2xl mx-auto  transition-shadow",
+        {
+          "": slug,
+        }
+      )}
       attributeConfig={{
         src: "data-src",
         srcSet: "data-srcset",

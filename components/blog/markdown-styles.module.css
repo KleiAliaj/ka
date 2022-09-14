@@ -10,16 +10,28 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug f1;
+  @apply text-3xl mt-20 mb-4 leading-snug f1 text-sky-600 dark:text-sky-300;
 }
-
+.markdown a {
+  @apply text-sky-500 underline;
+}
+.markdown strong {
+  @apply !font-bold;
+}
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug f1;
+  @apply !text-4xl mt-24 mb-4 leading-snug f1  text-sky-600 dark:text-sky-200;
+}
+.markdown blockquote {
+  @apply bg-sky-100 rounded-md shadow-lg shadow-sky-700/30 dark:bg-sky-800 ml-5 p-5 border-l-4 text-xl border-sky-400 italic font-extrabold;
 }
 .f1 {
   /* font-family: "Varela Round", sans-serif; */
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-family: "Baloo Thambi 2", cursive;
 
   /* font-family: "Gochi Hand", cursive; */
+}
+
+.markdown img {
+  @apply h-[400px] m-auto w-auto shadow-lg dark:shadow-sky-300/40 rounded-lg shadow-sky-700/40;
 }
