@@ -19,9 +19,9 @@ export default function MoreStories({ posts }) {
           />
         ))}
       </div>
-      <div className="flex justify-center w-full">
+      {/* <div className="flex justify-center w-full">
         <p>Total Posts: {posts.length + 1}</p>
-      </div>
+      </div> */}
     </section>
   );
 }

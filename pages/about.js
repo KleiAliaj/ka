@@ -57,7 +57,7 @@ function About() {
             Who am I?
           </motion.h2>
           <motion.div variants={textAnimate} className="w-full text-box">
-            <p className="pb-3 font-bold text-sky-600">
+            <p className="font-bold text-sky-600">
               I have always been a science geek, I love learning how the world
               works and thinking about how it might work better. Initially, I
               was fascinated with the natural sciences and biology, which led me

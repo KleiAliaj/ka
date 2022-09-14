@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
             content="OhpRDnvN-fz_RpyK7E4eKh7UNfjD0ln1UOWZPaVRtVk"
           />
         </Head>
-        <body className="bg-white dark:bg-slate-700">
+        <body className="bg-white dark:bg-slate-800">
           <Main />
           <NextScript />
         </body>

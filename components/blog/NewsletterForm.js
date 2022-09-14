@@ -14,7 +14,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   return (
     <div style={{}} className="px-5 py-2 rounded-2xl ring-2">
-      <h3 className="heading-sm">Sign up for my monthly newsletter!</h3>
+      <h3 className="heading-md">Sign up for my monthly newsletter!</h3>
       <p className="mb-2">
         Every Month I send out a short newsletter with fun resources, and my
         latest blog post. No spam, ever!{" "}
