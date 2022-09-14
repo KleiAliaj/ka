@@ -84,7 +84,7 @@ body {
 }
 
 .f1 {
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-family: "Baloo Thambi 2", sans-serif;
   font-display: block;
 }

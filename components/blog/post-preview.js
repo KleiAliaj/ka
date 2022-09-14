@@ -1,6 +1,6 @@
 import Avatar from "./avatar";
 import Date from "./date";
-import CoverImage from "../layout/cover-image";
+import CoverImage from "./cover-image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -28,7 +28,7 @@ export default function PostPreview({
   return (
     <motion.div
       variants={postsAnimate}
-      className="glass-box bg-white/80 dark:bg-slate-900/80 w-[70%]  group hover:scale-105 transition duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer"
+      className="glass-box bg-white/80 dark:bg-slate-900/80 w-[70%] h-auto  group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer relative"
     >
       <Link href={`/blog/posts/${slug}`}>
         <div>
@@ -44,11 +44,13 @@ export default function PostPreview({
             <div className="mb-4 text-base italic text-slate-500 f2 dark:text-slate-300">
               <Date dateString={date} />
             </div>
-            <p className="mb-4 text-base leading-relaxed">{excerpt}</p>
-            <Avatar
-              name={author.title}
-              picture={author.metadata.picture.imgix_url}
-            />
+            <p className="mb-16 text-base leading-relaxed">{excerpt}</p>
+            <div className="absolute bottom-4">
+              <Avatar
+                name={author.title}
+                picture={author.metadata.picture.imgix_url}
+              />
+            </div>
           </div>
         </div>
       </Link>

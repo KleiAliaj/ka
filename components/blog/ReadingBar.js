@@ -36,7 +36,7 @@ const ReadingBar = ({ target }) => {
 
   return (
     <div
-      className={` fixed top-0 left-0 z-50 h-[5px] bg-gradient-to-r from-sky-100/80 via-sky-400/60 to-sky-900/70 dark:from-sky-600/80 dark:via-sky-300/80 dark:to-sky-50/70 `}
+      className={` fixed top-0 left-0 z-50 h-[8px] bg-gradient-to-r from-sky-200/80 via-sky-400/80 to-sky-900/80 dark:from-sky-600/80 dark:via-sky-300/80 dark:to-sky-50/70 `}
       style={{ width: `${readingProgress}%` }}
     />
   );
