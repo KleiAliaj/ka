@@ -40,7 +40,7 @@ export default function Index({ allPosts }) {
             )}
           />
 
-          <h3 className="mb-4 text-2xl f1 text-sky-800 dark:text-sky-300">
+          <h3 className="mt-10 mb-4 text-2xl f1 text-sky-800 dark:text-sky-300">
             Latest Post:
           </h3>
           {heroPost && (

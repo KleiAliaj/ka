@@ -13,7 +13,10 @@ const CustomForm = ({ status, message, onValidated }) => {
     });
 
   return (
-    <div style={{}} className="px-5 py-2 rounded-2xl ring-2">
+    <div
+      style={{}}
+      className="px-5 py-4 shadow-md rounded-2xl shadow-sky-400 bg-white/60 dark:bg-slate-700/60"
+    >
       <h3 className="heading-md">Sign up for my monthly newsletter!</h3>
       <p className="mb-2">
         Every Month I send out a short newsletter with fun resources, and my
