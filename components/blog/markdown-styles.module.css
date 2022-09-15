@@ -21,9 +21,12 @@
 .markdown h3 {
   @apply !text-4xl mt-24 mb-4 leading-snug f1  text-sky-600 dark:text-sky-200;
 }
-.markdown blockquote {
-  @apply bg-sky-100 rounded-md shadow-lg shadow-sky-700/30 ml-5 p-5 border-l-4 text-xl border-sky-400 italic font-extrabold;
+.markdown blockquote > p {
+  @apply bg-sky-100  !text-black rounded-md shadow-lg shadow-sky-700/30  ml-5 p-5 border-l-4 text-xl border-sky-400 italic font-extrabold;
 }
+/* .markdown blockquote {
+  @apply bg-sky-100 dark:bg-sky-200 !text-black rounded-md shadow-lg shadow-sky-700/30  ml-5 p-5 border-l-4 text-xl border-sky-400 italic font-extrabold;
+} */
 .f1 {
   /* font-family: "Varela Round", sans-serif; */
   /* font-weight: bolder; */
