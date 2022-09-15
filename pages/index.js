@@ -10,6 +10,7 @@ import Link from "next/link";
 import CustomForm from "@/components/blog/NewsletterForm";
 import SocialIcons from "@/components/layout/SocialIcons";
 import { motion, useReducedMotion } from "framer-motion";
+import EmailSignup from "@/components/blog/EmailSignup";
 
 export default function Index({ allPosts }) {
   const prefersReducedMotion = useReducedMotion();
@@ -108,7 +109,7 @@ export default function Index({ allPosts }) {
       </Head>
       <div className="fade-effect-quick page-container !items-start">
         <DualSection centerText cn="w-full md:mt-10">
-          <TextSection >
+          <TextSection>
             <section className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 ">
               <motion.div
                 variants={headingAnimate}
@@ -165,7 +166,7 @@ export default function Index({ allPosts }) {
         <div className="md:mb-20 md:mt-20 sm:mb-6 sm:mt-6" />
 
         <DualSection invert centerText>
-          <TextSection >
+          <TextSection>
             <motion.h2
               variants={rightHeading}
               className={"font-bold heading-md "}
@@ -194,7 +195,7 @@ export default function Index({ allPosts }) {
         <div className="md:mb-24 md:mt-28 sm:mb-8 sm:mt-8" />
         {/* Play SECTION */}
         <DualSection centerText>
-          <TextSection >
+          <TextSection>
             <motion.h2
               variants={headingAnimate}
               className={"font-bold heading-md "}
@@ -326,7 +327,7 @@ export default function Index({ allPosts }) {
           </div>
           <motion.div variants={upThird}>
             {" "}
-            <CustomForm />
+            <EmailSignup />
           </motion.div>
         </motion.section>
         <div className="md:w-1/2 sm:w-full"></div>
