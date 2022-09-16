@@ -30,7 +30,6 @@ const ReadingBar = ({ target }) => {
 
   React.useEffect(() => {
     window.addEventListener("scroll", scrollListener);
-    console.log(readingProgress);
     return () => window.removeEventListener("scroll", scrollListener);
   });
 

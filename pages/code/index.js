@@ -221,13 +221,13 @@ function CodeIndex() {
           </motion.div>
           <motion.div
             variants={thirdAnimate}
-            className="flex justify-center w-full mt-5"
+            className="flex justify-center w-full gap-4 mt-5"
           >
             <a
               href="https://github.com/tyfiero/"
               target="_blank"
               rel="noopener noreferrer"
-              className="z-10 button-bw w-fit f2"
+              className="z-10 button-bw w-fit f2 !px-3"
             >
               Github Profile
               <picture>
@@ -236,6 +236,25 @@ function CodeIndex() {
                   src="assets/CodeLogos/github.png"
                   alt="github logo"
                   className="w-6 h-6 invert dark:invert-0"
+                />
+              </picture>
+            </a>
+            <a
+              href="https://profile.codersrank.io/user/tyfiero/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-3 py-2 text-black transition rounded-full shadow-md bg-sky-100 shadow-sky-300/50 hover:bg-sky-200 hover:shadow-sky-400/50 hover:shadow-lg hover:scale-105 active:scale-90 f2"
+            >
+              CodersRank
+              <picture>
+                <source
+                  srcSet="assets/CodeLogos/codersrank.png"
+                  type="image/png"
+                />
+                <img
+                  src="assets/CodeLogos/codersrank.png"
+                  alt="github logo"
+                  className="w-auto h-5"
                 />
               </picture>
             </a>
