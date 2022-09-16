@@ -12,7 +12,7 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section className="glass-box bg-white/80 dark:bg-slate-900/80 md:w-[50%] sm:w-[95%] group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
+    <section className="glass-box bg-white/80 dark:bg-slate-900/80 md:w-[40%] sm:w-[95%] group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
       <Link href={`/blog/posts/${slug}`}>
         <div>
           <div className="mb-0 md:mb-4 !rounded-xl">
@@ -20,7 +20,7 @@ export default function HeroPost({
           </div>
           <div className="flex flex-col items-center px-5 mb-10 md:mb-5">
             <div>
-              <h3 className="mb-2 text-4xl leading-tight lg:text-6xl">
+              <h3 className="mb-2 text-4xl leading-tight ">
                 <a className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
                   {title}
                 </a>
