@@ -46,7 +46,6 @@ export default async function handler(req, res) {
       const openai = new OpenAIApi(configuration);
 
       let userInput = req.body.input;
-      console.log(req.body);
       //   let type = req.body.type;
       let temp = req.body.temp;
       let name = req.body.name;
