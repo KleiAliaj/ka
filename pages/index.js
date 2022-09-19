@@ -10,7 +10,6 @@ import Link from "next/link";
 import CustomForm from "@/components/blog/NewsletterForm";
 import SocialIcons from "@/components/layout/SocialIcons";
 import { motion, useReducedMotion } from "framer-motion";
-import EmailSignup from "@/components/blog/EmailSignup";
 
 export default function Index({ allPosts }) {
   const prefersReducedMotion = useReducedMotion();
@@ -327,7 +326,7 @@ export default function Index({ allPosts }) {
           </div>
           <motion.div variants={upThird}>
             {" "}
-            <EmailSignup />
+            <CustomForm />
           </motion.div>
         </motion.section>
         <div className="md:w-1/2 sm:w-full"></div>

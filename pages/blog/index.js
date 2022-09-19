@@ -6,14 +6,11 @@ import Layout from "@/components/layout/layout";
 import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import CustomForm from "@/components/blog/NewsletterForm";
-import EmailSignup from "@/components/blog/EmailSignup";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
- 
 
   return (
     <>
@@ -27,7 +24,7 @@ export default function Index({ allPosts }) {
         <div className="page-container">
           <h2 className="text-left heading-lg ">Blog</h2>
 
-          <EmailSignup />
+          <CustomForm />
 
           <h3 className="mt-10 mb-4 text-2xl f1 text-sky-800 dark:text-sky-300">
             Latest Post:

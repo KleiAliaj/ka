@@ -1,30 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRight, FaEnvelope, FaSpinner } from "react-icons/fa";
+import axios from "axios";
 
-const CustomForm = ({ status, message, onValidated }) => {
-  const [error, setError] = useState(false);
-  let email;
-  const submit = (e) => {
+const CustomForm = () => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+  const submit = async (e) => {
     e.preventDefault();
-    if (email && email.value.indexOf("@") > -1) {
-      onValidated({
-        EMAIL: email.value,
+    await axios({
+      method: "POST",
+      url: "/api/mailerLite",
+      data: {
+        email: email,
+      },
+    })
+      .then((response) => {
+        if (response.data.results === "success") {
+          setStatus("success");
+        } else {
+          setStatus("error");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    }
   };
 
-  useEffect(() => {
-    if (status === "sending") {
-      setTimeout(() => {
-        if (status === "sending") {
-          setError(true);
-        }
-      }, 4000);
-    }
-  }, [status]);
   return (
     <div
-      style={{}}
       className="px-5 py-4 shadow-md rounded-2xl shadow-sky-400 bg-white/60 dark:bg-slate-700/60"
     >
       {status === "success" ? (
@@ -42,13 +45,13 @@ const CustomForm = ({ status, message, onValidated }) => {
           <div className="flex w-full gap-2">
             <input
               className="textarea-tw f2 w-full h-fit !py-2"
-              ref={(node) => (email = node)}
               type="email"
-              placeholder="Your email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
             />
             <br />
             <button className="button-1 !px-5 " onClick={submit}>
-              {status === "sending" && !error ? (
+              {status === "sending" ? (
                 <div className="flex items-center gap-2 whitespace-nowrap">
                   Sending <FaSpinner className="animate-spin" />
                 </div>
@@ -60,11 +63,11 @@ const CustomForm = ({ status, message, onValidated }) => {
             </button>
           </div>
 
-          {(error || status === "error") && (
+          {status === "error" && (
             <div className="mt-2 text-lg text-red-500 f2">
               An error occurred. Use{" "}
               <a
-                href="http://eepurl.com/h-tEGT"
+                href="https://dashboard.mailerlite.com/forms/152607/66347209167210126/share"
                 className="underline text-sky-500"
                 target="_blank"
                 rel="noopener noreferrer"
