@@ -20,7 +20,6 @@ const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const target = createRef();
-  console.log(post);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -50,6 +49,7 @@ export default function Post({ post, morePosts, preview }) {
               content={post.content}
               title={post.title}
               id={post.created_at}
+              slug={post.slug}
             />
           </article>
           <SectionSeparator />

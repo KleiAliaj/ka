@@ -1,7 +1,7 @@
 import Comments from "./Comments";
 import markdownStyles from "./markdown-styles.module.css";
 
-export default function PostBody({ content, title, id }) {
+export default function PostBody({ content, title, id, slug }) {
 
   return (
     <div className="w-full">
@@ -10,7 +10,7 @@ export default function PostBody({ content, title, id }) {
           className={markdownStyles["markdown"]}
           dangerouslySetInnerHTML={{ __html: content }}
         />
-        <Comments title={title} id={id}  />
+        <Comments title={title} id={id} slug={slug} />
       </div>
     </div>
   );
