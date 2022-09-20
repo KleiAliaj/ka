@@ -1,10 +1,14 @@
 import { DiscussionEmbed } from "disqus-react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Comments = ({ title, id, slug }) => {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
   const disqusShortname = "tyfiero";
-
   const disqusConfig = {
-    // url: `http://localhost:3000/blog/posts/${title}`,
     url: `https://tyfiero.com/blog/posts/${slug}`,
     identifier: id,
     title: title,
@@ -12,7 +16,9 @@ const Comments = ({ title, id, slug }) => {
 
   return (
     <div className="px-5 py-3 mb-10 bg-white shadow-lg shadow-sky-200 dark:bg-slate-200 rounded-2xl">
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      {loaded && (
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      )}
     </div>
   );
 };
