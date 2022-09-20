@@ -9,7 +9,7 @@ const Comments = ({ title, id, slug }) => {
   }, []);
   const disqusShortname = "tyfiero";
   const disqusConfig = {
-    url: `https://www.tyfiero.com/blog/posts/${slug}`,
+    url: `https://www.tyfiero.com/blog/posts/${slug}:`,
     identifier: id,
     title: title,
   };
