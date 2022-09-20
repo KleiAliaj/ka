@@ -7,6 +7,7 @@ const CustomForm = () => {
   const [status, setStatus] = useState("");
   const submit = async (e) => {
     e.preventDefault();
+    setStatus("sending");
     await axios({
       method: "POST",
       url: "/api/mailerLite",
@@ -27,9 +28,7 @@ const CustomForm = () => {
   };
 
   return (
-    <div
-      className="px-5 py-4 shadow-md rounded-2xl shadow-sky-400 bg-white/60 dark:bg-slate-700/60"
-    >
+    <div className="px-5 py-4 shadow-md rounded-2xl shadow-sky-400 bg-white/60 dark:bg-slate-700/60">
       {status === "success" ? (
         <div>
           <h3 className="heading-md">Thanks for signing up! </h3>

@@ -14,19 +14,17 @@ import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import dynamic from "next/dynamic";
 import { createRef } from "react";
-// import ReadingBar from "@/components/ReadingBar";
 const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
   ssr: false,
 });
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const target = createRef();
-
+  console.log(post);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    // <Layout preview={preview}>
     <Container>
       <ReadingBar target={target} />
       {/* <Header /> */}
@@ -36,9 +34,7 @@ export default function Post({ post, morePosts, preview }) {
         <>
           <article className="mt-16" ref={target}>
             <Head>
-              <title>
-                {post.title} Ty Fiero Blog on Life, Code, and Music.
-              </title>
+              <title>{post.title}</title>
               <meta
                 property="og:image"
                 content={post.metadata.cover_image.imgix_url}
@@ -50,7 +46,11 @@ export default function Post({ post, morePosts, preview }) {
               date={post.created_at}
               author={post.metadata.author}
             />
-            <PostBody content={post.content} />
+            <PostBody
+              content={post.content}
+              title={post.title}
+              id={post.created_at}
+            />
           </article>
           <SectionSeparator />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
