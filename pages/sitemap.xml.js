@@ -8,8 +8,8 @@ const bucket = Cosmic().bucket({
   slug: BUCKET_SLUG,
   read_key: READ_KEY,
 });
-
-const createSitemap = (posts) => `<?xml version="1.0" encoding="UTF-8"?>
+const createSitemap = (posts) => {
+  return `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
         <loc>https://tyfiero.com</loc>
@@ -64,7 +64,6 @@ const createSitemap = (posts) => `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.90</priority>
 </url>
 
-
 ${posts
   .map(({ id }) => {
     return `
@@ -75,6 +74,7 @@ ${posts
             `;
   })
   .join("")}
+
           
           <url>
               <loc>https://tyfiero.com/contact</loc>
@@ -91,11 +91,12 @@ ${posts
           </url>
           </urlset>
           `;
+};
 class Sitemap extends React.Component {
   static async getInitialProps({ res }) {
     const getAllPosts = async () => {
       const params = {
-        type: "posts",
+        type: "blogposts",
         props: "slug",
       };
       const data = await bucket.getObjects(params);
@@ -113,7 +114,6 @@ class Sitemap extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-
     res.setHeader("Content-Type", "text/xml");
     res.write(createSitemap(allPosts));
     res.end();
