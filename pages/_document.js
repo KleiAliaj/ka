@@ -45,6 +45,10 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="OhpRDnvN-fz_RpyK7E4eKh7UNfjD0ln1UOWZPaVRtVk"
           />
+          <script
+            defer
+            src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
+          />
         </Head>
         <body className="bg-white dark:bg-slate-800">
           <Main />
