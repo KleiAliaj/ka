@@ -8,12 +8,10 @@ export default class MyDocument extends Document {
       <Html lang="en" className={""}>
         <Head>
           {/* <Script src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB" /> */}
-          {`<!-- Pixel Code for https://app.tinyanalytics.io/ -->`}
           <script
             defer
             src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
           ></script>
-          {`<!-- END Pixel Code -->`}
           <link
             rel="apple-touch-icon"
             sizes="180x180"
