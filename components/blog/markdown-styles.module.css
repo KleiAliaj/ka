@@ -10,7 +10,7 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-20 mb-4 leading-snug f1 text-sky-600 dark:text-sky-300;
+  @apply sm:text-2xl md:text-3xl mt-20 mb-4 leading-snug f1 text-sky-600 dark:text-sky-300;
 }
 .markdown a {
   @apply text-sky-500 underline;
@@ -19,7 +19,7 @@
   @apply !font-bold;
 }
 .markdown h3 {
-  @apply !text-4xl mt-24 mb-4 leading-snug f1  text-sky-500 dark:text-sky-200;
+  @apply sm:text-xl md:!text-4xl mt-24 mb-4 leading-snug f1  text-sky-500 dark:text-sky-200;
 }
 .markdown blockquote > p {
   @apply bg-sky-100  !text-black rounded-md shadow-lg shadow-sky-700/30  ml-5 p-5 border-l-4 text-xl border-sky-400 italic font-extrabold;
