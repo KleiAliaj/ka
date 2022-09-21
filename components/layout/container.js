@@ -1,6 +1,6 @@
 export default function Container({ children }) {
   return (
-    <div className="container w-full mx-auto md:px-2 fade-effect-quick">
+    <div className="w-full mx-auto sm:px-5 md:px-2 fade-effect-quick">
       {children}
     </div>
   );

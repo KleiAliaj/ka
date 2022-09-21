@@ -31,7 +31,7 @@ export default function Post({ post, morePosts, preview }) {
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article className="mt-16" ref={target}>
+          <article className="mt-16 sm:px-0 md:!px-60 " ref={target}>
             <Head>
               <title>{post.title}</title>
               <meta
@@ -44,6 +44,7 @@ export default function Post({ post, morePosts, preview }) {
               coverImage={post.metadata.cover_image}
               date={post.created_at}
               author={post.metadata.author}
+              blurb={post.metadata.excerpt}
             />
             <PostBody
               content={post.content}
@@ -52,7 +53,6 @@ export default function Post({ post, morePosts, preview }) {
               slug={post.slug}
             />
           </article>
-          <SectionSeparator />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </>
       )}

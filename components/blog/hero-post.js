@@ -12,11 +12,16 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section className="glass-box bg-white/80 dark:bg-slate-900/80 md:w-[40%] sm:w-[95%] group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
+    <section className="glass-box bg-white/80 dark:bg-slate-900/80 md:w-[30%] sm:w-[95%] group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
       <Link href={`/blog/posts/${slug}`}>
         <div>
           <div className="mb-0 md:mb-4 !rounded-xl">
-            <CoverImage title={title} url={coverImage.imgix_url} slug={slug} />
+            <CoverImage
+              title={title}
+              url={coverImage.imgix_url}
+              slug={slug}
+              thumb
+            />
           </div>
           <div className="flex flex-col items-center px-5 mb-10 md:mb-5">
             <div>

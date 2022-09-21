@@ -38,3 +38,9 @@
 .markdown img {
   @apply h-[400px] m-auto w-auto shadow-lg dark:shadow-sky-300/40 rounded-lg shadow-sky-700/40;
 }
+.markdown img + em {
+  @apply !text-center text-base mt-2 !not-italic opacity-70;
+}
+.markdown p:has(img) {
+  @apply flex flex-col items-center;
+}
