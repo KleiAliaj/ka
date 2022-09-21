@@ -1,5 +1,6 @@
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default class MyDocument extends Document {
   render() {
@@ -45,10 +46,11 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="OhpRDnvN-fz_RpyK7E4eKh7UNfjD0ln1UOWZPaVRtVk"
           />
-          <script
+          {/* <script
             defer
             src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
-          />
+          /> */}
+          <Script src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB" />
         </Head>
         <body className="bg-white dark:bg-slate-800">
           <Main />
