@@ -1,7 +1,10 @@
-export default function PostTitle({ children }) {
+export default function PostTitle({ title, blurb }) {
   return (
-    <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tighter text-center md:text-3xl lg:text-[3.8rem] md:leading-none md:text-left f1 text-sky-800 dark:text-sky-300">
-      {children}
-    </h1>
+    <header>
+      <h1 className=" text-4xl mb-3 font-bold leading-tight tracking-tighter  md:text-3xl lg:text-[3.8rem] md:leading-none text-left f1 text-sky-800 dark:text-sky-300">
+        {title}
+      </h1>
+      {/* <p className="mb-1 sm:text-base md:text-xl md:text-left">{blurb}</p> */}
+    </header>
   );
 }
