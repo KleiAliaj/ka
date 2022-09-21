@@ -7,7 +7,7 @@ const Comments = ({ title, id, slug }) => {
   useEffect(() => {
     setLoaded(true);
   }, []);
-  const disqusShortname = "tyfiero";
+  const disqusShortname = "tyfiero-blog";
   const disqusConfig = {
     url: `https://www.tyfiero.com/blog/posts/${slug}:`,
     identifier: id,
