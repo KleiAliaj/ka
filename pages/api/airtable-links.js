@@ -1,6 +1,6 @@
 import { minifyLinkItems, linksTable } from "@/lib/AirtableLinks";
 
-export default async (_req, res) => {
+export default async function handler(_req, res) {
   try {
     const records = await linksTable.select({}).firstPage();
     // console.log(records);
@@ -10,4 +10,4 @@ export default async (_req, res) => {
     console.error(error);
     res.status(500).json({ msg: "Something went wrong! 😕" });
   }
-};
+}
