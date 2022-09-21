@@ -7,6 +7,14 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" className={""}>
         <Head>
+          <script
+            defer
+            src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
+          />
+          {/* <Script src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB" /> */}
+          {`<!-- Pixel Code for https://app.tinyanalytics.io/ -->
+<script defer src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"></script>
+<!-- END Pixel Code -->`}
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -46,11 +54,6 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="OhpRDnvN-fz_RpyK7E4eKh7UNfjD0ln1UOWZPaVRtVk"
           />
-          {/* <script
-            defer
-            src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
-          /> */}
-          <Script src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB" />
         </Head>
         <body className="bg-white dark:bg-slate-800">
           <Main />
