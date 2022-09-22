@@ -58,7 +58,7 @@ function Music() {
     <div className="page-container">
       <h2 className="text-left heading-lg fade-effect-quick">Music</h2>
       <DualSection centerText>
-        <TextSection title="" headerClassNames="hidden">
+        <TextSection>
           <motion.h2
             variants={headingAnimate}
             className={"font-bold heading-md "}
@@ -72,17 +72,16 @@ function Music() {
               this genre has been the soundtrack to my life. I can listen to it
               on a run, while coding, or even napping. The magic of Lo-Fi is
               that it conveys the mood of the moment, the same song can make you
-              feel happy, reminiscent or melancholic, depending on how
-              you&apos;re feel that day. The lack of vocals and the use of soft
-              piano and drum beats makes it the perfect music for, well,
-              anything. When I&apos;m not listening to Lo-Fi, I enjoy rap,
-              classic rock, smooth jazz, and classical music. But Lo-Fi will
-              always have my heart.
+              feel happy, reminiscent or melancholic, depending on how you feel
+              that day. The lack of vocals and the use of soft piano and drum
+              beats makes it the perfect music for, well, anything. When
+              I&apos;m not listening to Lo-Fi, I enjoy rap, classic rock, smooth
+              jazz, and classical music. But Lo-Fi will always have my heart.
               <br />
               <br />
               My love for Lo-Fi grew stronger in 2019, when I began to learn how
               to play the piano and make beats on my computer using Logic Pro.
-              Feeling an emotion from a song is one thing, but expressing a
+              Feeling an emotion from a song is one thing, but expressing an
               emotion through your own song is another. Playing along with the
               rhythm of your soul is something I wish everyone could experience.
               <br />
@@ -105,9 +104,12 @@ function Music() {
             >
               <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
                 <picture>
-                  <source srcSet="/assets/other/spotify.png" type="image/png" />
+                  <source
+                    srcSet="/assets/CodeLogos/spotify.webp"
+                    type="image/webp"
+                  />
                   <img
-                    src="/assets/other/spotify.png"
+                    src="/assets/CodeLogos/spotify.webp"
                     alt="spotify button"
                     className="object-contain"
                   />
@@ -123,11 +125,11 @@ function Music() {
               <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
                 <picture>
                   <source
-                    srcSet="/assets/other/appleMusic.png"
-                    type="image/png"
+                    srcSet="/assets/CodeLogos/appleMusic.webp"
+                    type="image/webp"
                   />
                   <img
-                    src="/assets/other/appleMusic.png"
+                    src="/assets/CodeLogos/appleMusic.webp"
                     alt="Apple Music button"
                     className="object-contain"
                   />
@@ -143,11 +145,11 @@ function Music() {
               <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
                 <picture>
                   <source
-                    srcSet="/assets/other/soundcloud.png"
-                    type="image/png"
+                    srcSet="/assets/CodeLogos/soundcloud.webp"
+                    type="image/webp"
                   />
                   <img
-                    src="/assets/other/soundcloud.png"
+                    src="/assets/CodeLogos/soundcloud.webp"
                     alt="Soundcloud button"
                     className="object-contain"
                   />

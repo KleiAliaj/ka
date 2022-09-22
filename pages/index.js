@@ -240,11 +240,11 @@ export default function Index({ allPosts }) {
                   {" "}
                   <picture>
                     <source
-                      srcSet="/assets/other/u-logo.png"
-                      type="image/png"
+                      srcSet="/assets/CodeLogos/u-logo.webp"
+                      type="image/webp"
                     />
                     <img
-                      src="/assets/other/u-logo.png"
+                      src="/assets/CodeLogos/u-logo.webp"
                       alt="unsplash button"
                       className="object-contain"
                     />
@@ -261,11 +261,11 @@ export default function Index({ allPosts }) {
                 <div className="md:w-40 sm:w-32 sm:h-16 md:h-auto">
                   <picture>
                     <source
-                      srcSet="/assets/other/spotify.png"
-                      type="image/png"
+                      srcSet="/assets/CodeLogos/spotify.webp"
+                      type="image/webp"
                     />
                     <img
-                      src="/assets/other/spotify.png"
+                      src="/assets/CodeLogos/spotify.webp"
                       alt="spotify button"
                       className="object-contain"
                     />
