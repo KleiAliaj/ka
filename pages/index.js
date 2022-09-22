@@ -218,8 +218,8 @@ export default function Index({ allPosts }) {
                 . Hobbies are important to me, and each one has a purpose. I
                 express my creativity through my music, I get outside with my
                 photography, I read to learn more about the the world around me,
-                and I play with AI because it is fascinating to me. A
-                well-rounded balance of hobbies and interesting work makes for a
+                and I play with AI because it is fascinating. A well-rounded
+                balance of hobbies and interesting work makes for a
                 entertaining, fulfilled life!
               </p>
             </motion.div>

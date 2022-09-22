@@ -22,14 +22,13 @@ export default function AI({ aiImages }) {
       <h2 className="text-left heading-lg fade-effect-quick">AI Experiments</h2>
       <div className="text-box sm:w-full md:w-2/3">
         <p>
-          AI has always fascinated me, the idea that a computer can make an
-          informed decision based on information it has learned is game
-          changing. The first time I used GPT3 back in 2020, it was massively
+          AI has always fascinated me, the notion that a computer can learn is a
+          crazy concept. The first time I used GPT3 back in 2020, it was super
           inspiring. It felt like magic, almost anything I&apos;d ask it, it
           would send back a reply that made sense, both contextually and
           grammatically. I spent hours having conversations about philosophy,
-          politics, and technology with a non-sentient computer. It will always
-          be something I&apos;m fascinated with.{" "}
+          politics, and technology with a computer that didn&apos; even know my
+          name. It will always be something I&apos;m interested in.
         </p>
       </div>
       <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
@@ -93,7 +92,7 @@ function Experiment({ path, imgSrc, name, description }) {
 }
 
 function AIImage({ index, pic }) {
-  //   console.log(pic);
+  console.log(pic);
   const [imageLoading, setImageLoading] = React.useState(false);
   let textSize = pic.name.length > 200 ? "  !text-xs" : " !text-base";
   React.useEffect(() => {
@@ -118,7 +117,7 @@ function AIImage({ index, pic }) {
           />
         </div>
       ) : (
-        <div className="absolute top-0 z-50 w-full h-full bg-slate-800/70 rounded-xl  opacity-0 group-hover:!opacity-100 transition duration-300 flex justify-center items-center p-2">
+        <div className="absolute top-0 z-50 w-full h-full bg-slate-800/70 rounded-xl  opacity-0 group-hover:!opacity-100 transition duration-300  justify-center items-center p-2 flex flex-col ">
           <p
             className={
               " text-white  opacity-0 group-hover:!opacity-100 duration-200  " +
@@ -127,6 +126,9 @@ function AIImage({ index, pic }) {
           >
             {pic.name.charAt(0).toUpperCase() + pic.name.slice(1)}
           </p>
+          <div className="  text-white !text-xs  opacity-0 group-hover:!opacity-100 duration-200  bg-sky-300/40 rounded-full px-2 py-1">
+            {pic.algorithm}
+          </div>
         </div>
       )}
       {/* <p>{pic.name.length}</p> */}
@@ -149,7 +151,6 @@ function AIImage({ index, pic }) {
         }}
       />
 
-      {/* <p>{pic}</p> */}
     </div>
   );
 }
@@ -159,11 +160,11 @@ export async function getStaticProps(context) {
   const axiosStats = await axios({
     method: "GET",
     url: "http://tyfiero.com/api/airtable",
-    //url: "http://localhost:3000/api/airtable",
+    // url: "http://localhost:3000/api/airtable",
   })
     .then((response) => {
       let images = response.data;
-      //   console.log(response.data);
+      // console.log(response.data);
       let sorted = images.sort(function (a, b) {
         return b.rank - a.rank;
       });
