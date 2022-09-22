@@ -51,7 +51,7 @@ export default function ContactForm() {
 
   return (
     <div className="fade-effect-quick sm:mb-[50px] md:mb-0">
-      <main>
+      <main className="text-box !px-20">
         {thanks ? (
           <div className="flex flex-col items-center justify-center w-full h-[50vh] gap-4">
             <p className="text-xl font-bold ">
@@ -132,7 +132,7 @@ export default function ContactForm() {
               />
               <button
                 // type="submit"
-                className="button-1"
+                className="mb-10 button-1 !text-xl"
               >
                 Send
                 <FaRegPaperPlane />

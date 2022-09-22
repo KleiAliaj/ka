@@ -81,7 +81,7 @@ function About() {
           </motion.div>
         </TextSection>
         <ImageSection
-          src="/assets/other/profileshot.jpg"
+          src="/assets/other/profileshot.webp"
           alt="Ty Fiero about image"
         />
       </DualSection>

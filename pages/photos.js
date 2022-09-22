@@ -14,6 +14,7 @@ import {
 import ImageSection from "@/components/layout/ImageSection";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
+import { motion, useReducedMotion } from "framer-motion";
 
 export async function getStaticProps(context) {
   let tyImages = [];
@@ -126,22 +127,71 @@ export async function getStaticProps(context) {
 }
 
 function Photography({ tyImages, tyStats, altDescription }) {
+  const prefersReducedMotion = useReducedMotion();
+
   const [pics, setPics] = React.useState(tyImages);
   const [altText, setAltText] = React.useState(altDescription);
+  const photoAnimate = {
+    offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
+    onscreen: {
+      scale: 1,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const headingAnimate = {
+    offscreen: { x: prefersReducedMotion ? 0 : -300, opacity: 0 },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
+    },
+  };
+  const textAnimate = {
+    offscreen: {
+      x: prefersReducedMotion ? 0 : -300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.2 },
+    },
+  };
+  const thirdAnimate = {
+    offscreen: {
+      x: prefersReducedMotion ? 0 : -300,
+      opacity: 0,
+      scale: prefersReducedMotion ? 1 : 0.2,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.4 },
+    },
+  };
 
-  const getMoreImages = async () => {};
   return (
     <div className="page-container">
       <h1 className="text-left heading-lg fade-effect-quick">Photography</h1>
       <DualSection>
-        <TextSection title="Why I Take Pictures">
-          <div className="text-box">
+        <TextSection>
+          <motion.h2
+            variants={headingAnimate}
+            className={"font-bold heading-md "}
+          >
+            Why I Take Pictures
+          </motion.h2>
+          <motion.div variants={textAnimate} className="text-box">
             <p>
               Photography is my creative outlet that gets me outside, and it
               helps me notice the small things, while appreciating the beauty of
               the Pacific Northwest. I am by no means a professional, far from
               it. But I do have a decent Nikon camera, an eye for nature
-              photography, and the patience to find the right shot. <br />
+              photography, and the patience to find the right shot! <br />
               <br /> I don&apos;t ever expect to be famous for my photography,
               or even make a single dollar, it&apos;s just so fun! My mind is so
               much clearer when I spend time in nature every week. I share all
@@ -156,9 +206,12 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </a>{" "}
               for anyone to use in their creative projects.
             </p>
-          </div>
+          </motion.div>
           <br />
-          <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-sky-600/30 dark:shadow-sky-400/30 bg-sky-50 dark:bg-sky-700/90">
+          <motion.div
+            variants={thirdAnimate}
+            className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-sky-600/30 dark:shadow-sky-400/30 bg-sky-50 dark:bg-sky-700/90"
+          >
             <div className="mb-2">
               <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
                 “
@@ -173,9 +226,10 @@ function Photography({ tyImages, tyStats, altDescription }) {
                 “
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="flex justify-center w-full mt-5">
-            <a
+            <motion.a
+              variants={thirdAnimate}
               href="https://unsplash.com/@tyfiero"
               target="_blank"
               rel="noreferrer"
@@ -187,15 +241,18 @@ function Photography({ tyImages, tyStats, altDescription }) {
               <div className="w-[8em]  dark:invert-0 invert h-[3em]">
                 {" "}
                 <picture>
-                  <source srcSet="/assets/other/u-logo.png" type="image/png" />
+                  <source
+                    srcSet="/assets/CodeLogos/u-logo.webp"
+                    type="image/webp"
+                  />
                   <img
-                    src="/assets/other/u-logo.png"
+                    src="/assets/CodeLogos/u-logo.webp"
                     alt="unsplash button"
                     className="object-contain"
                   />
                 </picture>
               </div>
-            </a>
+            </motion.a>
           </div>
         </TextSection>
         <ImageSection
