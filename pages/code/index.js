@@ -20,7 +20,7 @@ import TextSection from "@/components/layout/TextSection";
 import { motion, useReducedMotion } from "framer-motion";
 import dynamic from "next/dynamic";
 const CubeWaveSketch = dynamic(
-  () => import("../../components/projects/CubeWaveSketch"),
+  () => import("../../components/projects/art/CubeWaveSketch"),
   {
     ssr: false,
   }
