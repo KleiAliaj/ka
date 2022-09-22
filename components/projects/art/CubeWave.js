@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import p5 from "p5";
-import GithubButton from "../layout/githubButton";
+import GithubButton from "../../layout/githubButton";
 
 let pCubeHeight = 190;
 let pRotationX = 0;

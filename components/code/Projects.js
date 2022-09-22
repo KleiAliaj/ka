@@ -80,7 +80,7 @@ function Projects({ modalOpen, setModalOpen, setSelected }) {
               textColor=" text-indigo-500 dark:text-indigo-300"
               title="tyfiero.com"
               description="My personal website built with Next.js, Tailwind, and Cosmic CMS."
-              imgSrc="/assets/other/Ty-lofi.jpeg"
+              imgSrc="/assets/other/projects/ty/tyfierocom.webp"
               setModalOpen={setModalOpen}
               setSelected={setSelected}
             />
