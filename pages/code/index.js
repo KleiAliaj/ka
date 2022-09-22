@@ -216,7 +216,7 @@ function CodeIndex() {
               <Link href={"/contact"}>
                 <a className="underline text-sky-500">Let me know</a>
               </Link>{" "}
-              if you want to share a cool technology for me to explore!
+              if you have any cool technology recommendations!
             </p>
           </motion.div>
           <motion.div
@@ -281,9 +281,8 @@ function CodeIndex() {
             <p className="font-bold ">
               Javascript art in P5.js is what made me fall in love with coding.
               It&apos;s an excellent medium to start learning code, as it helps
-              to visualize how loops, functions, and other concepts work. The
-              instant visual feedback is amazing. Shout out to Daniel Shiffman
-              of the{" "}
+              to visualize how loops, functions, and other concepts work through
+              instant visual feedback. Shout out to Daniel Shiffman of the{" "}
               <a
                 href="https://thecodingtrain.com/"
                 target="_blank"
@@ -292,8 +291,9 @@ function CodeIndex() {
               >
                 Coding Train
               </a>{" "}
-              for the incredible tutorials. I don&apos;t make generative art as
-              much anymore, but it will always have a place in my heart.
+              for the incredible tutorials! I haven&apos;t had as much time as
+              I&apos;d like for generative art recently, but I&apos;ll always
+              love it.
             </p>
           </motion.div>
           <motion.div
