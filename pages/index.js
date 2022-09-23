@@ -2,7 +2,6 @@ import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
 import Image from "next/image";
 import HomePosts from "@/components/blog/homePosts";
-import TechStack from "@/components/projects/TechStack";
 import ImageSection from "@/components/layout/ImageSection";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
@@ -10,10 +9,43 @@ import Link from "next/link";
 import CustomForm from "@/components/blog/NewsletterForm";
 import SocialIcons from "@/components/layout/SocialIcons";
 import { motion, useReducedMotion } from "framer-motion";
+import { TbCode } from "react-icons/tb";
+import CompactProjects from "@/components/projects/CompactProjects";
 
 export default function Index({ allPosts }) {
   const prefersReducedMotion = useReducedMotion();
-
+  const favTech = [
+    {
+      title: "Next.js",
+      url: "/assets/CodeLogos/nextjs.png",
+      styles: " invert-0 dark:invert scale-110",
+    },
+    {
+      title: "React",
+      url: "/assets/CodeLogos/react.png",
+      styles: "scale-75",
+    },
+    {
+      title: "JavaScript",
+      url: "/assets/CodeLogos/js.png",
+      styles: "scale-90",
+    },
+    {
+      title: "Framer Motion",
+      url: "/assets/CodeLogos/framer.png",
+      styles: "scale-75",
+    },
+    {
+      title: "TailwindCSS",
+      url: "/assets/CodeLogos/tailwind.png",
+      styles: "scale-75",
+    },
+    {
+      title: "Firebase",
+      url: "/assets/CodeLogos/firebase.png",
+      styles: "scale-75",
+    },
+  ];
   const photoAnimate = {
     offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
     onscreen: {
@@ -164,36 +196,69 @@ export default function Index({ allPosts }) {
         {/* separator */}
         <div className="md:mb-20 md:mt-20 sm:mb-6 sm:mt-6" />
 
-        <DualSection invert centerText>
+        <DualSection cn="sm:px-0">
           <TextSection>
             <motion.h2
               variants={rightHeading}
               className={"font-bold heading-md "}
             >
-              What I do
+              Work
             </motion.h2>
-            <motion.div variants={rightSection} className="text-box">
+            <motion.div variants={rightSection} className="text-box sm:mx-3">
               <p>
                 I&apos;m a developer with a passion for building things that are
-                useful to people. My journey in software development started
-                during the covid lock down of 2020. I began taking online
-                courses for web development, starting with basic HTML and CSS.
-                In May of 2021 I left my job as a public health microbiologist
-                to learn full time. Since then, I&apos;ve worked on a variety of
-                projects, from small vanilla javascript projects to full stack
-                web applications in Next.js.
+                useful. My journey in software development started during the
+                covid lock down of 2020. I began taking online courses for web
+                development, starting with basic HTML and CSS. In May of 2021 I
+                left my job as a public health microbiologist to learn full
+                time. Since then, I&apos;ve worked on a variety of projects,
+                from small vanilla javascript projects to full stack web
+                applications in Next.js.
               </p>
+              <motion.div variants={thirdAnimate}>
+                <p className="mt-5 text-center">Favorite Technologies</p>
+                <div className="flex items-center justify-center w-full gap-2">
+                  {favTech.map((tech, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={
+                          "rounded-xl relative w-16 h-12 " + tech.styles
+                        }
+                      >
+                        <Image
+                          src={tech.url}
+                          alt={tech.title}
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              variants={thirdAnimate}
+              className="flex justify-center w-full"
+            >
+              <Link href={"/code/projects"}>
+                <a className="mt-5 button-1">
+                  View All Projects <TbCode className="text-xl" />
+                </a>
+              </Link>
             </motion.div>
           </TextSection>
           {/* <div className="md:w-1/2 sm:w-full"></div> */}
-          <motion.div variants={photoAnimate}>
-            <TechStack />
+          <motion.div variants={photoAnimate} className="sm:w-full md:w-1/2">
+            <h4 className="heading-sm">Projects</h4>
+            <CompactProjects />
           </motion.div>
         </DualSection>
         {/* separator */}
         <div className="md:mb-24 md:mt-28 sm:mb-8 sm:mt-8" />
         {/* Play SECTION */}
-        <DualSection centerText>
+        <DualSection invert centerText>
           <TextSection>
             <motion.h2
               variants={headingAnimate}
