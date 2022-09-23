@@ -281,7 +281,7 @@ export default function Index({ allPosts }) {
             variants={photoAnimate}
           > */}
           <ImageSection
-            src="/assets/other/Ty-lofi.jpeg"
+            src="/assets/other/Ty-lofi.webp"
             alt="Lofi Style image of Ty"
           />
           {/* </motion.div> */}

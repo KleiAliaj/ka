@@ -1,18 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import ProjectModal from "@/components/projects/modals/ProjectModal";
-import ModalConsistenSea from "@/components/projects/modals/ModalConsistenSea";
-import ModalOliverAIProject from "@/components/projects/modals/ModalOliverAIProject";
-import ModalDD from "@/components/projects/modals/ModalDD";
 import Link from "next/link";
 import Image from "next/image";
-import ModalCombinator from "@/components/projects/modals/ModalCombinator";
-import ModalDrum from "@/components/projects/modals/ModalDrum";
-import ModalPAAda from "@/components/projects/modals/ModalPAAda";
-import ModalPAeth from "@/components/projects/modals/ModalPAeth";
-import ModalTy from "@/components/projects/modals/ModalTy";
-import ModalPAWeb from "@/components/projects/modals/ModalPAWeb";
-import ModalIdeaIsland from "@/components/projects/modals/ModalIdeaIsland";
 import TechStack from "@/components/projects/TechStack";
 import Projects from "@/components/code/Projects";
 import DualSection from "@/components/layout/DualSection";
@@ -28,11 +17,6 @@ const CubeWaveSketch = dynamic(
 
 function CodeIndex() {
   const prefersReducedMotion = useReducedMotion();
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [selected, setSelected] = React.useState("consistensea");
-  const [selectedContent, setSelectedContent] = React.useState(
-    <ModalConsistenSea />
-  );
   const photoAnimate = {
     offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
     onscreen: {
@@ -111,86 +95,6 @@ function CodeIndex() {
   };
   return (
     <div className="page-container">
-      {modalOpen && selected === "ConsistentSea" ? (
-        <ProjectModal
-          content={selectedContent}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "Oliver" ? (
-        <ProjectModal
-          content={<ModalOliverAIProject />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "Deliberate Design" ? (
-        <ProjectModal
-          content={<ModalDD />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "Formulata" ? (
-        <ProjectModal
-          content={<ModalCombinator />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "JS Drum Set" ? (
-        <ProjectModal
-          content={<ModalDrum />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "PriceArt ADA" ? (
-        <ProjectModal
-          content={<ModalPAAda />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "PriceArt ETH" ? (
-        <ProjectModal
-          content={<ModalPAeth />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "PriceArt Website" ? (
-        <ProjectModal
-          content={<ModalPAWeb />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "tyfiero.com" ? (
-        <ProjectModal
-          content={<ModalTy />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
-      {modalOpen && selected === "ideaisland" ? (
-        <ProjectModal
-          content={<ModalIdeaIsland />}
-          setModalOpen={setModalOpen}
-          modalOpen={modalOpen}
-          selected={selected}
-        />
-      ) : null}
       <h2 className="text-left heading-lg fade-effect-quick ">Code</h2>
 
       <DualSection>
@@ -313,11 +217,7 @@ function CodeIndex() {
         </motion.div>
       </DualSection>
       <h3 className="heading-lg !mb-0 mt-20">Projects </h3>
-      <Projects
-        setModalOpen={setModalOpen}
-        modalOpen={modalOpen}
-        setSelected={setSelected}
-      />
+      <Projects />
     </div>
   );
 }

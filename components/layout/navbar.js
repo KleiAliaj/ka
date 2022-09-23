@@ -119,12 +119,11 @@ function Navbar() {
   };
   let postSlice = router.asPath.slice(0, 6);
 
-  // console.log(postSlice);
 
   React.useEffect(() => {
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
-    } else if (router.asPath === "/code" || router.asPath === "/code/art") {
+    } else if (router.asPath === "/code" || postSlice === "/code/") {
       setSelected("code");
     } else if (router.asPath === "/ai" || router.asPath === "/ai/Oliver") {
       setSelected("ai");
