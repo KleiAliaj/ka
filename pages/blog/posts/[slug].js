@@ -39,7 +39,7 @@ export default function Post({ post, morePosts, preview }) {
               />
               <link
                 rel="canonical"
-                href={`https://tyfiero.com/blog/posts/${post.slug}`}
+                href={`https://www.tyfiero.com/blog/posts/${post.slug}`}
               />
             </Head>
             <PostHeader
