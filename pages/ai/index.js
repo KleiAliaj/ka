@@ -92,7 +92,6 @@ function Experiment({ path, imgSrc, name, description }) {
 }
 
 function AIImage({ index, pic }) {
-  console.log(pic);
   const [imageLoading, setImageLoading] = React.useState(false);
   let textSize = pic.name.length > 200 ? "  !text-xs" : " !text-base";
   React.useEffect(() => {
@@ -164,7 +163,6 @@ export async function getStaticProps(context) {
   })
     .then((response) => {
       let images = response.data;
-      // console.log(response.data);
       let sorted = images.sort(function (a, b) {
         return b.rank - a.rank;
       });

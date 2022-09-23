@@ -63,12 +63,12 @@ function OliverPage() {
         // console.log("Status: " + response.status);
         // console.log("limit: " + response.headers?.get('X-RateLimit-Limit'));
         // console.log("remaining: " + response.headers?.get('X-RateLimit-Remaining'));
-        console.log(response.data);
+        // console.log(response.data);
         getSpeechfromText(response.data.results);
 
-        console.log("Before delay");
+        // console.log("Before delay");
         setTimeout(() => {
-          console.log("After delay");
+          // console.log("After delay");
           setAnswer(response.data.results);
           setResponseReceived(true);
           setAiLoading(false);

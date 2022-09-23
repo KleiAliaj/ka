@@ -103,7 +103,6 @@ export default async function handler(req, res) {
           presence_penalty: 0,
         })
         .then((data) => {
-          console.log(data.data);
           return data.data.choices[0].text;
         })
         .catch((error) => {
