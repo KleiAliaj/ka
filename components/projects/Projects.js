@@ -74,7 +74,7 @@ const ProjectCard = ({
             <source srcSet={imgSrc} type="image/png" />
             <img
               src={imgSrc}
-              alt="logo"
+              alt={"Image of the " + title + " project"}
               className="object-cover group-hover:scale-100 sm:h-[14em] md:h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
             />
           </picture>
