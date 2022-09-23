@@ -37,6 +37,10 @@ export default function Post({ post, morePosts, preview }) {
                 property="og:image"
                 content={post.metadata.cover_image.imgix_url}
               />
+              <link
+                rel="canonical"
+                href={`https://tyfiero.com/blog/posts/${post.slug}`}
+              />
             </Head>
             <PostHeader
               title={post.title}
