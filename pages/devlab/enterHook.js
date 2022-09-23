@@ -2,7 +2,7 @@ import { useEnter } from "@/lib/hooks/useEnter";
 import React from "react";
 
 function EnterHook() {
-  console.log("----------------");
+  // console.log("----------------");
   const [hit, setHit] = React.useState(false);
   const [hitNum, setHitNum] = React.useState(0);
 

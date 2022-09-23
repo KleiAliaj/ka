@@ -4,7 +4,6 @@ import Unsplash, { toJson } from "unsplash-js";
 export default function getUser(req, res) {
   return new Promise((resolve) => {
     const u = new Unsplash({ accessKey: process.env.UNSPLASH_ACCESS_KEY });
-    console.log(req);
     u.users
       .profile(process.env.UNSPLASH_USER)
       .then(toJson)
