@@ -2,7 +2,6 @@ import Image from "next/image";
 import Date from "./date";
 
 export default function Avatar({ name, picture, date }) {
-  console.log(date);
   return (
     <div className="flex items-center">
       <div className="relative mr-3 rounded-full shadow-lg h-14 w-14">

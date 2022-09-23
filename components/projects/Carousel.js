@@ -21,8 +21,8 @@ function Carousel({ imgs }) {
   };
 
   return (
-    <div className="w-full h-full">
-      <div className="relative flex justify-center w-full h-fit ">
+    <div className="w-full h-full ">
+      <div className="relative flex justify-center w-full min-w-full h-fit">
         <ImageSlide url={imgs[currentIndex]}>
           <button
             className="absolute flex items-center justify-center w-8 h-8 text-xl transition rounded-full opacity-50 hover:opacity-100 hover:scale-110 active:scale-90 top-[39%] left-1 bg-sky-200/70"
@@ -37,7 +37,7 @@ function Carousel({ imgs }) {
             <FaArrowRight className="text-sky-700 " />
           </button>
           <div className="flex justify-center w-full mt-1 ">
-            <div className="flex items-center gap-2 px-5 py-1 transition bg-white rounded-lg dark:bg-slate-400 ">
+            <div className="flex items-center gap-2 px-5 py-1 transition bg-white rounded-lg shadow-md dark:bg-slate-400 ">
               {imgs.map((img, index) => (
                 <button
                   key={index}

@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:site" content="@FieroTy" />
         <meta name="twitter:title" content="Ty Fiero" />
         <meta name="twitter:description" content="The Blog of Ty Fiero." />
-        <meta name="twitter:image" content="./assets/other/Ty-lofi.jpeg" />
+        <meta name="twitter:image" content="./assets/other/Ty-lofi.webp" />
         <link
           rel="apple-touch-icon"
           sizes="76x76"
