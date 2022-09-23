@@ -26,7 +26,6 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Container>
       <ReadingBar target={target} />
-      {/* <Header /> */}
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
@@ -57,7 +56,6 @@ export default function Post({ post, morePosts, preview }) {
         </>
       )}
     </Container>
-    // </Layout>
   );
 }
 
@@ -81,7 +79,6 @@ export async function getStaticPaths() {
   const allPosts = (await getAllPostsWithSlug()) || [];
 
   // add "404" as default
-  //  const paths = allPosts.map(({ slug }) => ({ params: { slug: slug || "404" } }));
   return {
     paths: allPosts.map((post) => `/blog/posts/${post.slug}` || "404"),
     fallback: true,

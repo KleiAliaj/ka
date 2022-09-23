@@ -1,6 +1,6 @@
 import Container from "./container";
 import { EXAMPLE_PATH } from "@/lib/constants";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "../etc/SocialIcons";
 
 export default function Footer() {
   let date = new Date().getFullYear();

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import p5 from "p5";
-import GithubButton from "../../layout/githubButton";
+import GithubButton from "../../etc/githubButton";
 
 function sketch(p) {
   // p is a reference to the p5 instance this sketch is attached to

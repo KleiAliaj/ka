@@ -7,7 +7,7 @@ import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
 import Link from "next/link";
 import CustomForm from "@/components/blog/NewsletterForm";
-import SocialIcons from "@/components/layout/SocialIcons";
+import SocialIcons from "@/components/etc/SocialIcons";
 import { motion, useReducedMotion } from "framer-motion";
 import { TbCode } from "react-icons/tb";
 import CompactProjects from "@/components/projects/CompactProjects";

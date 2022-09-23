@@ -8,7 +8,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import FullLoader from "@/components/FullLoader";
+import FullLoader from "@/components/etc/FullLoader";
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
 

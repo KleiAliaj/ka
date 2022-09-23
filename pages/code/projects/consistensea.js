@@ -1,4 +1,4 @@
-import GithubButton from "@/components/layout/githubButton";
+import GithubButton from "@/components/etc/githubButton";
 import React from "react";
 import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import Carousel from "@/components/projects/Carousel";
