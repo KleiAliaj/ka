@@ -202,7 +202,7 @@ function CodeIndex() {
             variants={invertThird}
             className="flex justify-center w-full mt-5 "
           >
-            <Link href="/code/art">
+            <Link href="/code/projects">
               <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
                 All Projects <FaArrowRight />
               </a>

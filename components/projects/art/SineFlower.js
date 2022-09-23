@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import p5 from "p5";
-import GithubButton from "../../layout/githubButton";
+import GithubButton from "../../etc/githubButton";
 
 function sketch(p) {
   let kMax = 10; // between 2-10

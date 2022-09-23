@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import p5 from "p5";
-import GithubButton from "../../layout/githubButton";
+import GithubButton from "../../etc/githubButton";
 let pSpeed = 1;
 let pRotate = 1;
 function sketch(p) {
