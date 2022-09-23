@@ -117,7 +117,7 @@ function TechStack() {
             imgStyle=" scale-[75%]  group-hover:!scale-[85%] translate-y-2"
           />
           <CodeLogo
-            title="Chrome Extensions"
+            title="Extensions"
             img="/assets/CodeLogos/chrome.png"
             alt="chrome logo"
             url="https://developer.chrome.com/docs/extensions/"
@@ -166,7 +166,7 @@ function CodeLogo(props) {
         href={props.url}
         target="_blank"
         rel="noopener noreferrer"
-        className={"w-20 h-20 transition  relative " + props.imgStyle}
+        className={"w-16 h-16 transition  relative " + props.imgStyle}
       >
         <Image
           src={props.img}
@@ -175,7 +175,7 @@ function CodeLogo(props) {
           objectFit="contain"
         />
       </a>
-      <p className={"font-bold text-center " + props.textStyle}>
+      <p className={"font-bold text-sm text-center " + props.textStyle}>
         {props.title}
       </p>
     </div>
