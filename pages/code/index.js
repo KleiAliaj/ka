@@ -3,11 +3,12 @@ import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import TechStack from "@/components/projects/TechStack";
-import Projects from "@/components/code/Projects";
+import Projects from "@/components/projects/Projects";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
 import { motion, useReducedMotion } from "framer-motion";
 import dynamic from "next/dynamic";
+import CompactProjects from "@/components/projects/CompactProjects";
 const CubeWaveSketch = dynamic(
   () => import("../../components/projects/art/CubeWaveSketch"),
   {
@@ -172,8 +173,52 @@ function CodeIndex() {
         </motion.div>
       </DualSection>
       {/* separator */}
-      <div className="md:mb-28 md:mt-28 sm:mb-6 sm:mt-6" />
+      <div className="md:mb-16 md:mt-16 sm:mb-6 sm:mt-6" />
       <DualSection invert>
+        <TextSection title="" headerClassNames="hidden">
+          <motion.h2
+            variants={invertHeader}
+            className={"font-bold heading-md "}
+          >
+            Projects
+          </motion.h2>
+          <motion.div variants={invertText} className="text-box">
+            <p className="font-bold ">
+              There&apos;s no better way to learn than by doing. Courses and
+              books are good for grasping the concepts, but applying this
+              knowledge is how to achieve mastery. Each project teaches me
+              something new, not only the technologies themselves, but also new
+              ways of thinking like a programmer.
+              <br />
+              <br />
+              Side projects encourage exploration, foster curiosity, and have
+              helped me level up as a developer. With each new side project, the
+              complexity and speed increase but the difficulty and strain
+              decrease. Of all these projects, ideaisland and PriceArt shaped
+              who I am today.
+            </p>
+          </motion.div>
+          <motion.div
+            variants={invertThird}
+            className="flex justify-center w-full mt-5 "
+          >
+            <Link href="/code/art">
+              <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
+                All Projects <FaArrowRight />
+              </a>
+            </Link>
+          </motion.div>
+        </TextSection>
+
+        <motion.div
+          className="flex items-center justify-center w-full h-full mt-11"
+          variants={headingAnimate}
+        >
+          <CompactProjects />
+        </motion.div>
+      </DualSection>
+      <div className="md:mb-16 md:mt-16 sm:mb-6 sm:mt-6" />
+      <DualSection>
         <TextSection title="" headerClassNames="hidden">
           <motion.h2
             variants={invertHeader}
@@ -206,7 +251,7 @@ function CodeIndex() {
           >
             <Link href="/code/art">
               <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
-                View All Generative Art <FaArrowRight />
+                All Generative Art <FaArrowRight />
               </a>
             </Link>
           </motion.div>
@@ -216,8 +261,6 @@ function CodeIndex() {
           <CubeWaveSketch />
         </motion.div>
       </DualSection>
-      <h3 className="heading-lg !mb-0 mt-20">Projects </h3>
-      <Projects />
     </div>
   );
 }
