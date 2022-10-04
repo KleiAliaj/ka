@@ -347,7 +347,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             <div
               key={index}
               className={
-                "relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[423px] sm:h-[211px] " +
+                "relative shadow-lg rounded-xl transition duration-500 hover:shadow-sky-400/60 shadow-sky-600/30 md:h-[423px] sm:h-[211px] hover:shadow-xl " +
                 width
               }
             >
@@ -355,7 +355,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
                 src={pic.displaySrc}
                 alt={pic.alt}
                 layout="fill"
-                className="cursor-pointer rounded-xl"
+                className="transition-transform duration-500 cursor-pointer !rounded-xl hover:scale-[99%] "
                 // placeholder="blur"
                 onClick={() => {
                   if (typeof window !== "undefined") {
