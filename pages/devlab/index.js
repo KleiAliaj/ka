@@ -20,6 +20,12 @@ function IndexDevLab() {
               <FaKeyboard />
             </a>
           </Link>
+          <Link href={"/devlab/canvas"}>
+            <a className="button-1">
+              npm Enter hook
+              <FaKeyboard />
+            </a>
+          </Link>
         </div>
       </div>
     </div>
