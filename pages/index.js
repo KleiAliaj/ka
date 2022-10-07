@@ -137,6 +137,7 @@ export default function Index({ allPosts }) {
     <>
       <Head>
         <title>Ty Fiero&apos;s blog on code, music, and life.</title>
+        <link rel="canonical" href="https://www.tyfiero.com" />
       </Head>
       <div className="fade-effect-quick page-container !items-start">
         <DualSection centerText cn="w-full md:mt-10">
