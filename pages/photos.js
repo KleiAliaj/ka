@@ -356,14 +356,12 @@ function Photography({ tyImages, tyStats, altDescription }) {
                 alt={pic.alt}
                 layout="fill"
                 className="transition-transform duration-500 cursor-pointer !rounded-xl hover:scale-[99%] "
-                // placeholder="blur"
                 onClick={() => {
                   if (typeof window !== "undefined") {
                     window.open(pic.src, "_blank");
                   }
                 }}
               />
-              {/* <p>{pic}</p> */}
             </div>
           );
         })}
