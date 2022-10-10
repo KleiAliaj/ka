@@ -86,9 +86,7 @@ ${posts
           <priority>0.00</priority>
           </url>
           
-          <url>
-          <loc>https://www.tyfiero.com/sitemap.xml</loc>
-          </url>
+         
           </urlset>
           `;
 };
