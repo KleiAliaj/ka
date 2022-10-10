@@ -1,4 +1,4 @@
-Sitemap: https://tyfiero.com/sitemap.xml
+Sitemap: https://www.tyfiero.com/sitemap.xml
 
 User-agent: *
 Allow: /*
