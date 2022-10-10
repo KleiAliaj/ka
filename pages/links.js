@@ -4,6 +4,7 @@ import { BsArrow90DegDown } from "react-icons/bs";
 import { FaCaretRight, FaList, FaStar } from "react-icons/fa";
 import axios from "axios";
 import { TbRectangleVertical } from "react-icons/tb";
+import Head from "next/head";
 
 function Links({ links }) {
   // console.log(links);
@@ -18,326 +19,335 @@ function Links({ links }) {
   // }, []);
 
   return (
-    <div className="page-container">
-      <h2 className="text-left heading-lg ">Links</h2>
-      <p>
-        This is a list of the best links on the internet I&apos;ve come across,
-        since I started keeping track in 2020. Lots of cool resources and
-        articles in here.
-      </p>
-      <div className="flex items-center gap-1">
-        <p>Favorite Links are labelled with a &quot;</p>
-        <FaStar className="text-sky-500" />
-        <p>&quot;</p>
-      </div>
-      <div className="flex justify-end w-full my-3">
-        <button
-          className="button-1 !px-2 !py-1"
-          onClick={() => setCardOrList(!cardOrList)}
+   <>
+    <Head>
+        <title>Ty&apos;s Links and Resources</title>
+        <meta
+            name="description"
+            content={`Useful and fun links from across the web.`}
+          />
+      </Head>
+      <div className="page-container">
+        <h2 className="text-left heading-lg ">Links</h2>
+        <p>
+          This is a list of the best links on the internet I&apos;ve come across,
+          since I started keeping track in 2020. Lots of cool resources and
+          articles in here.
+        </p>
+        <div className="flex items-center gap-1">
+          <p>Favorite Links are labelled with a &quot;</p>
+          <FaStar className="text-sky-500" />
+          <p>&quot;</p>
+        </div>
+        <div className="flex justify-end w-full my-3">
+          <button
+            className="button-1 !px-2 !py-1"
+            onClick={() => setCardOrList(!cardOrList)}
+          >
+            {cardOrList ? <FaList /> : <TbRectangleVertical />}
+            {cardOrList ? "List View" : "Card View"}
+          </button>
+        </div>
+        <Category
+          title="Code"
+          textColor=" text-sky-700 dark:text-sky-300"
+          cn=" rounded-lg bg-sky-300/20 mb-3"
         >
-          {cardOrList ? <FaList /> : <TbRectangleVertical />}
-          {cardOrList ? "List View" : "Card View"}
-        </button>
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.code.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-sky-700 dark:text-sky-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.code.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-sky-700 dark:text-sky-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+  
+        <Category
+          title="Crypto"
+          textColor=" text-indigo-700 dark:text-indigo-300"
+          cn=" rounded-lg bg-indigo-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.crypto.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-indigo-700 dark:text-indigo-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.crypto.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-indigo-700 dark:text-indigo-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+        <Category
+          title="Personal Development"
+          textColor=" text-purple-700 dark:text-purple-300"
+          cn=" rounded-lg bg-purple-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.personalDev.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-purple-700 dark:text-purple-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.personalDev.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-purple-700 dark:text-purple-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+        <Category
+          title="AI"
+          textColor=" text-fuchsia-700 dark:text-fuchsia-300"
+          cn=" rounded-lg bg-fuchsia-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.ai.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-fuchsia-700 dark:text-fuchsia-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.ai.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-fuchsia-700 dark:text-fuchsia-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+        <Category
+          title="Tools"
+          textColor=" text-orange-700 dark:text-orange-300"
+          cn=" rounded-lg bg-orange-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.tools.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-orange-700 dark:text-orange-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.tools.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-orange-700 dark:text-orange-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+        <Category
+          title="Innovation"
+          textColor=" text-yellow-700 dark:text-yellow-300"
+          cn=" rounded-lg bg-yellow-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.innovation.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-yellow-700 dark:text-yellow-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.innovation.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-yellow-700 dark:text-yellow-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+  
+        <Category
+          title="Tools"
+          textColor=" text-green-700 dark:text-green-300"
+          cn=" rounded-lg bg-green-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.tools.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-green-700 dark:text-green-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.tools.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-green-700 dark:text-green-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
+        <Category
+          title="Fun Stuff"
+          textColor=" text-teal-700 dark:text-teal-300"
+          cn=" rounded-lg bg-teal-300/20 mb-3"
+        >
+          {cardOrList ? (
+            <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
+              {linksList.fun.map((link, index) => {
+                return (
+                  <ResourceCard
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-teal-700 dark:text-teal-300"
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <div>
+              {linksList.fun.map((link, index) => {
+                return (
+                  <Resource
+                    key={index}
+                    name={link.title}
+                    fav={link.fav}
+                    url={link.url}
+                    note={link.note}
+                    textColor=" text-teal-700 dark:text-teal-300"
+                  />
+                );
+              })}
+            </div>
+          )}
+        </Category>
       </div>
-      <Category
-        title="Code"
-        textColor=" text-sky-700 dark:text-sky-300"
-        cn=" rounded-lg bg-sky-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.code.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-sky-700 dark:text-sky-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.code.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-sky-700 dark:text-sky-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-
-      <Category
-        title="Crypto"
-        textColor=" text-indigo-700 dark:text-indigo-300"
-        cn=" rounded-lg bg-indigo-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.crypto.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-indigo-700 dark:text-indigo-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.crypto.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-indigo-700 dark:text-indigo-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-      <Category
-        title="Personal Development"
-        textColor=" text-purple-700 dark:text-purple-300"
-        cn=" rounded-lg bg-purple-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.personalDev.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-purple-700 dark:text-purple-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.personalDev.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-purple-700 dark:text-purple-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-      <Category
-        title="AI"
-        textColor=" text-fuchsia-700 dark:text-fuchsia-300"
-        cn=" rounded-lg bg-fuchsia-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.ai.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-fuchsia-700 dark:text-fuchsia-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.ai.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-fuchsia-700 dark:text-fuchsia-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-      <Category
-        title="Tools"
-        textColor=" text-orange-700 dark:text-orange-300"
-        cn=" rounded-lg bg-orange-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.tools.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-orange-700 dark:text-orange-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.tools.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-orange-700 dark:text-orange-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-      <Category
-        title="Innovation"
-        textColor=" text-yellow-700 dark:text-yellow-300"
-        cn=" rounded-lg bg-yellow-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.innovation.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-yellow-700 dark:text-yellow-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.innovation.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-yellow-700 dark:text-yellow-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-
-      <Category
-        title="Tools"
-        textColor=" text-green-700 dark:text-green-300"
-        cn=" rounded-lg bg-green-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.tools.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-green-700 dark:text-green-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.tools.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-green-700 dark:text-green-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-      <Category
-        title="Fun Stuff"
-        textColor=" text-teal-700 dark:text-teal-300"
-        cn=" rounded-lg bg-teal-300/20 mb-3"
-      >
-        {cardOrList ? (
-          <div className="flex flex-wrap items-center justify-center h-full gap-3 p-1 pb-5">
-            {linksList.fun.map((link, index) => {
-              return (
-                <ResourceCard
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-teal-700 dark:text-teal-300"
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <div>
-            {linksList.fun.map((link, index) => {
-              return (
-                <Resource
-                  key={index}
-                  name={link.title}
-                  fav={link.fav}
-                  url={link.url}
-                  note={link.note}
-                  textColor=" text-teal-700 dark:text-teal-300"
-                />
-              );
-            })}
-          </div>
-        )}
-      </Category>
-    </div>
+   </>
   );
 }
 

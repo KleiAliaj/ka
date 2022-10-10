@@ -137,6 +137,10 @@ export default function Index({ allPosts }) {
     <>
       <Head>
         <title>Ty Fiero&apos;s blog on code, music, and life.</title>
+        <meta
+            name="description"
+            content={`Home page for Ty Fiero`}
+          />
         <link rel="canonical" href="https://www.tyfiero.com" />
       </Head>
       <div className="fade-effect-quick page-container !items-start">
