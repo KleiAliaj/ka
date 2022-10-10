@@ -12,55 +12,55 @@ const createSitemap = (posts) => {
   return `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-        <loc>https://tyfiero.com</loc>
+        <loc>https://www.tyfiero.com</loc>
         <priority>1.00</priority>
 </url>
 
 <url>
-    <loc>https://tyfiero.com/about</loc>
+    <loc>https://www.tyfiero.com/about</loc>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://tyfiero.com/code</loc>
+    <loc>https://www.tyfiero.com/code</loc>
     <priority>0.90</priority>
 </url>
 <url>
-    <loc>https://tyfiero.com/code/art</loc>
+    <loc>https://www.tyfiero.com/code/art</loc>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://tyfiero.com/ai</loc>
+    <loc>https://www.tyfiero.com/ai</loc>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://tyfiero.com/ai/Oliver</loc>
-    <priority>0.80</priority>
-</url>
-
-<url>
-    <loc>https://tyfiero.com/music</loc>
+    <loc>https://www.tyfiero.com/ai/Oliver</loc>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://tyfiero.com/photos</loc>
+    <loc>https://www.tyfiero.com/music</loc>
+    <priority>0.80</priority>
+</url>
+
+<url>
+    <loc>https://www.tyfiero.com/photos</loc>
     <priority>0.80</priority>
 </url>
 
 
 <url>
-    <loc>https://tyfiero.com/devlab</loc>
+    <loc>https://www.tyfiero.com/devlab</loc>
     <priority>0.00</priority>
 </url>
 
 
 <url>
-    <loc>https://tyfiero.com/links</loc>
+    <loc>https://www.tyfiero.com/links</loc>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://tyfiero.com/blog</loc>
+    <loc>https://www.tyfiero.com/blog</loc>
     <priority>0.90</priority>
 </url>
 
@@ -68,7 +68,7 @@ ${posts
   .map(({ id }) => {
     return `
             <url>
-            <loc>${`https://tyfiero.com/blog/posts/${id}`}</loc>
+            <loc>${`https://www.tyfiero.com/blog/posts/${id}`}</loc>
             <priority>0.90</priority>
             </url>
             `;
@@ -77,17 +77,17 @@ ${posts
 
           
           <url>
-              <loc>https://tyfiero.com/contact</loc>
+              <loc>https://www.tyfiero.com/contact</loc>
               <priority>0.50</priority>
           </url>
 
           <url>
-          <loc>https://tyfiero.com/500</loc>
+          <loc>https://www.tyfiero.com/500</loc>
           <priority>0.00</priority>
           </url>
           
           <url>
-          <loc>https://tyfiero.com/sitemap.xml</loc>
+          <loc>https://www.tyfiero.com/sitemap.xml</loc>
           </url>
           </urlset>
           `;
