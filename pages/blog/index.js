@@ -16,6 +16,10 @@ export default function Index({ allPosts }) {
     <>
       <Head>
         <title>Ty Fiero&apos;s blog posts on code, music, and life.</title>
+        <meta
+            name="description"
+            content={"All blog posts written by Ty Fiero."}
+          />
       </Head>
       <Container>
         {/* <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-8xl md:pr-8 f1">

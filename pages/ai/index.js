@@ -5,6 +5,7 @@ import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function AI({ aiImages }) {
   const [pics, setPics] = React.useState(aiImages);
@@ -18,55 +19,64 @@ export default function AI({ aiImages }) {
     },
   ];
   return (
-    <div className="page-container">
-      <h2 className="text-left heading-lg fade-effect-quick">AI Experiments</h2>
-      <div className="text-box sm:w-full md:w-2/3">
-        <p>
-          AI has always fascinated me, the notion that a computer can learn is a
-          crazy concept. The first time I used GPT3 back in 2020, it was super
-          inspiring. It felt like magic, almost anything I&apos;d ask it, it
-          would send back a reply that made sense, both contextually and
-          grammatically. I spent hours having conversations about philosophy,
-          politics, and technology with a computer that didn&apos; even know my
-          name. It will always be something I&apos;m interested in.
-        </p>
-      </div>
-      <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
-        <div className="flex flex-wrap justify-center w-full gap-3">
-          {experiments.map((experiment) => (
-            <Experiment
-              key={experiment.name}
-              name={experiment.name}
-              description={experiment.description}
-              path={experiment.path}
-              imgSrc={experiment.imgSrc}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
-        <h3 className="heading-md">AI Art Showcase</h3>
-        <div className="text-box">
+   <>
+    <Head>
+        <title>AI Experiments</title>
+        <meta
+            name="description"
+            content={`Ty&apos;s experiments with AI`}
+          />
+      </Head>
+      <div className="page-container">
+        <h2 className="text-left heading-lg fade-effect-quick">AI Experiments</h2>
+        <div className="text-box sm:w-full md:w-2/3">
           <p>
-            When the DALLE-2 was first released to the media, I knew right then
-            how big AI image generation would be. Input one sentence and get a
-            customized beautiful image back? Seemed too good to be true. I still
-            have yet to get access to DALLE-2, but I&apos;ve been having a ton
-            of fun playing with <a>Midjourney</a>, which some label as the
-            &quot;artsy&quot; DALLE. Its really impressive what it makes, and
-            I&apos;ve been enjoying the discord first approach more than I
-            though I would. Here is a collection of some of my favorite AI
-            artwork that I&apos;ve made.
+            AI has always fascinated me, the notion that a computer can learn is a
+            crazy concept. The first time I used GPT3 back in 2020, it was super
+            inspiring. It felt like magic, almost anything I&apos;d ask it, it
+            would send back a reply that made sense, both contextually and
+            grammatically. I spent hours having conversations about philosophy,
+            politics, and technology with a computer that didn&apos; even know my
+            name. It will always be something I&apos;m interested in.
           </p>
         </div>
+        <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
+          <div className="flex flex-wrap justify-center w-full gap-3">
+            {experiments.map((experiment) => (
+              <Experiment
+                key={experiment.name}
+                name={experiment.name}
+                description={experiment.description}
+                path={experiment.path}
+                imgSrc={experiment.imgSrc}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
+          <h3 className="heading-md">AI Art Showcase</h3>
+          <div className="text-box">
+            <p>
+              When the DALLE-2 was first released to the media, I knew right then
+              how big AI image generation would be. Input one sentence and get a
+              customized beautiful image back? Seemed too good to be true. I still
+              have yet to get access to DALLE-2, but I&apos;ve been having a ton
+              of fun playing with <a>Midjourney</a>, which some label as the
+              &quot;artsy&quot; DALLE. Its really impressive what it makes, and
+              I&apos;ve been enjoying the discord first approach more than I
+              though I would. Here is a collection of some of my favorite AI
+              artwork that I&apos;ve made.
+            </p>
+          </div>
+        </div>
+  
+        <div className="flex flex-wrap justify-center w-full gap-3 my-5 ">
+          {pics.map((pic, index) => {
+            return <AIImage key={index} pic={pic} />;
+          })}
+        </div>
       </div>
-
-      <div className="flex flex-wrap justify-center w-full gap-3 my-5 ">
-        {pics.map((pic, index) => {
-          return <AIImage key={index} pic={pic} />;
-        })}
-      </div>
-    </div>
+   </>
   );
 }
 
