@@ -4,6 +4,8 @@ import Carousel from "@/components/projects/Carousel";
 import TechChip from "@/components/projects/TechChip";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import Head from "next/head";
+
 const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
   ssr: false,
 });
