@@ -1,6 +1,7 @@
 import Container from "./container";
 import { EXAMPLE_PATH } from "@/lib/constants";
 import SocialIcons from "../etc/SocialIcons";
+import Link from "next/link";
 
 export default function Footer() {
   let date = new Date().getFullYear();
@@ -11,7 +12,10 @@ export default function Footer() {
         <div className="flex flex-col items-center w-full sm:gap-1 md:gap-2 bg-clear-pl4">
           <SocialIcons small />
           <p className="text-[11px] text-slate-300">
-            Copyright © {date} Ty Fiero
+            Copyright © {date}{" "}
+            <Link href={"/about"}>
+              <a className="cursor-pointer hover:underline">Ty Fiero</a>
+            </Link>
           </p>
           <a
             href="https://www.termsfeed.com/live/666072e9-81d8-43ef-8a29-7547a11f7700"
