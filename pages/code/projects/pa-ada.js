@@ -100,6 +100,7 @@ function ModalPAAda() {
                   "/assets/other/projects/PA/ada6.webp",
                   "/assets/other/projects/PA/ada7.jpg",
                 ]}
+                altText={"Image of the PriceArt ADA project"}
               />
             </div>
           </section>

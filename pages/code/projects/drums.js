@@ -97,6 +97,8 @@ function ModalDrum() {
                   "/assets/other/projects/drum/drum2.webp",
                   "/assets/other/projects/drum/drum3.webp",
                 ]}
+                altText={"Image of the drum set project"}
+
               />
             </div>
           </section>

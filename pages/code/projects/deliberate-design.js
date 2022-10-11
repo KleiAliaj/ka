@@ -103,7 +103,10 @@ function DD() {
             </div>
             <div className="flex flex-col items-center w-full lg:w-1/2">
               <h2 className="w-full text-center heading-md !mb-0">Images</h2>
-              <Carousel imgs={["/assets/other/projects/dd/deliberate.png"]} />
+              <Carousel imgs={["/assets/other/projects/dd/deliberate.png"]}
+                altText={"Image of the Deliberate Design project"}
+              
+              />
             </div>
           </section>
         </div>

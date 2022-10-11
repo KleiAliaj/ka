@@ -125,6 +125,8 @@ function ModalCombinator() {
                   "/assets/other/projects/combinator/comb2.webp",
                   "/assets/other/projects/combinator/comb3.webp",
                 ]}
+                altText={"Image of the formulata project"}
+
               />
             </div>
           </section>

@@ -106,6 +106,7 @@ function ModalPAeth() {
                   "/assets/other/projects/PA/eth4.webp",
                   "/assets/other/projects/PA/eth5.webp",
                 ]}
+                altText={"Image of the ETH PriceArt Project"}
               />
             </div>
           </section>

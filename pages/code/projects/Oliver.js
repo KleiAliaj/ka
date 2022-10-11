@@ -106,6 +106,8 @@ function OliverAIProject() {
                   "/assets/other/projects/oliver/oliver.webp",
                   "/assets/other/projects/oliver/oliver2.webp",
                 ]}
+                altText={"Image of the Oliver AI project"}
+
               />
             </div>
           </section>

@@ -12,7 +12,10 @@ function ConsistenSea() {
     <>
       <Head>
         <title>ConsistenSea</title>
-        <meta name="description" content={`ConsistenSea - habit tracking extension`} />
+        <meta
+          name="description"
+          content={`ConsistenSea - habit tracking extension`}
+        />
       </Head>
       <div className="relative page-container">
         <Link href={"/code/projects"}>
@@ -124,6 +127,7 @@ function ConsistenSea() {
                   "/assets/other/projects/consistensea/cs3.webp",
                   "/assets/other/projects/consistensea/cs1.webp",
                 ]}
+                altText={"Image of the ConsistenSea project"}
               />
             </div>
           </section>
