@@ -36,7 +36,6 @@ export default class MyDocument extends Document {
           <meta name="twitter:image" content="./assets/other/Ty-lofi.webp" />
           {/* Facebook */}
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.tyfiero.com" />
           <meta property="og:title" content="Ty Fiero's Blog" />
           <meta
             property="og:description"
