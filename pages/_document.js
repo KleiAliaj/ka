@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
           />
           <meta name="theme-color" content="#0FA5E9" />
           <meta charSet="utf-8" />
+
           <meta name="application-name" content="Ty's blog" />
           <meta name="language" content="English" />
 
@@ -21,6 +22,7 @@ export default class MyDocument extends Document {
 
           {/* Add to homescreen for Safari on iOS --> */}
           <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="robots" content="index, follow" />
 
           {/* Twitter */}
@@ -48,29 +50,29 @@ export default class MyDocument extends Document {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/assets/icons/apple-touch-icon.png"
+            href="/icons/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/assets/icons/favicon-32x32.png"
+            href="/icons/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/assets/icons/favicon-16x16.png"
+            href="/icons/favicon-16x16.png"
           />
           <link
             rel="icon"
             sizes="192x192"
-            href="/assets/icons/android-chrome-192x192.png"
+            href="/icons/android-chrome-192x192.png"
           />
 
-          <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-          <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="mask-icon" href="/maskable.png" />
+          <link rel="shortcut icon" href="/icons/favicon.ico" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="msapplication-config" content="/browserconfig.xml" />
           <meta name="apple-mobile-web-app-title" content="Ty Fiero" />
@@ -79,7 +81,11 @@ export default class MyDocument extends Document {
 
           <meta property="og:image" content={HOME_OG_IMAGE_URL} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Varela+Round&display=swap"
             rel="stylesheet"
