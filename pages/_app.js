@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
 
   const router = useRouter();
-
   //Loading animation logic
   React.useEffect(() => {
     const handleStart = (url) => {
@@ -30,10 +29,21 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleComplete);
     };
   }, [router]);
+
+  const canonicalUrl = (
+    `https://tyfiero.com` + (router.asPath === "/" ? "" : router.asPath)
+  ).split("?")[0];
+  console.log(canonicalUrl);
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link
+          rel="canonical"
+          href={`https://www.tyfiero.com${router.asPath}`}
+        />
+
+        <meta property="og:url" content={canonicalUrl} />
       </Head>
       <Layout>
         <Toaster />
