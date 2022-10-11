@@ -155,6 +155,8 @@ function PAWeb() {
                 "/assets/other/projects/PA/paweb2.png",
                 "/assets/other/projects/PA/paweb4.jpg",
               ]}
+              altText={"Image of the PriceArt website project"}
+
             />
           </div>
         </section>

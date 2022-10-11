@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-function Carousel({ imgs }) {
+function Carousel({ imgs, altText }) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const previousSlide = () => {
@@ -23,7 +23,7 @@ function Carousel({ imgs }) {
   return (
     <div className="w-full h-full ">
       <div className="relative flex justify-center w-full min-w-full h-fit">
-        <ImageSlide url={imgs[currentIndex]}>
+        <ImageSlide url={imgs[currentIndex]} altText={altText}>
           <button
             className="absolute flex items-center justify-center w-8 h-8 text-xl transition rounded-full opacity-50 hover:opacity-100 hover:scale-110 active:scale-90 top-[39%] left-1 bg-sky-200/70"
             onClick={() => previousSlide()}
@@ -56,16 +56,18 @@ function Carousel({ imgs }) {
   );
 }
 
-const ImageSlide = ({ url, children }) => {
+const ImageSlide = ({ url, children, altText = "" }) => {
   return (
     <div className="relative flex flex-col items-center h-auto w-fit fade-effect-quick ">
-      <img
-        key={url}
-        src={url}
-        style={{ animation: "fadeIn  .8s" }}
-        alt=""
-        className="rounded-lg  max-h-[25em] shadow-lg "
-      />
+      <picture>
+        <img
+          key={url}
+          src={url}
+          style={{ animation: "fadeIn  .8s" }}
+          alt={altText}
+          className="rounded-lg  max-h-[25em] shadow-lg "
+        />
+      </picture>
       {children}
     </div>
   );
