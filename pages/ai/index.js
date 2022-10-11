@@ -168,7 +168,7 @@ export async function getStaticProps(context) {
   let aiImages = [];
   const axiosStats = await axios({
     method: "GET",
-    url: "http://tyfiero.com/api/airtable",
+    url: "http://www.tyfiero.com/api/airtable",
     // url: "http://localhost:3000/api/airtable",
   })
     .then((response) => {
