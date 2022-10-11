@@ -37,6 +37,7 @@ export default function Post({ post, morePosts, preview }) {
                 property="og:image"
                 content={post.metadata.cover_image.imgix_url}
               />
+              <meta name="description" content={post.metadata.excerpt} />
               <link
                 rel="canonical"
                 href={`https://www.tyfiero.com/blog/posts/${post.slug}`}
