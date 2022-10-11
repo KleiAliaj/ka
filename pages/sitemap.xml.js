@@ -81,10 +81,7 @@ ${posts
               <priority>0.50</priority>
           </url>
 
-          <url>
-          <loc>https://www.tyfiero.com/500</loc>
-          <priority>0.00</priority>
-          </url>
+         
           
          
           </urlset>
