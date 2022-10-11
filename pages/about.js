@@ -48,7 +48,7 @@ function About() {
   return (
    <>
     <Head>
-        <title>About Ty</title>
+        <title>About Me - Ty Fiero</title>
         <meta
             name="description"
             content={`Coder, musician, artist. All about Ty.`}
