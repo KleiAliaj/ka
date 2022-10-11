@@ -4,11 +4,19 @@ import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import Carousel from "@/components/projects/Carousel";
 import TechChip from "@/components/projects/TechChip";
 import Link from "next/link";
+import Head from "next/head";
 
 function Ty() {
   let tech = ["Next.js", "React", "TailwindCSS", "Cosmic CMS"];
   return (
-    <div className="relative page-container">
+     <>
+      <Head>
+        <title>Ty&apos;s Portfolio Blog Site</title>
+        <meta
+            name="description"
+            content={`Homepage for Ty.`}
+          />
+      </Head><div className="relative page-container">
       <Link href={"/code/projects"}>
         <a className="absolute flex items-center gap-1 p-1 transition rounded-full top-3 text-sky-500 left-5 f2 hover:scale-105 hover:ring-2 ring-sky-500 ">
           <FaArrowLeft /> Back to Projects
@@ -155,6 +163,7 @@ function Ty() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 
