@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 
 function CanvasExp() {
@@ -43,31 +44,37 @@ function CanvasExp() {
   }, []);
 
   return (
-    <div className=" page-container">
-      <h2 className="heading-lg !m-0">Canvas Experiment</h2>
-
-      <div className="flex items-center justify-center w-full h-[50em] ">
-        <div className="relative flex flex-col w-1/2 p-10 h-1/2 ring-2 rounded-xl">
-          <canvas
-            id="stars"
-            width="300"
-            height="200"
-            className="absolute top-0 left-0 -z-10 ring-2 rounded-xl"
-          >
-            Your browser does not support the HTML canvas tag.
-          </canvas>
-          <h2 className="mx-auto text-3xl text-sky-300 ">
-            AI Generated HTML Canvas
-          </h2>
-          <p className="mx-auto text-center text-white">
-            Created with React and OpenAI&apos;s Codex
-          </p>
-          <p className="mx-auto text-center text-white">
-            Prompt: Create an animated HTML canvas of a starfield
-          </p>
+   <>
+   <Head>
+        <title>Devlab canvas</title>
+        <meta name="description" content={`test page`} />
+      </Head>
+      <div className=" page-container">
+        <h2 className="heading-lg !m-0">Canvas Experiment</h2>
+  
+        <div className="flex items-center justify-center w-full h-[50em] ">
+          <div className="relative flex flex-col w-1/2 p-10 h-1/2 ring-2 rounded-xl">
+            <canvas
+              id="stars"
+              width="300"
+              height="200"
+              className="absolute top-0 left-0 -z-10 ring-2 rounded-xl"
+            >
+              Your browser does not support the HTML canvas tag.
+            </canvas>
+            <h2 className="mx-auto text-3xl text-sky-300 ">
+              AI Generated HTML Canvas
+            </h2>
+            <p className="mx-auto text-center text-white">
+              Created with React and OpenAI&apos;s Codex
+            </p>
+            <p className="mx-auto text-center text-white">
+              Prompt: Create an animated HTML canvas of a starfield
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+   </>
   );
 }
 
