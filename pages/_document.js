@@ -7,6 +7,40 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" className={""}>
         <Head>
+          <meta
+            name="keywords"
+            content="tyfiero, ty fiero blog, ty fiero, ty blog, code blog"
+          />
+          <meta name="theme-color" content="#0FA5E9" />
+          <meta charSet="utf-8" />
+          <meta name="application-name" content="Ty's blog" />
+          <meta name="language" content="English" />
+
+          {/*Add to homescreen for Chrome on Android --> */}
+          <meta name="mobile-web-app-capable" content="yes" />
+
+          {/* Add to homescreen for Safari on iOS --> */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="robots" content="index, follow" />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@FieroTy" />
+          <meta name="twitter:title" content="Ty Fiero's Blog" />
+          <meta
+            name="twitter:description"
+            content="Writings on tech, music, and life."
+          />
+          <meta name="twitter:image" content="./assets/other/Ty-lofi.webp" />
+          {/* Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.tyfiero.com" />
+          <meta property="og:title" content="Ty Fiero's Blog" />
+          <meta
+            property="og:description"
+            content="Writings on tech, music, and life. "
+          />
+          <meta property="og:image" content="./assets/other/Ty-lofi.webp" />
           <script
             defer
             src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
@@ -28,14 +62,21 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/assets/icons/favicon-16x16.png"
           />
+          <link
+            rel="icon"
+            sizes="192x192"
+            href="/assets/icons/android-chrome-192x192.png"
+          />
+
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
           <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="msapplication-config" content="/browserconfig.xml" />
-          <meta name="theme-color" content="#000" />
+          <meta name="apple-mobile-web-app-title" content="Ty Fiero" />
+
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-          
+
           <meta property="og:image" content={HOME_OG_IMAGE_URL} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
