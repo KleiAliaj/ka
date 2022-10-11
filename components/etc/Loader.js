@@ -14,7 +14,12 @@ function Loader() {
             />
           </filter>
         </defs>
-        <g style={{ animation: "rotate 5s linear infinite" }}>
+        <g
+          style={{
+            animation: "rotate 5s linear infinite",
+            willChange: "transform",
+          }}
+        >
           <circle
             cx="50%"
             cy="35%"
@@ -55,7 +60,10 @@ function Loader() {
             cy="50%"
             r="20"
             fill="#1fd7e8"
-            style={{ animation: "rotate 5.5s linear infinite" }}
+            style={{
+              animation: "rotate 5.5s linear infinite",
+              willChange: "transform",
+            }}
             filter="url(#filter)"
           />
           <circle
@@ -63,7 +71,10 @@ function Loader() {
             cy="50%"
             r="20"
             fill="#26a3c2"
-            style={{ animation: "rotate 5.5s linear infinite" }}
+            style={{
+              animation: "rotate 5.5s linear infinite",
+              willChange: "transform",
+            }}
             filter="url(#filter)"
           />
           <circle
@@ -71,7 +82,10 @@ function Loader() {
             cy="27%"
             r="20"
             fill="#2563eb"
-            style={{ animation: "rotate 5.5s linear infinite" }}
+            style={{
+              animation: "rotate 5.5s linear infinite",
+              willChange: "transform",
+            }}
             filter="url(#filter)"
           />
           <circle
@@ -79,7 +93,10 @@ function Loader() {
             cy="73%"
             r="20"
             fill="#4f46e5"
-            style={{ animation: "rotate 5.5s linear infinite" }}
+            style={{
+              animation: "rotate 5.5s linear infinite",
+              willChange: "transform",
+            }}
             filter="url(#filter)"
           />
           {/* <circle

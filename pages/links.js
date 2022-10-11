@@ -19,20 +19,20 @@ function Links({ links }) {
   // }, []);
 
   return (
-   <>
-    <Head>
+    <>
+      <Head>
         <title>Ty&apos;s Links and Resources</title>
         <meta
-            name="description"
-            content={`Useful and fun links from across the web.`}
-          />
+          name="description"
+          content={`Useful and fun links from across the web.`}
+        />
       </Head>
       <div className="page-container">
         <h2 className="text-left heading-lg ">Links</h2>
         <p>
-          This is a list of the best links on the internet I&apos;ve come across,
-          since I started keeping track in 2020. Lots of cool resources and
-          articles in here.
+          This is a list of the best links on the internet I&apos;ve come
+          across, since I started keeping track in 2020. Lots of cool resources
+          and articles in here.
         </p>
         <div className="flex items-center gap-1">
           <p>Favorite Links are labelled with a &quot;</p>
@@ -85,7 +85,7 @@ function Links({ links }) {
             </div>
           )}
         </Category>
-  
+
         <Category
           title="Crypto"
           textColor=" text-indigo-700 dark:text-indigo-300"
@@ -271,7 +271,7 @@ function Links({ links }) {
             </div>
           )}
         </Category>
-  
+
         <Category
           title="Tools"
           textColor=" text-green-700 dark:text-green-300"
@@ -347,7 +347,7 @@ function Links({ links }) {
           )}
         </Category>
       </div>
-   </>
+    </>
   );
 }
 
