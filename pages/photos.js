@@ -176,13 +176,10 @@ function Photography({ tyImages, tyStats, altDescription }) {
   };
 
   return (
-   <>
-   <Head>
+    <>
+      <Head>
         <title>Ty&apos;s Photography</title>
-        <meta
-            name="description"
-            content={`Photos from Ty Fiero`}
-          />
+        <meta name="description" content={`Photos from Ty Fiero`} />
       </Head>
       <div className="page-container">
         <h1 className="text-left heading-lg fade-effect-quick">Photography</h1>
@@ -197,14 +194,14 @@ function Photography({ tyImages, tyStats, altDescription }) {
             <motion.div variants={textAnimate} className="text-box">
               <p>
                 Photography is my creative outlet that gets me outside, and it
-                helps me notice the small things, while appreciating the beauty of
-                the Pacific Northwest. I am by no means a professional, far from
-                it. But I do have a decent Nikon camera, an eye for nature
+                helps me notice the small things, while appreciating the beauty
+                of the Pacific Northwest. I am by no means a professional, far
+                from it. But I do have a decent Nikon camera, an eye for nature
                 photography, and the patience to find the right shot! <br />
                 <br /> I don&apos;t ever expect to be famous for my photography,
-                or even make a single dollar, it&apos;s just so fun! My mind is so
-                much clearer when I spend time in nature every week. I share all
-                my best work to{" "}
+                or even make a single dollar, it&apos;s just so fun! My mind is
+                so much clearer when I spend time in nature every week. I share
+                all my best work to{" "}
                 <a
                   href="https://unsplash.com/@tyfiero"
                   target="_blank"
@@ -226,10 +223,11 @@ function Photography({ tyImages, tyStats, altDescription }) {
                   “
                 </div>
                 <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
-                  We cannot predict the value our work will provide to the world.
-                  That&apos;s fine. It is not our job to judge our own work. It is
-                  our job to create it, to pour ourselves into it, and to master
-                  our craft as best we can. &nbsp; &nbsp;-James Clear
+                  We cannot predict the value our work will provide to the
+                  world. That&apos;s fine. It is not our job to judge our own
+                  work. It is our job to create it, to pour ourselves into it,
+                  and to master our craft as best we can. &nbsp; &nbsp;-James
+                  Clear
                 </blockquote>
                 <div className="h-3 mb-2 text-3xl text-right text-gray-600 dark:text-slate-200">
                   “
@@ -269,9 +267,9 @@ function Photography({ tyImages, tyStats, altDescription }) {
             alt="Image of Ty taking a photo"
           />
         </DualSection>
-  
+
         <div className="flex justify-center gap-10 md:items-start sm:flex-col-reverse md:flex-row sm:items-center"></div>
-  
+
         <div className="flex flex-col items-center px-5 pt-2 pb-2 mt-20 ring-2 rounded-xl">
           <a
             href="https://unsplash.com/@tyfiero"
@@ -295,7 +293,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             <p className="italic text-sky-300">@tyfiero</p>
             <h3 className="heading-sm">Unsplash Stats</h3>
           </a>
-  
+
           <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
             <div className="flex items-center gap-2">
               <FaImage className="text-sky-600 dark:text-sky-300" />
@@ -351,7 +349,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               pic.ratio > 1
                 ? " md:w-[640px] sm:w-[320px]"
                 : " md:w-[320px] sm:w-[170px]";
-  
+
             return (
               <div
                 key={index}
@@ -362,7 +360,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               >
                 <Image
                   src={pic.displaySrc}
-                  alt={pic.alt}
+                  alt={pic.alt || "Photo from Ty Fiero"}
                   layout="fill"
                   className="transition-transform duration-500 cursor-pointer !rounded-xl hover:scale-[99%] "
                   onClick={() => {
@@ -381,7 +379,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
           getStaticProps function.
         </p>
       </div>
-   </>
+    </>
   );
 }
 
