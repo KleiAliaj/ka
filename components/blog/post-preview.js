@@ -42,9 +42,11 @@ export default function PostPreview({
               />
             </div>
             <h3 className="mb-3 text-2xl leading-snug">
-              <a className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
-                {title}
-              </a>
+              <Link href={`/blog/posts/${slug}`}>
+                <a className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
+                  {title}
+                </a>
+              </Link>
             </h3>
 
             <div className="mb-4 text-base italic text-slate-500 f2 dark:text-slate-300">
