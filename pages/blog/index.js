@@ -26,7 +26,7 @@ export default function Index({ allPosts }) {
           Blog
         </h1> */}
         <div className="page-container">
-          <h2 className="text-left heading-lg ">Blog</h2>
+          <h1 className="text-left heading-lg ">Blog</h1>
 
           <CustomForm />
 
