@@ -12,10 +12,8 @@ export default class MyDocument extends Document {
             content="tyfiero, ty fiero blog, ty fiero, ty blog, code blog"
           />
           <meta name="theme-color" content="#0FA5E9" />
-          <meta charSet="utf-8" />
 
           <meta name="application-name" content="Ty's blog" />
-          <meta name="language" content="English" />
 
           {/*Add to homescreen for Chrome on Android --> */}
           <meta name="mobile-web-app-capable" content="yes" />
