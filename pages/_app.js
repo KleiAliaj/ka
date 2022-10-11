@@ -31,9 +31,8 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   const canonicalUrl = (
-    `https://tyfiero.com` + (router.asPath === "/" ? "" : router.asPath)
+    `https://www.tyfiero.com` + (router.asPath === "/" ? "" : router.asPath)
   ).split("?")[0];
-  console.log(canonicalUrl);
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <Head>
