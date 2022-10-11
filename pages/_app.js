@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import FullLoader from "@/components/etc/FullLoader";
+import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
 
@@ -31,6 +32,9 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
   return (
     <ThemeProvider enableSystem={true} attribute="class">
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Layout>
         <Toaster />
         <FullLoader show={loading} />
