@@ -17,7 +17,6 @@ function Loader() {
         <g
           style={{
             animation: "rotate 5s linear infinite",
-            willChange: "transform",
           }}
         >
           <circle
@@ -62,7 +61,6 @@ function Loader() {
             fill="#1fd7e8"
             style={{
               animation: "rotate 5.5s linear infinite",
-              willChange: "transform",
             }}
             filter="url(#filter)"
           />
@@ -73,7 +71,6 @@ function Loader() {
             fill="#26a3c2"
             style={{
               animation: "rotate 5.5s linear infinite",
-              willChange: "transform",
             }}
             filter="url(#filter)"
           />
@@ -84,7 +81,6 @@ function Loader() {
             fill="#2563eb"
             style={{
               animation: "rotate 5.5s linear infinite",
-              willChange: "transform",
             }}
             filter="url(#filter)"
           />
@@ -95,7 +91,6 @@ function Loader() {
             fill="#4f46e5"
             style={{
               animation: "rotate 5.5s linear infinite",
-              willChange: "transform",
             }}
             filter="url(#filter)"
           />
