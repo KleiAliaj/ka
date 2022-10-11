@@ -184,9 +184,9 @@ function Navbar() {
                   height={48}
                 />
               </div>
-              <h1 className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1 whitespace-nowrap">
+              <p className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1 whitespace-nowrap">
                 Ty Fiero
-              </h1>
+              </p>
             </a>
           </Link>
         </div>
