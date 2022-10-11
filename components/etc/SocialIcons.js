@@ -55,7 +55,9 @@ function SocialIcons({ small }) {
         <motion.a
           variants={iconAnimate}
           className="p-3 text-xl text-white transition rounded-full shadow-xl cursor-pointer bg-sky-400 hover:!scale-125 active:!scale-90"
+          role="link"
           aria-label="Email link"
+          title="Email link"
         >
           <FaRegEnvelope />
         </motion.a>
@@ -65,6 +67,7 @@ function SocialIcons({ small }) {
         href="http://twitter.com/FieroTy"
         target="_blank"
         rel="noopener noreferrer"
+        role="link"
         aria-label="Twitter link"
         className="p-3 text-xl text-white rounded-full bg-[#1DA1F2] shadow-xl transition hover:!scale-125 active:!scale-90"
       >
@@ -76,6 +79,7 @@ function SocialIcons({ small }) {
         href="https://www.linkedin.com/in/ty-fiero/"
         target="_blank"
         rel="noopener noreferrer"
+        role="link"
         aria-label="LinkedIn link"
         className="p-3 text-xl text-white rounded-full bg-[#0077b5] shadow-xl transition hover:!scale-125 active:!scale-90"
       >
@@ -86,6 +90,7 @@ function SocialIcons({ small }) {
         href="https://github.com/tyfiero"
         target="_blank"
         rel="noopener noreferrer"
+        role="link"
         aria-label="GitHub link"
         className="p-3 text-xl text-white rounded-full invert-0 dark:invert bg-[#171515] shadow-xl transition hover:!scale-125 active:!scale-90"
       >
