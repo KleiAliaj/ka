@@ -252,7 +252,7 @@ export default function Index({ allPosts }) {
           </TextSection>
           {/* <div className="md:w-1/2 sm:w-full"></div> */}
           <motion.div variants={photoAnimate} className="sm:w-full md:w-1/2">
-            <h4 className="heading-sm">Projects</h4>
+            <h3 className="heading-sm">Projects</h3>
             <CompactProjects />
           </motion.div>
         </DualSection>
