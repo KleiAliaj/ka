@@ -453,3 +453,8 @@ svg * {
   backface-visibility: hidden;
   filter: blur(0px);
 }
+
+.loader-rotate {
+  -webkit-animation: rotate 5s infinite linear;
+  animation: rotate 5s infinite linear;
+}
