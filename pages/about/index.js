@@ -7,6 +7,7 @@ import TextSection from "@/components/layout/TextSection";
 import ImageSection from "@/components/layout/ImageSection";
 import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
+import { BsBook, BsBookshelf } from "react-icons/bs";
 
 function About() {
   const prefersReducedMotion = useReducedMotion();
@@ -46,17 +47,17 @@ function About() {
     },
   };
   return (
-   <>
-    <Head>
+    <>
+      <Head>
         <title>About Me - Ty Fiero</title>
         <meta
-            name="description"
-            content={`Coder, musician, artist. All about Ty.`}
-          />
+          name="description"
+          content={`Coder, musician, artist. All about Ty.`}
+        />
       </Head>
       <div className="page-container">
         <h2 className="text-left heading-lg ">About Me</h2>
-  
+
         <DualSection centerText>
           <TextSection>
             <motion.h2
@@ -69,24 +70,32 @@ function About() {
               <p className="font-bold text-sky-600">
                 I have always been a science geek, I love learning how the world
                 works and thinking about how it might work better. Initially, I
-                was fascinated with the natural sciences and biology, which led me
-                to getting a B.S. in Microbiology with a minor in Zoology from
-                Colorado State University. While I still enjoy biology, I made a
-                decision to pivot my career to pursue computer science for more
-                opportunities to express my creativity and to build useful things.
-                This scientific background has given me a unique lens on computer
-                science. Follow along on my journey to see what I create next!
+                was fascinated with the natural sciences and biology, which led
+                me to getting a B.S. in Microbiology with a minor in Zoology
+                from Colorado State University. While I still enjoy biology, I
+                made a decision to pivot my career to pursue computer science
+                for more opportunities to express my creativity and to build
+                useful things. This scientific background has given me a unique
+                lens on computer science. Follow along on my journey to see what
+                I create next!
               </p>
             </motion.div>
             <motion.div
               variants={thirdAnimate}
               className="flex justify-center w-full"
             >
-              <Link href="/about/links">
-                <a className="mt-10 text-xl font-bold w-fit button-1">
-                  My Fav Links & Resources <FaLink />
-                </a>
-              </Link>
+              <div className="flex gap-3">
+                <Link href="/about/links">
+                  <a className="mt-10 text-xl font-bold w-fit button-1">
+                    My Fav Links & Resources <FaLink />
+                  </a>
+                </Link>
+                <Link href="/about/books">
+                  <a className="mt-10 text-xl font-bold w-fit button-1">
+                    Books <BsBook />
+                  </a>
+                </Link>
+              </div>
             </motion.div>
           </TextSection>
           <ImageSection
@@ -95,7 +104,7 @@ function About() {
           />
         </DualSection>
       </div>
-   </>
+    </>
   );
 }
 
