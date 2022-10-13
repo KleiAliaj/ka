@@ -9,6 +9,13 @@ const withPWA = require("next-pwa")({
 
 module.exports = withPWA({
   images: {
-    domains: ["imgix.cosmicjs.com", "images.unsplash.com", "dl.airtable.com"],
+    domains: [
+      "imgix.cosmicjs.com",
+      "images.unsplash.com",
+      "dl.airtable.com",
+      "m.media-amazon.com",
+      "images-na.ssl-images-amazon.com",
+      "www.tyfiero.com",
+    ],
   },
 });
