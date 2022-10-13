@@ -9,7 +9,7 @@ function Books({ books }) {
     <div className="page-container">
       <h1 className="heading-lg">Books</h1>
 
-      {/* <section className="flex flex-col w-full h-full gap-5">
+      <section className="flex flex-col w-full h-full gap-5">
         <div className="flex flex-col items-center">
           <h2 className="mb-3 heading-md">Life Changing Books</h2>
           <div className="flex flex-wrap justify-center w-full h-full gap-4">
@@ -139,7 +139,7 @@ function Books({ books }) {
             })}
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
