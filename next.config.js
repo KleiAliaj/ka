@@ -15,7 +15,7 @@ module.exports = withPWA({
       "dl.airtable.com",
       "m.media-amazon.com",
       "images-na.ssl-images-amazon.com",
-      "www.tyfiero.com",
+      "external-content.duckduckgo.com",
     ],
   },
 });
