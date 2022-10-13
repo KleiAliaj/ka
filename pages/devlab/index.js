@@ -1,22 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaBox, FaKeyboard } from "react-icons/fa";
+import { FaBox, FaImage, FaKeyboard } from "react-icons/fa";
 
 function IndexDevLab() {
   return (
-   <>
-    <Head>
-    <title>Ty&apos;s Dev Lab. shhhh secret!</title>
+    <>
+      <Head>
+        <title>Ty&apos;s Dev Lab. shhhh secret!</title>
         <meta
-            name="description"
-            content={`um... you arent supposed to be here!`}
-          />
-
-    </Head>
+          name="description"
+          content={`um... you arent supposed to be here!`}
+        />
+      </Head>
       <div className="w-full h-full">
         <h2 className="heading-lg">Ty&apos;s Dev Laboratory</h2>
-  
+
         <div className="w-full h-full p-5">
           <div className="flex flex-wrap items-center justify-center w-full h-full gap-5">
             <Link href={"/devlab/three"}>
@@ -36,10 +35,16 @@ function IndexDevLab() {
                 <FaKeyboard />
               </a>
             </Link>
+            <Link href={"/devlab/pics"}>
+              <a className="button-1">
+                Book Pics
+                <FaImage />
+              </a>
+            </Link>
           </div>
         </div>
       </div>
-   </>
+    </>
   );
 }
 
