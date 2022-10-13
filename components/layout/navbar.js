@@ -119,7 +119,7 @@ function Navbar() {
   };
   let postSlice = router.asPath.slice(0, 6);
 
-
+  // console.log(postSlice);
   React.useEffect(() => {
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
@@ -133,7 +133,7 @@ function Navbar() {
       setSelected("photos");
     } else if (router.asPath === "/blog" || postSlice === "/posts") {
       setSelected("blog");
-    } else if (router.asPath === "/about") {
+    } else if (router.asPath === "/about" || postSlice === "/about") {
       setSelected("about");
     } else if (router.asPath === "/contact") {
       setSelected("contact");
