@@ -9,7 +9,7 @@ function Books({ books }) {
     <div className="page-container">
       <h1 className="heading-lg">Books</h1>
 
-      {/* <section className="flex flex-col w-full h-full gap-5">
+      <section className="flex flex-col w-full h-full gap-5">
         <div className="flex flex-col items-center">
           <h2 className="mb-3 heading-md">Life Changing Books</h2>
           <div className="flex flex-wrap justify-center w-full h-full gap-4">
@@ -20,7 +20,7 @@ function Books({ books }) {
                   title={book.properties.Title.title[0].plain_text}
                   img={book.cover.external}
                   colors={
-                    "bg-gradient-to-br from-white via-white to-sky-200 dark:from-slate-900 dark:via-slate-800 dark:to-sky-600   shadow-sky-600/40 dark:shadow-sky-600 "
+                    "bg-gradient-to-br from-white via-white to-sky-200 dark:from-slate-900 dark:via-slate-800 dark:to-sky-600   shadow-sky-600/40 dark:shadow-sky-600 hover:shadow-sky-600/40"
                   }
                 />
               );
@@ -49,7 +49,7 @@ function Books({ books }) {
                   title={book.properties.Title.title[0].plain_text}
                   img={book.cover.external}
                   colors={
-                    " bg-gradient-to-br from-white via-white to-teal-200 dark:from-slate-900 dark:via-slate-800 dark:to-teal-600  shadow-teal-600/40 dark:shadow-teal-600 "
+                    " bg-gradient-to-br from-white via-white to-teal-200 dark:from-slate-900 dark:via-slate-800 dark:to-teal-600  shadow-teal-600/40 dark:shadow-teal-600 hover:shadow-teal-600/40"
                   }
                 />
               );
@@ -72,7 +72,7 @@ function Books({ books }) {
                   title={book.properties.Title.title[0].plain_text}
                   img={book.cover.external}
                   colors={
-                    " bg-gradient-to-br from-white via-white to-green-200 dark:from-slate-900 dark:via-slate-800 dark:to-green-600  shadow-green-600/40 dark:shadow-green-600 "
+                    " bg-gradient-to-br from-white via-white to-green-200 dark:from-slate-900 dark:via-slate-800 dark:to-green-600  shadow-green-600/40 dark:shadow-green-600 hover:shadow-green-600/40"
                   }
                 />
               );
@@ -93,7 +93,7 @@ function Books({ books }) {
                   title={book.properties.Title.title[0].plain_text}
                   img={book.cover.external}
                   colors={
-                    " bg-gradient-to-br from-white via-white to-yellow-200 dark:from-slate-900 dark:via-slate-800 dark:to-yellow-600  shadow-yellow-600/40 dark:shadow-yellow-600 "
+                    " bg-gradient-to-br from-white via-white to-yellow-200 dark:from-slate-900 dark:via-slate-800 dark:to-yellow-600  shadow-yellow-600/40 dark:shadow-yellow-600 hover:shadow-yellow-600/40"
                   }
                 />
               );
@@ -113,7 +113,7 @@ function Books({ books }) {
                   title={book.properties.Title.title[0].plain_text}
                   img={book.cover.external}
                   colors={
-                    " bg-gradient-to-br from-white via-white to-orange-200 dark:from-slate-900 dark:via-slate-800 dark:to-orange-600  shadow-orange-600/40 dark:shadow-orange-600 "
+                    " bg-gradient-to-br from-white via-white to-orange-200 dark:from-slate-900 dark:via-slate-800 dark:to-orange-600  shadow-orange-600/40 dark:shadow-orange-600 hover:shadow-orange-600/40"
                   }
                 />
               );
@@ -132,14 +132,14 @@ function Books({ books }) {
                   title={book.properties.Title.title[0].plain_text}
                   img={book.cover.external}
                   colors={
-                    " bg-gradient-to-br from-white via-white to-red-200 dark:from-slate-900 dark:via-slate-800 dark:to-red-600  shadow-red-600/40 dark:shadow-red-600 "
+                    " bg-gradient-to-br from-white via-white to-red-200 dark:from-slate-900 dark:via-slate-800 dark:to-red-600  shadow-red-600/40 dark:shadow-red-600 hover:shadow-red-600/40"
                   }
                 />
               );
             })}
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
