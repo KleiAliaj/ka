@@ -9,7 +9,7 @@ function Books({ books }) {
     <div className="page-container">
       <h1 className="heading-lg">Books</h1>
 
-      <section className="flex flex-col w-full h-full gap-5">
+      {/* <section className="flex flex-col w-full h-full gap-5">
         <div className="flex flex-col items-center">
           <h2 className="mb-3 heading-md">Life Changing Books</h2>
           <div className="flex flex-wrap justify-center w-full h-full gap-4">
@@ -139,7 +139,7 @@ function Books({ books }) {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
@@ -189,8 +189,8 @@ export async function getStaticProps(context) {
 
   const axiosRequest = await axios({
     method: "POST",
-    url: "http://localhost:3000/api/notion",
-    //   url: "http://www.tyfiero.com/api/notion",
+    // url: "http://localhost:3000/api/notion",
+    url: "http://www.tyfiero.com/api/notion",
   })
     .then((response) => {
       let results = response.data.response.results;
