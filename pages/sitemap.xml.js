@@ -55,10 +55,13 @@ const createSitemap = (posts) => {
 
 
 <url>
-    <loc>https://www.tyfiero.com/links</loc>
+    <loc>https://www.tyfiero.com/about/links</loc>
     <priority>0.80</priority>
 </url>
-
+<url>
+    <loc>https://www.tyfiero.com/about/books</loc>
+    <priority>0.80</priority>
+</url>
 <url>
     <loc>https://www.tyfiero.com/blog</loc>
     <priority>0.90</priority>
