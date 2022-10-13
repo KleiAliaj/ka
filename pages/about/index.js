@@ -82,7 +82,7 @@ function About() {
               variants={thirdAnimate}
               className="flex justify-center w-full"
             >
-              <Link href="/links">
+              <Link href="/about/links">
                 <a className="mt-10 text-xl font-bold w-fit button-1">
                   My Fav Links & Resources <FaLink />
                 </a>
