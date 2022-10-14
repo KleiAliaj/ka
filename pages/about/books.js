@@ -19,11 +19,13 @@ function Books({ books }) {
             <h2 className="mb-3 heading-md">Life Changing Books</h2>
             <div className="flex flex-wrap justify-center w-full h-full gap-4">
               {books.best.map((book, index) => {
+                console.log(book);
                 return (
                   <BookCard
                     key={index}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
+                    url={book.properties.URL.url}
                     colors={
                       "bg-gradient-to-br from-white via-white to-sky-200 dark:from-slate-900 dark:via-slate-800 dark:to-sky-600   shadow-sky-600/40 dark:shadow-sky-600 hover:shadow-sky-600/40"
                     }
@@ -52,6 +54,7 @@ function Books({ books }) {
                     key={index}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
+                    url={book.properties.URL.url}
                     colors={
                       " bg-gradient-to-br from-white via-white to-teal-200 dark:from-slate-900 dark:via-slate-800 dark:to-teal-600  shadow-teal-600/40 dark:shadow-teal-600 hover:shadow-teal-600/40"
                     }
@@ -75,6 +78,7 @@ function Books({ books }) {
                     key={index}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
+                    url={book.properties.URL.url}
                     colors={
                       " bg-gradient-to-br from-white via-white to-green-200 dark:from-slate-900 dark:via-slate-800 dark:to-green-600  shadow-green-600/40 dark:shadow-green-600 hover:shadow-green-600/40"
                     }
@@ -96,6 +100,7 @@ function Books({ books }) {
                     key={index}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
+                    url={book.properties.URL.url}
                     colors={
                       " bg-gradient-to-br from-white via-white to-yellow-200 dark:from-slate-900 dark:via-slate-800 dark:to-yellow-600  shadow-yellow-600/40 dark:shadow-yellow-600 hover:shadow-yellow-600/40"
                     }
@@ -116,6 +121,7 @@ function Books({ books }) {
                     key={index}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
+                    url={book.properties.URL.url}
                     colors={
                       " bg-gradient-to-br from-white via-white to-orange-200 dark:from-slate-900 dark:via-slate-800 dark:to-orange-600  shadow-orange-600/40 dark:shadow-orange-600 hover:shadow-orange-600/40"
                     }
@@ -135,6 +141,7 @@ function Books({ books }) {
                     key={index}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
+                    url={book.properties.URL.url}
                     colors={
                       " bg-gradient-to-br from-white via-white to-red-200 dark:from-slate-900 dark:via-slate-800 dark:to-red-600  shadow-red-600/40 dark:shadow-red-600 hover:shadow-red-600/40"
                     }
@@ -149,25 +156,28 @@ function Books({ books }) {
   );
 }
 
-function BookCard({ title, img, colors }) {
+function BookCard({ title, img, colors, url }) {
   const [imageLoading, setImageLoading] = React.useState(false);
 
-  let url =
+  let imageSRC =
     "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3xlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60";
   if (img?.url) {
-    url = img?.url;
+    imageSRC = img?.url;
   }
   React.useEffect(() => {}, []);
   return (
-    <div
+    <a
+      href={url}
+      target={"_blank"}
+      rel={"noreferrer"}
       className={
-        "relative flex flex-col h-64 !px-1 !py-1 rounded-lg w-fit shadow-lg hover:shadow-xl transition hover:scale-105 " +
+        "relative flex flex-col h-64 !px-1 !py-1 rounded-lg w-fit shadow-lg cursor-pointer hover:shadow-xl transition hover:scale-105 " +
         colors
       }
     >
       <div className="relative h-48 w-36">
         <Image
-          src={url}
+          src={imageSRC}
           alt={"Image of the book: " + title}
           layout="fill"
           className={"!rounded-sm z-0 "}
@@ -183,10 +193,9 @@ function BookCard({ title, img, colors }) {
         >
           {title}
         </p>
-        <p>{imageLoading ? "loading" : "done"}</p>
       </div>
       {/* <img src={url} alt={title} /> */}
-    </div>
+    </a>
   );
 }
 export default Books;
