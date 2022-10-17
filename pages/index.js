@@ -270,15 +270,15 @@ export default function Index({ allPosts }) {
             <motion.div variants={textAnimate} className="text-box">
               <p>
                 In my free time I make{" "}
-                <Link href={"/music"}>
+                <Link href={"/art#music"}>
                   <a className="underline text-sky-500 ">music</a>
                 </Link>
                 , take my camera out for nature{" "}
-                <Link href={"/photos"}>
+                <Link href={"/art#photography"}>
                   <a className="underline text-sky-500 "> photography</a>
                 </Link>
                 , I&apos;m an avid reader, and I experiment with{" "}
-                <Link href={"/photos"}>
+                <Link href={"/code/ai"}>
                   <a className="underline text-sky-500 ">AI&apos;s</a>
                 </Link>
                 . Hobbies are important to me, and each one has a purpose. I
