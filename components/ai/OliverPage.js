@@ -105,7 +105,7 @@ function OliverPage() {
         <OliverModal oliModal={oliModal} setOliModal={setOliModal} />
       )}
       <div className="flex w-full h-full md:flex-row sm:flex-col sm:items-end sm:justify-end md:items-start">
-        <Link href="/ai">
+        <Link href="/code/">
           <a className="absolute top-5 sm:-top-3 sm:left-1 left-5 button-1 !px-2">
             <FaArrowLeft /> Back
           </a>
@@ -117,7 +117,9 @@ function OliverPage() {
           <div className="flex flex-col items-center w-full h-full gap-3 p-3 ">
             <div className="flex sm:gap-2 md:gap-10 md:items-end md:flex-row sm:flex-col-reverse sm:items-center">
               <div className="flex flex-col items-start w-fit">
-                <p className="whitespace-nowrap">What&apos;s your first name?</p>
+                <p className="whitespace-nowrap">
+                  What&apos;s your first name?
+                </p>
                 <input
                   className="w-40 p-2 border-2 border-gray-300 rounded-lg placeholder:text-slate-200 f2"
                   type="text"
@@ -167,7 +169,11 @@ function OliverPage() {
                   }}
                 >
                   {aiLoading ? (
-                    <LoaderOli show={true} />
+                    // <LoaderOli show={true} />
+                    <>
+                      <p className="text-white ">Hmmmm... </p>
+                      <p className="text-2xl text-white animate-bounce">🤔 </p>
+                    </>
                   ) : (
                     <>
                       {" "}
