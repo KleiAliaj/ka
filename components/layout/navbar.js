@@ -2,20 +2,11 @@ import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { BsSun, BsMoon, BsChatLeftText } from "react-icons/bs";
+import { BsSun, BsMoon } from "react-icons/bs";
 import { useTheme } from "next-themes";
-import { FaHome, FaRegUser } from "react-icons/fa";
-import {
-  TbCamera,
-  TbCode,
-  TbFileText,
-  TbFolders,
-  TbHome2,
-  TbMail,
-  TbMusic,
-} from "react-icons/tb";
+import { FaRegUser } from "react-icons/fa";
+import { TbCode, TbFileText, TbHome2, TbMail, TbPalette } from "react-icons/tb";
 import Image from "next/image";
-import { AiOutlineRobot } from "react-icons/ai";
 import { motion, useReducedMotion } from "framer-motion";
 
 function Navbar() {
@@ -30,26 +21,18 @@ function Navbar() {
   const items = [
     { name: "home", icon: <TbHome2 className="scale-110 fade-effect-quick" /> },
 
-    {
-      name: "about",
-      icon: <FaRegUser className="scale-110 fade-effect-quick" />,
-    },
     { name: "code", icon: <TbCode className="scale-110 fade-effect-quick" /> },
     {
-      name: "ai",
-      icon: <AiOutlineRobot className="scale-110 fade-effect-quick" />,
-    },
-    {
-      name: "music",
-      icon: <TbMusic className="scale-110 fade-effect-quick" />,
-    },
-    {
-      name: "photos",
-      icon: <TbCamera className="scale-110 fade-effect-quick" />,
+      name: "art",
+      icon: <TbPalette className="scale-110 fade-effect-quick" />,
     },
     {
       name: "blog",
       icon: <TbFileText className="scale-110 fade-effect-quick" />,
+    },
+    {
+      name: "about",
+      icon: <FaRegUser className="scale-110 fade-effect-quick" />,
     },
     {
       name: "contact",
@@ -125,12 +108,8 @@ function Navbar() {
       setSelected("home");
     } else if (router.asPath === "/code" || postSlice === "/code/") {
       setSelected("code");
-    } else if (router.asPath === "/ai" || router.asPath === "/ai/Oliver") {
-      setSelected("ai");
-    } else if (router.asPath === "/music") {
-      setSelected("music");
-    } else if (router.asPath === "/photos") {
-      setSelected("photos");
+    } else if (router.asPath === "/art") {
+      setSelected("art");
     } else if (router.asPath === "/blog" || postSlice === "/posts") {
       setSelected("blog");
     } else if (router.asPath === "/about" || postSlice === "/about") {
@@ -263,7 +242,7 @@ function MenuItem({ selected, handleClick, name, icon }) {
           onClick={handleClick}
         >
           {selected === name && icon}
-          {name === "ai" ? name.toUpperCase() : name}
+          {name}
         </a>
       </Link>
     </motion.li>
