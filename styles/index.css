@@ -18,7 +18,9 @@
   --border-shirt: #0672a3;
   --shirt-collar: #04344a;
 }
-
+html {
+  scroll-padding-top: 70px;
+}
 body {
   height: 100vh;
   overflow-x: hidden;
