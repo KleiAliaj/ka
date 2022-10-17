@@ -16,6 +16,7 @@ import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
 import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
+import { useWindowSize } from "@/lib/hooks/useWindowSize";
 
 export async function getStaticProps(context) {
   let tyImages = [];
@@ -129,7 +130,10 @@ export async function getStaticProps(context) {
 
 function Photography({ tyImages, tyStats, altDescription }) {
   const prefersReducedMotion = useReducedMotion();
-
+  const size = useWindowSize();
+  let baseWidth = size.width > 768 ? 423 : 256;
+  console.log("screen: " + size.width);
+  console.log(baseWidth);
   const [pics, setPics] = React.useState(tyImages);
   const [altText, setAltText] = React.useState(altDescription);
   const photoAnimate = {
@@ -345,24 +349,26 @@ function Photography({ tyImages, tyStats, altDescription }) {
         <div className="flex flex-wrap justify-center w-full gap-3 my-5">
           {pics.map((pic, index) => {
             //   console.log(pic);
-            let width =
-              pic.ratio > 1
-                ? " md:w-[640px] sm:w-[320px]"
-                : " md:w-[320px] sm:w-[170px]";
+            // let width =
+            //   pic.ratio > 1
+            //     ? " md:w-[640px] sm:w-[320px]"
+            //     : " md:w-[320px] sm:w-[170px]";
 
             return (
               <div
                 key={index}
                 className={
-                  "relative shadow-lg rounded-xl transition duration-500 hover:shadow-sky-400/60 shadow-sky-600/30 md:h-[423px] sm:h-[211px] hover:shadow-xl " +
-                  width
+                  "relative shadow-lg rounded-xl transition duration-500 hover:shadow-sky-400/60 shadow-sky-600/30 md:h-[423px] sm:h-[256px] hover:shadow-xl hover:scale-[99%]"
                 }
+                style={{
+                  width: `${Math.floor(baseWidth * pic.ratio)}px`,
+                }}
               >
                 <Image
                   src={pic.displaySrc}
                   alt={pic.alt || "Photo from Ty Fiero"}
                   layout="fill"
-                  className="transition-transform duration-500 cursor-pointer !rounded-xl hover:scale-[99%] "
+                  className="transition-transform duration-500 cursor-pointer !rounded-xl  "
                   onClick={() => {
                     if (typeof window !== "undefined") {
                       window.open(pic.src, "_blank");
