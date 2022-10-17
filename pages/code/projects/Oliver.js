@@ -89,7 +89,7 @@ function OliverAIProject() {
                   </div>
                 </div>
                 <div className="flex justify-center w-full gap-3 mt-4">
-                  <Link href={"/ai/Oliver"}>
+                  <Link href={"/code/ai/Oliver"}>
                     <a className="button-1 w-fit f2">
                       Link <FaExternalLinkAlt />
                     </a>

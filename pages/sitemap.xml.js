@@ -16,44 +16,83 @@ const createSitemap = (posts) => {
         <priority>1.00</priority>
 </url>
 
-<url>
-    <loc>https://www.tyfiero.com/about</loc>
-    <priority>0.80</priority>
-</url>
+
 <url>
     <loc>https://www.tyfiero.com/code</loc>
     <priority>0.90</priority>
 </url>
 <url>
-    <loc>https://www.tyfiero.com/code/art</loc>
+    <loc>https://www.tyfiero.com/code/projects</loc>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.tyfiero.com/ai</loc>
+    <loc>https://www.tyfiero.com/code/projects/consistensea</loc>
     <priority>0.80</priority>
 </url>
 <url>
-    <loc>https://www.tyfiero.com/ai/Oliver</loc>
+    <loc>https://www.tyfiero.com/code/projects/deliberate-design</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/drums</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/formulata</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/ideaisland</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/Oliver</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/pa-ada</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/pa-eth</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/pa-web</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/projects/tyfiero</loc>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://www.tyfiero.com/music</loc>
+    <loc>https://www.tyfiero.com/code/ai</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/code/ai/Oliver</loc>
     <priority>0.80</priority>
 </url>
 
 <url>
-    <loc>https://www.tyfiero.com/photos</loc>
+    <loc>https://www.tyfiero.com/art</loc>
     <priority>0.80</priority>
 </url>
 
-
 <url>
-    <loc>https://www.tyfiero.com/devlab</loc>
-    <priority>0.00</priority>
+    <loc>https://www.tyfiero.com/art/ai-art</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/art/generative</loc>
+    <priority>0.80</priority>
 </url>
 
-
+<url>
+    <loc>https://www.tyfiero.com/about</loc>
+    <priority>0.80</priority>
+</url>
 <url>
     <loc>https://www.tyfiero.com/about/links</loc>
     <priority>0.80</priority>
