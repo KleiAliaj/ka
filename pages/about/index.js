@@ -87,7 +87,7 @@ function About() {
               <div className="flex gap-3">
                 <Link href="/about/links">
                   <a className="mt-10 text-xl font-bold w-fit button-1">
-                    My Fav Links & Resources <FaLink />
+                    Best Links <FaLink />
                   </a>
                 </Link>
                 <Link href="/about/books">
