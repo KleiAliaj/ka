@@ -59,7 +59,7 @@ function Navbar() {
     } else {
       return (
         <BsSun
-          className="text-yellow-500 transition md:w-5 md:h-5 sm:w-10 sm:h-10 hover:text-yellow-700"
+          className="transition md:text-yellow-500 sm:text-yellow-300 md:w-5 md:h-5 sm:w-10 sm:h-10 hover:text-yellow-700"
           role="button"
           onClick={() => setTheme("dark")}
         />
@@ -108,7 +108,7 @@ function Navbar() {
       setSelected("home");
     } else if (router.asPath === "/code" || postSlice === "/code/") {
       setSelected("code");
-    } else if (router.asPath === "/art") {
+    } else if (router.asPath === "/art" || postSlice === "/art") {
       setSelected("art");
     } else if (router.asPath === "/blog" || postSlice === "/posts") {
       setSelected("blog");
@@ -122,6 +122,9 @@ function Navbar() {
   const handleClick = () => {
     if (isToggled && isMobile) {
       setIsToggled(false);
+      if (typeof document !== "undefined") {
+        document.body.classList.toggle("lock-scroll");
+      }
     }
   };
   const menuVariant = {
@@ -151,26 +154,26 @@ function Navbar() {
         <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
           <Link href="/">
             <a
-              className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95"
+              className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120]"
               href="#"
             >
-              <div className="z-20 w-12 h-12 transition ">
+              <div className="w-12 h-12 transition ">
                 <Image
                   src="/assets/other/ty-circle-image.webp"
                   alt="Ty Fiero"
-                  className="z-20"
+                  className=""
                   width={48}
                   height={48}
                 />
               </div>
-              <p className="z-20 text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1 whitespace-nowrap">
+              <p className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1 whitespace-nowrap">
                 Ty Fiero
               </p>
             </a>
           </Link>
         </div>
 
-        <div className="absolute z-20 sm:flex right-2 top-3 md:hidden">
+        <div className="absolute z-[120] sm:flex right-2 top-3 md:hidden">
           {" "}
           <Hamburger
             className=""
@@ -178,6 +181,9 @@ function Navbar() {
             color="#0484C7"
             toggle={() => {
               setIsToggled(!isToggled);
+              if (typeof document !== "undefined") {
+                document.body.classList.toggle("lock-scroll");
+              }
             }}
             easing="ease-in"
             label="Show menu"
@@ -187,13 +193,13 @@ function Navbar() {
 
         {isToggled && (
           <>
-            <div className="absolute top-0 left-0 z-10 w-full h-screen bg-gradient-to-b from-white/90 dark:from-black/90 via-sky-100/90 dark:via-sky-900/90 to-sky-400/90 dark:to-sky-700/90 fade-effect-fast md:hidden !overflow-hidden"></div>
+            <div className="absolute top-0 left-0 z-[100] w-full h-screen bg-gradient-to-b from-white dark:from-black via-sky-100 dark:via-sky-900 to-sky-400 dark:to-sky-700 fade-effect-fast md:hidden !overflow-hidden"></div>
 
             <motion.ul
               variants={menuVariant}
               initial={"menuStart"}
               animate={"menuStop"}
-              className="z-20 flex items-center mt-4 md:gap-5 sm:gap-6 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%] md:justify-end md:mr-10 f1"
+              className="z-[120] flex items-center mt-4 md:gap-1 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-10 f1"
             >
               {items.map((item) => (
                 <MenuItem
@@ -204,7 +210,7 @@ function Navbar() {
                   handleClick={handleClick}
                 />
               ))}
-              <li>{renderThemeChanger()}</li>
+              <li className="sm:pl-0 md:pl-2">{renderThemeChanger()}</li>
             </motion.ul>
           </>
         )}
@@ -233,10 +239,10 @@ function MenuItem({ selected, handleClick, name, icon }) {
       <Link href={`/${name === "home" ? "" : name}`}>
         <a
           className={
-            "flex gap-2 items-center capitalize " +
+            "flex gap-2 items-center capitalize bg-transparent transition duration-500 rounded-2xl  py-1 px-2 " +
             (selected === name
-              ? " bg-sky-500 font-bold sm:text-3xl md:text-xl rounded-2xl text-white px-2 py-1"
-              : " md:hover:text-sky-400 skew-x-0 transition sm:text-3xl md:text-xl text-sky-900 dark:text-sky-50 ")
+              ? " !bg-sky-500 font-bold sm:text-5xl md:text-xl  text-white "
+              : " md:hover:text-sky-400    sm:text-4xl md:text-xl text-sky-900 dark:text-sky-50  ")
           }
           href="#"
           onClick={handleClick}
