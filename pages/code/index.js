@@ -145,7 +145,7 @@ function CodeIndex() {
                 rel="noopener noreferrer"
                 className="z-10 button-bw w-fit f2 !px-3"
               >
-                Github Profile
+                Github <span className="sm:hidden md:block">Profile</span>
                 <picture>
                   <source
                     srcSet="assets/CodeLogos/github.png"

@@ -25,6 +25,7 @@ import ReactPlayer from "react-player";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { TbCamera, TbCode, TbMusic } from "react-icons/tb";
+import MotionHeader from "@/components/etc/animation/MotionHeader.js";
 const WavesSketch = dynamic(
   () => import("../../components/projects/art/WavesSketch.js"),
   {
@@ -299,7 +300,9 @@ function Art({ tyImages, tyStats, altDescription }) {
         />
       </Head>
       <div className="page-container">
-        <h1 className="text-left heading-lg !mb-1 fade-effect-quick">Art</h1>
+        <MotionHeader>
+          <h1 className="text-left heading-lg !mb-1 fade-effect-quick">Art</h1>
+        </MotionHeader>
         <motion.div
           className="flex flex-wrap justify-center gap-2"
           variants={groupAnimate}
@@ -372,15 +375,16 @@ function Art({ tyImages, tyStats, altDescription }) {
 
         <DualSection centerText cn="w-full">
           <TextSection>
-            <motion.h2
-              variants={headingAnimate}
-              className={
-                "font-bold heading-md flex gap-2 justify-center items-center !text-teal-400"
-              }
-              id="music"
-            >
-              <TbMusic /> Music
-            </motion.h2>
+            <MotionHeader>
+              <h2
+                className={
+                  "font-bold heading-md flex gap-2 justify-center items-center !text-teal-400"
+                }
+                id="music"
+              >
+                <TbMusic /> Music
+              </h2>
+            </MotionHeader>
             <motion.div variants={textAnimate} className="text-box">
               <h3 className="text-left heading-sm !text-teal-400">
                 Warm, mellow Lo-Fi beats
@@ -543,7 +547,7 @@ function Art({ tyImages, tyStats, altDescription }) {
             <motion.h2
               variants={headingAnimate}
               className={
-                "font-bold heading-md flex gap-2 justify-center items-center !text-blue-500"
+                "font-bold heading-md flex gap-2 justify-center items-center !text-blue-500 dark:!text-blue-400"
               }
               id="ai-images"
             >
@@ -553,7 +557,7 @@ function Art({ tyImages, tyStats, altDescription }) {
               variants={textAnimate}
               className="text-box !shadow-blue-400/40"
             >
-              <h3 className="text-left heading-sm !text-blue-500">
+              <h3 className="text-left heading-sm !text-blue-500 dark:!text-blue-400">
                 Infinite creativity with prompt engineering
               </h3>
               <p className="font-bold">
@@ -572,7 +576,7 @@ function Art({ tyImages, tyStats, altDescription }) {
               className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90"
             >
               <Link href="/art/ai-art">
-                <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-400 !shadow-blue-300">
+                <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300">
                   All AI Images <FaArrowRight />
                 </a>
               </Link>
