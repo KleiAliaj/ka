@@ -15,7 +15,7 @@ export default function Avatar({ name, picture, date }) {
         )}
       </div>
       <div className="flex flex-col">
-        <div className="text-2xl font-bold f1">{name}</div>
+        <div className="text-2xl font-bold f1 sm:hidden md:block">{name}</div>
         {date && <Date dateString={date} />}
       </div>
     </div>
