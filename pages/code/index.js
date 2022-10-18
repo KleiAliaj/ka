@@ -196,7 +196,9 @@ function CodeIndex() {
             </MotionText>
           </TextSection>
 
-          <MotionImage>{/* <CubeWaveSketch /> */}</MotionImage>
+          <MotionImage>
+            <CubeWaveSketch />
+          </MotionImage>
         </DualSection>
         <div className="my-28" />
 
