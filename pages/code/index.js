@@ -197,7 +197,6 @@ function CodeIndex() {
           </TextSection>
 
           <MotionImage>
-            {" "}
             <CubeWaveSketch />
           </MotionImage>
         </DualSection>

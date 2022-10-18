@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import p5 from "p5";
 import { useTheme } from "next-themes";
 import { FaUndo, FaUndoAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 let codeCanvasWidth = 700;
 let artCanvasTheme = "light";
+let sketchPlaying = false;
 function sketch(p) {
   let loopSize; //between 10-200
   let zDistance; //between 0.1 - 5
@@ -80,11 +82,17 @@ function WavesSketch() {
     window.addEventListener("resize", handleWindowSizeChange);
     codeCanvasWidth = frame.current.clientWidth;
 
-    const p5Instance = new p5(sketch, p5ContainerRef.current);
+    if (sketchPlaying) {
+      const p5Instance = new p5(sketch, p5ContainerRef.current);
+      // console.log(")))))))))CREATED CANVAS(((((((((((");
+    }
 
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
-      p5Instance.remove();
+      if (p5Instance) {
+        p5Instance.remove();
+        // console.log("*************REMOVED CANVAS************");
+      }
     };
   }, [reset]);
   //   console.log(frame.current.clientHeight);
@@ -102,8 +110,26 @@ function WavesSketch() {
       >
         <FaUndo />
       </button>
-      <div
-        className="absolute top-0 flex items-center justify-center w-full h-full scale-[98%] rounded-xl z-0"
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 1.5,
+          },
+        }}
+        viewport={{ once: false, amount: 0.2 }}
+        onViewportEnter={() => {
+          sketchPlaying = true;
+          setIsReset(!reset);
+        }}
+        onViewportLeave={() => {
+          sketchPlaying = false;
+          setIsReset(!reset);
+        }}
+        className="absolute top-0 flex items-center justify-center w-full h-full !scale-[98%] rounded-xl z-0 "
         ref={p5ContainerRef}
       />
     </div>
