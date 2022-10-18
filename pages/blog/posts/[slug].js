@@ -24,7 +24,7 @@ export default function Post({ post, morePosts, preview }) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Container>
+    <div className="page-container">
       <ReadingBar target={target} />
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
@@ -56,7 +56,7 @@ export default function Post({ post, morePosts, preview }) {
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </>
       )}
-    </Container>
+    </div>
   );
 }
 

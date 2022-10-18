@@ -15,7 +15,8 @@ export default function PostHeader({ title, coverImage, date, author, blurb }) {
           picture={author.metadata.picture.imgix_url}
         />
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0 ">
+
+      <div className="sm:mb-8 md:mb-16 sm:px-0 ">
         <CoverImage title={title} url={coverImage.imgix_url} />
       </div>
       <div className="max-w-2xl mx-auto"></div>

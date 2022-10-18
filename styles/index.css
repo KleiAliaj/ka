@@ -29,7 +29,7 @@ body {
 
 @layer components {
   .page-container {
-    @apply h-full w-full flex flex-col items-center p-5 mb-[20em] fade-effect-quick;
+    @apply h-full w-full flex flex-col items-center md:px-5 sm:px-2 py-5 mb-[20em] fade-effect-quick;
   }
   .heading-lg {
     @apply text-center text-5xl sm:mb-5 md:mb-10 font-extrabold text-sky-600 dark:text-sky-300 f1;
