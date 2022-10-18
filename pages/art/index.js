@@ -513,7 +513,7 @@ function Art({ tyImages, tyStats, altDescription }) {
             </MotionText>
           </TextSection>
           <div className="flex items-center justify-center md:w-1/3 sm:w-full h-fit ">
-            <MotionImage>
+            <MotionImage classes="">
               <Link href={"/art/ai-art"}>
                 <a className="grid grid-cols-3 grid-rows-3 cursor-pointer w-fit lg:gap-2 sm:gap-1">
                   {aiImgs.map((img, index) => {
@@ -594,7 +594,7 @@ function Art({ tyImages, tyStats, altDescription }) {
               </div>
             </MotionText>
             <div className="flex justify-center w-full mt-5">
-              <MotionText invert delay={0.4}>
+              <MotionText invert delay={0.4} noSize>
                 <a
                   href="https://unsplash.com/@tyfiero"
                   target="_blank"

@@ -203,8 +203,8 @@ export default function Index({ allPosts }) {
             </MotionText>
             <br />
 
-            <div className="flex items-center justify-center w-full gap-3 ">
-              <MotionText invert noSize delay={0.2}>
+            <MotionText invert noSize delay={0.2}>
+              <div className="flex items-center justify-center w-full gap-3 ">
                 <a
                   href="https://unsplash.com/@tyfiero"
                   target="_blank"
@@ -229,8 +229,6 @@ export default function Index({ allPosts }) {
                     </picture>
                   </div>
                 </a>
-              </MotionText>
-              <MotionText invert noSize delay={0.2}>
                 <a
                   href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
                   target="_blank"
@@ -251,8 +249,8 @@ export default function Index({ allPosts }) {
                     </picture>
                   </div>
                 </a>
-              </MotionText>
-            </div>
+              </div>
+            </MotionText>
           </TextSection>
           {/* <div className="md:w-1/2 sm:w-full"></div> */}
 
