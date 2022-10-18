@@ -1,10 +1,13 @@
+import MotionHeader from "../etc/animation/MotionHeader";
 import PostPreview from "./post-preview";
 
 export default function MoreStories({ posts }) {
   return (
     <section className="mt-8">
       <div className="flex justify-center w-full">
-        <h2 className="mb-8 heading-lg ">More Posts</h2>
+        <MotionHeader yPx={-50} xPx={0}>
+          <h2 className="mb-8 heading-lg ">More Posts</h2>
+        </MotionHeader>
       </div>
       <div className="flex flex-wrap justify-center mb-32 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32">
         {posts.map((post) => (
