@@ -197,7 +197,7 @@ function CodeIndex() {
             >
               Projects
             </motion.h2>
-            <motion.div variants={invertText} className="text-box">
+            <motion.div variants={invertText} className="mx-2 text-box">
               <p className="font-bold ">
                 There&apos;s no better way to learn than by doing. Courses and
                 books are good for grasping the concepts, but applying this
