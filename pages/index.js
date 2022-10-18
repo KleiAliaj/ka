@@ -197,15 +197,15 @@ export default function Index({ allPosts }) {
         {/* separator */}
         <div className="md:mb-20 md:mt-20 sm:mb-6 sm:mt-6" />
 
-        <DualSection cn="sm:px-0">
+        <DualSection cn="sm:px-0 !w-full h-fit">
           <TextSection>
             <motion.h2
               variants={rightHeading}
-              className={"font-bold heading-md "}
+              className={"font-bold heading-lg !mb-0 "}
             >
               Work
             </motion.h2>
-            <motion.div variants={rightSection} className="text-box sm:mx-3">
+            <motion.div variants={rightSection} className="text-box sm:mx-0">
               <p>
                 I&apos;m a developer with a passion for building things that are
                 useful. My journey in software development started during the
@@ -251,7 +251,10 @@ export default function Index({ allPosts }) {
             </motion.div>
           </TextSection>
           {/* <div className="md:w-1/2 sm:w-full"></div> */}
-          <motion.div variants={photoAnimate} className="sm:w-full md:w-1/2">
+          <motion.div
+            variants={photoAnimate}
+            className="sm:w-screen md:w-1/2 h-fit"
+          >
             <h3 className="heading-sm">Projects</h3>
             <CompactProjects />
           </motion.div>
@@ -263,9 +266,9 @@ export default function Index({ allPosts }) {
           <TextSection>
             <motion.h2
               variants={headingAnimate}
-              className={"font-bold heading-md "}
+              className={"font-bold heading-lg !mb-0 "}
             >
-              Play
+              Hobbies
             </motion.h2>
             <motion.div variants={textAnimate} className="text-box">
               <p>
@@ -322,9 +325,9 @@ export default function Index({ allPosts }) {
                 href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
                 target="_blank"
                 rel="noreferrer"
-                className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
+                className="flex flex-col items-center justify-center p-2 transition h-fit bg-black/0 rounded-3xl hover:scale-110 active:scale-90 "
               >
-                <div className="md:w-40 sm:w-32 sm:h-16 md:h-auto">
+                <div className="h-auto md:w-40 sm:w-[10.4rem]">
                   <picture>
                     <source
                       srcSet="/assets/CodeLogos/spotify.webp"

@@ -1,6 +1,6 @@
 export const projectArray = [
   {
-    title: "ConsistentSea",
+    title: "ConsistenSea",
     route: "/code/projects/consistensea",
     shortDescription: "Habit-tracking extension",
     description:
