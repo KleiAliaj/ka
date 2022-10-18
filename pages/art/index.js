@@ -370,7 +370,7 @@ function Art({ tyImages, tyStats, altDescription }) {
         </motion.div>
         <div className="my-8" />
 
-        <DualSection centerText>
+        <DualSection centerText cn="w-full">
           <TextSection>
             <motion.h2
               variants={headingAnimate}
@@ -412,7 +412,7 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <motion.div
               variants={thirdAnimate}
-              className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90"
+              className="flex items-center content-center justify-center w-full sm:gap-0 md:gap-2 sm:mt-5 sm:!scale-90 md:scale-100"
             >
               <a
                 href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"

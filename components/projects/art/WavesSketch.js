@@ -40,24 +40,21 @@ function sketch(p) {
     p.rotateX(80);
 
     p.noFill();
-    let mouseX = isHovered ? p.map(p.mouseX, 0, p.width, 0.5, 1.5) : 1;
+    let mouseX = isHovered ? p.map(p.mouseX, 0, p.width, 0.001, 0.06) : 0.02;
     let mouseY = isHovered ? p.map(p.mouseY, 0, p.height, 0.2, -0.2) : 1;
     for (var i = 0; i < 50; i++) {
-      var r = p.map(p.sin(p.frameCount / 2), -1, 1, colorMin, 200);
-      var g = p.map(i, 0, 50, 100, 200);
-      var b = p.map(p.cos(p.frameCount / 2), -1, 1, colorMin, 100);
-
+      var r = 2 * i + p.map(p.sin(p.frameCount / 2), -1, 1, colorMin, 200);
+      var g = i + p.map(p.sin(p.frameCount / 2), -1, 1, colorMin, 200);
+      var b = 3 * i + p.map(p.sin(p.frameCount / 2), -1, 1, colorMin, 200);
       p.stroke(r, g, b);
-      p.fill(g, 100, 100, 0.015);
-      p.rotate(p.frameCount * 0.02);
+      p.fill(r, r, r, 0.15);
+      p.rotate(p.frameCount * mouseX);
 
       p.beginShape();
       for (var j = 0; j < loopSize; j += 2) {
-        var rad = i * (radSize * mouseX);
+        var rad = i * radSize;
         var x = rad * p.cos(j);
         var y = rad * p.sin(j);
-        // var x = rad * (p.cos(j) * mouseX);
-        // var y = rad * (p.sin(j) * mouseY);
         var z = p.sin((p.frameCount / 2) * (zDistance * mouseY) + i * 5) * 50;
 
         p.vertex(x, y, z);
