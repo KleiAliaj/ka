@@ -51,7 +51,7 @@ export default function ContactForm() {
 
   return (
     <div className="fade-effect-quick sm:mb-[50px] md:mb-0">
-      <main className="text-box !px-20">
+      <main className="text-box sm:!px-10 md:!px-20">
         {thanks ? (
           <div className="flex flex-col items-center justify-center w-full h-[50vh] gap-4">
             <p className="text-xl font-bold ">
