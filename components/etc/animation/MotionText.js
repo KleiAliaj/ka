@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-function MotionHeader({
+function MotionText({
   children,
   invert = false,
   noSize = false,
@@ -14,28 +14,34 @@ function MotionHeader({
   let yDistance = invert ? yPx : yPx * -1;
   let xValue = prefersReducedMotion ? 0 : distance;
   let yValue = prefersReducedMotion ? 0 : yDistance;
-  let sizeClasses = noSize ? "" : "w-full h-full";
 
+  let sizeClasses = noSize ? "" : "w-full h-full";
   return (
     <motion.div
       className={sizeClasses}
-      initial={{ x: xValue, y: yValue, opacity: 0 }}
+      initial={{
+        x: xValue,
+        y: yValue,
+        opacity: 0,
+        scale: prefersReducedMotion ? 1 : 0.6,
+      }}
       whileInView={{
         x: 0,
         y: 0,
         opacity: 1,
+        scale: 1,
         transition: {
           type: "spring",
-          bounce: 0.4,
+          bounce: 0.2,
           duration: 1.5,
           delay: delay,
         },
       }}
       viewport={{ once: true }}
     >
-      {children}{" "}
+      {children}
     </motion.div>
   );
 }
 
-export default MotionHeader;
+export default MotionText;
