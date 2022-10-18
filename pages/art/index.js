@@ -7,12 +7,7 @@ import {
   FaEye,
   FaHeart,
   FaImage,
-  FaImages,
-  FaPeopleArrows,
-  FaRedo,
-  FaRegHeart,
   FaRegImages,
-  FaRobot,
   FaUserAlt,
 } from "react-icons/fa";
 import ImageSection from "@/components/layout/ImageSection";
@@ -26,6 +21,8 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { TbCamera, TbCode, TbMusic } from "react-icons/tb";
 import MotionHeader from "@/components/etc/animation/MotionHeader.js";
+import MotionText from "@/components/etc/animation/MotionText.js";
+import MotionImage from "@/components/etc/animation/MotionImage.js";
 const WavesSketch = dynamic(
   () => import("../../components/projects/art/WavesSketch.js"),
   {
@@ -175,48 +172,6 @@ function Art({ tyImages, tyStats, altDescription }) {
       });
     }
   };
-  const photoAnimate = {
-    offscreen: { scale: prefersReducedMotion ? 1 : 0.6, opacity: 0 },
-    onscreen: {
-      scale: 1,
-      opacity: 1,
-      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
-    },
-  };
-  const headingAnimate = {
-    offscreen: { x: prefersReducedMotion ? 0 : -300, opacity: 0 },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
-    },
-  };
-  const textAnimate = {
-    offscreen: {
-      x: prefersReducedMotion ? 0 : -300,
-      opacity: 0,
-      scale: prefersReducedMotion ? 1 : 0.2,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.2 },
-    },
-  };
-  const thirdAnimate = {
-    offscreen: {
-      x: prefersReducedMotion ? 0 : -300,
-      opacity: 0,
-      scale: prefersReducedMotion ? 1 : 0.2,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.4 },
-    },
-  };
 
   const groupAnimate = {
     offscreen: {
@@ -256,40 +211,6 @@ function Art({ tyImages, tyStats, altDescription }) {
     },
   };
 
-  const rightSection = {
-    offscreen: {
-      x: prefersReducedMotion ? 0 : 300,
-      opacity: 0,
-      scale: prefersReducedMotion ? 1 : 0.2,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", bounce: 0.2, duration: 1, delay: 0.3 },
-    },
-  };
-  const rightHeading = {
-    offscreen: { x: prefersReducedMotion ? 0 : 300, opacity: 0 },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      transition: { type: "spring", bounce: 0.4, duration: 1.5 },
-    },
-  };
-  const rightThird = {
-    offscreen: {
-      x: prefersReducedMotion ? 0 : 300,
-      opacity: 0,
-      scale: prefersReducedMotion ? 1 : 0.2,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", bounce: 0.2, duration: 1.5, delay: 0.4 },
-    },
-  };
   return (
     <>
       <Head>
@@ -300,9 +221,7 @@ function Art({ tyImages, tyStats, altDescription }) {
         />
       </Head>
       <div className="page-container">
-        <MotionHeader>
-          <h1 className="text-left heading-lg !mb-1 fade-effect-quick">Art</h1>
-        </MotionHeader>
+        <h1 className=" heading-lg !mb-1 fade-effect-quick">Art</h1>
         <motion.div
           className="flex flex-wrap justify-center gap-2"
           variants={groupAnimate}
@@ -385,309 +304,322 @@ function Art({ tyImages, tyStats, altDescription }) {
                 <TbMusic /> Music
               </h2>
             </MotionHeader>
-            <motion.div variants={textAnimate} className="text-box">
-              <h3 className="text-left heading-sm !text-teal-400">
-                Warm, mellow Lo-Fi beats
-              </h3>
-              <p className="font-bold">
-                I was listening to Lo-Fi Hip Hop before it was cool (*puts on
-                hipster glasses*). For real though, for as long as I can
-                remember this genre has been the soundtrack to my life. The
-                magic of Lo-Fi is that it conveys the mood of the moment, the
-                same song can make you feel happy, reminiscent or melancholic,
-                depending on how you feel that day. When I&apos;m not listening
-                to Lo-Fi, I enjoy rap, classic rock, smooth jazz, and classical
-                music. But Lo-Fi will always have my heart.
-                <br />
-                <br />
-                My love for Lo-Fi grew stronger in 2019, when I began to learn
-                how to play the piano and make beats on my computer using Logic
-                Pro. Feeling an emotion from a song is one thing, but expressing
-                an emotion through your own song is another. Playing along with
-                the rhythm of your soul is something I wish everyone could
-                experience.
-                <br />
-                <br />
-                My music is far from platinum, but I&apos;m proud of it. And it
-                conveys the feelings I felt in those moments behind the
-                keyboard. I hope you enjoy it!
-              </p>
-            </motion.div>
+            <MotionText>
+              <div className="text-box">
+                <MotionHeader xPx={-100} delay={0.3}>
+                  <h3 className="text-left heading-sm !text-teal-400">
+                    Warm, mellow Lo-Fi beats
+                  </h3>
+                </MotionHeader>
+                <p className="font-bold">
+                  I was listening to Lo-Fi Hip Hop before it was cool (*puts on
+                  hipster glasses*). For real though, for as long as I can
+                  remember this genre has been the soundtrack to my life. The
+                  magic of Lo-Fi is that it conveys the mood of the moment, the
+                  same song can make you feel happy, reminiscent or melancholic,
+                  depending on how you feel that day. When I&apos;m not
+                  listening to Lo-Fi, I enjoy rap, classic rock, smooth jazz,
+                  and classical music. But Lo-Fi will always have my heart.
+                  <br />
+                  <br />
+                  My love for Lo-Fi grew stronger in 2019, when I began to learn
+                  how to play the piano and make beats on my computer using
+                  Logic Pro. Feeling an emotion from a song is one thing, but
+                  expressing an emotion through your own song is another.
+                  Playing along with the rhythm of your soul is something I wish
+                  everyone could experience.
+                  <br />
+                  <br />
+                  My music is far from platinum, but I&apos;m proud of it. And
+                  it conveys the feelings I felt in those moments behind the
+                  keyboard. I hope you enjoy it!
+                </p>
+              </div>
+            </MotionText>
 
-            <motion.div
-              variants={thirdAnimate}
-              className="flex items-center content-center justify-center w-full sm:gap-0 md:gap-2 sm:mt-5 sm:!scale-90 md:scale-100"
-            >
-              <a
-                href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
-                target="_blank"
-                rel="noreferrer"
-                className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
-              >
-                <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                  <picture>
-                    <source
-                      srcSet="/assets/CodeLogos/spotify.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="/assets/CodeLogos/spotify.webp"
-                      alt="spotify button"
-                      className="object-contain"
-                    />
-                  </picture>
-                </div>
-              </a>
-              <a
-                href="https://music.apple.com/us/artist/ty-the-creator/1626735693"
-                target="_blank"
-                rel="noreferrer"
-                className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
-              >
-                <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                  <picture>
-                    <source
-                      srcSet="/assets/CodeLogos/appleMusic.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="/assets/CodeLogos/appleMusic.webp"
-                      alt="Apple Music button"
-                      className="object-contain"
-                    />
-                  </picture>
-                </div>
-              </a>
-              <a
-                href="https://soundcloud.com/ty-the-creatorr"
-                target="_blank"
-                rel="noreferrer"
-                className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
-              >
-                <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                  <picture>
-                    <source
-                      srcSet="/assets/CodeLogos/soundcloud.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="/assets/CodeLogos/soundcloud.webp"
-                      alt="Soundcloud button"
-                      className="object-contain"
-                    />
-                  </picture>
-                </div>
-              </a>
-            </motion.div>
+            <div className="flex items-center content-center justify-center w-full sm:gap-0 md:gap-2 sm:mt-5 sm:!scale-90 md:scale-100">
+              <MotionText delay={0.3}>
+                <a
+                  href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
+                >
+                  <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
+                    <picture>
+                      <source
+                        srcSet="/assets/CodeLogos/spotify.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/assets/CodeLogos/spotify.webp"
+                        alt="spotify button"
+                        className="object-contain"
+                      />
+                    </picture>
+                  </div>
+                </a>
+              </MotionText>
+              <MotionText delay={0.5}>
+                <a
+                  href="https://music.apple.com/us/artist/ty-the-creator/1626735693"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
+                >
+                  <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
+                    <picture>
+                      <source
+                        srcSet="/assets/CodeLogos/appleMusic.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/assets/CodeLogos/appleMusic.webp"
+                        alt="Apple Music button"
+                        className="object-contain"
+                      />
+                    </picture>
+                  </div>
+                </a>
+              </MotionText>
+              <MotionText delay={0.8}>
+                <a
+                  href="https://soundcloud.com/ty-the-creatorr"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
+                >
+                  <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
+                    <picture>
+                      <source
+                        srcSet="/assets/CodeLogos/soundcloud.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/assets/CodeLogos/soundcloud.webp"
+                        alt="Soundcloud button"
+                        className="object-contain"
+                      />
+                    </picture>
+                  </div>
+                </a>
+              </MotionText>
+            </div>
           </TextSection>
-          <motion.div
-            className="md:w-1/3 sm:w-full h-[23em] md:mb-12"
-            variants={photoAnimate}
-          >
-            {domLoaded && (
-              <ReactPlayer
-                width={"100%"}
-                height={"100%"}
-                url="https://soundcloud.com/ty-the-creatorr/sets/reflections"
-              />
-            )}
-          </motion.div>
+          <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12">
+            <MotionImage>
+              {domLoaded && (
+                <ReactPlayer
+                  width={"100%"}
+                  height={"100%"}
+                  url="https://soundcloud.com/ty-the-creatorr/sets/reflections"
+                />
+              )}
+            </MotionImage>
+          </div>
         </DualSection>
 
         <div className="my-28" />
         <DualSection centerText invert>
           <TextSection>
-            <motion.h2
-              variants={rightHeading}
-              className={
-                "font-bold heading-md flex gap-2 justify-center items-center"
-              }
-              id="generative"
-            >
-              <TbCode /> Generative Art
-            </motion.h2>
-            <motion.div variants={rightSection} className="text-box">
-              <h3 className="text-left heading-sm">Beauty through code</h3>
-              <p className="font-bold">
-                Leveraging code to create art opens a world of creative
-                possibilities. Code allows for motion and interactivity,
-                breathing life and depth into the two-dimensional pixelated
-                canvas. I have so much fun tweaking algorithms to create a set
-                of pixels that looks pleasing to my eye.
-                <br />
-                <br />I learned how to code through art, and in a way, learned
-                art through code. Check out my generative art pieces, not all of
-                them made it to the website, but my favorites are there to be
-                played with, or remixed and made your own!
-              </p>
-            </motion.div>
+            <MotionHeader invert>
+              <h2
+                className={
+                  "font-bold heading-md flex gap-2 justify-center items-center"
+                }
+                id="generative"
+              >
+                <TbCode /> Generative Art
+              </h2>
+            </MotionHeader>
+            <MotionText invert>
+              <div className="text-box">
+                <MotionHeader delay={0.3} xPx={-100} invert>
+                  {" "}
+                  <h3 className="text-left heading-sm">Beauty through code</h3>
+                </MotionHeader>
+                <p className="font-bold">
+                  Leveraging code to create art opens a world of creative
+                  possibilities. Code allows for motion and interactivity,
+                  breathing life and depth into the two-dimensional pixelated
+                  canvas. I have so much fun tweaking algorithms to create a set
+                  of pixels that looks pleasing to my eye.
+                  <br />
+                  <br />I learned how to code through art, and in a way, learned
+                  art through code. Check out my generative art pieces, not all
+                  of them made it to the website, but my favorites are there to
+                  be played with, or remixed and made your own!
+                </p>
+              </div>
+            </MotionText>
 
-            <motion.div
-              variants={rightThird}
-              className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90"
-            >
-              <Link href="/art/generative">
-                <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
-                  All Generative Art <FaArrowRight />
-                </a>
-              </Link>
-            </motion.div>
+            <MotionText invert delay={0.4}>
+              <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
+                <Link href="/art/generative">
+                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
+                    All Generative Art <FaArrowRight />
+                  </a>
+                </Link>
+              </div>
+            </MotionText>
           </TextSection>
-          <motion.div
-            className="md:w-1/3 sm:w-full h-[23em] md:mb-12"
-            variants={photoAnimate}
-          >
-            <WavesSketch />
-          </motion.div>
+          <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12">
+            <MotionImage>
+              <WavesSketch />
+            </MotionImage>
+          </div>
         </DualSection>
         <div className="my-28" />
 
         <DualSection centerText>
           <TextSection>
-            <motion.h2
-              variants={headingAnimate}
-              className={
-                "font-bold heading-md flex gap-2 justify-center items-center !text-blue-500 dark:!text-blue-400"
-              }
-              id="ai-images"
-            >
-              <FaRegImages /> AI Images
-            </motion.h2>
-            <motion.div
-              variants={textAnimate}
-              className="text-box !shadow-blue-400/40"
-            >
-              <h3 className="text-left heading-sm !text-blue-500 dark:!text-blue-400">
-                Infinite creativity with prompt engineering
-              </h3>
-              <p className="font-bold">
-                AI fascinates me, particularly AI generated artwork using
-                DALLE-2, Stable Diffusion, and MidJourney. No longer am I
-                restrained by my drawing skills, the only limit to what can be
-                created is my own imagination. What a time to be alive!
-                <br />
-                <br />I save all of my best AI artwork to share with others,
-                check out the entire collection!
-              </p>
-            </motion.div>
+            <MotionHeader>
+              <h2
+                className={
+                  "font-bold heading-md flex gap-2 justify-center items-center !text-blue-500 dark:!text-blue-400"
+                }
+                id="ai-images"
+              >
+                <FaRegImages /> AI Images
+              </h2>
+            </MotionHeader>
+            <MotionText>
+              <div className="text-box !shadow-blue-400/40">
+                <MotionHeader delay={0.3} xPx={-100}>
+                  <h3 className="text-left heading-sm !text-blue-500 dark:!text-blue-400">
+                    Infinite creativity with prompt engineering
+                  </h3>
+                </MotionHeader>
+                <p className="font-bold">
+                  AI fascinates me, particularly AI generated artwork using
+                  DALLE-2, Stable Diffusion, and MidJourney. No longer am I
+                  restrained by my drawing skills, the only limit to what can be
+                  created is my own imagination. What a time to be alive!
+                  <br />
+                  <br />I save all of my best AI artwork to share with others,
+                  check out the entire collection!
+                </p>
+              </div>
+            </MotionText>
 
-            <motion.div
-              variants={thirdAnimate}
-              className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90"
-            >
-              <Link href="/art/ai-art">
-                <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300">
-                  All AI Images <FaArrowRight />
+            <MotionText delay={0.4}>
+              <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
+                <Link href="/art/ai-art">
+                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300">
+                    All AI Images <FaArrowRight />
+                  </a>
+                </Link>
+              </div>
+            </MotionText>
+          </TextSection>
+          <div className="flex items-center justify-center md:w-1/3 sm:w-full h-fit ">
+            <MotionImage>
+              <Link href={"/art/ai-art"}>
+                <a className="grid grid-cols-3 grid-rows-3 cursor-pointer w-fit lg:gap-2 sm:gap-1">
+                  {aiImgs.map((img, index) => {
+                    return (
+                      <img
+                        key={index}
+                        className="h-auto mx-auto rounded-md shadow-md xl:w-36 lg:w-28 md:w-20 sm:w-24 shadow-blue-400/60"
+                        src={img}
+                        alt="AI image from Ty Fiero"
+                      />
+                    );
+                  })}
                 </a>
               </Link>
-            </motion.div>
-          </TextSection>
-          <motion.div
-            className="flex items-center justify-center md:w-1/3 sm:w-full h-fit "
-            variants={photoAnimate}
-          >
-            <Link href={"/art/ai-art"}>
-              <a className="grid grid-cols-3 grid-rows-3 cursor-pointer w-fit lg:gap-2 sm:gap-1">
-                {aiImgs.map((img, index) => {
-                  return (
-                    <img
-                      key={index}
-                      className="h-auto mx-auto rounded-md shadow-md xl:w-36 lg:w-28 md:w-20 sm:w-24 shadow-blue-400/60"
-                      src={img}
-                      alt="AI image from Ty Fiero"
-                    />
-                  );
-                })}
-              </a>
-            </Link>
-          </motion.div>
+            </MotionImage>
+          </div>
         </DualSection>
         <div className="my-28" />
         <DualSection invert>
           <TextSection>
-            <motion.h2
-              variants={rightHeading}
-              className={
-                "font-bold heading-md flex gap-2 justify-center items-center !text-violet-500"
-              }
-              id="photography"
-            >
-              <TbCamera /> Photography
-            </motion.h2>
-            <motion.div
-              variants={rightSection}
-              className="text-box !shadow-violet-400/40"
-            >
-              <h3 className="text-left heading-sm !text-violet-500">
-                Capturing the beauty of the Pacific Northwest
-              </h3>
-              <p>
-                Photography is my creative outlet that gets me outside and helps
-                me notice the small things. I am by no means a professional, far
-                from it. But I do have a decent Nikon camera, an eye for nature
-                photography, and the patience to find the right shot! <br />
-                <br /> I don&apos;t ever expect to be famous for my photography,
-                or even make a single dollar, it&apos;s just so fun! My mind is
-                so much clearer when I spend time in nature every week. I share
-                all my best work to{" "}
+            <MotionHeader invert>
+              <h2
+                className={
+                  "font-bold heading-md flex gap-2 justify-center items-center !text-violet-500"
+                }
+                id="photography"
+              >
+                <TbCamera /> Photography
+              </h2>
+            </MotionHeader>
+            <MotionText invert>
+              <div className="text-box !shadow-violet-400/40">
+                <MotionHeader delay={0.3} xPx={-100} invert>
+                  <h3 className="text-left heading-sm !text-violet-500">
+                    Capturing the beauty of the Pacific Northwest
+                  </h3>
+                </MotionHeader>
+                <p>
+                  Photography is my creative outlet that gets me outside and
+                  helps me notice the small things. I am by no means a
+                  professional, far from it. But I do have a decent Nikon
+                  camera, an eye for nature photography, and the patience to
+                  find the right shot! <br />
+                  <br /> I don&apos;t ever expect to be famous for my
+                  photography, or even make a single dollar, it&apos;s just so
+                  fun! My mind is so much clearer when I spend time in nature
+                  every week. I share all my best work to{" "}
+                  <a
+                    href="https://unsplash.com/@tyfiero"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-violet-500 "
+                  >
+                    unsplash
+                  </a>{" "}
+                  for anyone to use in their creative projects.
+                </p>
+              </div>
+            </MotionText>
+            <br />
+            <MotionText invert delay={0.2}>
+              <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-violet-600/30 dark:shadow-violet-400/30 bg-violet-50 dark:bg-violet-700/90">
+                <div className="mb-2">
+                  <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
+                    “
+                  </div>
+                  <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
+                    We cannot predict the value our work will provide to the
+                    world. That&apos;s fine. It is not our job to judge our own
+                    work. It is our job to create it, to pour ourselves into it,
+                    and to master our craft as best we can. &nbsp; &nbsp;-James
+                    Clear
+                  </blockquote>
+                  <div className="h-3 mb-2 text-3xl text-right text-gray-600 dark:text-slate-200">
+                    “
+                  </div>
+                </div>
+              </div>
+            </MotionText>
+            <div className="flex justify-center w-full mt-5">
+              <MotionText invert delay={0.4}>
                 <a
                   href="https://unsplash.com/@tyfiero"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-violet-500 "
+                  rel="noreferrer"
+                  className="flex h-[4em] w-[18em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
                 >
-                  unsplash
-                </a>{" "}
-                for anyone to use in their creative projects.
-              </p>
-            </motion.div>
-            <br />
-            <motion.div
-              variants={rightSection}
-              className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-violet-600/30 dark:shadow-violet-400/30 bg-violet-50 dark:bg-violet-700/90"
-            >
-              <div className="mb-2">
-                <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
-                  “
-                </div>
-                <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
-                  We cannot predict the value our work will provide to the
-                  world. That&apos;s fine. It is not our job to judge our own
-                  work. It is our job to create it, to pour ourselves into it,
-                  and to master our craft as best we can. &nbsp; &nbsp;-James
-                  Clear
-                </blockquote>
-                <div className="h-3 mb-2 text-3xl text-right text-gray-600 dark:text-slate-200">
-                  “
-                </div>
-              </div>
-            </motion.div>
-            <div className="flex justify-center w-full mt-5">
-              <motion.a
-                variants={rightThird}
-                href="https://unsplash.com/@tyfiero"
-                target="_blank"
-                rel="noreferrer"
-                className="flex h-[4em] w-[18em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
-              >
-                <span className="text-xs font-bold text-white dark:text-black">
-                  View my photos on
-                </span>
-                <div className="w-[8em]  dark:invert-0 invert h-[3em]">
-                  {" "}
-                  <picture>
-                    <source
-                      srcSet="/assets/CodeLogos/u-logo.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="/assets/CodeLogos/u-logo.webp"
-                      alt="unsplash button"
-                      className="object-contain"
-                    />
-                  </picture>
-                </div>
-              </motion.a>
+                  <span className="text-xs font-bold text-white dark:text-black">
+                    View my photos on
+                  </span>
+                  <div className="w-[8em]  dark:invert-0 invert h-[3em]">
+                    {" "}
+                    <picture>
+                      <source
+                        srcSet="/assets/CodeLogos/u-logo.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/assets/CodeLogos/u-logo.webp"
+                        alt="unsplash button"
+                        className="object-contain"
+                      />
+                    </picture>
+                  </div>
+                </a>
+              </MotionText>
             </div>
           </TextSection>
           <ImageSection
@@ -698,89 +630,96 @@ function Art({ tyImages, tyStats, altDescription }) {
 
         <div className="flex justify-center gap-10 md:items-start sm:flex-col-reverse md:flex-row sm:items-center"></div>
 
-        <div className="flex flex-col items-center px-5 pt-2 pb-2 mt-20 ring-2 rounded-xl ring-violet-400">
-          <a
-            href="https://unsplash.com/@tyfiero"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-col items-center"
-          >
-            <div className="w-20 h-20 rounded-full shadow-lg">
-              <picture>
-                <source
-                  srcSet={"/assets/other/unsplash-profile.png"}
-                  type="image/png"
-                />
-                <img
-                  src={"/assets/other/unsplash-profile.png"}
-                  alt="Unsplash profile image"
-                  className="rounded-full "
-                />
-              </picture>
-            </div>
-            <p className="italic text-violet-300">@tyfiero</p>
-            <h3 className="heading-sm !text-violet-500">Unsplash Stats</h3>
-          </a>
+        <MotionText yPx={-200} xPx={0} noSize>
+          <div className="flex flex-col items-center px-5 pt-2 pb-2 mt-20 ring-2 rounded-xl ring-violet-400">
+            <a
+              href="https://unsplash.com/@tyfiero"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-col items-center"
+            >
+              <div className="w-20 h-20 rounded-full shadow-lg">
+                <picture>
+                  <source
+                    srcSet={"/assets/other/unsplash-profile.png"}
+                    type="image/png"
+                  />
+                  <img
+                    src={"/assets/other/unsplash-profile.png"}
+                    alt="Unsplash profile image"
+                    className="rounded-full "
+                  />
+                </picture>
+              </div>
+              <p className="italic text-violet-300">@tyfiero</p>
+              <h3 className="heading-sm !text-violet-500">Unsplash Stats</h3>
+            </a>
 
-          <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
-            <div className="flex items-center gap-2">
-              <FaImage className="text-violet-600 dark:text-violet-300" />
-              <p>
-                Photos:&nbsp;{"  "}
-                <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                  {tyStats.photoNum}
-                </span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaEye className="text-violet-600 dark:text-violet-300" />
-              <p>
-                Total Views:&nbsp;{"  "}
-                <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                  {tyStats.views.toLocaleString("en-US")}
-                </span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2 ">
-              <FaDownload className="scale-75 text-violet-600 dark:text-violet-300" />
-              <p>
-                Downloads:&nbsp;{"  "}
-                <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                  {tyStats.downloads}
-                </span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaUserAlt className="text-violet-600 dark:text-violet-300" />
-              <p>
-                Followers: &nbsp; {"  "}
-                <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                  {tyStats.followers}
-                </span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaHeart className="text-violet-600 dark:text-violet-300" />
-              <p>
-                Likes:&nbsp;{" "}
-                <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                  {tyStats.likes}
-                </span>
-              </p>
+            <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
+              <div className="flex items-center gap-2">
+                <FaImage className="text-violet-600 dark:text-violet-300" />
+                <p>
+                  Photos:&nbsp;{"  "}
+                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                    {tyStats.photoNum}
+                  </span>
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaEye className="text-violet-600 dark:text-violet-300" />
+                <p>
+                  Total Views:&nbsp;{"  "}
+                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                    {tyStats.views.toLocaleString("en-US")}
+                  </span>
+                </p>
+              </div>
+              <div className="flex items-center gap-2 ">
+                <FaDownload className="scale-75 text-violet-600 dark:text-violet-300" />
+                <p>
+                  Downloads:&nbsp;{"  "}
+                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                    {tyStats.downloads}
+                  </span>
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaUserAlt className="text-violet-600 dark:text-violet-300" />
+                <p>
+                  Followers: &nbsp; {"  "}
+                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                    {tyStats.followers}
+                  </span>
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaHeart className="text-violet-600 dark:text-violet-300" />
+                <p>
+                  Likes:&nbsp;{" "}
+                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                    {tyStats.likes}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </MotionText>
         <div className="flex flex-wrap justify-center w-full gap-3 my-5">
           {pics.map((pic, index) => {
-            //   console.log(pic);
-            // let width =
-            //   pic.ratio > 1
-            //     ? " md:w-[640px] sm:w-[320px]"
-            //     : " md:w-[320px] sm:w-[170px]";
-
             return (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0.2, filter: "blur(3px)" }}
+                whileInView={{
+                  filter: "blur(0px)",
+                  opacity: 1,
+                  transition: {
+                    type: "spring",
+                    bounce: 0.4,
+                    duration: 1.5,
+                  },
+                }}
+                viewport={{ once: false }}
                 className={
                   "relative shadow-lg rounded-xl transition duration-500 hover:shadow-violet-400/60 shadow-violet-600/30 md:h-[423px] sm:h-[256px] hover:shadow-xl hover:scale-[99%]"
                 }
@@ -799,7 +738,7 @@ function Art({ tyImages, tyStats, altDescription }) {
                     }
                   }}
                 />
-              </div>
+              </motion.div>
             );
           })}
         </div>
