@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 import Link from "next/link";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTheme } from "next-themes";
+import MotionImage from "./animation/MotionImage";
+import MotionHeader from "./animation/MotionHeader";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -54,89 +56,106 @@ export default function ContactForm() {
       <main className="text-box sm:!px-10 md:!px-20">
         {thanks ? (
           <div className="flex flex-col items-center justify-center w-full h-[50vh] gap-4">
-            <p className="text-xl font-bold ">
-              Thanks for reaching out! I&apos;ll get back to you soon. 😊
-            </p>
-            <Link href="/">
-              <a className="text-xl font-bold button-1">
-                Back Home <FaHome />
-              </a>
-            </Link>
+            <MotionImage>
+              <p className="text-xl font-bold ">
+                Thanks for reaching out! I&apos;ll get back to you soon. 😊
+              </p>
+              <Link href="/">
+                <a className="text-xl font-bold button-1">
+                  Back Home <FaHome />
+                </a>
+              </Link>
+            </MotionImage>
           </div>
         ) : (
           <>
             {" "}
             <div className="flex flex-col gap-2">
-              <h2 className="heading-md !mb-2 mt-10 fade-effect-quick">
-                {" "}
-                Want to work together? Let&apos;s chat!
-              </h2>
-              <p>
-                Send me a message using the form below, or{" "}
-                <a
-                  href="http://twitter.com/FieroTy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-sky-500"
-                >
-                  DM me
-                </a>{" "}
-                on Twitter.
-              </p>
+              <MotionHeader yPx={-50} xPx={0}>
+                <h2 className="heading-md !mb-2 mt-10 fade-effect-quick">
+                  {" "}
+                  Want to work together? Let&apos;s chat!
+                </h2>
+              </MotionHeader>
+              <MotionHeader yPx={-100} xPx={0}>
+                <p>
+                  Send me a message using the form below, or{" "}
+                  <a
+                    href="http://twitter.com/FieroTy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-sky-500"
+                  >
+                    DM me
+                  </a>{" "}
+                  on Twitter.
+                </p>
+              </MotionHeader>
             </div>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center justify-center w-full h-full gap-4 mt-5"
             >
               <div className="flex flex-col items-start w-[70%]">
-                <label htmlFor="name">Name:</label>
-                <input
-                  id="name"
-                  className="w-full mt-1 textarea-tw "
-                  type="text"
-                  onChange={(e) => setName(e.target.value)}
-                />
+                <MotionImage>
+                  <label htmlFor="name">Name:</label>
+                  <input
+                    id="name"
+                    className="w-full mt-1 textarea-tw "
+                    type="text"
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </MotionImage>
               </div>
 
               <div className="flex flex-col items-start w-[70%]">
-                <label htmlFor="email">
-                  <span className="text-rose-400">* </span>Email:
-                </label>
-                <input
-                  id="email"
-                  className="w-full mt-1 textarea-tw "
-                  required
-                  type="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                <MotionImage>
+                  <label htmlFor="email">
+                    <span className="text-rose-400">* </span>Email:
+                  </label>
+                  <input
+                    id="email"
+                    className="w-full mt-1 textarea-tw "
+                    required
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </MotionImage>
               </div>
               <div className="flex flex-col items-start w-[70%]">
-                <label htmlFor="message" className="">
-                  <span className="text-rose-400">* </span>Message:
-                </label>
-                <textarea
-                  id="message"
-                  className="w-full mt-1 textarea-tw"
-                  type="text"
-                  rows="4"
-                  onChange={(e) => setMessage(e.target.value)}
-                />
+                <MotionImage>
+                  <label htmlFor="message" className="">
+                    <span className="text-rose-400">* </span>Message:
+                  </label>
+                  <textarea
+                    id="message"
+                    className="w-full mt-1 textarea-tw"
+                    type="text"
+                    rows="4"
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </MotionImage>
               </div>
-              <ReCAPTCHA
-                sitekey="6Ld6T9shAAAAALBkXovooVihStYeAFV1kr1ZBoW3"
-                // size="compact"
-                theme={theme}
-                onChange={() => {
-                  setVerified(true);
-                }}
-              />
-              <button
-                // type="submit"
-                className="mb-10 button-1 !text-xl"
-              >
-                Send
-                <FaRegPaperPlane />
-              </button>
+              <MotionImage classes="mx-auto">
+                <ReCAPTCHA
+                  sitekey="6Ld6T9shAAAAALBkXovooVihStYeAFV1kr1ZBoW3"
+                  // size="compact"
+                  theme={theme}
+                  onChange={() => {
+                    setVerified(true);
+                  }}
+                />
+              </MotionImage>
+
+              <MotionImage classes="mx-auto">
+                <button
+                  // type="submit"
+                  className="mb-10 button-1 !text-xl"
+                >
+                  Send
+                  <FaRegPaperPlane />
+                </button>
+              </MotionImage>
             </form>
           </>
         )}
