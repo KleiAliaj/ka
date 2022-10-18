@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 function DualSection({
   children,
   invert = false,
@@ -7,10 +6,7 @@ function DualSection({
   centerText = false,
 }) {
   return (
-    <motion.section
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true }}
+    <section
       className={
         "flex justify-center sm:gap-5 md:gap-10  sm:flex-col  sm:items-center md:px-3 " +
         (invert ? "md:flex-row-reverse " : "md:flex-row ") +
@@ -19,7 +15,7 @@ function DualSection({
       }
     >
       {children}
-    </motion.section>
+    </section>
   );
 }
 
