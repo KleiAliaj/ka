@@ -7,6 +7,9 @@ import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "@/lib/constants";
 import CustomForm from "@/components/blog/NewsletterForm";
+import MotionImage from "@/components/etc/animation/MotionImage";
+import MotionText from "@/components/etc/animation/MotionText";
+import MotionHeader from "@/components/etc/animation/MotionHeader";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -26,13 +29,17 @@ export default function Index({ allPosts }) {
           Blog
         </h1> */}
       <div className="page-container">
-        <h1 className="text-left heading-lg ">Blog</h1>
+        <h1 className="text-left heading-lg fade-effect-quick">Blog</h1>
 
-        <CustomForm />
+        <MotionText yPx={-100} xPx={0} noSize>
+          <CustomForm />
+        </MotionText>
 
-        <h3 className="mt-10 mb-4 text-2xl f1 text-sky-800 dark:text-sky-300">
-          Latest Post:
-        </h3>
+        <MotionHeader yPx={-100} xPx={0} noSize>
+          <h3 className="mt-10 mb-4 text-3xl f1 text-sky-800 dark:text-sky-300">
+            Latest Post:
+          </h3>
+        </MotionHeader>
         {heroPost && (
           <HeroPost
             title={heroPost.title}
