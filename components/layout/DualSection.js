@@ -10,7 +10,7 @@ function DualSection({
     <motion.section
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true }}
       className={
         "flex justify-center sm:gap-5 md:gap-10  sm:flex-col  sm:items-center md:px-3 " +
         (invert ? "md:flex-row-reverse " : "md:flex-row ") +
