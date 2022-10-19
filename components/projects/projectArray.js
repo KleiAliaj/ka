@@ -15,7 +15,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/cs.webp",
     styles: {
       color: "bg-blue-400",
-      bColor: "hover:ring-blue-500 ",
+      bColor: "ring-blue-500 ",
       textColor: " text-blue-600 dark:text-blue-400",
       shadow:
         "!shadow-blue-500 bg-gradient-to-br from-white via-white to-blue-200 dark:from-slate-900 dark:via-slate-900 dark:to-blue-900",
@@ -32,7 +32,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/oli.webp",
     styles: {
       color: "bg-red-400",
-      bColor: "hover:ring-red-500 ",
+      bColor: "ring-red-500 ",
       textColor: " text-red-600 dark:text-red-400",
       shadow:
         "!shadow-red-500 bg-gradient-to-br from-white via-white to-red-200 dark:from-slate-900 dark:via-slate-900 dark:to-red-900",
@@ -49,7 +49,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/palm.webp",
     styles: {
       color: "bg-teal-400",
-      bColor: "hover:ring-teal-500 ",
+      bColor: "ring-teal-500 ",
       textColor: " text-teal-600 dark:text-teal-300 whitespace-nowrap",
       shadow:
         "!shadow-teal-500 bg-gradient-to-br from-white via-white to-teal-200 dark:from-slate-900 dark:via-slate-900 dark:to-teal-900",
@@ -66,7 +66,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/ty.webp",
     styles: {
       color: "bg-sky-400",
-      bColor: "hover:ring-sky-500 ",
+      bColor: "ring-sky-500 ",
       textColor: " text-sky-600 dark:text-sky-300",
       shadow:
         "!shadow-sky-500 bg-gradient-to-br from-white via-white to-sky-200 dark:from-slate-900 dark:via-slate-900 dark:to-sky-900",
@@ -90,7 +90,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/ii.webp",
     styles: {
       color: "bg-pink-400",
-      bColor: "hover:ring-pink-500 ",
+      bColor: "ring-pink-500 ",
       textColor: " text-pink-600 dark:text-pink-300",
       shadow:
         "!shadow-pink-500 bg-gradient-to-br from-white via-white to-pink-200 dark:from-slate-900 dark:via-slate-900 dark:to-pink-900",
@@ -107,7 +107,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/eth.webp",
     styles: {
       color: "bg-indigo-400",
-      bColor: "hover:ring-indigo-500 ",
+      bColor: "ring-indigo-500 ",
       textColor: " text-indigo-600 dark:text-indigo-300 whitespace-nowrap",
       shadow:
         "!shadow-indigo-500 bg-gradient-to-br from-white via-white to-indigo-200 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-900",
@@ -124,7 +124,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/ada.webp",
     styles: {
       color: "bg-green-400",
-      bColor: "hover:ring-green-500 ",
+      bColor: "ring-green-500 ",
       textColor: " text-green-600 dark:text-green-300 whitespace-nowrap",
       shadow:
         "!shadow-green-500 bg-gradient-to-br from-white via-white to-green-200 dark:from-slate-900 dark:via-slate-900 dark:to-green-900",
@@ -140,7 +140,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/pa.webp",
     styles: {
       color: "bg-lime-500",
-      bColor: "hover:ring-lime-500 ",
+      bColor: "ring-lime-500 ",
       textColor: " text-lime-600 dark:text-lime-300",
       shadow:
         "!shadow-lime-500 bg-gradient-to-br from-white via-white to-lime-200 dark:from-slate-900 dark:via-slate-900 dark:to-lime-900",
@@ -157,7 +157,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/shrublogo.webp",
     styles: {
       color: "bg-teal-400 dark:bg-teal-500",
-      bColor: "hover:ring-teal-500 ",
+      bColor: "ring-teal-500 ",
       textColor: " text-teal-600 dark:text-teal-300",
       shadow:
         "!shadow-teal-500 bg-gradient-to-br from-white via-white to-teal-200 dark:from-slate-900 dark:via-slate-900 dark:to-teal-900",
@@ -174,7 +174,7 @@ export const projectArray = [
     thumb: "/assets/other/projects/thumbnails/drum.webp",
     styles: {
       color: "bg-yellow-500 ",
-      bColor: "hover:ring-yellow-500 ",
+      bColor: "ring-yellow-500 ",
       textColor: " text-yellow-600 dark:text-yellow-300",
       shadow:
         "!shadow-yellow-500 bg-gradient-to-br from-white via-white to-yellow-200 dark:from-slate-900 dark:via-slate-900 dark:to-yellow-900",
