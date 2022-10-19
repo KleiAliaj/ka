@@ -197,28 +197,6 @@ function CodeIndex() {
             </MotionText>
           </TextSection>
 
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 1.5,
-              },
-            }}
-            viewport={{ once: false, amount: 0.2 }}
-            onViewportEnter={() => {
-              setShowSketch(true);
-            }}
-            onViewportLeave={() => {
-              setShowSketch(false);
-            }}
-            className="w-full h-[400px] shadow-sky-600/30 shadow-xl rounded-xl dark:bg-black bg-white mt-4 scale-100 relative"
-          >
-            {showSketch ? <CubeWaveSketch /> : null}
-          </motion.div> */}
-
           <MotionImage>
             <CubeWaveSketch />
           </MotionImage>

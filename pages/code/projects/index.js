@@ -4,20 +4,16 @@ import React from "react";
 
 function index() {
   return (
-   <>
-   <Head>
-    <title>Ty&apos;s Coding Projects</title>
-        <meta
-            name="description"
-            content={`Coding projects and works.`}
-          />
-
-    </Head>
-      <div className="page-container">
+    <>
+      <Head>
+        <title>Ty&apos;s Coding Projects</title>
+        <meta name="description" content={`Coding projects and works.`} />
+      </Head>
+      <div className="page-container !px-2">
         <h1 className="heading-lg">All Projects</h1>
         <Projects />
       </div>
-   </>
+    </>
   );
 }
 
