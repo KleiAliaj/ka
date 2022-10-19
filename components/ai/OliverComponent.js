@@ -126,13 +126,13 @@ function Oliver({ playing, aiLoading, responseReceived, answer, kind }) {
   }
   return (
     <div className="relative w-fit h-fit">
-      <div className="absolute top-0 left-0 w-fit h-fit -z-10">
+      <div className="absolute top-0 left-0 md:h-fit sm:h-[40vmin] w-fit -z-10">
         <picture>
           <source srcSet={imgSrc} type="image/png" />
           <img
             src={imgSrc}
             alt="oliver ai image"
-            className="rounded-lg object-fit w-fit h-fit"
+            className="h-full rounded-lg object-fit w-fit"
           />
         </picture>
       </div>

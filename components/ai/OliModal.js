@@ -22,11 +22,11 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
   return (
     <>
       <div className="fixed top-0 left-0 z-40 w-screen h-screen fade-effect-quick bg-slate-800/50" />
-      <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen ">
+      <div className="fixed top-0 left-0 z-[200] flex items-center justify-center w-screen h-screen ">
         <div
           ref={menuRef}
           className={
-            " glass-box md:h-[80vh] h-[92vh]   shadow-2xl flex flex-col lg:w-2/3 md:w-4/5 sm:w-[95%]  items-center !px-10 !pt-5 !pb-10 z-100 bg-white/80 dark:bg-slate-600/80 grow-effect overflow-auto"
+            " glass-box md:h-[80vh] h-[92vh]   shadow-2xl flex flex-col lg:w-2/3 md:w-4/5 sm:w-[95%]  items-center md:!px-10 !pt-5 !pb-10 z-100 bg-white/80 dark:bg-slate-600/80 grow-effect overflow-auto"
           }
         >
           <div className={"modalHeader"}>
@@ -121,9 +121,12 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               :)
             </p>
 
-            <button className="button-1" onClick={() => setOliModal(false)}>
-              <p>Continue</p>
-              <FaArrowRight />
+            <button
+              className="mt-5 button-1"
+              onClick={() => setOliModal(false)}
+            >
+              <p className="text-3xl text-white">Continue</p>
+              <FaArrowRight className="text-3xl" />
             </button>
           </div>
         </div>
