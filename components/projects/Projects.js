@@ -9,7 +9,7 @@ function Projects({ modalOpen, setModalOpen, setSelected }) {
   return (
     <div className="relative flex flex-wrap items-center justify-center px-5 py-0 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 dark:ring-sky-600 dark:bg-sky-900/30 rounded-2xl ">
       <Atropos shadow={false} activeOffset={0} rotateXMax={0} rotateYMax={2}>
-        <div className="flex flex-wrap items-center justify-center w-full gap-5 py-5 mt-3">
+        <div className="flex flex-wrap items-center justify-center w-full gap-5 py-5 mt-3 sm:px-16 md:px-2 h-fit">
           {projectArray.map((project) => {
             return <ProjectUnit key={project.title} projectData={project} />;
           })}
@@ -27,6 +27,7 @@ const ProjectUnit = ({ projectData }) => {
       perspective={1000}
       transitionSpeed={1000}
       scale={1.02}
+      className="sm:w-full md:w-fit"
     >
       <ProjectCard
         route={projectData.route}
@@ -57,31 +58,31 @@ const ProjectCard = ({
       shadow={false}
       activeOffset={40}
       className={
-        "my-atropos hover:ring-4 rounded-xl  transition duration-500  bg-gradient-to-br from-white via-slate-50 to-slate-100 dark:from-slate-500 dark:via-slate-700 dark:to-slate-900  shadow-lg hover:shadow-2xl " +
+        "my-atropos hover:ring-8 rounded-xl  transition duration-500  bg-gradient-to-br from-white via-slate-50 to-slate-100 dark:from-slate-500 dark:via-slate-700 dark:to-slate-900  shadow-lg hover:shadow-2xl ring-2  " +
         bColor
       }
     >
       <div
         className={
-          "flex flex-col group  items-center justify-center sm:w-[22em] md:w-[15em] h-[25em] p-2   z-0 hover:z-10   "
+          "flex flex-col group  items-center justify-center sm:w-full md:w-[15em] sm:h-fit md:h-[25em] p-2   z-0 hover:z-10   "
         }
       >
         <div
           data-atropos-offset="2"
-          className="w-full sm:h-[14em] md:h-[10em] bg-white/40  rounded-lg  "
+          className="w-full sm:h-fit md:h-[10em] bg-white/40  rounded-lg  "
         >
           <picture>
             <source srcSet={imgSrc} type="image/png" />
             <img
               src={imgSrc}
               alt={"Image of the " + title + " project"}
-              className="object-cover group-hover:scale-100 sm:h-[14em] md:h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
+              className="object-cover group-hover:scale-100 sm:h-[10em] md:h-[10em] w-full transition duration-500 rounded-lg shadow-md group-hover:shadow-xl"
             />
           </picture>
         </div>
 
         <div
-          className="flex flex-col justify-between items-center h-[15em] px-5 py-2   "
+          className="flex flex-col justify-between items-center sm:h-48 md:h-[15em] px-5 py-2   "
           style={{
             transformStyle: "preserve-3d",
           }}
