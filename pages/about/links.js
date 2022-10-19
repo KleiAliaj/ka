@@ -7,17 +7,8 @@ import { TbRectangleVertical } from "react-icons/tb";
 import Head from "next/head";
 
 function Links({ links }) {
-  // console.log(links);
-  //   console.log(errors);
   const [linksList, setLinksList] = React.useState(links);
   const [cardOrList, setCardOrList] = React.useState(true);
-
-  // React.useEffect(() => {
-  //   if (typeof window !== "undefined") {
-
-  //   }
-  // }, []);
-
   return (
     <>
       <Head>
@@ -69,7 +60,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.code.map((link, index) => {
                 return (
                   <Resource
@@ -79,6 +70,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-sky-700 dark:text-sky-300"
+                    ring={" ring-sky-500"}
                   />
                 );
               })}
@@ -107,7 +99,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.crypto.map((link, index) => {
                 return (
                   <Resource
@@ -117,6 +109,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-indigo-700 dark:text-indigo-300"
+                    ring={" ring-indigo-500"}
                   />
                 );
               })}
@@ -144,7 +137,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.personalDev.map((link, index) => {
                 return (
                   <Resource
@@ -154,6 +147,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-purple-700 dark:text-purple-300"
+                    ring={" ring-purple-500"}
                   />
                 );
               })}
@@ -181,7 +175,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.ai.map((link, index) => {
                 return (
                   <Resource
@@ -191,6 +185,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-fuchsia-700 dark:text-fuchsia-300"
+                    ring={" ring-fuchsia-500"}
                   />
                 );
               })}
@@ -218,7 +213,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.tools.map((link, index) => {
                 return (
                   <Resource
@@ -228,6 +223,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-orange-700 dark:text-orange-300"
+                    ring={" ring-orange-500"}
                   />
                 );
               })}
@@ -255,7 +251,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.innovation.map((link, index) => {
                 return (
                   <Resource
@@ -265,6 +261,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-yellow-700 dark:text-yellow-300"
+                    ring={" ring-yellow-500"}
                   />
                 );
               })}
@@ -293,7 +290,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.tools.map((link, index) => {
                 return (
                   <Resource
@@ -303,6 +300,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-green-700 dark:text-green-300"
+                    ring={" ring-green-500"}
                   />
                 );
               })}
@@ -330,7 +328,7 @@ function Links({ links }) {
               })}
             </div>
           ) : (
-            <div>
+            <div className="flex flex-col items-center justify-center gap-2 p-1 pb-5">
               {linksList.fun.map((link, index) => {
                 return (
                   <Resource
@@ -340,6 +338,7 @@ function Links({ links }) {
                     url={link.url}
                     note={link.note}
                     textColor=" text-teal-700 dark:text-teal-300"
+                    ring={" ring-teal-500"}
                   />
                 );
               })}
@@ -351,9 +350,14 @@ function Links({ links }) {
   );
 }
 
-function Resource({ name, url, cn, fav, note, textColor }) {
+function Resource({ name, url, cn, fav, note, textColor, ring }) {
   return (
-    <div className="p-2 my-2 ml-10 bg-white/60 dark:bg-slate-800/90 ring-1 ring-slate-300 rounded-xl w-fit">
+    <div
+      className={
+        "w-4/5 p-2  ml-2 bg-white/60 dark:bg-slate-800/90 ring-1  rounded-xl " +
+        ring
+      }
+    >
       <div className="flex items-center gap-2 ">
         {fav ? (
           <FaStar className="text-sky-600" />
@@ -395,18 +399,18 @@ function Resource({ name, url, cn, fav, note, textColor }) {
           </div>
         </a>
       </div>
-      {note && (
+      {/* {note && (
         <div className="flex items-center gap-2 ml-12 cursor-default ">
           <BsArrow90DegDown className="-rotate-90 -translate-y-1 text-sky-900 dark:text-sky-700" />
           <p className="text-sm text-slate-500 dark:text-slate-200">{note}</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
 function ResourceCard({ name, url, cn, fav, note, textColor }) {
   return (
-    <div className="w-52 h-auto min-h-[100%] p-2 transition shadow-xl bg-white/90 dark:bg-slate-800/90 rounded-xl hover:scale-105 active:scale-90 hover:ring-4 ring-sky-400 cursor-alias flex flex-col items-center relative">
+    <div className=" sm: w-full md:w-52 h-auto min-h-[100%] p-2 transition shadow-xl bg-white/90 dark:bg-slate-800/90 rounded-xl hover:scale-105 active:scale-90 hover:ring-4 ring-sky-400 cursor-alias flex flex-col items-center relative">
       <a
         target="_blank"
         rel="noopener noreferrer"
