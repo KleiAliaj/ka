@@ -91,7 +91,7 @@ export default function Index({ allPosts }) {
               <SocialIcons />
             </section>
           </TextSection>
-          <div className="md:w-1/2 sm:h-[18em] sm:w-full md:h-[36em] rounded-lg drop-shadow-xl relative  ">
+          <div className="md:w-1/2 sm:h-[18em] sm:w-full md:h-[36em] rounded-lg drop-shadow-xl relative">
             <MotionImage>
               <div className="absolute z-10 w-1/5 bg-teal-300/70 h-2/5 rounded-3xl dark:bg-teal-200/70 blur-3xl left-40 dot top-16"></div>
               <div className="absolute z-10 w-2/5 bg-indigo-200/70 h-2/5 rounded-full dark:bg-indigo-300/70 blur-2xl right-28 top-[12rem] dot2 bounds"></div>
@@ -127,7 +127,7 @@ export default function Index({ allPosts }) {
                   projects, from small vanilla javascript projects to full stack
                   web applications in Next.js.
                 </p>
-                <MotionText delay={0.2}>
+                <MotionText xPx={0} yPx={50} delay={0.4}>
                   <p className="mt-5 text-center">Favorite Technologies</p>
                   <div className="flex items-center justify-center w-full gap-2">
                     {favTech.map((tech, index) => {

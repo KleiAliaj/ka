@@ -29,7 +29,7 @@ export default function Footer() {
       {/* <div class="header"> */}
       {/* <div className="absolute w-full -top-[240px] "> */}
 
-      <div className="absolute bottom-0 sm:w-[100vw] md:w-full -z-10 overflow-hidden">
+      <div className="absolute bottom-0 sm:w-[100vw] md:w-full -z-10 !overflow-hidden">
         <svg
           className="waves"
           xmlns="http://www.w3.org/2000/svg"

@@ -42,8 +42,6 @@ $amount: 25;
   }
 }
 
-
-
 .atropos {
   position: relative;
   display: block;
@@ -97,7 +95,11 @@ $amount: 25;
   top: -50%;
   width: 200%;
   height: 200%;
-  background-image: radial-gradient(circle at 50%, rgba(255, 255, 255, 0.25), transparent 50%);
+  background-image: radial-gradient(
+    circle at 50%,
+    rgba(255, 255, 255, 0.25),
+    transparent 50%
+  );
   z-index: 0;
 }
 .atropos-rotate {
