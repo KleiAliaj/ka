@@ -109,12 +109,12 @@ function CubeWaveSketch() {
     window.addEventListener("resize", handleWindowSizeChange);
     codeCanvasWidth = frame.current.clientWidth;
 
-    // if (sketch2Playing) {
-    const p5Instance = new p5(sketch, p5ContainerRef.current);
-    mobileScale = size.width < 700 ? true : false;
+    if (sketch2Playing) {
+      const p5Instance = new p5(sketch, p5ContainerRef.current);
+      mobileScale = size.width < 700 ? true : false;
 
-    // console.log(")))))))))CREATED CANVAS(((((((((((");
-    // }
+      // console.log(")))))))))CREATED CANVAS(((((((((((");
+    }
 
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
@@ -129,7 +129,7 @@ function CubeWaveSketch() {
   return (
     <div
       ref={frame}
-      className="relative w-full mt-4 h-[400px] scale-100 dark:bg-black bg-white shadow-xl rounded-xl shadow-sky-600/30"
+      className="w-full h-[400px] shadow-sky-600/30 shadow-xl rounded-xl dark:bg-black bg-white mt-4 scale-100 relative"
     >
       <motion.div
         initial={{ opacity: 0 }}
