@@ -6,6 +6,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
 import Head from "next/head";
+import { FaExpandAlt, FaExpandArrowsAlt } from "react-icons/fa";
 
 export default function AI({ aiImages }) {
   const [pics, setPics] = React.useState(aiImages);
@@ -57,10 +58,12 @@ export default function AI({ aiImages }) {
 
 function AIImage({ index, pic }) {
   const [imageLoading, setImageLoading] = React.useState(false);
+  const [clicked, setClicked] = React.useState(false);
   let textSize = pic.name.length > 200 ? "  !text-xs" : " !text-base";
   React.useEffect(() => {
     setImageLoading(true);
   }, []);
+
   return (
     <div
       key={index}
@@ -79,19 +82,39 @@ function AIImage({ index, pic }) {
               "
           />
         </div>
-      ) : (
-        <div className="absolute top-0 z-50 w-full h-full bg-slate-800/70 rounded-xl  opacity-0 group-hover:!opacity-100 transition duration-300  justify-center items-center p-2 flex flex-col ">
-          <p
-            className={
-              " text-white  opacity-0 group-hover:!opacity-100 duration-200  " +
-              textSize
-            }
-          >
+      ) : null}
+      {clicked && (
+        <div
+          className="absolute top-0 z-50 flex flex-col items-center justify-center w-full h-full p-2 transition duration-300 select-none bg-slate-800/70 rounded-xl fade-effect-turbo"
+          onClick={() => {
+            setClicked(!clicked);
+          }}
+        >
+          <p className={" text-white    " + textSize}>
             {pic.name.charAt(0).toUpperCase() + pic.name.slice(1)}
           </p>
-          <div className="  text-white !text-xs  opacity-0 group-hover:!opacity-100 duration-200  bg-sky-300/40 rounded-full px-2 py-1">
+          <div
+            className={
+              "absolute top-2 left-2  text-white !text-xs    duration-200   rounded-full px-2 py-1 " +
+              (pic.algorithm === "DALLE-2"
+                ? " bg-sky-300/70"
+                : pic.algorithm === "MidJourney"
+                ? " bg-green-400/70"
+                : " bg-violet-400/70")
+            }
+          >
             {pic.algorithm}
           </div>
+          <button
+            className="absolute text-white top-2 right-2"
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.open(pic.image.url, "_blank");
+              }
+            }}
+          >
+            <FaExpandAlt />
+          </button>
         </div>
       )}
       {/* <p>{pic.name.length}</p> */}
@@ -108,9 +131,10 @@ function AIImage({ index, pic }) {
           setImageLoading(false);
         }}
         onClick={() => {
-          if (typeof window !== "undefined") {
-            window.open(pic.image.url, "_blank");
-          }
+          setClicked(!clicked);
+          setTimeout(() => {
+            setClicked(false);
+          }, 7000);
         }}
       />
     </div>
