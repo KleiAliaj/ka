@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex flex-col items-center lg:flex-row">
         <div className="flex flex-col items-center w-full sm:gap-1 md:gap-2 bg-clear-pl4">
           <SocialIcons small />
-          <p className="text-[11px] text-slate-300">
+          <p className="text-xs text-slate-300">
             Copyright © {date}{" "}
             <Link href={"/about"}>
               <a className="cursor-pointer hover:underline">Ty Fiero</a>
@@ -19,7 +19,7 @@ export default function Footer() {
             href="https://www.termsfeed.com/live/666072e9-81d8-43ef-8a29-7547a11f7700"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] text-slate-300 mb-2 hover:underline hover:text-white"
+            className="text-xs text-slate-300 mb-2 hover:underline hover:text-white"
           >
             Privacy Policy
           </a>
