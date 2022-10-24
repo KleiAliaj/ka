@@ -102,6 +102,10 @@ const createSitemap = (posts) => {
     <priority>0.80</priority>
 </url>
 <url>
+    <loc>https://www.tyfiero.com/about/travel</loc>
+    <priority>0.80</priority>
+</url>
+<url>
     <loc>https://www.tyfiero.com/blog</loc>
     <priority>0.90</priority>
 </url>
