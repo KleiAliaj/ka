@@ -19,7 +19,7 @@ function Books({ books }) {
             <h2 className="mb-3 heading-md">Life Changing Books</h2>
             <div className="flex flex-wrap justify-center w-full h-full gap-4">
               {books.best.map((book, index) => {
-                console.log(book);
+                // console.log(book);
                 return (
                   <BookCard
                     key={index}
