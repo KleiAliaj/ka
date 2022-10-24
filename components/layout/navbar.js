@@ -4,39 +4,109 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { useTheme } from "next-themes";
-import { FaRegUser } from "react-icons/fa";
-import { TbCode, TbFileText, TbHome2, TbMail, TbPalette } from "react-icons/tb";
+import {
+  FaBook,
+  FaCaretDown,
+  FaGlobeAmericas,
+  FaRegUser,
+  FaRobot,
+} from "react-icons/fa";
+import {
+  TbCode,
+  TbDeviceLaptop,
+  TbFileText,
+  TbFolders,
+  TbHome2,
+  TbLink,
+  TbMail,
+  TbPalette,
+} from "react-icons/tb";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 function Navbar() {
   const prefersReducedMotion = useReducedMotion();
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
+  const [isReady, setIsReady] = React.useState(false);
   const [selected, setSelected] = React.useState("home");
   const router = useRouter();
-
+  console.log(selected);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const items = [
-    { name: "home", icon: <TbHome2 className="scale-110 fade-effect-quick" /> },
+    {
+      name: "home",
+      icon: <TbHome2 className="scale-110 fade-effect-quick" />,
+      sub: false,
+    },
 
-    { name: "code", icon: <TbCode className="scale-110 fade-effect-quick" /> },
+    {
+      name: "code",
+      icon: <TbCode className="scale-110 fade-effect-quick" />,
+      sub: true,
+      subLinks: [
+        {
+          name: "Projects",
+          icon: <TbFolders />,
+          path: "/code/projects",
+        },
+        {
+          name: "AI",
+          icon: <FaRobot />,
+          path: "/code/ai",
+        },
+      ],
+    },
     {
       name: "art",
       icon: <TbPalette className="scale-110 fade-effect-quick" />,
+      sub: true,
+      subLinks: [
+        {
+          name: "Code Art",
+          icon: <TbDeviceLaptop />,
+          path: "/art/generative",
+        },
+        {
+          name: "AI Art",
+          icon: <FaRobot />,
+          path: "/art/ai-art",
+        },
+      ],
+    },
+
+    {
+      name: "about",
+      icon: <FaRegUser className="scale-110 fade-effect-quick" />,
+      sub: true,
+      subLinks: [
+        {
+          name: "Links",
+          icon: <TbLink />,
+          path: "/about/links",
+        },
+        {
+          name: "Books",
+          icon: <FaBook />,
+          path: "/about/books",
+        },
+        {
+          name: "Travel",
+          icon: <FaGlobeAmericas />,
+          path: "/about/travel",
+        },
+      ],
     },
     {
       name: "blog",
       icon: <TbFileText className="scale-110 fade-effect-quick" />,
-    },
-    {
-      name: "about",
-      icon: <FaRegUser className="scale-110 fade-effect-quick" />,
+      sub: false,
     },
     {
       name: "contact",
       icon: <TbMail className="scale-110 fade-effect-quick" />,
+      sub: false,
     },
   ];
 
@@ -102,8 +172,22 @@ function Navbar() {
   };
   let postSlice = router.asPath.slice(0, 6);
 
+  // const handleStart = () => {
+  //   if (isReady) {
+  //     setIsReady(false);
+  //     console.log("not ready");
+  //   }
+  // };
+  // const handleStop = () => {
+  //   if (!isReady) {
+  //     setIsReady(true);
+  //     console.log("ready");
+  //   }
+  // };
   // console.log(postSlice);
   React.useEffect(() => {
+    // router.events.on("routeChangeStart", handleStart);
+    // router.events.on("routeChangeComplete", handleStop);
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
     } else if (router.asPath === "/code" || postSlice === "/code/") {
@@ -199,15 +283,20 @@ function Navbar() {
               variants={menuVariant}
               initial={"menuStart"}
               animate={"menuStop"}
-              className="z-[120] flex items-center mt-4 md:gap-1 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-10 f1"
+              className="z-[120] flex items-center mt-4 md:gap-3 sm:gap-10 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-10 f1"
             >
               {items.map((item) => (
                 <MenuItem
                   key={item.name}
                   name={item.name}
                   icon={item.icon}
+                  sub={item.sub}
+                  subLinks={item.subLinks}
                   selected={selected}
+                  setSelected={setSelected}
                   handleClick={handleClick}
+                  isMobile={isMobile}
+                  isReady={isReady}
                 />
               ))}
               <li className="sm:pl-0 md:pl-2">{renderThemeChanger()}</li>
@@ -219,8 +308,25 @@ function Navbar() {
   );
 }
 
-function MenuItem({ selected, handleClick, name, icon }) {
+function MenuItem({
+  selected,
+  handleClick,
+  name,
+  icon,
+  sub,
+  subLinks,
+  isMobile,
+  isReady,
+  setSelected,
+}) {
   const prefersReducedMotion = useReducedMotion();
+  const [clicked, setClicked] = React.useState(false);
+  const router = useRouter();
+  React.useEffect(() => {
+    if (selected) {
+      setClicked(false);
+    }
+  }, [selected]);
 
   const itemVariant = {
     menuStart: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.4 },
@@ -235,22 +341,103 @@ function MenuItem({ selected, handleClick, name, icon }) {
     },
   };
   return (
-    <motion.li variants={itemVariant}>
-      <Link href={`/${name === "home" ? "" : name}`}>
-        <a
-          className={
-            "flex gap-2 items-center capitalize bg-transparent transition duration-500 rounded-2xl  py-1 px-2 " +
-            (selected === name
-              ? " !bg-sky-500 font-bold sm:text-5xl md:text-xl  text-white "
-              : " md:hover:text-sky-400    sm:text-4xl md:text-xl text-sky-900 dark:text-sky-50  ")
+    <motion.li
+      variants={itemVariant}
+      className={"relative transition duration-1000 "}
+      style={{
+        transition: "all 2.5s ease;",
+        marginBottom:
+          isMobile && sub && clicked ? `${40 * subLinks.length}px` : "",
+      }}
+      onMouseEnter={() => {
+        setClicked(true);
+      }}
+      onMouseLeave={() => {
+        setClicked(false);
+      }}
+    >
+      {/* <Link href={`/${name === "home" ? "" : name}`}> */}
+      <a
+        className={
+          "flex gap-1 cursor-pointer  items-center capitalize bg-transparent  transition duration-500 rounded-2xl w-fit   sm:!z-100 md:!z-20 shadow-sky-700/40 sm:text-4xl  md:text-lg " +
+          (selected === name
+            ? " !bg-sky-500 font-bold  shadow-md  text-white py-1 "
+            : " md:hover:text-sky-400    text-sky-900 dark:text-sky-50 dark:shadow-sky-300/40  hover:bg-white dark:hover:bg-slate-800 hover:shadow-md ") +
+          (name.length < 4 ? " px-4" : " px-2")
+        }
+        onClick={() => {
+          //When clicked, I need it to set selected if it isnt already.
+          //also needs to navigate to the page if not selected
+          //if selected and submenu open, navigate, otherwise open menu
+
+          if (selected !== name) {
+            setSelected(name);
+            router.push(`/${name === "home" ? "" : name}`);
+            //handleClick deals with mobile styling of the menu
+            handleClick();
           }
-          href="#"
-          onClick={handleClick}
-        >
-          {selected === name && icon}
-          {name}
-        </a>
-      </Link>
+          // else {
+          // if (clicked) {
+          //   setClicked(false);
+          //   router.push(`/${name === "home" ? "" : name}`);
+          //   //handleClick deals with mobile styling of the menu
+          //   handleClick();
+          // } else {
+          //   setClicked(true);
+          // }
+          // }
+        }}
+      >
+        <div className={sub ? " ml-0" : ""}> {icon}</div>
+        {name}
+        {sub && (
+          <FaCaretDown
+            className={
+              "transition-transform duration-500 scale-75  " +
+              (clicked ? " rotate-180" : "") +
+              (selected === name ? " ml-0" : " ml-0")
+            }
+          />
+        )}
+      </a>
+      {/* </Link> */}
+      <AnimatePresence>
+        {sub && clicked ? (
+          <motion.div
+            // layout
+            exit={{ opacity: 0, top: "0rem" }}
+            initial={{ opacity: 0, top: "0rem" }}
+            animate={{ opacity: 1, top: isMobile ? "1.5rem" : "0.75rem" }}
+            transition={{
+              duration: isMobile ? 0.2 : selected === name ? 0.4 : 0.4,
+            }}
+            className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40  left-[3px] pt-5  rounded-b-lg  w-[95%] h-fit bg-white dark:bg-slate-900 !-z-10"
+          >
+            {sub &&
+              subLinks.map((link, index) => {
+                return (
+                  <Link href={link.path} key={index}>
+                    <a
+                      className={
+                        "px-1 my-2 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
+                        (router.asPath === link.path
+                          ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
+                          : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
+                      }
+                      onClick={() => {
+                        setClicked(false);
+                        handleClick();
+                      }}
+                    >
+                      <div>{link.icon}</div>
+                      {link.name}
+                    </a>
+                  </Link>
+                );
+              })}
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </motion.li>
   );
 }
