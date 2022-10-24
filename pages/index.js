@@ -118,8 +118,7 @@ export default function Index({ allPosts }) {
             <MotionText>
               <div className="text-box sm:mx-0">
                 <p>
-                  I&apos;m a developer with a passion for building things that
-                  are useful. My journey in software development started during
+                  I&apos;m a developer with a passion for creating building useful digital experiences. My journey in software development started during
                   the covid lock down of 2020. I began taking online courses for
                   web development, starting with basic HTML and CSS. In May of
                   2021 I left my job as a public health microbiologist to learn
