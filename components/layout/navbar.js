@@ -31,7 +31,6 @@ function Navbar() {
   const [isReady, setIsReady] = React.useState(false);
   const [selected, setSelected] = React.useState("home");
   const router = useRouter();
-  console.log(selected);
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const items = [
@@ -173,22 +172,7 @@ function Navbar() {
   let postSlice = router.asPath.slice(0, 6);
   let artSlice = router.asPath.slice(0, 4);
 
-  // const handleStart = () => {
-  //   if (isReady) {
-  //     setIsReady(false);
-  //     console.log("not ready");
-  //   }
-  // };
-  // const handleStop = () => {
-  //   if (!isReady) {
-  //     setIsReady(true);
-  //     console.log("ready");
-  //   }
-  // };
-  console.log(postSlice);
   React.useEffect(() => {
-    // router.events.on("routeChangeStart", handleStart);
-    // router.events.on("routeChangeComplete", handleStop);
     if (router.asPath === "/home" || router.asPath === "/") {
       setSelected("home");
     } else if (router.asPath === "/code" || postSlice === "/code/") {
@@ -284,7 +268,7 @@ function Navbar() {
               variants={menuVariant}
               initial={"menuStart"}
               animate={"menuStop"}
-              className="z-[120] flex items-center mt-4 md:gap-2 sm:gap-0 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-10 f1"
+              className="z-[120] flex items-center mt-4 md:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-10 f1"
             >
               {items.map((item) => (
                 <MenuItem
@@ -351,12 +335,9 @@ function MenuItem({
         "flex flex-col items-center    " + (sub ? "  rounded-md" : " ")
       }
     >
-      {name !== "home" && (
-        <motion.hr
-          variants={itemVariant}
-          className="w-[40vw] border-1 rounded-full border-slate-700 my-6 sm:block md:hidden"
-        />
-      )}
+      {/* {name !== "home" && (
+        <motion.hr className="w-[40vw] border-1 rounded-full border-slate-700 my-0 sm:block md:hidden" />
+      )} */}
       <li
         className={
           "relative group flex gap-1 cursor-pointer  items-center capitalize bg-transparent  transition duration-500 rounded-2xl w-fit   sm:!z-100 md:!z-20 shadow-sky-700/40 sm:text-4xl  md:text-lg " +
@@ -397,7 +378,7 @@ function MenuItem({
                 handleClick();
               }}
             >
-              <div className="sm:hidden md:block"> {icon}</div>
+              <div className=""> {icon}</div>
               {name}
             </a>
           </Link>
