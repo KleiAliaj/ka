@@ -129,3 +129,141 @@ $amount: 25;
 [data-atropos-offset][data-atropos-opacity] {
   transition-property: transform, opacity;
 }
+
+.mobile-body {
+  position: relative;
+  flex-shrink: 0;
+  width: 35.6rem;
+  height: 72.2rem;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  // background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  box-shadow: none;
+  transition: all 1s;
+
+  .layer-1 {
+    $offset: 0;
+    position: absolute;
+    left: $offset;
+    right: $offset;
+    top: $offset;
+    bottom: $offset;
+    border: 0.4rem solid #484848;
+    border-radius: 6rem;
+  }
+  .layer-2 {
+    $offset: 0.3rem;
+    position: absolute;
+    left: $offset;
+    right: $offset;
+    top: $offset;
+    bottom: $offset;
+    border: 1.6rem solid #000000;
+    border-radius: 5.6rem;
+  }
+
+  .top-bar {
+    width: 17.3rem;
+    height: 2.8rem;
+    background-color: #000000;
+    position: absolute;
+    top: 1.7rem;
+    left: 9.1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+  .camera {
+    position: absolute;
+    bottom: 1.1rem;
+    right: 4.5rem;
+    right: 4.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(191, 236, 249);
+    border-radius: 50%;
+    border: 0.2rem solid #1e1f22;
+  }
+  .speaker {
+    position: absolute;
+    bottom: 1.3rem;
+    right: 6.5rem;
+    width: 4rem;
+    height: 0.6rem;
+    background-color: #696969;
+    border-radius: 0.2rem;
+  }
+  .button {
+    width: 0.3rem;
+    height: 2.5rem;
+    background-color: #484848;
+    position: absolute;
+    left: -0.2rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border: 0.1rem solid rgba(black, 0.1);
+    border-right: none;
+
+    &.silent {
+      top: 9.8rem;
+    }
+    &.volume-up {
+      top: 15rem;
+      height: 5rem;
+    }
+    &.volume-down {
+      top: 21.6rem;
+      height: 5rem;
+    }
+    &.power {
+      top: 16.9rem;
+      height: 5rem;
+      right: -0.3rem;
+      left: auto;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-content {
+    width: 100%;
+    border-radius: 0;
+  }
+  .mobile-body {
+    transform: scale(0.65) !important;
+
+    &:hover {
+      transform: scale(0.6) !important;
+    }
+  }
+  .gallery-content__img {
+    &:last-child {
+      margin-right: 2rem !important;
+    }
+  }
+}
+
+@media (max-height: 800px) {
+  .mobile-body {
+    transform: scale(0.77) !important;
+
+    &:hover {
+      transform: scale(0.68) !important;
+    }
+  }
+}
+
+@media (max-height: 630px) {
+  .mobile-body {
+    transform: scale(0.53) !important;
+
+    &:hover {
+      transform: scale(0.48) !important;
+    }
+  }
+}
