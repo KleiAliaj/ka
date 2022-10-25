@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaBox, FaImage, FaKeyboard } from "react-icons/fa";
+import { FaBox, FaImage, FaKeyboard, FaPhone } from "react-icons/fa";
 
 function IndexDevLab() {
   return (
@@ -35,10 +35,10 @@ function IndexDevLab() {
                 <FaKeyboard />
               </a>
             </Link>
-            <Link href={"/devlab/pics"}>
+            <Link href={"/devlab/iphone"}>
               <a className="button-1">
-                Book Pics
-                <FaImage />
+                Iphone AI messenger
+                <FaPhone />
               </a>
             </Link>
           </div>
