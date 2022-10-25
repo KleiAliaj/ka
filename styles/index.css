@@ -463,3 +463,26 @@ svg * {
 .lock-scroll {
   overflow: hidden;
 }
+
+.bub1 {
+  animation: color-change 1s infinite;
+}
+.bub2 {
+  animation: color-change 1s infinite;
+  animation-delay: 0.2s;
+}
+.bub3 {
+  animation: color-change 1s infinite;
+  animation-delay: 0.4s;
+}
+@keyframes color-change {
+  0% {
+    color: #cfcfcf;
+  }
+  50% {
+    color: #9e9ea1;
+  }
+  100% {
+    color: #cfcfcf;
+  }
+}
