@@ -77,7 +77,7 @@ function Navbar() {
 
     {
       name: "about",
-      icon: <FaRegUser className="scale-110 fade-effect-quick" />,
+      icon: <FaRegUser className="scale-100 fade-effect-quick" />,
       sub: true,
       subLinks: [
         {
@@ -285,9 +285,7 @@ function Navbar() {
                 />
               ))}
 
-              <li className="sm:pl-0 sm:mt-2 md:pl-2">
-                {renderThemeChanger()}
-              </li>
+              <li className="sm:pl-0  md:pl-2">{renderThemeChanger()}</li>
             </motion.ul>
           </>
         )}
@@ -438,7 +436,7 @@ function MenuItem({
               <Link href={link.path} key={index}>
                 <a
                   className={
-                    "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm underline  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
+                    "px-2 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm underline  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
                     (router.asPath === link.path
                       ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
                       : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
