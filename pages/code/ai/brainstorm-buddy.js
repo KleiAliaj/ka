@@ -1,14 +1,16 @@
 import React from "react";
 import { FaBatteryQuarter, FaWifi } from "react-icons/fa";
 import { IoCellular } from "react-icons/io5";
-import { AnimatePresence, motion } from "framer-motion";
-import MessageScreen from "./MessageScreen";
-import HomeScreen from "./homeScreen";
+import { motion } from "framer-motion";
+import MessageScreen from "@/components/ai/MessageScreen";
+import HomeScreen from "@/components/ai/homeScreen";
 function Iphone() {
   const [screen, setScreen] = React.useState({
     name: "Innovation AI",
     icon: "IA",
     description: "An AI to help you come up with innovative new ideas.",
+    intro:
+      "Hi there! I'm an trained AI that helps you make great ideas through questions and conversation. Ask me anything! Though, questions about new ideas and innovation are what I'm best at 😁",
   });
   const [move, setMove] = React.useState(false);
   let time = new Date().toLocaleTimeString("en-US", {
