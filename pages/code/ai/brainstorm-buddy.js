@@ -4,6 +4,7 @@ import { IoCellular } from "react-icons/io5";
 import { motion } from "framer-motion";
 import MessageScreen from "@/components/ai/MessageScreen";
 import HomeScreen from "@/components/ai/homeScreen";
+import Link from "next/link";
 function Iphone() {
   const [screen, setScreen] = React.useState({
     name: "Innovation AI",
@@ -11,6 +12,7 @@ function Iphone() {
     description: "An AI to help you come up with innovative new ideas.",
     intro:
       "Hi there! I'm an trained AI that helps you make great ideas through questions and conversation. Ask me anything! Though, questions about new ideas and innovation are what I'm best at 😁",
+    img: "/assets/other/projects/buddy/blue.webp",
   });
   const [move, setMove] = React.useState(false);
   let time = new Date().toLocaleTimeString("en-US", {
@@ -65,24 +67,11 @@ function Iphone() {
                 </p>
               </li>
             </ol>
-            <h2 className="heading-sm text-left mt-5">What is this?</h2>
-            <p>
-              This is a GPT-3 experiment I made to simulate a knowledgable
-              friend to brainstorm with. The AI is designed to ask you questions
-              about the ideas you present it, in order to challenge your
-              assumptions and create better ideas. I&apos;ve found that my best
-              ideas come when talking to friends, making ideas by myself is
-              tougher. But I can&apos;t always talk to a buddy to brainstorm, so
-              I made this!{" "}
-            </p>
-            <br />
-            <p>
-              I&apos;m pretty happy with how it turned out. I could have made it
-              with a simple UI, but emulating an Iphone sounded really fun in
-              the moment, so here we are! Really made me appreciate how
-              intricate IOS UI and animations are. Took me longer than I thought
-              it would to recreate the messages app.
-            </p>
+            <Link href={"/code/projects/brainstorm-buddy-project"}>
+              <a className="button-1 w-2/3 mx-auto mt-5">
+                More about this Project
+              </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center justify-start w-full h-fit  md:scale-[60%] sm:scale-50 md:-translate-y-[14rem] sm:-translate-y-[18rem]">
@@ -126,7 +115,7 @@ function Iphone() {
             <div className="layer-2 z-0 "></div>
             <div className="layer-1 "></div>
             <div className="absolute   top-9 left-16 ml-2">
-              <p className="text-lg">{formattedTime}</p>
+              <p className="text-lg">{formattedTime.slice(0, -2)}</p>
             </div>
             <div className="absolute  flex gap-2 top-9 right-16 text-xl ml-2 mt-1">
               <IoCellular />
