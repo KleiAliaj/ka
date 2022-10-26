@@ -87,7 +87,7 @@ function Iphone() {
         </div>
         <div className="flex flex-col items-center justify-start w-full h-fit  md:scale-[60%] sm:scale-50 md:-translate-y-[14rem] sm:-translate-y-[18rem]">
           {/* Start Iphone */}
-          <section className="mobile-body  relative  pointer-events-none !overflow-hidden">
+          <section className="mobile-body  relative  pointer-events-none !overflow-clip">
             <div
               className="absolute top-0 pt-2  backdrop-blur-md
   bg-slate-200/80 dark:bg-slate-900/80 border-b-2 border-slate-300/50 dark:border-slate-700/50 h-40 rounded-t-[6em] w-full "
