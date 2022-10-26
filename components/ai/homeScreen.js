@@ -4,12 +4,12 @@ import { IoIosArrowBack } from "react-icons/io";
 import ScrollContainer from "react-indiana-drag-scroll";
 
 function HomeScreen({ setScreen, formattedTime, setMove }) {
-  //   let date = currentdate.getHours() + ":" + currentdate.getMinutes();
   const contacts = [
     {
       name: "Innovation AI",
       icon: "IA",
       description: "An AI to help you come up with innovative new ideas.",
+      img: "/assets/other/projects/buddy/blue.webp",
       intro:
         "Hi there! I'm an trained AI that helps you make great ideas through questions and conversation. Ask me anything! Though, questions about new ideas and innovation are what I'm best at 😁",
     },
@@ -17,6 +17,7 @@ function HomeScreen({ setScreen, formattedTime, setMove }) {
       name: "Business AI",
       icon: "BA",
       description: "An AI to help you solve business problems",
+      img: "/assets/other/projects/buddy/pink.webp",
       intro:
         "Hi there! I'm an trained business AI that work through business problems through questions and conversation. I am here to solve your business issues, and maybe have a great conversation in the process!",
     },
@@ -40,15 +41,15 @@ function HomeScreen({ setScreen, formattedTime, setMove }) {
                     icon: entry.icon,
                     description: entry.description,
                     intro: entry.intro,
+                    img: entry.img,
                   });
                   setMove(true);
                 }}
               >
-                <div className="rounded-full flex justify-center bg-slate-400 p-4 h-16 w-16">
-                  {" "}
-                  <p className="text-white text-3xl">{entry.icon}</p>
+                <div className="rounded-full flex justify-center  h-16 w-16">
+                  <img src={entry.img} alt="" />
                 </div>
-                <div className="flex flex-col border-b-2 w-[25rem] max-w-full">
+                <div className="flex flex-col border-b-2 dark:border-slate-700 w-[25rem] max-w-full">
                   <div className="flex w-full justify-between">
                     <p className="text-2xl">{entry.name}</p>
                     <div className="flex gap-2 items-center">
@@ -72,7 +73,7 @@ function HomeScreen({ setScreen, formattedTime, setMove }) {
           <FaRegEdit className="text-3xl text-sky-400 " />
         </div>
       </div>
-      <div className="w-[27.5rem] mx-16 h-10 z-10 mt-[7.2rem] flex justify-between items-center bg-slate-300 rounded-xl">
+      <div className="w-[27.5rem] mx-16 h-10 z-10 mt-[7.2rem] flex justify-between items-center bg-slate-300 dark:bg-slate-700 rounded-xl">
         <div className="flex justify-between px-2 w-full ">
           <div className="flex gap-1 items-center  ">
             <FaSearch className="text-2xl text-slate-500/70" />
