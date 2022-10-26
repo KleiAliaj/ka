@@ -264,7 +264,7 @@ function MessageScreen({ setMove, screen, move }) {
         <div className="flex flex-col items-center mt-1 ">
           <div className="rounded-full flex justify-center bg-slate-400 items-center h-12 w-12">
             {" "}
-            <button
+            {/* <button
               className={
                 "absolute pointer-events-auto transition bottom-[10px] right-12  text-white f2 text-2xl rounded-full px-2 py-2 " +
                 (input.length > 0 ? " bg-sky-400" : " bg-slate-400")
@@ -291,7 +291,7 @@ function MessageScreen({ setMove, screen, move }) {
               }}
             >
               <FaArrowUp />
-            </button>
+            </button> */}
             <p className="text-white text-2xl">{screen.icon}</p>
           </div>
           <div className="flex items-center gap-0 pl-2">
