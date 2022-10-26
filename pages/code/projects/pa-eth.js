@@ -22,7 +22,7 @@ function ModalPAeth() {
         </Link>
         <div
           className={
-            "flex flex-col items-center sm:!px-3 md:!px-10 !pt-5 !pb-10 grow-effect overflow-auto"
+            "flex flex-col items-center sm:!px-3 md:!px-10 !pt-5 !pb-10 grow-effect overflow-auto w-full"
           }
         >
           <div className="flex justify-center w-full fade-effect">
