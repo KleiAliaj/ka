@@ -4,9 +4,8 @@ import axios from "axios";
 import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import Link from "next/link";
 import Head from "next/head";
-import { experiments } from "@/components/ai/aiArray";
+import AiExperiments from "@/components/ai/aiExperiments";
 export default function AI({ aiImages }) {
   const [pics, setPics] = React.useState(aiImages);
 
@@ -21,41 +20,10 @@ export default function AI({ aiImages }) {
           AI Experiments
         </h2>
 
-        <div className="flex flex-col items-start mt-5 sm:w-full md:w-2/3">
-          <div className="flex flex-wrap justify-center w-full gap-3">
-            {experiments.map((experiment) => (
-              <Experiment
-                key={experiment.name}
-                name={experiment.name}
-                description={experiment.description}
-                path={experiment.path}
-                imgSrc={experiment.imgSrc}
-              />
-            ))}
-          </div>
+        <div className="flex flex-col items-start mt-5 sm:px-10 sm:w-full md:w-2/3">
+          <AiExperiments />
         </div>
       </div>
     </>
-  );
-}
-
-function Experiment({ path, imgSrc, name, description }) {
-  return (
-    <Link href={path}>
-      <a className="flex items-center px-2 py-1 transition sm:w-full md:w-1/2 ring-2 ring-sky-400 hover:ring-4 hover:scale-110 rounded-xl active:scale-95 bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 dark:from-sky-700 dark:via-sky-800 dark:to-black">
-        <div className="flex flex-col justify-between items-between">
-          <h4 className="heading-sm !text-left">{name}</h4>
-          <p>{description}</p>
-        </div>
-        <picture>
-          <source srcSet={imgSrc} type="image/png" />
-          <img
-            src={imgSrc}
-            alt="logo"
-            className="object-cover group-hover:scale-105 h-[10em] w-full transition duration-500 rounded-lg"
-          />
-        </picture>
-      </a>
-    </Link>
   );
 }

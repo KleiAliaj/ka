@@ -14,6 +14,7 @@ import { experiments } from "@/components/ai/aiArray";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionImage from "@/components/etc/animation/MotionImage";
+import AiExperiments from "@/components/ai/aiExperiments";
 const CubeWaveSketch = dynamic(
   () => import("../../components/projects/art/CubeWaveSketch"),
   {
@@ -206,7 +207,11 @@ function CodeIndex() {
         <DualSection invert>
           <TextSection title="" headerClassNames="hidden">
             <MotionHeader invert>
-              <h2 className={"font-bold heading-md "}>AI Experiments</h2>
+              <Link href={"/code/ai"}>
+                <a>
+                  <h2 className={"font-bold heading-md  "}>AI Experiments</h2>
+                </a>
+              </Link>
             </MotionHeader>
             <MotionText invert>
               <div className="text-box">
@@ -225,19 +230,7 @@ function CodeIndex() {
           </TextSection>
 
           <div className="flex items-center justify-center w-full h-full mt-11">
-            <MotionImage>
-              <div className="flex flex-wrap justify-center w-full gap-3">
-                {experiments.map((experiment) => (
-                  <Experiment
-                    key={experiment.name}
-                    name={experiment.name}
-                    description={experiment.description}
-                    path={experiment.path}
-                    imgSrc={experiment.imgSrc}
-                  />
-                ))}
-              </div>
-            </MotionImage>
+            <AiExperiments />
           </div>
         </DualSection>
       </div>
@@ -246,26 +239,3 @@ function CodeIndex() {
 }
 
 export default CodeIndex;
-
-function Experiment({ path, imgSrc, name, description }) {
-  return (
-    <Link href={path}>
-      <a className="flex items-center px-2 py-1 transition sm:w-full md:w-1/3 ring-2 ring-sky-400 hover:ring-4 hover:scale-105 rounded-xl active:scale-95 bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 dark:from-sky-700 dark:via-sky-800 dark:to-black">
-        <div className="flex flex-col justify-between items-between">
-          <h4 className="heading-sm !text-left">{name}</h4>
-          <p>{description}</p>
-        </div>
-        <div className="flex items-center w-2/3 h-full">
-          <picture>
-            <source srcSet={imgSrc} type="image/png" />
-            <img
-              src={imgSrc}
-              alt="logo"
-              className="object-cover transition duration-500 rounded-lg group-hover:scale-105"
-            />
-          </picture>
-        </div>
-      </a>
-    </Link>
-  );
-}
