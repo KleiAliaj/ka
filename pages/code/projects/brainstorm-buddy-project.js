@@ -40,7 +40,11 @@ function Brainstorm() {
               talking to friends, making ideas by myself is tougher. But I
               can&apos;t always talk to a buddy to brainstorm, so I made this!
               It works surprisingly well, I honestly wasn&apos;t expecting it to
-              perform as well as it does. Give it a try, and{" "}
+              perform as well as it does.{" "}
+              <Link href={"/code/ai/brainstorm-buddy"}>
+                <a className="text-sky-400 underline">Give it a try</a>
+              </Link>
+              , and{" "}
               <Link href={"/contact"}>
                 <a className="text-sky-400 underline">let me know</a>
               </Link>{" "}

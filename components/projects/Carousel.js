@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -58,16 +59,20 @@ function Carousel({ imgs, altText }) {
 
 const ImageSlide = ({ url, children, altText = "" }) => {
   return (
-    <div className="relative flex flex-col items-center h-auto w-fit fade-effect-quick ">
-      <picture>
-        <img
-          key={url}
-          src={url}
-          style={{ animation: "fadeIn  .8s" }}
-          alt={altText}
-          className="rounded-lg  max-h-[25em] shadow-lg "
-        />
-      </picture>
+    <div className="relative flex flex-col items-center h-auto w-full fade-effect-quick ">
+      <AnimatePresence>
+        <picture>
+          <motion.img
+            key={url}
+            src={url}
+            initial={{ opacity: 0.2, filter: "blur(3px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            // style={{ animation: "fadeIn  .8s" }}
+            alt={altText}
+            className="rounded-lg  max-h-[25em] shadow-lg "
+          />
+        </picture>
+      </AnimatePresence>
       {children}
     </div>
   );
