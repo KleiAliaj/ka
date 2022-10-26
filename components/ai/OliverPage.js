@@ -60,12 +60,7 @@ function OliverPage() {
       // headers: headers,
     })
       .then((response) => {
-        console.log(response);
-        console.log("error?");
-        // console.log("Status: " + response.status);
-        // console.log("limit: " + response.headers?.get('X-RateLimit-Limit'));
-        // console.log("remaining: " + response.headers?.get('X-RateLimit-Remaining'));
-        // console.log(response.data);
+   
         getSpeechfromText(response.data.results);
 
         // console.log("Before delay");

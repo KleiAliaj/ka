@@ -1,243 +1,140 @@
 import React from "react";
-import { FaArrowUp } from "react-icons/fa";
-import TextareaAutosize from "react-textarea-autosize";
-import { IoIosArrowBack } from "react-icons/io";
-import { DiSenchatouch } from "react-icons/di";
-import { BsCircleFill } from "react-icons/bs";
-import axios from "axios";
-import { ScrollContainer } from "react-indiana-drag-scroll";
-import "react-indiana-drag-scroll/dist/style.css";
-
+import { FaBatteryQuarter, FaWifi } from "react-icons/fa";
+import { IoCellular } from "react-icons/io5";
+import { AnimatePresence, motion } from "framer-motion";
+import MessageScreen from "./MessageScreen";
+import HomeScreen from "./homeScreen";
 function Iphone() {
-  const [input, setInput] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
-  const [messages, setMessages] = React.useState([]);
-  const [heightChange, setHeightChange] = React.useState(48);
-  const [responseReceived, setResponseReceived] = React.useState(false);
+  const [screen, setScreen] = React.useState({
+    name: "Innovation AI",
+    icon: "IA",
+    description: "An AI to help you come up with innovative new ideas.",
+  });
+  const [move, setMove] = React.useState(false);
+  let time = new Date().toLocaleTimeString("en-US", {
+    hour12: true,
+    hour: "numeric",
+    minute: "numeric",
+  });
+  let regex = /^0+/;
+  let formattedTime = time.replace(regex, "");
 
-  const submitToAI = async (values) => {
-    setResponseReceived(false);
-    setLoading(true);
-    let allMessages = "";
-    for (let i in messages) {
-      allMessages += messages[i].msg;
-    }
-    allMessages = allMessages + " " + input;
-    await axios({
-      method: "POST",
-      url: "/api/innovationAI",
-      data: {
-        input: allMessages,
-        // kind: kind.value,
-      },
-      // headers: headers,
-    })
-      .then((response) => {
-        setMessages((prev) => {
-          return [...prev, { msg: response.data.results, usr: "ai" }];
-        });
-        setResponseReceived(true);
-        setLoading(false);
-        if (typeof window !== "undefined") {
-          let pane = document.getElementById("pane");
-          pane.scrollTop = pane.offsetHeight;
-        }
-        return response;
-      })
-      .catch((error) => {
-        if (error.message === "Request failed with status code 429") {
-          setResponseReceived(true);
-          setLoading(false);
-          setMessages((prev) => {
-            return [
-              ...prev,
-              {
-                msg: "Rate limit exceeded, to many requests sent in one minute ",
-                usr: "ai",
-              },
-            ];
-          });
-        } else {
-          setResponseReceived(true);
-          setLoading(false);
-          setMessages((prev) => {
-            return [
-              ...prev,
-              {
-                msg: "Something went wrong. Please try again later.",
-                usr: "ai",
-              },
-            ];
-          });
-        }
-      });
-  };
   return (
-    <div className="page-container">
-      <h1 className="heading-lg">Conversational Innovation AI</h1>
-      <div className="flex flex-col items-center justify-start w-full h-fit">
-        {/* <div className="bg-content"></div> */}
-        <div className="mobile-body scale-50 relative  pointer-events-none	">
-          <div className="absolute bg-white w-full h-full rounded-[6em] ">
-            <ScrollContainer
-              id="pane"
-              className="fixed mt-8  pb-12 pt-36 px-10 w-full h-[64.2em] gap-2 flex flex-col  overflow-y-scroll pointer-events-auto "
-            >
-              {messages.map((msg, index) => {
-                if (msg.usr === "ai") {
-                  return (
-                    <div
-                      key={index}
-                      className={
-                        " w-full flex justify-start relative  p-2 rounded-2xl  z-0"
-                      }
-                    >
-                      <div className="bg-[#e5e5ea] mr-24 p-2 relative rounded-2xl w-fit message">
-                        <p className=" text-xl text-black z-[1]">{msg.msg}</p>
-                        {/* <DiSenchatouch className="text-slate-200 absolute -left-3 -z-10 rotate-45 text-5xl -bottom-3 " /> */}
-                      </div>
-                    </div>
-                  );
-                }
-                return (
-                  <div key={index} className={" w-full flex justify-end"}>
-                    <div className="bg-[#0b93f6] ml-24 p-2 relative rounded-2xl w-fit message2">
-                      {" "}
-                      <p className=" text-xl text-white">{msg.msg}</p>
-                    </div>
-                  </div>
-                );
-              })}
-              {loading && (
-                <div
-                  className={
-                    "relative bg-slate-200 p-2 rounded-full w-fit z-20"
-                  }
-                >
-                  <div className="flex gap-1 text-xs  z-10 py-2 px-2">
-                    <BsCircleFill className="bub1" />
-                    <BsCircleFill className="bub2" />
-                    <BsCircleFill className="bub3" />
-                  </div>
-                  <BsCircleFill className="text-slate-200 absolute -left-0 -z-10 rotate-45 text-lg top-7 " />
-                  <BsCircleFill className="text-slate-200 absolute -left-2 -z-10 rotate-45 text-[10px] top-[40px] " />
-                </div>
-              )}
-              {/* </div> */}
-            </ScrollContainer>
+    <div className="page-container relative">
+      <div className=" w-full flex md:flex-row sm:flex-col-reverse relative sm:h-fit md:h-[60rem] md:bg-slate-200/60 p-10 rounded-2xl md:text-box md:backdrop-blur-md ">
+        <div className="md:w-1/2 sm:w-full md:translate-y-0 sm:-translate-y-[32rem] ">
+          {" "}
+          <h1 className="heading-lg sm:!text-2xl md:!text-4xl !mb-0">
+            Brainstorm Buddy
+          </h1>
+          <div className="text-box w-full">
+            <h2 className="heading-sm text-left">Instructions</h2>
+            <ol>
+              <li>
+                <p>1. Select what AI model you want to use</p>
+              </li>
+              <li>
+                <p>
+                  2. Ask the AI a question or ask for feedback on an idea you
+                  have by typing it into the text input at the bottom, then send
+                  your message. (Or hit enter)
+                </p>
+              </li>
+              <li>
+                <p>
+                  3. Await the response from the AI, then ask follow up
+                  questions!
+                </p>
+              </li>
+            </ol>
+            <h2 className="heading-sm text-left mt-5">Tips</h2>
+            <ol className="list-disc list-outside pl-5">
+              <li>
+                <p>
+                  The AI understands questions best. Think of it as an
+                  experienced innovator.
+                </p>
+              </li>
+              <li>
+                <p>
+                  It understands the context of the conversation because it
+                  receives the entire transcript, so feel free to ask follow up
+                  questions.
+                </p>
+              </li>
+            </ol>
+            <h2 className="heading-sm text-left mt-5">What is this?</h2>
+            <p>
+              This is a GPT-3 experiment I made to simulate a knowledgable
+              friend to brainstorm with. The AI is designed to ask you questions
+              about the ideas you present it, in order to challenge your
+              assumptions and create better ideas. I&apos;ve found that my best
+              ideas come when talking to friends, making ideas by myself is
+              tougher. But I can&apos;t always talk to a buddy to brainstorm, so
+              I made this!{" "}
+            </p>
+            <br />
+            <p>
+              I&apos;m pretty happy with how it turned out. I could have made it
+              with a simple UI, but emulating an Iphone sounded really fun in
+              the moment, so here we are! Really made me appreciate how
+              intricate IOS UI and animations are. Took me longer than I thought
+              it would to recreate the messages app.
+            </p>
           </div>
-          <div className="absolute bottom-0 pt-2   bg-slate-200 h-32 rounded-b-[6em] w-full z-100"></div>
-          <div
-            className="absolute top-0 pt-2 backdrop-blur-md
-
-bg-slate-200/80 border-b-2 h-40 rounded-t-[6em] w-full z-100"
-          ></div>
-          <div className="top-bar">
-            <div className="camera"></div>
-            <div className="speaker"></div>
-          </div>
-          <div className="button volume-up"></div>
-          <div className="button volume-down"></div>
-          <div className="button silent"></div>
-          <div className="button power"></div>
-          <div className="layer-2 z-0 "></div>
-          <div className="layer-1 ">
+        </div>
+        <div className="flex flex-col items-center justify-start w-full h-fit  md:scale-[60%] sm:scale-50 md:-translate-y-[14rem] sm:-translate-y-[18rem]">
+          {/* Start Iphone */}
+          <section className="mobile-body  relative  pointer-events-none !overflow-hidden">
             <div
-              className={
-                "w-full top-20 absolute flex justify-center  z-10 scale-125 "
-              }
+              className="absolute top-0 pt-2  backdrop-blur-md
+  bg-slate-200/80 dark:bg-slate-900/80 border-b-2 border-slate-300/50 dark:border-slate-700/50 h-40 rounded-t-[6em] w-full "
+            ></div>
+            <div className="absolute bg-white dark:bg-[#181818] w-full h-full rounded-[6em] -z-20 "></div>
+
+            <motion.div
+              style={{ x: move ? "-570px" : "0px" }}
+              className="flex w-[71rem] transition duration-500 "
             >
-              <div className="flex flex-col items-center">
-                <div className="rounded-full ml-1 bg-slate-400 py-2 px-3">
-                  {" "}
-                  <button
-                    className={
-                      "absolute pointer-events-auto transition bottom-[10px] right-12  text-white f2 text-2xl rounded-full px-2 py-2 " +
-                      (input.length > 0 ? " bg-sky-400" : " bg-slate-400")
-                    }
-                    onClick={() => {
-                      if (input.length > 0) {
-                        setMessages((prev) => {
-                          return [
-                            ...prev,
-                            { msg: "demo text", usr: "ai" },
-                            { msg: "demo demo demo", usr: "user" },
-                            { msg: "demo text", usr: "ai" },
-                            { msg: "demo demo demo", usr: "user" },
-                            { msg: "demo text", usr: "ai" },
-                            { msg: "demo demo demo", usr: "user" },
-                            { msg: "demo text", usr: "ai" },
-                            { msg: "demo demo demo", usr: "user" },
-                          ];
-                        });
-                        setInput("");
-                      }
-                    }}
-                  >
-                    <FaArrowUp />
-                  </button>
-                  <p className="text-white text-xl">AI</p>
-                </div>
-                <div className="flex items-center gap-0">
-                  <p className="text-xs text-slate-700">Innovation AI</p>
-                  <IoIosArrowBack className="text-xs text-slate-700/50  cursor-pointer rotate-180" />
-                </div>
-              </div>
-            </div>
-            <div className="absolute  top-14 w-full pt-3 px-10  z-10">
-              <div
-                className={
-                  "left-10 top-5 absolute  z-10 scale-125 pointer-events-auto "
-                }
-              >
-                <IoIosArrowBack className="text-6xl text-sky-600 hover:scale-105 cursor-pointer active:scale-90" />
-              </div>
-            </div>
-            <div className="absolute  bottom-14 w-full pt-3 px-10  z-10">
-              <div
-                className={
-                  "left-[25px] -mt-3 absolute w-[91.2%] h-full bg-slate-200 border-t-2 border-slate-300/50 -z-10  " +
-                  (heightChange > 48 ? " rounded-b-3xl" : " rounded-b-[6em]")
-                }
-              ></div>
-              <div className="z-50 pointer-events-auto">
-                <TextareaAutosize
-                  autoFocus
-                  className="w-full  rounded-3xl ring-1 ring-slate-300 f2  text-2xl pl-4 pr-12 py-2"
-                  value={input}
-                  tabIndex={1}
-                  placeholder="Talk to Innovation AI"
-                  onChange={(e) => {
-                    setInput(e.target.value);
-                  }}
-                  onHeightChange={(e, b) => {
-                    setHeightChange(e);
-                  }}
+              <div className="w-[35.5rem]">
+                <HomeScreen
+                  setScreen={setScreen}
+                  formattedTime={formattedTime}
+                  setMove={setMove}
                 />
-                <button
-                  className={
-                    "absolute transition bottom-[10px] right-12  text-white f2 text-2xl rounded-full px-2 py-2 " +
-                    (input.length > 0 ? " bg-sky-400" : " bg-slate-400")
-                  }
-                  onClick={() => {
-                    if (input.length > 0) {
-                      setMessages((prev) => {
-                        return [...prev, { msg: input, usr: "user" }];
-                      });
-                      setInput("");
-                      submitToAI();
-                      if (typeof window !== "undefined") {
-                        let pane = document.getElementById("pane");
-                        pane.scrollTop = pane.offsetHeight;
-                      }
-                    }
-                  }}
-                >
-                  <FaArrowUp />
-                </button>
               </div>
+              <div className="w-fit ">
+                <MessageScreen
+                  setScreen={setScreen}
+                  screen={screen}
+                  setMove={setMove}
+                  move={move}
+                />
+              </div>
+            </motion.div>
+
+            <div className="top-bar">
+              <div className="camera"></div>
+              <div className="speaker"></div>
             </div>
-          </div>
+            <div className="button volume-up"></div>
+            <div className="button volume-down"></div>
+            <div className="button silent"></div>
+            <div className="button power"></div>
+            <div className="layer-2 z-0 "></div>
+            <div className="layer-1 "></div>
+            <div className="absolute   top-9 left-16 ml-2">
+              <p className="text-lg">{formattedTime}</p>
+            </div>
+            <div className="absolute  flex gap-2 top-9 right-16 text-xl ml-2 mt-1">
+              <IoCellular />
+              <FaWifi />
+              <FaBatteryQuarter />
+            </div>
+            <div className="absolute bottom-10 w-full flex justify-center">
+              <div className="bg-slate-600 h-2 w-1/3 rounded-full"></div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
