@@ -22,6 +22,23 @@ export const projectArray = [
     },
   },
   {
+    title: "Brainstorm Buddy",
+    route: "/code/projects/brainstorm-buddy-project",
+    shortDescription: "Conversational idea AI",
+    description:
+      "Conversational AI designed to help you brainstorm, using GPT-3 and Next.js.",
+    technologies: ["React", "Framer Motion", "Next.js", "TailwindCSS", "GPT-3"],
+    imgSrc: "/assets/other/projects/buddy/tile.webp",
+    thumb: "/assets/other/projects/buddy/profile-square.webp",
+    styles: {
+      color: "bg-sky-400",
+      bColor: "ring-sky-500 ",
+      textColor: " text-sky-600 dark:text-sky-400 whitespace-nowrap",
+      shadow:
+        "!shadow-sky-500 bg-gradient-to-br from-white via-white to-sky-200 dark:from-slate-900 dark:via-slate-900 dark:to-sky-900",
+    },
+  },
+  {
     title: "Oliver",
     route: "/code/projects/Oliver",
     shortDescription: "AI life advice app",
