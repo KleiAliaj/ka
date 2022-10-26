@@ -60,6 +60,7 @@ function OliverPage() {
       // headers: headers,
     })
       .then((response) => {
+        console.log(response);
         // console.log("Status: " + response.status);
         // console.log("limit: " + response.headers?.get('X-RateLimit-Limit'));
         // console.log("remaining: " + response.headers?.get('X-RateLimit-Remaining'));
