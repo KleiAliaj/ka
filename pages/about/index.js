@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLink } from "react-icons/fa";
+import { FaFile, FaFileAlt, FaLink } from "react-icons/fa";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
 import ImageSection from "@/components/layout/ImageSection";
@@ -49,14 +49,22 @@ function About() {
             </MotionText>
             <MotionText delay={0.2}>
               <div className="flex justify-center w-full">
-                <div className="flex gap-3">
+                <div className="flex gap-3 lg:flex-row sm:flex-col items-center  mt-10">
+                  <a
+                    href="/assets/other/TyFieroResume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-bold w-fit button-1"
+                  >
+                    Resume <FaFileAlt />
+                  </a>
                   <Link href="/about/links">
-                    <a className="mt-10 text-xl font-bold w-fit button-1">
-                      Best Links <FaLink />
+                    <a className="  text-xl font-bold w-fit button-1">
+                      Links <FaLink />
                     </a>
                   </Link>
                   <Link href="/about/books">
-                    <a className="mt-10 text-xl font-bold w-fit button-1">
+                    <a className="text-xl font-bold w-fit button-1">
                       Books <BsBook />
                     </a>
                   </Link>
