@@ -262,9 +262,7 @@ function MessageScreen({ setMove, screen, move }) {
         }
       >
         <div className="flex flex-col items-center mt-1 ">
-          <div className="rounded-full flex justify-center bg-slate-400 items-center h-12 w-12">
-            {" "}
-            {/* <button
+          {/* <button
               className={
                 "absolute pointer-events-auto transition bottom-[10px] right-12  text-white f2 text-2xl rounded-full px-2 py-2 " +
                 (input.length > 0 ? " bg-sky-400" : " bg-slate-400")
@@ -292,7 +290,9 @@ function MessageScreen({ setMove, screen, move }) {
             >
               <FaArrowUp />
             </button> */}
-            <p className="text-white text-2xl">{screen.icon}</p>
+          <div className="rounded-full flex justify-center items-center h-12 w-12">
+            {/* <p className="text-white text-2xl">{screen.icon}</p> */}
+            <img src={screen.img} alt="AI profile image" />
           </div>
           <div className="flex items-center gap-0 pl-2">
             <p className="text-xs text-slate-700">{screen.name}</p>
@@ -317,7 +317,7 @@ function MessageScreen({ setMove, screen, move }) {
       <div className="absolute  bottom-14 w-full pt-3 px-10  z-10">
         <div
           className={
-            "left-[25px] -mt-3 absolute w-[91.2%] h-full bg-slate-200 dark:bg-slate-900 border-t-2 border-slate-300/50 -z-10  " +
+            "left-[25px] -mt-5 absolute w-[91.2%] h-full bg-slate-200 dark:bg-slate-900 border-t-2 border-slate-300/50 -z-10  " +
             (heightChange > 48 ? " rounded-b-3xl" : " rounded-b-[6em]")
           }
         ></div>
