@@ -65,7 +65,10 @@ const createSitemap = (posts) => {
     <loc>https://www.tyfiero.com/code/projects/tyfiero</loc>
     <priority>0.80</priority>
 </url>
-
+<url>
+    <loc>https://www.tyfiero.com/code/projects/brainstorm-buddy-project</loc>
+    <priority>0.80</priority>
+</url>
 <url>
     <loc>https://www.tyfiero.com/code/ai</loc>
     <priority>0.80</priority>
@@ -74,7 +77,10 @@ const createSitemap = (posts) => {
     <loc>https://www.tyfiero.com/code/ai/Oliver</loc>
     <priority>0.80</priority>
 </url>
-
+<url>
+    <loc>https://www.tyfiero.com/code/ai/brainstorm-buddy</loc>
+    <priority>0.80</priority>
+</url>
 <url>
     <loc>https://www.tyfiero.com/art</loc>
     <priority>0.80</priority>
