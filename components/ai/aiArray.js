@@ -32,7 +32,7 @@ export const experiments = [
     description:
       "Conversational brainstorming AI for developing ideas, using GPT-3",
     path: "/code/ai/brainstorm-buddy",
-    imgSrc: "/assets/other/projects/art/aiImgs/aigrid.webp",
+    imgSrc: "/assets/other/projects/buddy/profile-square.webp",
     styles: {
       color: "bg-sky-400",
       bColor: "ring-sky-500 ",
