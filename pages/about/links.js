@@ -410,7 +410,7 @@ function Resource({ name, url, cn, fav, note, textColor, ring }) {
 }
 function ResourceCard({ name, url, cn, fav, note, textColor }) {
   return (
-    <div className=" sm: w-full md:w-52 h-auto min-h-[100%] p-2 transition shadow-xl bg-white/90 dark:bg-slate-800/90 rounded-xl hover:scale-105 active:scale-90 hover:ring-4 ring-sky-400 cursor-alias flex flex-col items-center relative">
+    <div className=" sm: w-full md:w-52 h-auto min-h-[100%] p-2 transition shadow-xl bg-white/90 dark:bg-slate-800/90 rounded-xl md:hover:scale-105 active:scale-90 md:hover:ring-4 ring-sky-400 cursor-alias flex flex-col items-center relative">
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -483,7 +483,7 @@ function Category({ children, title, cn, textColor }) {
         />
         <p
           className={
-            "text-xl select-none hover:scale-105 transition " +
+            "text-xl select-none md:hover:scale-105 transition " +
             (isOpened
               ? " font-bold  " + textColor
               : " font-normal  text-slate-900 dark:text-white")
