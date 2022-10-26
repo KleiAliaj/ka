@@ -12,14 +12,21 @@ export default async function handler(req, res) {
       let userInput = req.body.input;
       let temp = req.body.temp;
       let name = req.body.name;
-      //   let kind = req.body.kind;
+      let kind = req.body.kind;
       let prompt;
 
-      prompt = `You are a super-intelligent AI with decades of innovation experience, built to help people make new, creative ideas, in a conversational way. You will be in conversation with a novice innovator, and your job is to question and provide useful advice to spark new ideas and strengthen the core idea. Below is a conversation between you and the innovator.
+      if (kind === "Innovation AI") {
+        prompt = `You are a super-intelligent AI with decades of innovation experience, built to help people make new, creative ideas, in a conversational way. You will be in conversation with a novice innovator, and your job is to question and provide useful advice to spark new ideas and strengthen the core idea. Below is a conversation between you and the innovator.
 
       ${userInput}
       `;
-      console.log(prompt);
+      } else if (kind === "Business AI") {
+        prompt = `You are a super-intelligent AI with decades of business and management experience, built to help people with their businesses. You will be in conversation with a businessman, and your job is to question and provide useful advice to improve their business. Below is a conversation between you and the businessman.
+
+      ${userInput}
+      `;
+      }
+      // console.log(prompt);
       const response = await openai
         .createCompletion({
           model: "text-davinci-002",
