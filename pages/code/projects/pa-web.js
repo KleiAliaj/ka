@@ -52,10 +52,10 @@ function PAWeb() {
             </p>
           </div>
           <section className="flex gap-4 lg:flex-row sm:flex-col">
-            <div className="w-full lg:w-1/2">
+            <div className="sm:w-full lg:w-1/2">
               <h2 className="w-full text-center heading-md !mb-0">Details</h2>
               <div className="flex flex-col items-center text-box h-fit">
-                <div className="flex flex-row-reverse lg:flex-col">
+                <div className="flex flex-col">
                   <div className="w-full">
                     {" "}
                     <h2 className="w-full text-left heading-sm !mb-0 !mt-2 ">
