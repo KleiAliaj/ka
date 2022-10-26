@@ -59,7 +59,12 @@ export default function AI({ aiImages }) {
 function AIImage({ index, pic }) {
   const [imageLoading, setImageLoading] = React.useState(false);
   const [clicked, setClicked] = React.useState(false);
-  let textSize = pic.name.length > 200 ? "  !text-xs" : " !text-base";
+  let textSize =
+    pic.name.length < 200
+      ? " sm:!text-xs md:!text-base"
+      : pic.name.length > 350
+      ? " sm:!text-[8px] md:!text-[10px]"
+      : " sm:!text-[10px] md:!text-xs";
   React.useEffect(() => {
     setImageLoading(true);
   }, []);
@@ -90,7 +95,7 @@ function AIImage({ index, pic }) {
             setClicked(!clicked);
           }}
         >
-          <p className={" text-white    " + textSize}>
+          <p className={" text-white pt-5   " + textSize}>
             {pic.name.charAt(0).toUpperCase() + pic.name.slice(1)}
           </p>
           <div
