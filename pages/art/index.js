@@ -719,7 +719,7 @@ function Art({ tyImages, tyStats, altDescription }) {
                     duration: 1.5,
                   },
                 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className={
                   "relative shadow-lg rounded-xl transition duration-500 hover:shadow-violet-400/60 shadow-violet-600/30 md:h-[423px] sm:h-[256px] hover:shadow-xl hover:scale-[99%]"
                 }

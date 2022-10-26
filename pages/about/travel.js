@@ -31,7 +31,7 @@ function Travel() {
               </p>
             </div>
             <h2 className="heading-md mt-10">Stats</h2>
-            <div className="w-full flex md:flex-row sm:flex-col justify-between">
+            <div className="w-full flex md:flex-row sm:flex-col justify-between items-center">
               <div className="flex-col gap-1 items-center">
                 <div className="flex flex-col items-center  rounded-lg bg-white/70 dark:bg-slate-800/70 shadow-lg shadow-sky-500/40 p-2 max-w-[12em]">
                   <h3 className="heading-sm">States Visited</h3>
@@ -70,9 +70,9 @@ function Travel() {
                   </li>
                 </ul>
               </div>
-              <div className="flex-col gap-1 items-center">
+              <div className="flex-col gap-1 items-center sm:mt-16">
                 <div className="flex flex-col items-center  rounded-lg bg-white/70 dark:bg-slate-800/70 shadow-lg shadow-sky-500/40 p-2 max-w-[12em]">
-                  <h3 className="heading-sm">Countries Visited</h3>
+                  <h3 className="heading-sm ">Countries Visited</h3>
                   <h3 className="heading-md !text-sky-700">
                     <span className="text-sky-400">7</span>/20
                   </h3>
