@@ -65,8 +65,8 @@ const ImageSlide = ({ url, children, altText = "" }) => {
           <motion.img
             key={url}
             src={url}
-            initial={{ opacity: 0.2, filter: "blur(3px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
+            initial={{ opacity: 0.2 }}
+            animate={{ opacity: 1 }}
             // style={{ animation: "fadeIn  .8s" }}
             alt={altText}
             className="rounded-lg  max-h-[25em] shadow-lg "
