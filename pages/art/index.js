@@ -337,8 +337,8 @@ function Art({ tyImages, tyStats, altDescription }) {
               </div>
             </MotionText>
 
-            <div className="flex items-center content-center justify-center w-full sm:gap-0 md:gap-2 sm:mt-5 sm:!scale-90 md:scale-100">
-              <MotionText delay={0.3}>
+            <MotionText>
+              <div className="flex items-center content-center justify-center w-full sm:gap-0 md:gap-2 sm:mt-5 sm:!scale-90 md:scale-100">
                 <a
                   href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
                   target="_blank"
@@ -359,8 +359,6 @@ function Art({ tyImages, tyStats, altDescription }) {
                     </picture>
                   </div>
                 </a>
-              </MotionText>
-              <MotionText delay={0.5}>
                 <a
                   href="https://music.apple.com/us/artist/ty-the-creator/1626735693"
                   target="_blank"
@@ -381,8 +379,6 @@ function Art({ tyImages, tyStats, altDescription }) {
                     </picture>
                   </div>
                 </a>
-              </MotionText>
-              <MotionText delay={0.8}>
                 <a
                   href="https://soundcloud.com/ty-the-creatorr"
                   target="_blank"
@@ -403,8 +399,8 @@ function Art({ tyImages, tyStats, altDescription }) {
                     </picture>
                   </div>
                 </a>
-              </MotionText>
-            </div>
+              </div>
+            </MotionText>
           </TextSection>
           <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12">
             <MotionImage>
@@ -658,48 +654,48 @@ function Art({ tyImages, tyStats, altDescription }) {
             <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
               <div className="flex items-center gap-2">
                 <FaImage className="text-violet-600 dark:text-violet-300" />
-                <p>
-                  Photos:&nbsp;{"  "}
-                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                <div className="w-full flex items-center sm:justify-between">
+                  <p>Photos:&nbsp;{"  "}</p>
+                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
                     {tyStats.photoNum}
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <FaEye className="text-violet-600 dark:text-violet-300" />
-                <p>
-                  Total Views:&nbsp;{"  "}
-                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                <div className="w-full flex items-center sm:justify-between">
+                  <p>Views:&nbsp;{"  "}</p>
+                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
                     {tyStats.views.toLocaleString("en-US")}
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2 ">
                 <FaDownload className="scale-75 text-violet-600 dark:text-violet-300" />
-                <p>
-                  Downloads:&nbsp;{"  "}
-                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                <div className="w-full flex items-center sm:justify-between">
+                  <p>Downloads:&nbsp;{"  "}</p>
+                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300 sm:ml-8 md:ml-0">
                     {tyStats.downloads}
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <FaUserAlt className="text-violet-600 dark:text-violet-300" />
-                <p>
-                  Followers: &nbsp; {"  "}
-                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                <div className="w-full flex items-center sm:justify-between">
+                  <p>Followers: &nbsp; {"  "}</p>
+                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
                     {tyStats.followers}
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <FaHeart className="text-violet-600 dark:text-violet-300" />
-                <p>
-                  Likes:&nbsp;{" "}
-                  <span className="text-lg font-bold text-violet-600 dark:text-violet-300">
+                <div className="w-full flex items-center sm:justify-between">
+                  <p>Likes:&nbsp; </p>
+                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
                     {tyStats.likes}
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
