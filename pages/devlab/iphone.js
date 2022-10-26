@@ -5,6 +5,9 @@ import { IoIosArrowBack } from "react-icons/io";
 import { DiSenchatouch } from "react-icons/di";
 import { BsCircleFill } from "react-icons/bs";
 import axios from "axios";
+import { ScrollContainer } from "react-indiana-drag-scroll";
+import "react-indiana-drag-scroll/dist/style.css";
+
 function Iphone() {
   const [input, setInput] = React.useState("");
   const [loading, setLoading] = React.useState(false);
@@ -74,11 +77,11 @@ function Iphone() {
       <h1 className="heading-lg">Conversational Innovation AI</h1>
       <div className="flex flex-col items-center justify-start w-full h-fit">
         {/* <div className="bg-content"></div> */}
-        <div className="mobile-body scale-50 relative ">
+        <div className="mobile-body scale-50 relative  pointer-events-none	">
           <div className="absolute bg-white w-full h-full rounded-[6em] ">
-            <div
+            <ScrollContainer
               id="pane"
-              className=" mt-8 pl-10 pb-12 pt-36 pr-8 w-full h-[64.2em] gap-2 flex flex-col overflow-y-scroll"
+              className="fixed mt-8  pb-12 pt-36 px-10 w-full h-[64.2em] gap-2 flex flex-col  overflow-y-scroll pointer-events-auto "
             >
               {messages.map((msg, index) => {
                 if (msg.usr === "ai") {
@@ -89,16 +92,16 @@ function Iphone() {
                         " w-full flex justify-start relative  p-2 rounded-2xl  z-0"
                       }
                     >
-                      <div className="bg-[#e5e5ea] mr-24 p-2 relative rounded-2xl w-fit ">
+                      <div className="bg-[#e5e5ea] mr-24 p-2 relative rounded-2xl w-fit message">
                         <p className=" text-xl text-black z-[1]">{msg.msg}</p>
-                        <DiSenchatouch className="text-slate-200 absolute -left-3 -z-10 rotate-45 text-5xl -bottom-3 " />
+                        {/* <DiSenchatouch className="text-slate-200 absolute -left-3 -z-10 rotate-45 text-5xl -bottom-3 " /> */}
                       </div>
                     </div>
                   );
                 }
                 return (
                   <div key={index} className={" w-full flex justify-end"}>
-                    <div className="bg-[#0b93f6] ml-24 p-2 relative rounded-2xl w-fit ">
+                    <div className="bg-[#0b93f6] ml-24 p-2 relative rounded-2xl w-fit message2">
                       {" "}
                       <p className=" text-xl text-white">{msg.msg}</p>
                     </div>
@@ -120,7 +123,8 @@ function Iphone() {
                   <BsCircleFill className="text-slate-200 absolute -left-2 -z-10 rotate-45 text-[10px] top-[40px] " />
                 </div>
               )}
-            </div>
+              {/* </div> */}
+            </ScrollContainer>
           </div>
           <div className="absolute bottom-0 pt-2   bg-slate-200 h-32 rounded-b-[6em] w-full z-100"></div>
           <div
@@ -148,13 +152,23 @@ bg-slate-200/80 border-b-2 h-40 rounded-t-[6em] w-full z-100"
                   {" "}
                   <button
                     className={
-                      "absolute transition bottom-[10px] right-12  text-white f2 text-2xl rounded-full px-2 py-2 " +
+                      "absolute pointer-events-auto transition bottom-[10px] right-12  text-white f2 text-2xl rounded-full px-2 py-2 " +
                       (input.length > 0 ? " bg-sky-400" : " bg-slate-400")
                     }
                     onClick={() => {
                       if (input.length > 0) {
                         setMessages((prev) => {
-                          return [...prev, { msg: input, usr: "ai" }];
+                          return [
+                            ...prev,
+                            { msg: "demo text", usr: "ai" },
+                            { msg: "demo demo demo", usr: "user" },
+                            { msg: "demo text", usr: "ai" },
+                            { msg: "demo demo demo", usr: "user" },
+                            { msg: "demo text", usr: "ai" },
+                            { msg: "demo demo demo", usr: "user" },
+                            { msg: "demo text", usr: "ai" },
+                            { msg: "demo demo demo", usr: "user" },
+                          ];
                         });
                         setInput("");
                       }
@@ -171,7 +185,11 @@ bg-slate-200/80 border-b-2 h-40 rounded-t-[6em] w-full z-100"
               </div>
             </div>
             <div className="absolute  top-14 w-full pt-3 px-10  z-10">
-              <div className={"left-10 top-5 absolute  z-10 scale-125 "}>
+              <div
+                className={
+                  "left-10 top-5 absolute  z-10 scale-125 pointer-events-auto "
+                }
+              >
                 <IoIosArrowBack className="text-6xl text-sky-600 hover:scale-105 cursor-pointer active:scale-90" />
               </div>
             </div>
@@ -182,7 +200,7 @@ bg-slate-200/80 border-b-2 h-40 rounded-t-[6em] w-full z-100"
                   (heightChange > 48 ? " rounded-b-3xl" : " rounded-b-[6em]")
                 }
               ></div>
-              <div className="z-50">
+              <div className="z-50 pointer-events-auto">
                 <TextareaAutosize
                   autoFocus
                   className="w-full  rounded-3xl ring-1 ring-slate-300 f2  text-2xl pl-4 pr-12 py-2"
