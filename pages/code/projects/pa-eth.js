@@ -74,7 +74,7 @@ function ModalPAeth() {
                     </ol>
                   </div>
                 </div>
-                <div className="flex justify-center w-full gap-3 mt-4">
+                <div className="flex md:flex-row sm:flex-col justify-center w-full gap-3 mt-4">
                   <a
                     href="https://priceart.xyz/ada-explorer/"
                     target="_blank"

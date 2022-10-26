@@ -60,7 +60,6 @@ function OliverPage() {
       // headers: headers,
     })
       .then((response) => {
-   
         getSpeechfromText(response.data.results);
 
         // console.log("Before delay");
@@ -168,7 +167,9 @@ function OliverPage() {
                   {aiLoading ? (
                     // <LoaderOli show={true} />
                     <>
-                      <p className="text-white ">Hmmmm... </p>
+                      <p className="text-white md:text-base sm:text-xs">
+                        Hmmmm...{" "}
+                      </p>
                       <p className="text-2xl text-white animate-bounce">🤔 </p>
                     </>
                   ) : (
