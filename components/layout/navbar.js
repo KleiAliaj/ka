@@ -235,7 +235,7 @@ function Navbar() {
                   height={48}
                 />
               </div>
-              <p className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl md:pr-8 logo f1 whitespace-nowrap">
+              <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap">
                 Ty Fiero
               </p>
             </a>
@@ -268,7 +268,7 @@ function Navbar() {
               variants={menuVariant}
               initial={"menuStart"}
               animate={"menuStop"}
-              className="z-[120] flex items-center mt-4 md:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-10 f1"
+              className="z-[120] flex items-center mt-4 md:gap-1 lg:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-5 lg:mr-10 f1"
             >
               {items.map((item) => (
                 <MenuItem
