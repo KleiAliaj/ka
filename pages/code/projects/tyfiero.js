@@ -52,19 +52,6 @@ function Ty() {
               world. I plan on implementing a full 3D landing page experience
               with React Three Fiber soon, to give the site more of a wow factor
               while hopefully keeping loading times fast.
-              <br />
-              <br />
-              Also, weighing in at 987kb, I&apos;m a proud member of the{" "}
-              <a
-                href="https://1mb.club/"
-                className="underline text-sky-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                1MB club
-              </a>{" "}
-              :)
             </p>
           </div>
           <section className="flex gap-4 lg:flex-row sm:flex-col">
