@@ -29,12 +29,7 @@ function IndexDevLab() {
                 <FaKeyboard />
               </a>
             </Link>
-            <Link href={"/devlab/canvas"}>
-              <a className="button-1">
-                npm Enter hook
-                <FaKeyboard />
-              </a>
-            </Link>
+            
             <Link href={"/devlab/iphone"}>
               <a className="button-1">
                 Iphone AI messenger
