@@ -35,10 +35,10 @@ function IndexDevLab() {
                 <FaKeyboard />
               </a>
             </Link>
-            <Link href={"/devlab/iphone"}>
+            <Link href={"/devlab/Framer-playground"}>
               <a className="button-1">
-                Iphone AI messenger
-                <FaPhone />
+                Framer Playground
+                <FaImage />
               </a>
             </Link>
           </div>
