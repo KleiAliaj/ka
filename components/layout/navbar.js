@@ -223,19 +223,19 @@ function Navbar() {
         <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
           <Link href="/">
             <a
-              className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120]"
+              className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
               href="#"
             >
-              <div className="w-12 h-12 transition ">
+              <div className="w-12 h-12 transition shadow-md dark:shadow-sky-400/60 shadow-sky-800/70 rounded-full">
                 <Image
                   src="/assets/other/ty-circle-image.webp"
+                  className=" "
                   alt="Ty Fiero"
-                  className=""
                   width={48}
                   height={48}
                 />
               </div>
-              <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap">
+              <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 pt-2 pb-1">
                 Ty Fiero
               </p>
             </a>

@@ -54,7 +54,7 @@ function SocialIcons({ small }) {
       <Link href="/contact">
         <motion.a
           variants={iconAnimate}
-          className="p-3 text-xl text-white transition rounded-full shadow-xl cursor-pointer bg-sky-400 hover:!scale-125 active:!scale-90"
+          className="p-3 text-xl text-white transition rounded-full shadow-sky-800/50 shadow-md cursor-pointer bg-sky-400 hover:!scale-125 active:!scale-90"
           role="link"
           aria-label="Email link"
           title="Email link"
@@ -69,7 +69,7 @@ function SocialIcons({ small }) {
         rel="noopener noreferrer"
         role="link"
         aria-label="Twitter link"
-        className="p-3 text-xl text-white rounded-full bg-[#1DA1F2] shadow-xl transition hover:!scale-125 active:!scale-90"
+        className="p-3 text-xl text-white rounded-full bg-[#1DA1F2] shadow-sky-800/50 shadow-md transition hover:!scale-125 active:!scale-90"
       >
         <FaTwitter className="scale-110" />
       </motion.a>
@@ -81,7 +81,7 @@ function SocialIcons({ small }) {
         rel="noopener noreferrer"
         role="link"
         aria-label="LinkedIn link"
-        className="p-3 text-xl text-white rounded-full bg-[#0077b5] shadow-xl transition hover:!scale-125 active:!scale-90"
+        className="p-3 text-xl text-white rounded-full bg-[#0077b5] shadow-sky-800/50 shadow-md transition hover:!scale-125 active:!scale-90"
       >
         <FaLinkedin className="scale-125" />
       </motion.a>
@@ -92,7 +92,7 @@ function SocialIcons({ small }) {
         rel="noopener noreferrer"
         role="link"
         aria-label="GitHub link"
-        className="p-3 text-xl text-white rounded-full invert-0 dark:invert bg-[#171515] shadow-xl transition hover:!scale-125 active:!scale-90"
+        className="p-3 text-xl text-white rounded-full invert-0 dark:invert bg-[#171515] shadow-slate-800/50 shadow-md transition hover:!scale-125 active:!scale-90"
       >
         <FaGithub className="scale-125" />
       </motion.a>
