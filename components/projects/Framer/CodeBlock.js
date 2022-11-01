@@ -10,21 +10,21 @@ import React from "react";
 // import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 // import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { CopyBlock, nord } from "react-code-blocks";
+import { FaTimes } from "react-icons/fa";
 
-function CodeBlock({ code }) {
+function CodeBlock({ code, setShowCode, showCode }) {
   return (
-    <div className="w-1/3">
-      <div className="mx-auto mt-10 rounded-lg ">
-        {/* <SyntaxHighlighter
-          wrapLines
-          showLineNumbers
-          wrapLongLines
-          useInlineStyles={false}
-          language="jsx"
-          style={docco}
+    <div className="w-2/3">
+      <div className="mx-auto mt-10 rounded-lg shadow-lg shadow-slate-600/70 px-5 py-2 relative">
+        <p className="heading-md !mb-0">Code</p>
+        <button
+          className="absolute text-3xl text-sky-600 dark:text-sky-200 top-2 right-2"
+          onClick={() => {
+            setShowCode(!showCode);
+          }}
         >
-          {code}
-        </SyntaxHighlighter> */}
+          <FaTimes />
+        </button>
         <CopyBlock
           text={code}
           language={"jsx"}
