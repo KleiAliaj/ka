@@ -16,7 +16,7 @@ import TextSection from "@/components/layout/TextSection";
 import { motion, useReducedMotion } from "framer-motion";
 import Head from "next/head";
 import { useWindowSize } from "@/lib/hooks/useWindowSize";
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { TbCamera, TbCode, TbMusic } from "react-icons/tb";
@@ -148,15 +148,15 @@ function Art({ tyImages, tyStats, altDescription }) {
   const [altText, setAltText] = React.useState(altDescription);
   const [domLoaded, setDomLoaded] = React.useState(false);
   const aiImgs = [
-    "/assets/other/projects/art/aiImgs/4.webp",
-    "/assets/other/projects/art/aiImgs/3.webp",
-    "/assets/other/projects/art/aiImgs/9.png",
+    "/assets/other/projects/art/aiImgs/9.webp",
     "/assets/other/projects/art/aiImgs/5.webp",
-    "/assets/other/projects/art/aiImgs/2.webp",
-    "/assets/other/projects/art/aiImgs/1.webp",
     "/assets/other/projects/art/aiImgs/6.webp",
+    "/assets/other/projects/art/aiImgs/3.webp",
     "/assets/other/projects/art/aiImgs/7.webp",
-    "/assets/other/projects/art/aiImgs/8.png",
+    "/assets/other/projects/art/aiImgs/4.webp",
+    "/assets/other/projects/art/aiImgs/2.webp",
+    "/assets/other/projects/art/aiImgs/8.webp",
+    "/assets/other/projects/art/aiImgs/1.webp",
   ];
   React.useEffect(() => {
     setDomLoaded(true);
@@ -308,111 +308,55 @@ function Art({ tyImages, tyStats, altDescription }) {
               <div className="text-box">
                 <MotionHeader xPx={-100} delay={0.3}>
                   <h3 className="text-left heading-sm !text-teal-400">
-                    Warm, mellow Lo-Fi beats
+                    Auditorial Creativity
                   </h3>
                 </MotionHeader>
                 <p className="font-bold">
-                  I was listening to Lo-Fi Hip Hop before it was cool (*puts on
-                  hipster glasses*). For real though, for as long as I can
-                  remember this genre has been the soundtrack to my life. The
-                  magic of Lo-Fi is that it conveys the mood of the moment, the
-                  same song can make you feel happy, reminiscent or melancholic,
-                  depending on how you feel that day. When I&apos;m not
-                  listening to Lo-Fi, I enjoy rap, classic rock, smooth jazz,
-                  and classical music. But Lo-Fi will always have my heart.
+                  After years of curiosity, I finally started making music in{" "}
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    Logic Pro
+                  </a>{" "}
+                  back in 2019. I make primarily LoFi hip hop beats, the type of
+                  music you&apos;d want to hear on a moody rainy day. Music is
+                  an incredible medium for expressing emotions, I can still
+                  remember the way I was feeling when I listen to any of my old
+                  tracks. Something about a blank musical canvas and a keyboard
+                  makes my soul really happy.
                   <br />
                   <br />
-                  My love for Lo-Fi grew stronger in 2019, when I began to learn
-                  how to play the piano and make beats on my computer using
-                  Logic Pro. Feeling an emotion from a song is one thing, but
-                  expressing an emotion through your own song is another.
-                  Playing along with the rhythm of your soul is something I wish
-                  everyone could experience.
-                  <br />
-                  <br />
-                  My music is far from platinum, but I&apos;m proud of it. And
-                  it conveys the feelings I felt in those moments behind the
-                  keyboard. I hope you enjoy it!
+                  It&apos;s certainly not perfect, but I&apos;m proud of how it
+                  turned out. Creativity isn&apos;t about perfection, it&apos;s
+                  about expressing who you are through a medium you enjoy. Give
+                  it a listen, and{" "}
+                  <a
+                    className="underline text-sky-500"
+                    href="http://www.tyfiero.com/contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    let me know
+                  </a>{" "}
+                  what you think!
                 </p>
               </div>
             </MotionText>
 
-            <MotionText>
-              <div className="flex items-center content-center justify-center w-full sm:gap-0 md:gap-2 sm:mt-5 sm:!scale-90 md:scale-100">
-                <a
-                  href="https://open.spotify.com/artist/3jxSd4I4g4AH76AzgPw006?si=NpMCWZEWT5uLvP5lyhI__A"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col items-center p-2 transition shadow-xs bg-black/0 rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm "
-                >
-                  <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                    <picture>
-                      <source
-                        srcSet="/assets/CodeLogos/spotify.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/CodeLogos/spotify.webp"
-                        alt="spotify button"
-                        className="object-contain"
-                      />
-                    </picture>
-                  </div>
-                </a>
-                <a
-                  href="https://music.apple.com/us/artist/ty-the-creator/1626735693"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
-                >
-                  <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                    <picture>
-                      <source
-                        srcSet="/assets/CodeLogos/appleMusic.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/CodeLogos/appleMusic.webp"
-                        alt="Apple Music button"
-                        className="object-contain"
-                      />
-                    </picture>
-                  </div>
-                </a>
-                <a
-                  href="https://soundcloud.com/ty-the-creatorr"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col items-center p-2 transition shadow-xs rounded-3xl hover:scale-110 active:scale-90 drop-shadow-sm"
-                >
-                  <div className="md:w-40 sm:w-32 sm:h-16 md:h-20">
-                    <picture>
-                      <source
-                        srcSet="/assets/CodeLogos/soundcloud.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/CodeLogos/soundcloud.webp"
-                        alt="Soundcloud button"
-                        className="object-contain"
-                      />
-                    </picture>
-                  </div>
-                </a>
+            <MotionText delay={0.4}>
+              <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
+                <Link href="/art/music">
+                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-teal-500 !shadow-teal-300">
+                    Listen Now <FaArrowRight />
+                  </a>
+                </Link>
               </div>
             </MotionText>
           </TextSection>
-          <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12">
-            <MotionImage>
-              {domLoaded && (
-                <ReactPlayer
-                  width={"100%"}
-                  height={"100%"}
-                  url="https://soundcloud.com/ty-the-creatorr/sets/reflections"
-                />
-              )}
-            </MotionImage>
-          </div>
+          {/* <div className="md:w-1/3 sm:w-full h-[23em] md:mb-12"> */}
+          <ImageSection
+            src="/assets/other/Ty-lofi.webp"
+            alt="Lofi Style image of Ty"
+          />
+          {/* </div> */}
         </DualSection>
 
         <div className="my-28" />
@@ -453,7 +397,7 @@ function Art({ tyImages, tyStats, altDescription }) {
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
                 <Link href="/art/generative">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
-                    All Generative Art <FaArrowRight />
+                    View Generative Art <FaArrowRight />
                   </a>
                 </Link>
               </div>
@@ -502,7 +446,7 @@ function Art({ tyImages, tyStats, altDescription }) {
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
                 <Link href="/art/ai-art">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300">
-                    All AI Images <FaArrowRight />
+                    View AI Images <FaArrowRight />
                   </a>
                 </Link>
               </div>
@@ -528,7 +472,7 @@ function Art({ tyImages, tyStats, altDescription }) {
           </div>
         </DualSection>
         <div className="my-28" />
-        <DualSection invert>
+        <DualSection invert centerText>
           <TextSection>
             <MotionHeader invert>
               <h2
@@ -548,73 +492,32 @@ function Art({ tyImages, tyStats, altDescription }) {
                   </h3>
                 </MotionHeader>
                 <p>
-                  Photography is my creative outlet that gets me outside and
-                  helps me notice the small things. I am by no means a
-                  professional, far from it. But I do have a decent Nikon
-                  camera, an eye for nature photography, and the patience to
-                  find the right shot! <br />
-                  <br /> I don&apos;t ever expect to be famous for my
-                  photography, or even make a single dollar, it&apos;s just so
-                  fun! My mind is so much clearer when I spend time in nature
-                  every week. I share all my best work to{" "}
-                  <a
-                    href="https://unsplash.com/@tyfiero"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline text-violet-500 "
-                  >
-                    unsplash
-                  </a>{" "}
-                  for anyone to use in their creative projects.
+                  Photography might be my most &quot;productive&quot; hobby, it
+                  gets me outdoors, keeps me active, and has massively improved
+                  my creativity in general. Thanks to photography, I see the
+                  world through a whole new lens (
+                  <span className="italic">pun intended</span>). I find myself
+                  noticing things in my daily life that I would have overlooked
+                  otherwise. Now, a bee on a flower will make pause for a
+                  second; to appreciate the beauty in the tiny things, but also
+                  to say,{" "}
+                  <span className="italic">
+                    &quot;Damn, I wish I brought my camera&quot;
+                  </span>
+                  .
                 </p>
               </div>
             </MotionText>
-            <br />
-            <MotionText invert delay={0.2}>
-              <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-violet-600/30 dark:shadow-violet-400/30 bg-violet-50 dark:bg-violet-700/90">
-                <div className="mb-2">
-                  <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
-                    “
-                  </div>
-                  <blockquote className="px-4 text-base italic text-center text-gray-600 dark:text-slate-200 f2">
-                    We cannot predict the value our work will provide to the
-                    world. That&apos;s fine. It is not our job to judge our own
-                    work. It is our job to create it, to pour ourselves into it,
-                    and to master our craft as best we can. &nbsp; &nbsp;-James
-                    Clear
-                  </blockquote>
-                  <div className="h-3 mb-2 text-3xl text-right text-gray-600 dark:text-slate-200">
-                    “
-                  </div>
+
+            <div className="flex justify-center w-full ">
+              <MotionText delay={0.4}>
+                <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
+                  <Link href="/art/photography">
+                    <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-violet-500 !shadow-violet-300">
+                      View Photos <FaArrowRight />
+                    </a>
+                  </Link>
                 </div>
-              </div>
-            </MotionText>
-            <div className="flex justify-center w-full mt-5">
-              <MotionText invert delay={0.4} noSize>
-                <a
-                  href="https://unsplash.com/@tyfiero"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex h-[4em] w-[18em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
-                >
-                  <span className="text-xs font-bold text-white dark:text-black">
-                    View my photos on
-                  </span>
-                  <div className="w-[8em]  dark:invert-0 invert h-[3em]">
-                    {" "}
-                    <picture>
-                      <source
-                        srcSet="/assets/CodeLogos/u-logo.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/CodeLogos/u-logo.webp"
-                        alt="unsplash button"
-                        className="object-contain"
-                      />
-                    </picture>
-                  </div>
-                </a>
               </MotionText>
             </div>
           </TextSection>
@@ -623,126 +526,6 @@ function Art({ tyImages, tyStats, altDescription }) {
             alt="Image of Ty taking a photo"
           />
         </DualSection>
-
-        <div className="flex justify-center gap-10 md:items-start sm:flex-col-reverse md:flex-row sm:items-center"></div>
-
-        <MotionText yPx={-200} xPx={0} noSize>
-          <div className="flex flex-col items-center px-5 pt-2 pb-2 mt-20 ring-2 rounded-xl ring-violet-400">
-            <a
-              href="https://unsplash.com/@tyfiero"
-              target="_blank"
-              rel="noreferrer"
-              className="flex flex-col items-center"
-            >
-              <div className="w-20 h-20 rounded-full shadow-lg">
-                <picture>
-                  <source
-                    srcSet={"/assets/other/unsplash-profile.png"}
-                    type="image/png"
-                  />
-                  <img
-                    src={"/assets/other/unsplash-profile.png"}
-                    alt="Unsplash profile image"
-                    className="rounded-full "
-                  />
-                </picture>
-              </div>
-              <p className="italic text-violet-300">@tyfiero</p>
-              <h3 className="heading-sm !text-violet-500">Unsplash Stats</h3>
-            </a>
-
-            <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
-              <div className="flex items-center gap-2">
-                <FaImage className="text-violet-600 dark:text-violet-300" />
-                <div className="w-full flex items-center sm:justify-between">
-                  <p>Photos:&nbsp;{"  "}</p>
-                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                    {tyStats.photoNum}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaEye className="text-violet-600 dark:text-violet-300" />
-                <div className="w-full flex items-center sm:justify-between">
-                  <p>Views:&nbsp;{"  "}</p>
-                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                    {tyStats.views.toLocaleString("en-US")}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 ">
-                <FaDownload className="scale-75 text-violet-600 dark:text-violet-300" />
-                <div className="w-full flex items-center sm:justify-between">
-                  <p>Downloads:&nbsp;{"  "}</p>
-                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300 sm:ml-8 md:ml-0">
-                    {tyStats.downloads}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaUserAlt className="text-violet-600 dark:text-violet-300" />
-                <div className="w-full flex items-center sm:justify-between">
-                  <p>Followers: &nbsp; {"  "}</p>
-                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                    {tyStats.followers}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaHeart className="text-violet-600 dark:text-violet-300" />
-                <div className="w-full flex items-center sm:justify-between">
-                  <p>Likes:&nbsp; </p>
-                  <p className="text-lg font-bold text-violet-600 dark:text-violet-300">
-                    {tyStats.likes}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </MotionText>
-        <div className="flex flex-wrap justify-center w-full gap-3 my-5">
-          {pics.map((pic, index) => {
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0.2, filter: "blur(3px)" }}
-                whileInView={{
-                  filter: "blur(0px)",
-                  opacity: 1,
-                  transition: {
-                    type: "spring",
-                    bounce: 0.4,
-                    duration: 1.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className={
-                  "relative shadow-lg rounded-xl transition duration-500 hover:shadow-violet-400/60 shadow-violet-600/30 md:h-[423px] sm:h-[256px] hover:shadow-xl hover:scale-[99%]"
-                }
-                style={{
-                  width: `${Math.floor(baseWidth * pic.ratio)}px`,
-                }}
-              >
-                <Image
-                  src={pic.displaySrc}
-                  alt={pic.alt || "Photo from Ty Fiero"}
-                  layout="fill"
-                  className="transition-transform duration-500 cursor-pointer !rounded-xl  "
-                  onClick={() => {
-                    if (typeof window !== "undefined") {
-                      window.open(pic.src, "_blank");
-                    }
-                  }}
-                />
-              </motion.div>
-            );
-          })}
-        </div>
-        <p className="my-8 text-sm text-slate-400">
-          For all the nerds out there, this page was statically rendered using
-          Next.js, and my photos were fetched from unsplash using the
-          getStaticProps function.
-        </p>
       </div>
     </>
   );
