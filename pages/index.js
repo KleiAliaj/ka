@@ -61,7 +61,7 @@ export default function Index({ allPosts }) {
             <section className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 ">
               <MotionHeader>
                 <div className="flex items-center w-full md:justify-start sm:justify-center">
-                  <h1 className="font-bold leading-tight tracking-tighter sm:!text-7xl md:text-8xl pr-4 logo f1">
+                  <h1 className="font-bold leading-tight tracking-tighter sm:!text-7xl md:text-8xl pr-4 logo f1 drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500">
                     Hi! I&apos;m Ty
                   </h1>
                   <motion.p
@@ -118,13 +118,14 @@ export default function Index({ allPosts }) {
             <MotionText>
               <div className="text-box sm:mx-0">
                 <p>
-                  I&apos;m a developer with a passion for creating building useful digital experiences. My journey in software development started during
-                  the covid lock down of 2020. I began taking online courses for
-                  web development, starting with basic HTML and CSS. In May of
-                  2021 I left my job as a public health microbiologist to learn
-                  full time. Since then, I&apos;ve worked on a variety of
-                  projects, from small vanilla javascript projects to full stack
-                  web applications in Next.js.
+                  I&apos;m a developer with a passion for creating building
+                  useful digital experiences. My journey in software development
+                  started during the covid lock down of 2020. I began taking
+                  online courses for web development, starting with basic HTML
+                  and CSS. In May of 2021 I left my job as a public health
+                  microbiologist to learn full time. Since then, I&apos;ve
+                  worked on a variety of projects, from small vanilla javascript
+                  projects to full stack web applications in Next.js.
                 </p>
                 <MotionText xPx={0} yPx={50} delay={0.4}>
                   <p className="mt-5 text-center">Favorite Technologies</p>
