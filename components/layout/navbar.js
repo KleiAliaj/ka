@@ -12,6 +12,7 @@ import {
   FaRobot,
 } from "react-icons/fa";
 import {
+  TbCamera,
   TbCode,
   TbDeviceLaptop,
   TbFileText,
@@ -19,6 +20,7 @@ import {
   TbHome2,
   TbLink,
   TbMail,
+  TbMusic,
   TbPalette,
 } from "react-icons/tb";
 import Image from "next/image";
@@ -63,7 +65,17 @@ function Navbar() {
       sub: true,
       subLinks: [
         {
-          name: "Code Art",
+          name: "Music",
+          icon: <TbMusic />,
+          path: "/art/music",
+        },
+        {
+          name: "Photos",
+          icon: <TbCamera />,
+          path: "/art/photography",
+        },
+        {
+          name: "Digital Art",
           icon: <TbDeviceLaptop />,
           path: "/art/generative",
         },
