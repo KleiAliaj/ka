@@ -35,9 +35,9 @@ function IndexDevLab() {
                 <FaKeyboard />
               </a>
             </Link>
-            <Link href={"/devlab/Framer-playground"}>
+            <Link href={"/devlab/Framer-ocean"}>
               <a className="button-1">
-                Framer Playground
+                Framer Ocean
                 <FaImage />
               </a>
             </Link>

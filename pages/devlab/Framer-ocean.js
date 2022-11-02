@@ -87,7 +87,7 @@ function FramerOcean() {
                   <button
                     key={index}
                     className={
-                      "w-full pl-8 rounded-md hover:bg-sky-300  flex gap-2 py-1 transition items-center " +
+                      "w-full pl-8 rounded-md hover:bg-sky-200  flex gap-2 py-1 transition items-center " +
                       (selected === section.name
                         ? " bg-sky-600 text-white"
                         : " bg-white text-slate-700")
