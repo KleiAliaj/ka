@@ -4,7 +4,7 @@ export const experiments = [
     description:
       "Images I've made using DALLE-2, MidJourney, and Stable Diffusion.",
     path: "/art/ai-art",
-    imgSrc: "/assets/other/projects/art/aiImgs/aigrid.webp",
+    imgSrc: "/assets/other/projects/art/aiImgs/5.webp",
     styles: {
       color: "bg-blue-400",
       bColor: "ring-blue-500 ",
