@@ -75,14 +75,14 @@ function Navbar() {
           path: "/art/photography",
         },
         {
-          name: "Digital Art",
-          icon: <TbDeviceLaptop />,
-          path: "/art/generative",
-        },
-        {
           name: "AI Art",
           icon: <FaRobot />,
           path: "/art/ai-art",
+        },
+        {
+          name: "Code Art",
+          icon: <TbDeviceLaptop />,
+          path: "/art/generative",
         },
       ],
     },
@@ -408,11 +408,11 @@ function MenuItem({
                 // layout
                 exit={{ opacity: 0, top: "0rem" }}
                 initial={{ opacity: 0, top: "0rem" }}
-                animate={{ opacity: 1, top: isMobile ? "1.5rem" : "1.8rem" }}
+                animate={{ opacity: 1, top: isMobile ? "1.5rem" : "1.3rem" }}
                 transition={{
                   duration: isMobile ? 0.2 : selected === name ? 0.4 : 0.4,
                 }}
-                className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40 bg-red-60f0 left-[3px] pt-2  rounded-b-lg  w-[95%] h-fit -!z-10 "
+                className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40  left-[3px] pt-2  rounded-b-lg  w-[95%] h-fit -!z-10 "
               >
                 {sub &&
                   subLinks.map((link, index) => {
