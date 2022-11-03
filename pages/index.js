@@ -83,7 +83,7 @@ export default function Index({ allPosts }) {
                 </div>
               </MotionHeader>
               <MotionText>
-                <p className="text-2xl md:text-left sm:text-center">
+                <p className="text-2xl md:text-left sm:text-center font-semibold">
                   Web developer, musician, and photographer in Seattle,
                   Washington.
                 </p>
@@ -182,15 +182,15 @@ export default function Index({ allPosts }) {
                 <p>
                   In my free time I make{" "}
                   <Link href={"/art#music"}>
-                    <a className="underline text-sky-500 ">music</a>
+                    <a className="anc ">music</a>
                   </Link>
                   , take my camera out for nature{" "}
                   <Link href={"/art#photography"}>
-                    <a className="underline text-sky-500 "> photography</a>
+                    <a className="anc "> photography</a>
                   </Link>
                   , I&apos;m an avid reader, and I experiment with{" "}
                   <Link href={"/code/ai"}>
-                    <a className="underline text-sky-500 ">AI&apos;s</a>
+                    <a className="anc ">AI&apos;s</a>
                   </Link>
                   . Hobbies are important to me, and each one has a purpose. I
                   express my creativity through my music, I get outside with my
@@ -274,7 +274,7 @@ export default function Index({ allPosts }) {
                   Writing is thinking, my best thinking always comes from my
                   writing. I&apos;ve been sharing my recent writings on my{" "}
                   <Link href={"/blog"}>
-                    <a className="underline text-sky-500 ">blog</a>
+                    <a className="anc ">blog</a>
                   </Link>
                   , where I write about technology and personal development
                   every few weeks. I try to pack as much helpful info as I can

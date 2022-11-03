@@ -84,7 +84,7 @@ export default function ContactForm() {
                     href="http://twitter.com/FieroTy"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-sky-500"
+                    className="anc"
                   >
                     DM me
                   </a>{" "}

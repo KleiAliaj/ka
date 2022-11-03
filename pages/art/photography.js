@@ -170,7 +170,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
                     href="https://unsplash.com/@tyfiero"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-sky-500 "
+                    className="anc "
                   >
                     unsplash
                   </a>{" "}

@@ -40,7 +40,7 @@ function ModalPAeth() {
                   "/blog/posts/timeless-lessons-from-shipping-an-nft-collection-as-a-new-developer"
                 }
               >
-                <a className="underline text-sky-500">a full blog post</a>
+                <a className="anc">a full blog post</a>
               </Link>{" "}
               about this experience.
               <br />

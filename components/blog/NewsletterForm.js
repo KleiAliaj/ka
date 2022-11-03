@@ -67,7 +67,7 @@ const CustomForm = () => {
               An error occurred. Use{" "}
               <a
                 href="https://dashboard.mailerlite.com/forms/152607/66347209167210126/share"
-                className="underline text-sky-500"
+                className="anc"
                 target="_blank"
                 rel="noopener noreferrer"
               >
