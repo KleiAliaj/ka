@@ -84,7 +84,7 @@ export default class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Varela+Round&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
           <meta
