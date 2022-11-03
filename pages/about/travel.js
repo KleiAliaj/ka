@@ -70,7 +70,7 @@ function Travel() {
                   </li>
                 </ul>
               </div>
-              <div className="flex-col gap-1 items-center sm:mt-16">
+              <div className="flex-col gap-1 items-center sm:mt-16 md:mt-0">
                 <div className="flex flex-col items-center  rounded-lg bg-white/70 dark:bg-slate-800/70 shadow-lg shadow-sky-500/40 p-2 max-w-[12em]">
                   <h3 className="heading-sm ">Countries Visited</h3>
                   <h3 className="heading-md !text-sky-700">
