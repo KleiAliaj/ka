@@ -32,7 +32,7 @@ body {
     @apply h-full w-full flex flex-col items-center md:px-5 sm:px-2 py-5 mb-[20em] fade-effect-quick;
   }
   .anc {
-    @apply text-sky-500 font-bold leading-none overflow-hidden align-bottom	 py-1 inline-block	 relative  visited:text-sky-700 hover:text-white transition px-[2px] before:absolute before:-z-[1] before:top-0 before:left-0 before:translate-y-[calc(100%-5px)] before:w-full before:h-full before:bg-gradient-to-r before:from-sky-300/80 before:via-sky-400/80 before:to-sky-600/80 hover:before:translate-y-0 before:transition  before:rounded-sm  before:px-2;
+    @apply text-sky-500 dark:text-sky-300 dark:visited:text-sky-500 font-bold leading-none overflow-hidden align-bottom	 py-1 inline-block	 relative  visited:text-sky-700 hover:text-white transition px-[2px] before:absolute before:-z-[1] before:top-0 before:left-0 before:translate-y-[calc(100%-5px)] before:w-full before:h-full before:bg-gradient-to-r before:from-sky-300/80 before:via-sky-400/80 before:to-sky-600/80 hover:before:translate-y-0 before:transition  before:rounded-sm  before:px-2;
   }
   .heading-lg {
     @apply text-center text-5xl sm:mb-5 md:mb-10 font-extrabold text-sky-600 dark:text-sky-300 f1;
@@ -47,7 +47,7 @@ body {
     @apply bg-[hsla(200,0%,100%,1)]  dark:bg-[hsla(200,0%,10%,1)]  placeholder:text-slate-400 dark:placeholder:text-slate-300 text-slate-800 dark:text-slate-100 rounded-lg dark:!shadow-white textarea-box;
   }
   .text-box {
-    @apply !p-4 glass-box shadow-lg shadow-sky-600/40 dark:shadow-sky-600 !border-0 bg-white/60 dark:bg-black/60;
+    @apply !p-4 glass-box shadow-lg !shadow-sky-600/40 dark:shadow-sky-600 !border-0 bg-white/60 dark:bg-black/60;
   }
   .button-1 {
     @apply flex items-center gap-2 px-10 py-2 text-white transition rounded-full shadow-md bg-sky-500 shadow-sky-300 hover:bg-sky-600 hover:shadow-sky-400 hover:shadow-lg hover:scale-105 active:scale-90 justify-center f2;
