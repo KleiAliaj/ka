@@ -329,7 +329,7 @@ function Art({ tyImages, tyStats, altDescription }) {
                   about expressing who you are through a medium you enjoy. Give
                   it a listen, and{" "}
                   <a
-                    className="underline text-sky-500"
+                    className="anc"
                     href="http://www.tyfiero.com/contact"
                     target="_blank"
                     rel="noopener noreferrer"

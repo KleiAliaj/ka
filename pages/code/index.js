@@ -58,7 +58,7 @@ function CodeIndex() {
                   the line, but for now I want to focus on getting good at front
                   end.{" "}
                   <Link href={"/contact"}>
-                    <a className="underline text-sky-500">Let me know</a>
+                    <a className="anc">Let me know</a>
                   </Link>{" "}
                   if you have any cool technology recommendations!
                 </p>
@@ -177,7 +177,7 @@ function CodeIndex() {
                     href="https://thecodingtrain.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline text-sky-400"
+                    className="anc"
                   >
                     Coding Train
                   </a>{" "}

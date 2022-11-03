@@ -390,7 +390,7 @@ function Resource({ name, url, cn, fav, note, textColor, ring }) {
             </picture>
             <p
               className={
-                "transition hover:underline visited:text-indigo-600 hover:text-sky-700 hover:dark:text-sky-300 " +
+                "anc " +
                 textColor
               }
             >
