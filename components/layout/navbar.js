@@ -408,7 +408,7 @@ function MenuItem({
                 // layout
                 exit={{ opacity: 0, top: "0rem" }}
                 initial={{ opacity: 0, top: "0rem" }}
-                animate={{ opacity: 1, top: isMobile ? "1.5rem" : "1.3rem" }}
+                animate={{ opacity: 1, top: isMobile ? "1.5rem" : "1.55rem" }}
                 transition={{
                   duration: isMobile ? 0.2 : selected === name ? 0.4 : 0.4,
                 }}
@@ -448,7 +448,7 @@ function MenuItem({
               <Link href={link.path} key={index}>
                 <a
                   className={
-                    "px-2 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm underline  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
+                    "px-2 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm   w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
                     (router.asPath === link.path
                       ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
                       : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
