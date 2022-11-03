@@ -94,7 +94,14 @@ const createSitemap = (posts) => {
     <loc>https://www.tyfiero.com/art/generative</loc>
     <priority>0.80</priority>
 </url>
-
+<url>
+    <loc>https://www.tyfiero.com/art/photography</loc>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://www.tyfiero.com/art/music</loc>
+    <priority>0.80</priority>
+</url>
 <url>
     <loc>https://www.tyfiero.com/about</loc>
     <priority>0.80</priority>
