@@ -54,7 +54,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
               The AI powered by GPT-3 from openAI. The API provided by&nbsp;
               <a
                 href="https://openai.com/"
-                className="underline text-sky-400"
+                className="anc"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -83,7 +83,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
                 href="https://codepen.io/alvaromontoro/pen/ExyvEJY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-sky-400"
+                className="anc"
               >
                 &nbsp;Alvaro Montoro&nbsp;
               </a>
@@ -97,7 +97,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
                 href="https://codepen.io/alvaromontoro/pen/ExyvEJY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-sky-400"
+                className="anc"
               >
                 &nbsp;VoiceRSS&nbsp;
               </a>
@@ -114,7 +114,7 @@ function OliverModal({ oliModal, setOliModal, children, header, className }) {
                 href="https://www.buymeacoffee.com/tyfiero"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-sky-500"
+                className="anc"
               >
                 buying me a coffee
               </a>{" "}
