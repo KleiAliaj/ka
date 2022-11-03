@@ -41,7 +41,28 @@ function Navbar() {
       icon: <TbHome2 className="scale-110 fade-effect-quick" />,
       sub: false,
     },
-
+    {
+      name: "about",
+      icon: <FaRegUser className="scale-100 fade-effect-quick" />,
+      sub: true,
+      subLinks: [
+        {
+          name: "Links",
+          icon: <TbLink />,
+          path: "/about/links",
+        },
+        {
+          name: "Books",
+          icon: <FaBook />,
+          path: "/about/books",
+        },
+        {
+          name: "Travel",
+          icon: <FaGlobeAmericas />,
+          path: "/about/travel",
+        },
+      ],
+    },
     {
       name: "code",
       icon: <TbCode className="scale-110 fade-effect-quick" />,
@@ -87,28 +108,6 @@ function Navbar() {
       ],
     },
 
-    {
-      name: "about",
-      icon: <FaRegUser className="scale-100 fade-effect-quick" />,
-      sub: true,
-      subLinks: [
-        {
-          name: "Links",
-          icon: <TbLink />,
-          path: "/about/links",
-        },
-        {
-          name: "Books",
-          icon: <FaBook />,
-          path: "/about/books",
-        },
-        {
-          name: "Travel",
-          icon: <FaGlobeAmericas />,
-          path: "/about/travel",
-        },
-      ],
-    },
     {
       name: "blog",
       icon: <TbFileText className="scale-110 fade-effect-quick" />,
