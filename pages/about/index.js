@@ -10,6 +10,11 @@ import Head from "next/head";
 import { BsBook, BsBookshelf } from "react-icons/bs";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import MotionText from "@/components/etc/animation/MotionText";
+import BooksSection from "@/components/about/books";
+import BookMarks from "@/components/about/links";
+import TravelButton from "@/components/about/travelButton";
+import TravelSvg from "@/components/about/travelSvg";
+import ResumeButton from "@/components/about/resumeButton";
 
 function About() {
   const prefersReducedMotion = useReducedMotion();
@@ -27,7 +32,7 @@ function About() {
         <h2 className="text-left heading-lg fade-effect-quick ">About Me</h2>
 
         <DualSection centerText>
-          <TextSection>
+          <TextSection cn="lg:min-w-[36rem]">
             <MotionHeader>
               <h2 className={"font-bold heading-md "}>Who am I?</h2>
             </MotionHeader>
@@ -48,26 +53,14 @@ function About() {
               </div>
             </MotionText>
             <MotionText delay={0.2}>
-              <div className="flex justify-center w-full">
-                <div className="flex gap-3 lg:flex-row sm:flex-col items-center  mt-10">
-                  <a
-                    href="/assets/other/TyFieroResume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xl font-bold w-fit button-1"
-                  >
-                    Resume <FaFileAlt />
-                  </a>
-                  <Link href="/about/links">
-                    <a className="  text-xl font-bold w-fit button-1">
-                      Links <FaLink />
-                    </a>
-                  </Link>
-                  <Link href="/about/books">
-                    <a className="text-xl font-bold w-fit button-1">
-                      Books <BsBook />
-                    </a>
-                  </Link>
+              <div className="flex  flex-col mt-2 w-full items-center  ">
+                <div className="flex sm:flex-col lg:flex-row gap-2 md:gap-1 sm:gap-2 xl:gap-12 lg:gap-2 ">
+                  <BooksSection />
+                  <ResumeButton />
+                </div>
+                <div className="flex sm:flex-col lg:flex-row gap-2 mt-2 md:gap-1 sm:gap-2 xl:gap-12 lg:gap-2 ">
+                  <BookMarks />
+                  <TravelButton />
                 </div>
               </div>
             </MotionText>
