@@ -47,6 +47,11 @@ function Navbar() {
       sub: true,
       subLinks: [
         {
+          name: "About Me",
+          icon: <FaRegUser />,
+          path: "/about",
+        },
+        {
           name: "Links",
           icon: <TbLink />,
           path: "/about/links",
@@ -351,7 +356,7 @@ function MenuItem({
         className={
           "relative group flex gap-1 cursor-pointer  items-center capitalize bg-transparent  transition duration-500 rounded-2xl w-fit   sm:!z-100 md:!z-20 shadow-sky-700/40 sm:text-4xl  md:text-lg " +
           (selected === name
-            ? " !bg-sky-500 font-bold  shadow-md  text-white py-1 "
+            ? " !bg-sky-500 font-bold  shadow-md  text-white py-[2px] "
             : " md:hover:text-sky-400    text-sky-900 dark:text-sky-50 dark:shadow-sky-300/40  hover:bg-white dark:hover:bg-slate-800 hover:shadow-md ") +
           (name.length < 4 ? " px-4" : " px-2")
         }
