@@ -313,7 +313,12 @@ function Art({ tyImages, tyStats, altDescription }) {
                 </MotionHeader>
                 <p className="font-bold">
                   After years of curiosity, I finally started making music in{" "}
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.apple.com/logic-pro/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="anc"
+                  >
                     Logic Pro
                   </a>{" "}
                   back in 2019. I make primarily LoFi hip hop beats, the type of
