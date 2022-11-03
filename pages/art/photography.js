@@ -147,13 +147,13 @@ function Photography({ tyImages, tyStats, altDescription }) {
             <TbCamera /> Photography
           </h1>
         </MotionHeader>
-        <DualSection centerText>
+        <DualSection>
           <TextSection>
             <MotionText>
-              <div className="text-box !shadow-sky-400/40">
+              <div className="text-box md:mt-8">
                 <MotionHeader delay={0.3} xPx={-100}>
                   <h3 className="text-left heading-sm !text-sky-500">
-                    Capturing the beauty of the Pacific Northwest
+                    More than just a photo
                   </h3>
                 </MotionHeader>
                 <p>
@@ -180,7 +180,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             </MotionText>
             <br />
             <MotionText invert delay={0.2}>
-              <div className="max-w-4xl p-4 !pb-2 text-gray-800   rounded-lg shadow-xl shadow-sky-600/30 dark:shadow-sky-400/30 bg-sky-50 dark:bg-sky-700/90">
+              <div className="text-box  bg-sky-50 dark:bg-sky-700/90">
                 <div className="mb-2">
                   <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
                     “
@@ -204,7 +204,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
                   href="https://unsplash.com/@tyfiero"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-[4em] w-[18em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
+                  className="flex h-[4em] w-[18em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-xl drop-shadow-lg"
                 >
                   <span className="text-xs font-bold text-white dark:text-black">
                     View my photos on
