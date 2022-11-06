@@ -11,7 +11,7 @@ import FullLoader from "@/components/etc/FullLoader";
 import Head from "next/head";
 import { Quicksand, Baloo_Thambi_2 } from "@next/font/google";
 
-//TODO I cant seem to get the fonts working properly. Next 13 bug?
+//TODO I cant seem to get the fonts working properly. Next 13 bug? Need to test it
 const quicksand = Quicksand({
   variable: "--font-quicksand",
   subsets: ["latin"],
