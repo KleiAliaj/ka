@@ -245,18 +245,18 @@ function Navbar() {
     <>
       <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
         <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a
               className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
               href="#"
             >
-              <div className="w-12 h-12 transition shadow-md dark:shadow-sky-400/60 shadow-sky-800/70 rounded-full">
+              <div className="w-12 h-12 relative transition shadow-md dark:shadow-sky-400/60 shadow-sky-800/70 rounded-full">
                 <Image
                   src="/assets/other/ty-circle-image.webp"
-                  className=" "
                   alt="Ty Fiero"
-                  width={48}
-                  height={48}
+                  fill
+                  sizes="48px"
+                  priority
                 />
               </div>
               <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 pt-2 pb-1">
@@ -292,7 +292,7 @@ function Navbar() {
               variants={menuVariant}
               initial={"menuStart"}
               animate={"menuStop"}
-              className="z-[120] flex items-center mt-4 md:gap-1 lg:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-5 lg:mr-10 f1"
+              className="z-[120] flex items-center mt-4 md:gap-1 lg:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-5 lg:mr-10 f1 "
             >
               {items.map((item) => (
                 <MenuItem
@@ -381,28 +381,27 @@ function MenuItem({
         }}
       >
         <>
-          <Link href={`/${name === "home" ? "" : name}`}>
-            <a
-              className={"flex gap-1 items-center"}
-              onClick={() => {
-                //When clicked, I need it to set selected if it isnt already.
-                //also needs to navigate to the page if not selected
-                //if selected and submenu open, navigate, otherwise open menu
+          <Link
+            href={`/${name === "home" ? "" : name}`}
+            className={"flex gap-1 items-center z-100"}
+            onClick={() => {
+              //When clicked, I need it to set selected if it isnt already.
+              //also needs to navigate to the page if not selected
+              //if selected and submenu open, navigate, otherwise open menu
 
-                if (selected !== name) {
-                  setSelected(name);
-                  // router.push(`/${name === "home" ? "" : name}`);
-                } else {
-                  // router.push(`/${name === "home" ? "" : name}`);
-                }
-                //handleClick deals with mobile styling of the menu
+              if (selected !== name) {
+                setSelected(name);
+                // router.push(`/${name === "home" ? "" : name}`);
+              } else {
+                // router.push(`/${name === "home" ? "" : name}`);
+              }
+              //handleClick deals with mobile styling of the menu
 
-                handleClick();
-              }}
-            >
-              <div className=""> {icon}</div>
-              {name}
-            </a>
+              handleClick();
+            }}
+          >
+            <div className=""> {icon}</div>
+            {name}
           </Link>
 
           {sub && (
@@ -424,12 +423,12 @@ function MenuItem({
                 transition={{
                   duration: isMobile ? 0.2 : selected === name ? 0.4 : 0.4,
                 }}
-                className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40  left-[3px] pt-2  rounded-b-lg  w-[95%] h-fit -!z-10 "
+                className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40  left-[3px] pt-2  rounded-b-lg  w-[95%] h-fit -!z-10 md:bg-gradient-to-b md:from-white/0 md:via-white/40 md:to-white dark:md:from-slate-800/0 dark:md:via-slate-800/40 dark:md:to-slate-800"
               >
                 {sub &&
                   subLinks.map((link, index) => {
                     return (
-                      <Link href={link.path} key={index}>
+                      <Link legacyBehavior href={link.path} key={index}>
                         <a
                           className={
                             "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
@@ -457,7 +456,7 @@ function MenuItem({
         {sub &&
           subLinks.map((link, index) => {
             return (
-              <Link href={link.path} key={index}>
+              <Link legacyBehavior href={link.path} key={index}>
                 <a
                   className={
                     "px-2 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm   w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
