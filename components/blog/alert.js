@@ -16,7 +16,7 @@ export default function Alert({ preview }) {
           {preview ? (
             <>
               This is page is a preview.{" "}
-              <Link href="/api/exit-preview">
+              <Link legacyBehavior href="/api/exit-preview">
                 <a
                   rel="noreferrer noopener"
                   className="underline transition-colors duration-200 hover:text-cyan"

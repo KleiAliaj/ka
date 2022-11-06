@@ -101,7 +101,7 @@ function OliverPage() {
         <OliverModal oliModal={oliModal} setOliModal={setOliModal} />
       )}
       <div className="flex w-full h-full md:flex-row sm:flex-col sm:items-end sm:justify-end md:items-start">
-        <Link href="/code/">
+        <Link legacyBehavior href="/code/">
           <a className="absolute top-5 sm:-top-3 sm:left-1 left-5 button-1 !px-2">
             <FaArrowLeft /> Back
           </a>

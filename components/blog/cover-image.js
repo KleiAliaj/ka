@@ -31,7 +31,7 @@ export default function CoverImage({ title, url, slug, thumb = false }) {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link href={`/blog/posts/${slug}`}>
+        <Link legacyBehavior href={`/blog/posts/${slug}`}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

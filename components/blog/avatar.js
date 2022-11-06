@@ -8,8 +8,8 @@ export default function Avatar({ name, picture, date }) {
         {picture && (
           <Image
             src={`${picture}?auto=format,compress,enhance&w=100&h=100`}
-            layout="fill"
             className="rounded-full"
+            fill
             alt={name}
           />
         )}

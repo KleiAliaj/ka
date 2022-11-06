@@ -11,7 +11,7 @@ export default function Footer() {
           <SocialIcons small />
           <p className="text-xs text-slate-300">
             Copyright © {date}{" "}
-            <Link href={"/about"}>
+            <Link legacyBehavior href={"/about"}>
               <a className="cursor-pointer hover:underline">Ty Fiero</a>
             </Link>
           </p>

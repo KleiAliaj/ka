@@ -8,9 +8,9 @@ function ImageSection({ src, alt }) {
       <Image
         src={src}
         alt={alt}
-        layout="fill"
-        sizes="100%"
-        objectFit="cover"
+        fill
+        sizes="(max-width: 768px) 80vw,
+                50vw"
         className="object-cover rounded-xl "
       />
     </MotionImage>

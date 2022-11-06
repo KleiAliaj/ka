@@ -18,7 +18,7 @@ export default function PostPreview({
   return (
     <MotionImage classes="flex justify-center">
       <div className="glass-box bg-white/80 dark:bg-slate-900/80 sm:w-4/5 md:w-[70%] md:max-w-[30em] h-auto  group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer relative">
-        <Link href={`/blog/posts/${slug}`}>
+        <Link legacyBehavior href={`/blog/posts/${slug}`}>
           <div>
             <div className="p-2">
               <div className="sm:mb-2 md:mb-5">
@@ -30,7 +30,7 @@ export default function PostPreview({
                 />
               </div>
               <h3 className="text-2xl leading-snug md:mb-3">
-                <Link href={`/blog/posts/${slug}`}>
+                <Link legacyBehavior href={`/blog/posts/${slug}`}>
                   <a className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
                     {title}
                   </a>

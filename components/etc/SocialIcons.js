@@ -51,7 +51,7 @@ function SocialIcons({ small }) {
       viewport={{ once: true, amount: 0.5 }}
       className={"flex md:gap-3 sm:gap-8  " + (small ? " scale-75" : " mt-4")}
     >
-      <Link href="/contact">
+      <Link legacyBehavior href="/contact">
         <motion.a
           variants={iconAnimate}
           className="p-3 text-xl text-white transition rounded-full shadow-sky-800/50 shadow-md cursor-pointer bg-sky-400 hover:!scale-125 active:!scale-90"
