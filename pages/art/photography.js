@@ -332,7 +332,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
                 <Image
                   src={pic.displaySrc}
                   alt={pic.alt || "Photo from Ty Fiero"}
-                  layout="fill"
+                  fill
                   className="transition-transform duration-500 cursor-pointer !rounded-xl  "
                   onClick={() => {
                     if (typeof window !== "undefined") {

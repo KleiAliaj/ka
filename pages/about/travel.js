@@ -9,6 +9,8 @@ function Travel() {
         <meta name="description" content={`Ty's travels.`} />
       </Head>
       <div className="page-container">
+        <h2 className="heading-lg !mb-5">Travels</h2>
+
         <div className="w-full">
           <iframe
             src="https://www.google.com/maps/d/u/0/embed?mid=17RHxjwzkrJIq_GPtHD4D5qRzErpuvB4&ehbc=2E312F"
@@ -17,7 +19,6 @@ function Travel() {
           ></iframe>
         </div>
         <article className="w-full px-10 pb-10 pt-5 overflow-y-auto max-w-[620px] mx-auto">
-          <h2 className="heading-lg ">Travels</h2>
           <div className="w-full">
             <div className="text-box">
               <p className="">

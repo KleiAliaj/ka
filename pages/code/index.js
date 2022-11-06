@@ -57,7 +57,7 @@ function CodeIndex() {
                   to learn SQL, machine learning, and backend frameworks down
                   the line, but for now I want to focus on getting good at front
                   end.{" "}
-                  <Link href={"/contact"}>
+                  <Link legacyBehavior href={"/contact"}>
                     <a className="anc">Let me know</a>
                   </Link>{" "}
                   if you have any cool technology recommendations!
@@ -142,7 +142,7 @@ function CodeIndex() {
             </MotionText>
             <MotionText invert delay={0.4}>
               <div className="flex justify-center w-full mt-5 ">
-                <Link href="/code/projects">
+                <Link legacyBehavior href="/code/projects">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
                     All Projects <FaArrowRight />
                   </a>
@@ -189,7 +189,7 @@ function CodeIndex() {
             </MotionText>
             <MotionText delay={0.4}>
               <div className="flex justify-center w-full mt-5 ">
-                <Link href="/art/generative">
+                <Link legacyBehavior href="/art/generative">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
                     All Generative Art <FaArrowRight />
                   </a>
@@ -207,7 +207,7 @@ function CodeIndex() {
         <DualSection invert>
           <TextSection title="" headerClassNames="hidden">
             <MotionHeader invert>
-              <Link href={"/code/ai"}>
+              <Link legacyBehavior href={"/code/ai"}>
                 <a>
                   <h2 className={"font-bold heading-md  "}>AI Experiments</h2>
                 </a>
