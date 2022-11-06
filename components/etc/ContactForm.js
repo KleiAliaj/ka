@@ -55,15 +55,16 @@ export default function ContactForm() {
     <div className="fade-effect-quick sm:mb-[50px] md:mb-0">
       <main className="text-box sm:!px-10 md:!px-20">
         {thanks ? (
-          <div className="flex flex-col items-center justify-center w-full h-[50vh] gap-4">
+          <div className="flex flex-col items-center justify-center w-full  gap-4">
             <MotionImage>
               <p className="text-xl font-bold ">
                 Thanks for reaching out! I&apos;ll get back to you soon. 😊
               </p>
-              <Link href="/">
-                <a className="text-xl font-bold button-1">
-                  Back Home <FaHome />
-                </a>
+              <Link
+                href="/"
+                className="text-xl flex gap-2 font-bold button-1 mt-20 w-fit mx-auto"
+              >
+                Back Home <FaHome />
               </Link>
             </MotionImage>
           </div>
