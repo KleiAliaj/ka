@@ -77,7 +77,7 @@ export default class MyDocument extends Document {
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
 
           <meta property="og:image" content={HOME_OG_IMAGE_URL} />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
@@ -86,7 +86,7 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
-          />
+          /> */}
           <meta
             name="google-site-verification"
             content="OhpRDnvN-fz_RpyK7E4eKh7UNfjD0ln1UOWZPaVRtVk"
