@@ -92,17 +92,18 @@ export default function Index({ allPosts }) {
             </section>
           </TextSection>
           <div className="md:w-1/2 sm:h-[18em] sm:w-full md:h-[36em] rounded-lg drop-shadow-xl relative">
-            <MotionImage>
+            <MotionImage classes="relative w-full h-full">
               <div className="absolute z-10 w-1/5 bg-teal-300/70 h-2/5 rounded-3xl dark:bg-teal-200/70 blur-3xl left-40 dot top-16"></div>
               <div className="absolute z-10 w-2/5 bg-indigo-200/70 h-2/5 rounded-full dark:bg-indigo-300/70 blur-2xl right-28 top-[12rem] dot2 bounds"></div>
               <div className="absolute w-3/5 h-4/5 rounded-3xl bg-sky-300/70 dark:bg-sky-400/70 blur-3xl left-40 top-10 dot3 bounds"></div>
               <Image
                 src="/assets/other/tyheadshot.webp"
                 alt="Ty Fiero image"
-                className="!rounded-lg z-50"
-                layout="fill"
+                className="!rounded-lg z-50 object-contain"
                 priority={true}
-                objectFit="contain"
+                fill
+                sizes="(max-width: 768px) 80vw,
+                50vw"
               />
             </MotionImage>
           </div>
@@ -141,8 +142,9 @@ export default function Index({ allPosts }) {
                           <Image
                             src={tech.url}
                             alt={tech.title}
-                            layout="fill"
-                            objectFit="contain"
+                            className="object-contain"
+                            fill
+                            sizes="4rem"
                           />
                         </div>
                       );
@@ -153,7 +155,7 @@ export default function Index({ allPosts }) {
             </MotionText>
             <MotionText delay={0.4}>
               <div className="flex justify-center w-full">
-                <Link href={"/code/projects"}>
+                <Link legacyBehavior href={"/code/projects"}>
                   <a className="mt-5 button-1">
                     View All Projects <TbCode className="text-xl" />
                   </a>
@@ -181,15 +183,15 @@ export default function Index({ allPosts }) {
               <div className="text-box">
                 <p>
                   In my free time I make{" "}
-                  <Link href={"/art#music"}>
+                  <Link legacyBehavior href={"/art#music"}>
                     <a className="anc ">music</a>
                   </Link>
                   , take my camera out for nature{" "}
-                  <Link href={"/art#photography"}>
+                  <Link legacyBehavior href={"/art#photography"}>
                     <a className="anc "> photography</a>
                   </Link>
                   , I&apos;m an avid reader, and I experiment with{" "}
-                  <Link href={"/code/ai"}>
+                  <Link legacyBehavior href={"/code/ai"}>
                     <a className="anc ">AI&apos;s</a>
                   </Link>
                   . Hobbies are important to me, and each one has a purpose. I
@@ -273,7 +275,7 @@ export default function Index({ allPosts }) {
                 <p>
                   Writing is thinking, my best thinking always comes from my
                   writing. I&apos;ve been sharing my recent writings on my{" "}
-                  <Link href={"/blog"}>
+                  <Link legacyBehavior href={"/blog"}>
                     <a className="anc ">blog</a>
                   </Link>
                   , where I write about technology and personal development

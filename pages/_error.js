@@ -10,7 +10,7 @@ function Error({ statusCode }) {
           <p>The server didn&apos;t like that... Try refreshing maybe? Idk </p>
           <p>
             If you keep getting an error,{" "}
-            <Link href="/contact">
+            <Link legacyBehavior href="/contact">
               <a>send me a message</a>
             </Link>{" "}
             and I&apos;ll go bug hunting.{" "}
