@@ -16,7 +16,7 @@ function OliverAIProject() {
         <meta name="description" content={`AI therapist Oliver`} />
       </Head>
       <div className="relative page-container">
-        <Link href={"/code/projects"}>
+        <Link legacyBehavior href={"/code/projects"}>
           <a className="absolute flex items-center gap-1 p-1 transition rounded-full top-3 text-sky-500 left-5 f2 hover:scale-105 hover:ring-2 ring-sky-500 ">
             <FaArrowLeft /> Back to Projects
           </a>
@@ -89,7 +89,7 @@ function OliverAIProject() {
                   </div>
                 </div>
                 <div className="flex justify-center w-full gap-3 mt-4">
-                  <Link href={"/code/ai/Oliver"}>
+                  <Link legacyBehavior href={"/code/ai/Oliver"}>
                     <a className="button-1 w-fit f2">
                       Link <FaExternalLinkAlt />
                     </a>

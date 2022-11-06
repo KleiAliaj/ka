@@ -9,7 +9,7 @@ function CompactProjects() {
       <div className="flex flex-wrap justify-center gap-4 md:w-full sm:w-screen h-fit">
         {slimProjects.map((project, index) => {
           return (
-            <Link href={project.route} key={index}>
+            <Link legacyBehavior href={project.route} key={index}>
               <a>
                 <Atropos
                   shadow={false}

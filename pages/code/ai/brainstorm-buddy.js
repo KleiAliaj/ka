@@ -67,10 +67,11 @@ function Iphone() {
                 </p>
               </li>
             </ol>
-            <Link href={"/code/projects/brainstorm-buddy-project"}>
-              <a className="button-1 w-2/3 mx-auto mt-5">
-                More about this Project
-              </a>
+            <Link
+              href={"/code/projects/brainstorm-buddy-project"}
+              className="button-1 w-2/3 mx-auto mt-5 whitespace-nowrap"
+            >
+              More about this Project
             </Link>
           </div>
         </div>
