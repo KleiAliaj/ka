@@ -107,7 +107,7 @@ const ProjectCard = ({
               {description}
             </p>
           </div>
-          <Link href={route}>
+          <Link legacyBehavior href={route}>
             <div className="relative transition duration-500 md:active:scale-95 ">
               <a
                 data-atropos-offset="-8"

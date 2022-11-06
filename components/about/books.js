@@ -14,7 +14,7 @@ function BooksSection() {
     },
   ];
   return (
-    <Link href={"/about/books"}>
+    <Link legacyBehavior href={"/about/books"}>
       <a className="!p-3 overflow-hidden rounded-xl cursor-pointer text-box w-72 h-32 hover:bg-sky-100/60 dark:hover:bg-sky-700/60 transition duration-500 group hover:shadow-xl">
         <div className="flex gap-1 absolute top-2 left-2 items-center">
           <p className="f1 transition group-hover:text-sky-400 text-sky-600 dark:text-sky-300 dark:group-hover:text-sky-200 text-xl ">

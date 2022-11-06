@@ -6,7 +6,7 @@ import TravelSvg from "./travelSvg";
 function TravelButton() {
   const [hover, setHover] = React.useState(false);
   return (
-    <Link href={"/about/travel"}>
+    <Link legacyBehavior href={"/about/travel"}>
       <a
         className="!p-3 overflow-hidden rounded-xl cursor-pointer  text-box w-72 h-32 hover:bg-sky-100/60 dark:hover:bg-sky-700/60 transition duration-500 group hover:shadow-xl"
         onMouseEnter={() => {
