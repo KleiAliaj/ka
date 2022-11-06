@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function TravelSvg({ hover }) {
-  console.log(hover);
   return (
     <>
       {hover && (

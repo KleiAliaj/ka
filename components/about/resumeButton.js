@@ -1,7 +1,5 @@
-import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import TravelSvg from "./travelSvg";
 
 function ResumeButton() {
   return (

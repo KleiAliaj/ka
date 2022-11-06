@@ -24,10 +24,18 @@ import {
   TbPalette,
 } from "react-icons/tb";
 import Image from "next/image";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  useScroll,
+} from "framer-motion";
 
 function Navbar() {
   const prefersReducedMotion = useReducedMotion();
+  // const { scrollYProgress } = useScroll();
+  // let y = useScroll();
+  // console.log(y);
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
   const [isReady, setIsReady] = React.useState(false);
@@ -235,7 +243,7 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
+      <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
         <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
           <Link href="/">
             <a
