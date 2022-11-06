@@ -348,7 +348,7 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link href="/art/music">
+                <Link legacyBehavior href="/art/music">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-teal-500 !shadow-teal-300">
                     Listen Now <FaArrowRight />
                   </a>
@@ -400,7 +400,7 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText invert delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link href="/art/generative">
+                <Link legacyBehavior href="/art/generative">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
                     View Generative Art <FaArrowRight />
                   </a>
@@ -449,7 +449,7 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link href="/art/ai-art">
+                <Link legacyBehavior href="/art/ai-art">
                   <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300">
                     View AI Images <FaArrowRight />
                   </a>
@@ -459,7 +459,7 @@ function Art({ tyImages, tyStats, altDescription }) {
           </TextSection>
           <div className="flex items-center justify-center md:w-1/3 sm:w-full h-fit ">
             <MotionImage classes="">
-              <Link href={"/art/ai-art"}>
+              <Link legacyBehavior href={"/art/ai-art"}>
                 <a className="grid grid-cols-3 grid-rows-3 cursor-pointer w-fit lg:gap-2 sm:gap-1">
                   {aiImgs.map((img, index) => {
                     return (
@@ -517,7 +517,7 @@ function Art({ tyImages, tyStats, altDescription }) {
             <div className="flex justify-center w-full ">
               <MotionText delay={0.4}>
                 <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                  <Link href="/art/photography">
+                  <Link legacyBehavior href="/art/photography">
                     <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-violet-500 !shadow-violet-300">
                       View Photos <FaArrowRight />
                     </a>

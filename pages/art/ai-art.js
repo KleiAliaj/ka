@@ -122,17 +122,16 @@ function AIImage({ index, pic }) {
           </button>
         </div>
       )}
-      {/* <p>{pic.name.length}</p> */}
       <Image
         src={pic.image.url}
         alt={pic.name}
-        layout="fill"
+        fill
+        sizes="(max-width: 768px) 100px,
+        250px"
         className={
           " rounded-xl z-0 cursor-pointer " + +(imageLoading ? " !hidden" : "")
         }
         onLoadingComplete={() => {
-          // console.log("IMG LOADED");
-
           setImageLoading(false);
         }}
         onClick={() => {

@@ -171,8 +171,8 @@ function CodeLogo(props) {
         <Image
           src={props.img}
           alt={props.alt}
-          layout="fill"
-          objectFit="contain"
+          className="object-contain"
+          fill
         />
       </a>
       <p className={"font-bold text-sm text-center " + props.textStyle}>
