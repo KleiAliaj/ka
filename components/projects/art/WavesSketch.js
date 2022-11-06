@@ -81,9 +81,10 @@ function WavesSketch() {
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     codeCanvasWidth = frame.current.clientWidth;
-
+    console.log(sketchPlaying + " Where it matters");
+    let p5Instance;
     if (sketchPlaying) {
-      const p5Instance = new p5(sketch, p5ContainerRef.current);
+      p5Instance = new p5(sketch, p5ContainerRef.current);
       // console.log(")))))))))CREATED CANVAS(((((((((((");
     }
 
@@ -123,6 +124,7 @@ function WavesSketch() {
         viewport={{ once: false, amount: 0.2 }}
         onViewportEnter={() => {
           sketchPlaying = true;
+          console.log(sketchPlaying);
           setIsReset(!reset);
         }}
         onViewportLeave={() => {

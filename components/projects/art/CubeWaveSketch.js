@@ -108,9 +108,9 @@ function CubeWaveSketch() {
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     codeCanvasWidth = frame.current.clientWidth;
-
+    let p5Instance;
     if (sketch2Playing) {
-      const p5Instance = new p5(sketch, p5ContainerRef.current);
+      p5Instance = new p5(sketch, p5ContainerRef.current);
       mobileScale = size.width < 700 ? true : false;
 
       // console.log(")))))))))CREATED CANVAS(((((((((((");
