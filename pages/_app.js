@@ -9,9 +9,25 @@ import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import FullLoader from "@/components/etc/FullLoader";
 import Head from "next/head";
+import { Quicksand, Baloo_Thambi_2 } from "@next/font/google";
+
+//TODO I cant seem to get the fonts working properly. Next 13 bug?
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
+const baloo = Baloo_Thambi_2({
+  variable: "--font-baloo",
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
+
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
-
   const router = useRouter();
   //Loading animation logic
   React.useEffect(() => {
@@ -44,7 +60,7 @@ function MyApp({ Component, pageProps }) {
 
         <meta property="og:url" content={canonicalUrl} />
       </Head>
-      <Layout>
+      <Layout fontCn={` ${baloo.variable}  ${quicksand.variable}`}>
         <Toaster />
         <FullLoader show={loading} />
 

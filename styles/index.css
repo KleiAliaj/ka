@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --font-quicksand: monospace;
+  --font-baloo: monospace;
   --blue: #0ea5e9;
   --blue-l: #bae6fd;
   --blue-d: #0c4a6e;
@@ -89,14 +91,18 @@ body {
 }
 
 .f1 {
-  /* font-weight: bolder; */
-  font-family: "Baloo Thambi 2", sans-serif;
+  font-family: var(--font-baloo);
   font-display: block;
+  /* font-family: "Baloo Thambi 2", sans-serif;
+  font-display: block; */
 }
 .f2 {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-quicksand);
   font-weight: 500;
   font-display: block;
+  /* font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-display: block; */
 }
 
 .glass-box {
