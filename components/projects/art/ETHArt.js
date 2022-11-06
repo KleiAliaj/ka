@@ -25,12 +25,12 @@ function sketch(p) {
     p.noiseDetail(1);
 
     function makeStar() {
+      let width3D = p.width;
+      let height3D = p.height;
       this.x = p.random(-width3D, width3D);
       this.y = p.random(-height3D, height3D);
       this.z = p.random(width3D);
       this.randLength = p.random(3, 8);
-      let width3D = p.width;
-      let height3D = p.height;
       // display
       this.update = function () {
         this.z -= starSpeed;
