@@ -11,7 +11,7 @@ export const projectArray = [
       "Tailwind",
       "Chrome Extension API",
     ],
-    imgSrc: "/assets/other/consistensea.png",
+    imgSrc: "/assets/other/projects/consistensea/consistensea.png",
     thumb: "/assets/other/projects/thumbnails/cs.webp",
     styles: {
       color: "bg-blue-400",
