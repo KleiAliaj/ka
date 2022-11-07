@@ -21,10 +21,11 @@ function ModalPAAda() {
         <meta name="description" content={`Cardano PriceArt NFTs`} />
       </Head>
       <div className="relative page-container">
-        <Link legacyBehavior href={"/code/projects"}>
-          <a className="absolute flex items-center gap-1 p-1 transition rounded-full top-3 text-sky-500 left-5 f2 hover:scale-105 hover:ring-2 ring-sky-500 ">
-            <FaArrowLeft /> Back to Projects
-          </a>
+        <Link
+          className="absolute flex items-center gap-1 p-1 transition rounded-full top-3 text-sky-500 left-5 f2 hover:scale-105 hover:ring-2 ring-sky-500 "
+          href={"/code/projects"}
+        >
+          <FaArrowLeft /> Back to Projects
         </Link>
         <div
           className={
@@ -40,11 +41,12 @@ function ModalPAAda() {
             <p>
               Official write up coming soon, but I did write{" "}
               <Link
+              className="anc"
                 href={
                   "/blog/posts/timeless-lessons-from-shipping-an-nft-collection-as-a-new-developer"
                 }
               >
-                <a className="anc">a full blog post</a>
+                a full blog post
               </Link>{" "}
               about this experience.
             </p>

@@ -18,28 +18,20 @@ function IndexDevLab() {
 
         <div className="w-full h-full p-5">
           <div className="flex flex-wrap items-center justify-center w-full h-full gap-5">
-            <Link legacyBehavior href={"/devlab/three"}>
-              <a className="button-1">
-                Three.js <FaBox />
-              </a>
+            <Link className="button-1" href={"/devlab/three"}>
+              Three.js <FaBox />
             </Link>
-            <Link legacyBehavior href={"/devlab/enterHook"}>
-              <a className="button-1">
-                npm Enter hook
-                <FaKeyboard />
-              </a>
+            <Link className="button-1" href={"/devlab/enterHook"}>
+              npm Enter hook
+              <FaKeyboard />
             </Link>
-            <Link legacyBehavior href={"/devlab/canvas"}>
-              <a className="button-1">
-                npm Enter hook
-                <FaKeyboard />
-              </a>
+            <Link className="button-1" href={"/devlab/canvas"}>
+              npm Enter hook
+              <FaKeyboard />
             </Link>
-            <Link legacyBehavior href={"/devlab/Framer-ocean"}>
-              <a className="button-1">
-                Framer Ocean
-                <FaImage />
-              </a>
+            <Link className="button-1" href={"/devlab/Framer-ocean"}>
+              Framer Ocean
+              <FaImage />
             </Link>
           </div>
         </div>

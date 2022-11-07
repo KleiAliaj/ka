@@ -57,8 +57,8 @@ function CodeIndex() {
                   to learn SQL, machine learning, and backend frameworks down
                   the line, but for now I want to focus on getting good at front
                   end.{" "}
-                  <Link legacyBehavior href={"/contact"}>
-                    <a className="anc">Let me know</a>
+                  <Link className="anc" href={"/contact"}>
+                    Let me know
                   </Link>{" "}
                   if you have any cool technology recommendations!
                 </p>
@@ -142,10 +142,11 @@ function CodeIndex() {
             </MotionText>
             <MotionText invert delay={0.4}>
               <div className="flex justify-center w-full mt-5 ">
-                <Link legacyBehavior href="/code/projects">
-                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
-                    All Projects <FaArrowRight />
-                  </a>
+                <Link
+                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit"
+                  href="/code/projects"
+                >
+                  All Projects <FaArrowRight />
                 </Link>
               </div>
             </MotionText>
@@ -189,10 +190,11 @@ function CodeIndex() {
             </MotionText>
             <MotionText delay={0.4}>
               <div className="flex justify-center w-full mt-5 ">
-                <Link legacyBehavior href="/art/generative">
-                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
-                    All Generative Art <FaArrowRight />
-                  </a>
+                <Link
+                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit"
+                  href="/art/generative"
+                >
+                  All Generative Art <FaArrowRight />
                 </Link>
               </div>
             </MotionText>
@@ -207,10 +209,8 @@ function CodeIndex() {
         <DualSection invert>
           <TextSection title="" headerClassNames="hidden">
             <MotionHeader invert>
-              <Link legacyBehavior href={"/code/ai"}>
-                <a>
-                  <h2 className={"font-bold heading-md  "}>AI Experiments</h2>
-                </a>
+              <Link href={"/code/ai"}>
+                <h2 className={"font-bold heading-md  "}>AI Experiments</h2>
               </Link>
             </MotionHeader>
             <MotionText invert>

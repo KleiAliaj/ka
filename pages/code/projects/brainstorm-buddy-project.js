@@ -18,10 +18,11 @@ function Brainstorm() {
         />
       </Head>
       <div className="relative page-container">
-        <Link legacyBehavior href={"/code/projects"}>
-          <a className="absolute flex items-center gap-1 p-1 transition rounded-full top-3 text-sky-500 left-5 f2 hover:scale-105 hover:ring-2 ring-sky-500 ">
-            <FaArrowLeft /> Back to Projects
-          </a>
+        <Link
+          className="absolute flex items-center gap-1 p-1 transition rounded-full top-3 text-sky-500 left-5 f2 hover:scale-105 hover:ring-2 ring-sky-500 "
+          href={"/code/projects"}
+        >
+          <FaArrowLeft /> Back to Projects
         </Link>
         <div
           className={
@@ -41,12 +42,12 @@ function Brainstorm() {
               can&apos;t always talk to a buddy to brainstorm, so I made this!
               It works surprisingly well, I honestly wasn&apos;t expecting it to
               perform as well as it does.{" "}
-              <Link legacyBehavior href={"/code/ai/brainstorm-buddy"}>
-                <a className="text-sky-400 underline">Give it a try</a>
+              <Link className="anc" href={"/code/ai/brainstorm-buddy"}>
+                Give it a try
               </Link>
               , and{" "}
-              <Link legacyBehavior href={"/contact"}>
-                <a className="text-sky-400 underline">let me know</a>
+              <Link className="anc" href={"/contact"}>
+                let me know
               </Link>{" "}
               how it works for you.
               <br />
@@ -99,10 +100,11 @@ function Brainstorm() {
                   </div>
                 </div>
                 <div className="flex justify-center w-full gap-2 mt-4">
-                  <Link legacyBehavior href={"/code/ai/brainstorm-buddy"}>
-                    <a className="button-1 w-fit f2">
-                      Link <FaExternalLinkAlt />
-                    </a>
+                  <Link
+                    className="button-1 w-fit f2"
+                    href={"/code/ai/brainstorm-buddy"}
+                  >
+                    Link <FaExternalLinkAlt />
                   </Link>
 
                   <GithubButton url="https://github.com/tyfiero/tyfiero-blog/blob/main/pages/code/ai/brainstorm-buddy.js" />
