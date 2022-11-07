@@ -245,24 +245,22 @@ function Navbar() {
     <>
       <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
         <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
-          <Link legacyBehavior href="/">
-            <a
-              className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
-              href="#"
-            >
-              <div className="w-12 h-12 relative transition shadow-md dark:shadow-sky-400/60 shadow-sky-800/70 rounded-full">
-                <Image
-                  src="/assets/other/ty-circle-image.webp"
-                  alt="Ty Fiero"
-                  fill
-                  sizes="48px"
-                  priority
-                />
-              </div>
-              <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 pt-2 pb-1">
-                Ty Fiero
-              </p>
-            </a>
+          <Link
+            className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
+            href="/"
+          >
+            <div className="w-12 h-12 relative transition shadow-md dark:shadow-sky-400/60 shadow-sky-800/70 rounded-full">
+              <Image
+                src="/assets/other/ty-circle-image.webp"
+                alt="Ty Fiero"
+                fill
+                sizes="48px"
+                priority
+              />
+            </div>
+            <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 pt-2 pb-1">
+              Ty Fiero
+            </p>
           </Link>
         </div>
 
@@ -428,22 +426,22 @@ function MenuItem({
                 {sub &&
                   subLinks.map((link, index) => {
                     return (
-                      <Link legacyBehavior href={link.path} key={index}>
-                        <a
-                          className={
-                            "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
-                            (router.asPath === link.path
-                              ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
-                              : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
-                          }
-                          onClick={() => {
-                            setClicked(false);
-                            handleClick();
-                          }}
-                        >
-                          <div>{link.icon}</div>
-                          {link.name}
-                        </a>
+                      <Link
+                        href={link.path}
+                        key={index}
+                        className={
+                          "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
+                          (router.asPath === link.path
+                            ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
+                            : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
+                        }
+                        onClick={() => {
+                          setClicked(false);
+                          handleClick();
+                        }}
+                      >
+                        <div>{link.icon}</div>
+                        {link.name}
                       </Link>
                     );
                   })}
@@ -456,22 +454,22 @@ function MenuItem({
         {sub &&
           subLinks.map((link, index) => {
             return (
-              <Link legacyBehavior href={link.path} key={index}>
-                <a
-                  className={
-                    "px-2 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm   w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
-                    (router.asPath === link.path
-                      ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
-                      : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
-                  }
-                  onClick={() => {
-                    setClicked(false);
-                    handleClick();
-                  }}
-                >
-                  {/* <div>{link.icon}</div> */}
-                  {link.name}
-                </a>
+              <Link
+                className={
+                  "px-2 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm   w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
+                  (router.asPath === link.path
+                    ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
+                    : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
+                }
+                onClick={() => {
+                  setClicked(false);
+                  handleClick();
+                }}
+                href={link.path}
+                key={index}
+              >
+                {/* <div>{link.icon}</div> */}
+                {link.name}
               </Link>
             );
           })}

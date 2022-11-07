@@ -333,14 +333,9 @@ function Art({ tyImages, tyStats, altDescription }) {
                   turned out. Creativity isn&apos;t about perfection, it&apos;s
                   about expressing who you are through a medium you enjoy. Give
                   it a listen, and{" "}
-                  <a
-                    className="anc"
-                    href="http://www.tyfiero.com/contact"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link className="anc" href={"/contact"}>
                     let me know
-                  </a>{" "}
+                  </Link>
                   what you think!
                 </p>
               </div>
@@ -348,10 +343,11 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link legacyBehavior href="/art/music">
-                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-teal-500 !shadow-teal-300">
-                    Listen Now <FaArrowRight />
-                  </a>
+                <Link
+                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-teal-500 !shadow-teal-300"
+                  href="/art/music"
+                >
+                  Listen Now <FaArrowRight />
                 </Link>
               </div>
             </MotionText>
@@ -400,10 +396,11 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText invert delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link legacyBehavior href="/art/generative">
-                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit">
-                    View Generative Art <FaArrowRight />
-                  </a>
+                <Link
+                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit"
+                  href="/art/generative"
+                >
+                  View Generative Art <FaArrowRight />
                 </Link>
               </div>
             </MotionText>
@@ -449,29 +446,31 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link legacyBehavior href="/art/ai-art">
-                  <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300">
-                    View AI Images <FaArrowRight />
-                  </a>
+                <Link
+                  href="/art/ai-art"
+                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300"
+                >
+                  View AI Images <FaArrowRight />
                 </Link>
               </div>
             </MotionText>
           </TextSection>
           <div className="flex items-center justify-center md:w-1/3 sm:w-full h-fit ">
             <MotionImage classes="">
-              <Link legacyBehavior href={"/art/ai-art"}>
-                <a className="grid grid-cols-3 grid-rows-3 cursor-pointer w-fit lg:gap-2 sm:gap-1">
-                  {aiImgs.map((img, index) => {
-                    return (
-                      <img
-                        key={index}
-                        className="h-auto mx-auto rounded-md shadow-md xl:w-36 lg:w-28 md:w-20 sm:w-24 shadow-blue-400/60"
-                        src={img}
-                        alt="AI image from Ty Fiero"
-                      />
-                    );
-                  })}
-                </a>
+              <Link
+                className="grid grid-cols-3 grid-rows-3 cursor-pointer w-fit lg:gap-2 sm:gap-1"
+                href={"/art/ai-art"}
+              >
+                {aiImgs.map((img, index) => {
+                  return (
+                    <img
+                      key={index}
+                      className="h-auto mx-auto rounded-md shadow-md xl:w-36 lg:w-28 md:w-20 sm:w-24 shadow-blue-400/60"
+                      src={img}
+                      alt="AI image from Ty Fiero"
+                    />
+                  );
+                })}
               </Link>
             </MotionImage>
           </div>
@@ -517,10 +516,11 @@ function Art({ tyImages, tyStats, altDescription }) {
             <div className="flex justify-center w-full ">
               <MotionText delay={0.4}>
                 <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                  <Link legacyBehavior href="/art/photography">
-                    <a className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-violet-500 !shadow-violet-300">
-                      View Photos <FaArrowRight />
-                    </a>
+                  <Link
+                    className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-violet-500 !shadow-violet-300"
+                    href="/art/photography"
+                  >
+                    View Photos <FaArrowRight />
                   </Link>
                 </div>
               </MotionText>

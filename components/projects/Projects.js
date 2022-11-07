@@ -107,22 +107,23 @@ const ProjectCard = ({
               {description}
             </p>
           </div>
-          <Link legacyBehavior href={route}>
-            <div className="relative transition duration-500 md:active:scale-95 ">
-              <a
-                data-atropos-offset="-8"
-                className={
-                  " flex gap-1 items-center rounded-full justify-center py-2 px-5 z-50 !opacity-100 whitespace-nowrap transition duration-500 shadow-md cursor-pointer !blur-none  text-white group-hover:shadow-lg " +
-                  color +
-                  " " +
-                  bColor
-                }
-              >
-                <p className="m-0  text-white text-test f2 !opacity-100 ">
-                  More Info
-                </p>{" "}
-                <FaArrowRight />
-              </a>
+          <Link
+            className="relative transition duration-500 md:active:scale-95 "
+            href={route}
+          >
+            <div
+              data-atropos-offset="-8"
+              className={
+                " flex gap-1 items-center rounded-full justify-center py-2 px-5 z-50 !opacity-100 whitespace-nowrap transition duration-500 shadow-md cursor-pointer !blur-none  text-white group-hover:shadow-lg " +
+                color +
+                " " +
+                bColor
+              }
+            >
+              <p className="m-0  text-white text-test f2 !opacity-100 ">
+                More Info
+              </p>{" "}
+              <FaArrowRight />
               <button
                 data-atropos-offset="0"
                 className={

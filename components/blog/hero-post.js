@@ -15,7 +15,7 @@ export default function HeroPost({
   return (
     <MotionImage classes="flex justify-center">
       <section className="glass-box bg-white/80 dark:bg-slate-900/80 md:w-[40%] sm:w-[95%] group hover:scale-105 transition shadow-lg duration-500 hover:shadow-2xl !shadow-sky-400 cursor-pointer">
-        <Link legacyBehavior href={`/blog/posts/${slug}`}>
+        <Link href={`/blog/posts/${slug}`}>
           <div>
             <div className="mb-0 md:mb-4 !rounded-xl sm:w-full md:w-full h-1/5  mx-auto">
               <CoverImage

@@ -155,10 +155,8 @@ export default function Index({ allPosts }) {
             </MotionText>
             <MotionText delay={0.4}>
               <div className="flex justify-center w-full">
-                <Link legacyBehavior href={"/code/projects"}>
-                  <a className="mt-5 button-1">
-                    View All Projects <TbCode className="text-xl" />
-                  </a>
+                <Link className="mt-5 button-1" href={"/code/projects"}>
+                  View All Projects <TbCode className="text-xl" />
                 </Link>
               </div>
             </MotionText>
@@ -183,16 +181,16 @@ export default function Index({ allPosts }) {
               <div className="text-box">
                 <p>
                   In my free time I make{" "}
-                  <Link legacyBehavior href={"/art#music"}>
-                    <a className="anc ">music</a>
+                  <Link className="anc " href={"/art#music"}>
+                    music
                   </Link>
                   , take my camera out for nature{" "}
-                  <Link legacyBehavior href={"/art#photography"}>
-                    <a className="anc "> photography</a>
+                  <Link className="anc " href={"/art#photography"}>
+                    photography
                   </Link>
                   , I&apos;m an avid reader, and I experiment with{" "}
-                  <Link legacyBehavior href={"/code/ai"}>
-                    <a className="anc ">AI&apos;s</a>
+                  <Link className="anc " href={"/code/ai"}>
+                    AI&apos;s
                   </Link>
                   . Hobbies are important to me, and each one has a purpose. I
                   express my creativity through my music, I get outside with my
@@ -275,8 +273,8 @@ export default function Index({ allPosts }) {
                 <p>
                   Writing is thinking, my best thinking always comes from my
                   writing. I&apos;ve been sharing my recent writings on my{" "}
-                  <Link legacyBehavior href={"/blog"}>
-                    <a className="anc ">blog</a>
+                  <Link className="anc " href={"/blog"}>
+                    blog
                   </Link>
                   , where I write about technology and personal development
                   every few weeks. I try to pack as much helpful info as I can

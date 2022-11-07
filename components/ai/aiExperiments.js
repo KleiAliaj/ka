@@ -26,30 +26,27 @@ export default AiExperiments;
 
 function Experiment({ path, imgSrc, name, description, styles }) {
   return (
-    <Link legacyBehavior href={path}>
-      <a
-        className={
-          "flex items-center px-2 py-1 transition sm:w-full md:w-1/2  hover:scale-105 rounded-xl shadow-md cursor-pointer hover:shadow-lg active:scale-95 h-32   " +
-          styles.shadow
-        }
-      >
-        <div className="flex flex-col justify-between items-between pr-3">
-          <h4 className={"heading-sm !text-left " + styles.textColor}>
-            {name}
-          </h4>
-          <p className="text-sm">{description}</p>
-        </div>
-        <div className="w-28 !h-28 ">
-          <picture>
-            <source srcSet={imgSrc} type="image/png" />
-            <img
-              src={imgSrc}
-              alt={`Image of the ${name} AI experiment`}
-              className="object-cover w-full h-full rounded-lg  "
-            />
-          </picture>
-        </div>
-      </a>
+    <Link
+      className={
+        "flex items-center px-2 py-1 transition sm:w-full md:w-1/2  hover:scale-105 rounded-xl shadow-md cursor-pointer hover:shadow-lg active:scale-95 h-32   " +
+        styles.shadow
+      }
+      href={path}
+    >
+      <div className="flex flex-col justify-between items-between pr-3">
+        <h4 className={"heading-sm !text-left " + styles.textColor}>{name}</h4>
+        <p className="text-sm">{description}</p>
+      </div>
+      <div className="w-28 !h-28 ">
+        <picture>
+          <source srcSet={imgSrc} type="image/png" />
+          <img
+            src={imgSrc}
+            alt={`Image of the ${name} AI experiment`}
+            className="object-cover w-full h-full rounded-lg  "
+          />
+        </picture>
+      </div>
     </Link>
   );
 }

@@ -40,8 +40,8 @@ function About() {
                   I&apos;m a former Microbiologist turned Web Developer striving
                   for world-class user experiences through simplicity and clean
                   design. When I&apos;m not working I&apos;m making{" "}
-                  <Link legacyBehavior href="/art">
-                    <a className="anc">art</a>
+                  <Link className="anc" href="/art">
+                    art
                   </Link>{" "}
                   and spending time with my girlfriend{" "}
                   <a
@@ -149,8 +149,8 @@ function About() {
                   <br />
                   Enough about me,
                   <span className="font-bold"> how can I help you?</span>{" "}
-                  <Link legacyBehavior href="/contact">
-                    <a className="anc">Shoot me a message</a>
+                  <Link className="anc" href="/contact">
+                   Shoot me a message
                   </Link>
                   , let&apos;s work together!
                 </p>
