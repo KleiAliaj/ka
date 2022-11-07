@@ -142,18 +142,32 @@ function About() {
                     minute of my learning thus far.
                   </p>
                 </MotionHeader>
-                {/* <MotionHeader delay={0.4}>
+                <MotionHeader delay={0.4}>
                   <h2 className={"font-bold heading-sm text-left  mt-2"}>
                     What I Do Now
                   </h2>
-                  <p>Currently teaching myself web development.</p>
+                  <p>
+                    These days I spend my time learning more web development
+                    skills by building projects that showcase
+                    what I have learned. I 💙 Next.js and TailwindCSS, these two
+                    technologies make it so fun to build beautiful yet powerful
+                    UI&apos;s.
+                    <br />
+                    <br />
+                    When I&apos;m not learning or building projects for myself,
+                    I&apos;m building projects for others through freelancing.
+                  </p>
                 </MotionHeader>
                 <MotionHeader delay={0.4}>
                   <h2 className={"font-bold heading-sm text-left  mt-2"}>
                     Where I&apos;m Headed
                   </h2>
-                  <p>Currently teaching myself web development.</p>
-                </MotionHeader> */}
+                  <p>
+                    I&apos;m looking forward to joining a dev team at an
+                    exciting company, where I can express my creativity and help
+                    the team ship quality user experiences.
+                  </p>
+                </MotionHeader>
                 <MotionHeader delay={0.6}>
                   <p className="mt-10 text-center">
                     Enough about me,
