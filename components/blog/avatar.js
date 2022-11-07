@@ -10,6 +10,7 @@ export default function Avatar({ name, picture, date }) {
             src={`${picture}?auto=format,compress,enhance&w=100&h=100`}
             className="rounded-full"
             fill
+            sizes="3.5rem"
             alt={name}
           />
         )}

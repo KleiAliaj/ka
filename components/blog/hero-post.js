@@ -28,9 +28,9 @@ export default function HeroPost({
             <div className="flex flex-col items-center px-5 sm:mb-2 md:mb-5">
               <div>
                 <h3 className="leading-tight sm:text-2xl md:text-4xl md:mb-2 sm:mb-0 ">
-                  <a className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
+                  <div className="transition duration-500 group-hover:text-sky-400 shadow-sky-200 group-hover:drop-shadow-lg text-sky-800 dark:text-sky-300 f1">
                     {title}
-                  </a>
+                  </div>
                 </h3>
                 <div className="text-lg italic sm:mb-2 md:mb-4 text-slate-500 f2 dark:text-slate-300">
                   <Date dateString={date} />
