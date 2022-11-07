@@ -9,6 +9,7 @@ function ImageSection({ src, alt }) {
         src={src}
         alt={alt}
         fill
+        priority
         sizes="(max-width: 768px) 80vw,
                 50vw"
         className="object-cover rounded-xl "

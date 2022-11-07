@@ -164,6 +164,7 @@ function About() {
                 src="/assets/other/profileshot.webp"
                 alt="Ty Fiero about image"
                 fill
+                sizes="(max-width: 768px) 50vw, 80vw"
                 className="object-cover rounded-xl "
               />
             </MotionImage>

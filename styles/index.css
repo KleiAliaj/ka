@@ -93,16 +93,11 @@ body {
 .f1 {
   font-family: var(--font-baloo);
   font-display: block;
-  /* font-family: "Baloo Thambi 2", sans-serif;
-  font-display: block; */
 }
 .f2 {
   font-family: var(--font-quicksand);
   font-weight: 500;
   font-display: block;
-  /* font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-display: block; */
 }
 
 .glass-box {

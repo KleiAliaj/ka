@@ -181,6 +181,7 @@ function BookCard({ title, img, colors, url }) {
           alt={"Image of the book: " + title}
           className={"!rounded-sm z-0 "}
           fill
+          sizes="9rem"
         />
       </div>
       <div className="px-2 w-36">

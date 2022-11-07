@@ -333,6 +333,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
                   src={pic.displaySrc}
                   alt={pic.alt || "Photo from Ty Fiero"}
                   fill
+                  sizes="50vw"
                   className="transition-transform duration-500 cursor-pointer !rounded-xl  "
                   onClick={() => {
                     if (typeof window !== "undefined") {
