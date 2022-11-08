@@ -45,7 +45,7 @@ function CodeIndex() {
             </MotionHeader>
             <MotionText>
               <div className="text-box">
-                <p className="font-bold ">
+                <p>
                   Learning new technologies is a rush for me. I try to learn
                   something new every week that I can apply to projects in the
                   future. My favorite technologies thus far are React, Next.js,
@@ -124,7 +124,7 @@ function CodeIndex() {
             </MotionHeader>
             <MotionText invert>
               <div className="mx-2 text-box">
-                <p className="font-bold ">
+                <p>
                   There&apos;s no better way to learn than by doing. Courses and
                   books are good for grasping the concepts, but applying this
                   knowledge is how to achieve mastery. Each project teaches me
@@ -168,7 +168,7 @@ function CodeIndex() {
             </MotionHeader>
             <MotionText>
               <div className="text-box">
-                <p className="font-bold ">
+                <p>
                   Javascript art in P5.js is what made me fall in love with
                   coding. It&apos;s an excellent medium to start learning code,
                   as it helps to visualize how loops, functions, and other
@@ -215,7 +215,7 @@ function CodeIndex() {
             </MotionHeader>
             <MotionText invert>
               <div className="text-box">
-                <p className="font-bold ">
+                <p>
                   The notion that a computer can learn is fascinating to me. The
                   first time I used GPT3 back in 2020, it was inspiring. It felt
                   like magic, almost anything I&apos;d ask it, it would send

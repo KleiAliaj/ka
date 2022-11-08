@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaBox, FaImage, FaKeyboard, FaPhone } from "react-icons/fa";
+import { FaBox, FaImage, FaKeyboard, FaPhone, FaPills } from "react-icons/fa";
 
 function IndexDevLab() {
   return (
@@ -25,9 +25,9 @@ function IndexDevLab() {
               npm Enter hook
               <FaKeyboard />
             </Link>
-            <Link className="button-1" href={"/devlab/canvas"}>
-              npm Enter hook
-              <FaKeyboard />
+            <Link className="button-1" href={"/devlab/pharma"}>
+              Pharma QA
+              <FaPills />
             </Link>
             <Link className="button-1" href={"/devlab/Framer-ocean"}>
               Framer Ocean

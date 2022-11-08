@@ -148,8 +148,8 @@ function About() {
                   </h2>
                   <p>
                     These days I spend my time learning more web development
-                    skills by building projects that showcase
-                    what I have learned. I 💙 Next.js and TailwindCSS, these two
+                    skills by building projects that showcase what I have
+                    learned. I 💙 Next.js and TailwindCSS, these two
                     technologies make it so fun to build beautiful yet powerful
                     UI&apos;s.
                     <br />
@@ -163,7 +163,7 @@ function About() {
                     Where I&apos;m Headed
                   </h2>
                   <p>
-                    I&apos;m looking forward to joining a dev team at an
+                    I&apos;m looking forward to joining a development team at an
                     exciting company, where I can express my creativity and help
                     the team ship quality user experiences.
                   </p>
