@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { slimProjects } from "@/components/projects/projectArray";
 import Atropos from "atropos/react";
+import "atropos/css";
 
 function CompactProjects() {
   return (
@@ -9,7 +10,7 @@ function CompactProjects() {
       <div className="flex flex-wrap justify-center gap-4 md:w-full sm:w-screen h-fit">
         {slimProjects.map((project, index) => {
           return (
-            <Link href={project.route} key={index}>
+            <Link key={index} href={project.route}>
               <Atropos
                 shadow={false}
                 activeOffset={40}
@@ -46,12 +47,14 @@ function CompactProjects() {
                     >
                       {project.title}
                     </p>
+                    {/* <Atropos key={index} shadow={false} activeOffset={40}> */}
                     <p
                       className="-mt-1 text-xs sm:hidden lg:block"
                       data-atropos-offset="-5"
                     >
                       {project.shortDescription}
                     </p>
+                    {/* </Atropos> */}
                   </div>
                 </div>
               </Atropos>

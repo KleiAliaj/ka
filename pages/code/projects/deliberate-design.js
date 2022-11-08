@@ -30,19 +30,22 @@ function DD() {
           </div>
           <div className="flex flex-col items-center mb-2 text-box">
             <p>
-              This started off as just a simple project that I could learn
-              Recoil.js with, and it ended up being way more than that. I wanted
-              to create a unique, walk-through wizard style prompt designer for
-              image AI&apos;s, specifically for MidJourney. When I started using
-              MidJourney, I noticed that I was having image prompt writers
-              block. The AI could make <strong>anything</strong> you wanted, and
-              that lead me to analysis paralysis, so I would just write whatever
-              came to my mind. After a few off the top prompts like, &quot;A
-              monkey on a spaceship painted by Picasso&quot;, I realized that I
-              wanted to be more deliberate with my prompt design. Instead of
-              just throwing whatever into the prompt, I wanted to plan out my
-              prompts much like a professional artist would would plan an art
-              piece. Thus, the idea for DeliberateDesign.art was born.
+              *Work in Progress*
+              <br />
+              <br /> This started off as just a simple project that I could
+              learn Recoil.js with, and it ended up being way more than that. I
+              wanted to create a unique, walk-through wizard style prompt
+              designer for image AI&apos;s, specifically for MidJourney. When I
+              started using MidJourney, I noticed that I was having image prompt
+              writers block. The AI could make <strong>anything</strong> you
+              wanted, and that lead me to analysis paralysis, so I would just
+              write whatever came to my mind. After a few off the top prompts
+              like, &quot;A monkey on a spaceship painted by Picasso&quot;, I
+              realized that I wanted to be more deliberate with my prompt
+              design. Instead of just throwing whatever into the prompt, I
+              wanted to plan out my prompts much like a professional artist
+              would would plan an art piece. Thus, the idea for
+              DeliberateDesign.art was born.
             </p>
           </div>
           <section className="flex gap-4 lg:flex-row sm:flex-col">
