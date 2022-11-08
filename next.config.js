@@ -8,6 +8,7 @@ const withPWA = require("next-pwa")({
 });
 
 module.exports = withPWA({
+  experimental: { appDir: false },
   images: {
     domains: [
       "imgix.cosmicjs.com",
