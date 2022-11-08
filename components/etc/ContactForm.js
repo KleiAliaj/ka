@@ -27,7 +27,6 @@ export default function ContactForm() {
         message,
       };
 
-      console.log(data);
       setName("");
       setEmail("");
       setMessage("");
@@ -37,9 +36,6 @@ export default function ContactForm() {
       })
         .then(() => {
           toast.success("Message sent! ✉️");
-          // console.log("HI THERE BITCH");
-
-          // console.log("why no work?");
         })
         .catch(() => {
           toast.error("Message failed to send :( ");
