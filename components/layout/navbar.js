@@ -29,13 +29,12 @@ import {
   motion,
   useReducedMotion,
   useScroll,
+  useTransform,
 } from "framer-motion";
 
 function Navbar() {
   const prefersReducedMotion = useReducedMotion();
-  // const { scrollYProgress } = useScroll();
-  // let y = useScroll();
-  // console.log(y);
+
   const [isMobile, setIsMobile] = React.useState(false);
   const [isToggled, setIsToggled] = React.useState(true);
   const [isReady, setIsReady] = React.useState(false);
@@ -243,8 +242,8 @@ function Navbar() {
   };
   return (
     <>
-      <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row">
-        <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
+      <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row !z-[10000]">
+        <div className=" z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
           <Link
             className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
             href="/"

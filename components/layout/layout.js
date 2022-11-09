@@ -3,8 +3,10 @@ import Footer from "./footer";
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import Navbar from "./navbar";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 export default function Layout({ preview, children, fontCn }) {
+  const router = useRouter();
   return (
     <>
       <div
@@ -37,7 +39,18 @@ export default function Layout({ preview, children, fontCn }) {
           <span></span>
         </div>
         <Navbar className="w-full" />
-        <main className="w-full h-full fade-effect-quick">{children}</main>
+
+        <AnimatePresence>
+          <motion.main
+            key={router.route}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-full h-full fade-effect-quick"
+          >
+            {children}
+          </motion.main>
+        </AnimatePresence>
       </div>
       <Footer />
     </>
