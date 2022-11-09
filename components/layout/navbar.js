@@ -28,8 +28,6 @@ import {
   AnimatePresence,
   motion,
   useReducedMotion,
-  useScroll,
-  useTransform,
 } from "framer-motion";
 
 function Navbar() {
