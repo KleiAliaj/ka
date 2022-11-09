@@ -12,9 +12,7 @@ export default async function handler(req, res) {
       }
     )
       .then((data) => {
-        // const clean = JSON.parse(data);
-        // console.log(clean);
-        // console.log(clean.ParsedResults.ParsedText);
+     
         console.log(data);
         // parsed: data.ParsedResults[0].ParsedText
         // console.log(data.ParsedResults[0].ParsedText);
