@@ -14,6 +14,7 @@ module.exports = withPWA({
       "imgix.cosmicjs.com",
       "images.unsplash.com",
       "dl.airtable.com",
+      "v5.airtableusercontent.com",
       "m.media-amazon.com",
       "images-na.ssl-images-amazon.com",
       "external-content.duckduckgo.com",
