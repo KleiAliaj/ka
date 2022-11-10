@@ -11,7 +11,6 @@ import FullLoader from "@/components/etc/FullLoader";
 import Head from "next/head";
 import { Quicksand, Baloo_Thambi_2 } from "@next/font/google";
 
-
 const quicksand = Quicksand({
   variable: "--font-quicksand",
   subsets: ["latin"],
@@ -61,9 +60,8 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content={canonicalUrl} />
       </Head>
       <Layout fontCn={` ${baloo.variable}  ${quicksand.variable}`}>
-        <Toaster />
         <FullLoader show={loading} />
-
+        <Toaster />
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>

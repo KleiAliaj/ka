@@ -24,11 +24,7 @@ import {
   TbPalette,
 } from "react-icons/tb";
 import Image from "next/image";
-import {
-  AnimatePresence,
-  motion,
-  useReducedMotion,
-} from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 function Navbar() {
   const prefersReducedMotion = useReducedMotion();
@@ -355,98 +351,106 @@ function MenuItem({
       {/* {name !== "home" && (
         <motion.hr className="w-[40vw] border-1 rounded-full border-slate-700 my-0 sm:block md:hidden" />
       )} */}
-      <li
-        className={
-          "relative group flex gap-1 cursor-pointer  items-center capitalize bg-transparent  transition duration-500 rounded-2xl w-fit   sm:!z-100 md:!z-20 shadow-sky-700/40 sm:text-4xl  md:text-lg " +
-          (selected === name
-            ? " !bg-sky-500 font-bold  shadow-md  text-white py-[2px] "
-            : " md:hover:text-sky-400    text-sky-900 dark:text-sky-50 dark:shadow-sky-300/40  hover:bg-white dark:hover:bg-slate-800 hover:shadow-md ") +
-          (name.length < 4 ? " px-4" : " px-2")
-        }
-        // style={{
-        //   transition: "all 2.5s ease;",
-        //   marginBottom:
-        //     isMobile && sub && clicked ? `${40 * subLinks.length}px` : "",
-        // }}
-        onMouseEnter={() => {
-          setClicked(true);
-        }}
-        onMouseLeave={() => {
-          setClicked(false);
-        }}
-      >
-        <>
-          <Link
-            href={`/${name === "home" ? "" : name}`}
-            className={"flex gap-1 items-center z-100"}
-            onClick={() => {
-              //When clicked, I need it to set selected if it isnt already.
-              //also needs to navigate to the page if not selected
-              //if selected and submenu open, navigate, otherwise open menu
 
-              if (selected !== name) {
-                setSelected(name);
-                // router.push(`/${name === "home" ? "" : name}`);
-              } else {
-                // router.push(`/${name === "home" ? "" : name}`);
-              }
-              //handleClick deals with mobile styling of the menu
+      <Link href={`/${name === "home" ? "" : name}`}>
+        <li
+          className={
+            "relative group flex gap-1 cursor-pointer  items-center capitalize bg-transparent  transition duration-500 rounded-2xl w-fit   sm:!z-100 md:!z-20 shadow-sky-700/40 sm:text-4xl  md:text-lg " +
+            (selected === name
+              ? " !bg-sky-500 font-bold  shadow-md  text-white py-[2px] "
+              : " dark:hover:!text-sky-900     text-sky-900 dark:text-sky-50 dark:shadow-sky-300/40  hover:bg-sky-300/40 dark:hover:bg-sky-300 hover:shadow-md ") +
+            (name.length < 4 ? " px-4" : " px-2")
+          }
+          // style={{
+          //   transition: "all 2.5s ease;",
+          //   marginBottom:
+          //     isMobile && sub && clicked ? `${40 * subLinks.length}px` : "",
+          // }}
+          onMouseEnter={() => {
+            setClicked(true);
+          }}
+          onMouseLeave={() => {
+            setClicked(false);
+          }}
+        >
+          <>
+            <div
+              className={"flex gap-1 items-center z-100"}
+              onClick={() => {
+                //When clicked, I need it to set selected if it isnt already.
+                //also needs to navigate to the page if not selected
+                //if selected and submenu open, navigate, otherwise open menu
 
-              handleClick();
-            }}
-          >
-            <div className=""> {icon}</div>
-            {name}
-          </Link>
+                if (selected !== name) {
+                  setSelected(name);
+                  // router.push(`/${name === "home" ? "" : name}`);
+                } else {
+                  // router.push(`/${name === "home" ? "" : name}`);
+                }
+                //handleClick deals with mobile styling of the menu
 
-          {sub && (
-            <FaCaretDown
-              className={
-                "transition-transform duration-500 scale-75 sm:hidden md:block  " +
-                (clicked ? " rotate-180" : "") +
-                (selected === name ? " ml-0" : " ml-0")
-              }
-            />
-          )}
-          <AnimatePresence>
-            {sub && clicked && !isMobile ? (
-              <motion.div
-                // layout
-                exit={{ opacity: 0, top: "0rem" }}
-                initial={{ opacity: 0, top: "0rem" }}
-                animate={{ opacity: 1, top: isMobile ? "1.5rem" : "1.55rem" }}
-                transition={{
-                  duration: isMobile ? 0.2 : selected === name ? 0.4 : 0.4,
-                }}
-                className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40  left-[3px] pt-2  rounded-b-lg  w-[95%] h-fit -!z-10 md:bg-gradient-to-b md:from-white/0 md:via-white/40 md:to-white dark:md:from-slate-800/0 dark:md:via-slate-800/40 dark:md:to-slate-800"
-              >
-                {sub &&
-                  subLinks.map((link, index) => {
-                    return (
-                      <Link
-                        href={link.path}
-                        key={index}
-                        className={
-                          "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-200 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
-                          (router.asPath === link.path
-                            ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
-                            : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
-                        }
-                        onClick={() => {
-                          setClicked(false);
-                          handleClick();
-                        }}
-                      >
-                        <div>{link.icon}</div>
-                        {link.name}
-                      </Link>
-                    );
-                  })}
-              </motion.div>
-            ) : null}
-          </AnimatePresence>
-        </>
-      </li>
+                handleClick();
+              }}
+            >
+              <div className=""> {icon}</div>
+              {name}
+            </div>
+
+            {sub && (
+              <FaCaretDown
+                className={
+                  "transition-transform duration-500 scale-75 sm:hidden md:block  " +
+                  (clicked ? " rotate-180" : "") +
+                  (selected === name ? " ml-0" : " ml-0")
+                }
+              />
+            )}
+            <AnimatePresence>
+              {sub && clicked && !isMobile ? (
+                <motion.div
+                  // layout
+                  exit={{ opacity: 0, top: "0rem", z: -10, scaleY: 0.7 }}
+                  initial={{ opacity: 0, top: "0rem", z: -10, scaleY: 0.7 }}
+                  animate={{
+                    opacity: 1,
+                    top: isMobile ? "1.5rem" : "1.55rem",
+                    z: -100,
+                    scaleY: 1,
+                  }}
+                  transition={{
+                    duration: isMobile ? 0.2 : selected === name ? 0.4 : 0.4,
+                    delay: 0.12,
+                  }}
+                  className="absolute sm:top-12 md:top-3 px-1 shadow-lg shadow-sky-400/40  left-[3px] pt-2  rounded-b-lg  w-[95%] h-fit -!z-10 md:bg-gradient-to-b md:from-white/0 md:via-white/40 md:to-white dark:md:from-slate-800/0 dark:md:via-slate-800/40 dark:md:to-slate-800"
+                >
+                  {sub &&
+                    subLinks.map((link, index) => {
+                      return (
+                        <Link
+                          href={link.path}
+                          key={index}
+                          className={
+                            "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-300/40 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
+                            (router.asPath === link.path
+                              ? " bg-sky-500 text-white dark:text-sky-800 shadow-md"
+                              : " text-sky-800 dark:text-sky-300 dark:hover:text-sky-50 ")
+                          }
+                          onClick={() => {
+                            setClicked(false);
+                            handleClick();
+                          }}
+                        >
+                          <div>{link.icon}</div>
+                          {link.name}
+                        </Link>
+                      );
+                    })}
+                </motion.div>
+              ) : null}
+            </AnimatePresence>
+          </>
+        </li>
+      </Link>
       <div className="sm:flex gap-3 mt-1  md:hidden">
         {sub &&
           subLinks.map((link, index) => {
