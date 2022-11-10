@@ -36,12 +36,10 @@ export default function AI({ aiImages }) {
               When the DALLE-2 was first released to the media, I knew right
               then how big AI image generation would be. Input one sentence and
               get a customized beautiful image back? Seemed too good to be true.
-              I still have yet to get access to DALLE-2, but I&apos;ve been
-              having a ton of fun playing with <a>Midjourney</a>, which some
-              label as the &quot;artsy&quot; DALLE. Its really impressive what
-              it makes, and I&apos;ve been enjoying the discord first approach
-              more than I though I would. Here is a collection of some of my
-              favorite AI artwork that I&apos;ve made.
+              No longer am I constrained by how well I can draw. Prompt
+              engineering is a new kind of artistic skill, one that I tend to
+              think will be rather valuable in the future. Here is a collection
+              of some of my favorite AI artwork that I&apos;ve made.
             </p>
           </div>
         </div>
