@@ -26,7 +26,6 @@ function Pharma() {
   );
   //   console.log(imgBase64);
   const OCR = async (e) => {
-    // console.log(typeof imgBase64);
     // console.log(imgBase64);
     const data = {
       url: imgBase64,
