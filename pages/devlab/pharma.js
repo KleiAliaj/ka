@@ -26,11 +26,11 @@ function Pharma() {
   );
   //   console.log(imgBase64);
   const OCR = async (e) => {
-    console.log(typeof imgBase64);
-    console.log(imgBase64);
+    // console.log(typeof imgBase64);
+    // console.log(imgBase64);
     const data = {
-      //   url: imgBase64,
-      url: "test",
+      url: imgBase64,
+      // url: "test",
     };
     console.log(data);
     console.log(JSON.stringify(data));
@@ -41,6 +41,7 @@ function Pharma() {
     })
       .then((response) => {
         console.log(response);
+        response.json().then((data) => console.log(data));
         console.log(response.body);
         // setOcrText(response);
       })
