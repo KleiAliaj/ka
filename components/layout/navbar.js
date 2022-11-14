@@ -251,7 +251,7 @@ function Navbar() {
                 priority
               />
             </div>
-            <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 pt-2 pb-1">
+            <p className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl lg:text-6xl md:pr-8 logo transition  f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 pt-2 pb-1">
               Ty Fiero
             </p>
           </Link>
@@ -351,9 +351,9 @@ function MenuItem({
       {/* {name !== "home" && (
         <motion.hr className="w-[40vw] border-1 rounded-full border-slate-700 my-0 sm:block md:hidden" />
       )} */}
-
       <Link href={`/${name === "home" ? "" : name}`}>
         <li
+          id={name}
           className={
             "relative group flex gap-1 cursor-pointer  items-center capitalize bg-transparent  transition duration-500 rounded-2xl w-fit   sm:!z-100 md:!z-20 shadow-sky-700/40 sm:text-4xl  md:text-lg " +
             (selected === name
@@ -361,12 +361,9 @@ function MenuItem({
               : " dark:hover:!text-sky-900     text-sky-900 dark:text-sky-50 dark:shadow-sky-300/40  hover:bg-sky-300/40 dark:hover:bg-sky-300 hover:shadow-md ") +
             (name.length < 4 ? " px-4" : " px-2")
           }
-          // style={{
-          //   transition: "all 2.5s ease;",
-          //   marginBottom:
-          //     isMobile && sub && clicked ? `${40 * subLinks.length}px` : "",
-          // }}
-          onMouseEnter={() => {
+          onMouseEnter={(e) => {
+            console.log(e);
+            console.dir(e);
             setClicked(true);
           }}
           onMouseLeave={() => {
@@ -383,12 +380,8 @@ function MenuItem({
 
                 if (selected !== name) {
                   setSelected(name);
-                  // router.push(`/${name === "home" ? "" : name}`);
-                } else {
-                  // router.push(`/${name === "home" ? "" : name}`);
                 }
                 //handleClick deals with mobile styling of the menu
-
                 handleClick();
               }}
             >
@@ -428,6 +421,7 @@ function MenuItem({
                       return (
                         <Link
                           href={link.path}
+                          id={link.name}
                           key={index}
                           className={
                             "px-1 py-[1px] my-1 transition capitalize sm:text-xl md:text-sm  w-full hover:bg-sky-300/40 dark:hover:bg-sky-600 rounded-md flex items-center gap-1 hover:shadow-md shadow-sky-700/50 whitespace-nowrap" +
