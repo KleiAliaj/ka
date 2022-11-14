@@ -15,6 +15,8 @@ import MotionHeader from "@/components/etc/animation/MotionHeader";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionImage from "@/components/etc/animation/MotionImage";
 import AiExperiments from "@/components/ai/aiExperiments";
+import ShiftButton from "@/components/layout/shiftButton";
+import { TbCode, TbDeviceLaptop } from "react-icons/tb";
 const CubeWaveSketch = dynamic(
   () => import("../../components/projects/art/CubeWaveSketch"),
   {
@@ -142,12 +144,11 @@ function CodeIndex() {
             </MotionText>
             <MotionText invert delay={0.4}>
               <div className="flex justify-center w-full mt-5 ">
-                <Link
-                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit"
-                  href="/code/projects"
-                >
-                  All Projects <FaArrowRight />
-                </Link>
+                <ShiftButton
+                  href={"/code/projects"}
+                  icon={<TbCode />}
+                  title="All Projects "
+                />
               </div>
             </MotionText>
           </TextSection>
@@ -190,12 +191,12 @@ function CodeIndex() {
             </MotionText>
             <MotionText delay={0.4}>
               <div className="flex justify-center w-full mt-5 ">
-                <Link
-                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit"
+                <ShiftButton
                   href="/art/generative"
-                >
-                  All Generative Art <FaArrowRight />
-                </Link>
+                  classes="mt-2 text-xl font-bold  "
+                  title="View Generative Art"
+                  icon={<TbDeviceLaptop />}
+                />
               </div>
             </MotionText>
           </TextSection>

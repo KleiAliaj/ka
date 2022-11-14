@@ -19,10 +19,19 @@ import { useWindowSize } from "@/lib/hooks/useWindowSize";
 // import ReactPlayer from "react-player";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { TbCamera, TbCode, TbMusic } from "react-icons/tb";
+import {
+  TbCamera,
+  TbCode,
+  TbDeviceLaptop,
+  TbHeadphones,
+  TbMusic,
+  TbPhoto,
+  TbRobot,
+} from "react-icons/tb";
 import MotionHeader from "@/components/etc/animation/MotionHeader.js";
 import MotionText from "@/components/etc/animation/MotionText.js";
 import MotionImage from "@/components/etc/animation/MotionImage.js";
+import ShiftButton from "@/components/layout/shiftButton.js";
 const WavesSketch = dynamic(
   () => import("../../components/projects/art/WavesSketch.js"),
   {
@@ -343,12 +352,12 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link
-                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-teal-500 !shadow-teal-300"
+                <ShiftButton
                   href="/art/music"
-                >
-                  Listen Now <FaArrowRight />
-                </Link>
+                  classes="mt-2 text-xl font-bold   !bg-teal-500 !shadow-teal-300"
+                  title="Listen Now"
+                  icon={<TbHeadphones />}
+                />
               </div>
             </MotionText>
           </TextSection>
@@ -396,12 +405,12 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText invert delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link
-                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit"
+                <ShiftButton
                   href="/art/generative"
-                >
-                  View Generative Art <FaArrowRight />
-                </Link>
+                  classes="mt-2 text-xl font-bold  "
+                  title="View Generative Art"
+                  icon={<TbDeviceLaptop />}
+                />
               </div>
             </MotionText>
           </TextSection>
@@ -446,12 +455,12 @@ function Art({ tyImages, tyStats, altDescription }) {
 
             <MotionText delay={0.4}>
               <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                <Link
+                <ShiftButton
                   href="/art/ai-art"
-                  className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-blue-500 !shadow-blue-300"
-                >
-                  View AI Images <FaArrowRight />
-                </Link>
+                  classes="mt-2 text-xl font-bold  !bg-blue-500 !shadow-blue-300"
+                  title="View AI Images"
+                  icon={<TbRobot />}
+                />
               </div>
             </MotionText>
           </TextSection>
@@ -516,12 +525,12 @@ function Art({ tyImages, tyStats, altDescription }) {
             <div className="flex justify-center w-full ">
               <MotionText delay={0.4}>
                 <div className="flex items-center content-center justify-center w-full gap-2 sm:mt-5 sm:scale-90">
-                  <Link
-                    className="mt-2 text-xl font-bold cursor-pointer button-1 w-fit !bg-violet-500 !shadow-violet-300"
+                  <ShiftButton
                     href="/art/photography"
-                  >
-                    View Photos <FaArrowRight />
-                  </Link>
+                    classes="mt-2 text-xl font-bold  !bg-violet-500 !shadow-violet-300"
+                    title="View Photos"
+                    icon={<TbPhoto />}
+                  />
                 </div>
               </MotionText>
             </div>
