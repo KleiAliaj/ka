@@ -361,9 +361,7 @@ function MenuItem({
               : " dark:hover:!text-sky-900     text-sky-900 dark:text-sky-50 dark:shadow-sky-300/40  hover:bg-sky-300/40 dark:hover:bg-sky-300 hover:shadow-md ") +
             (name.length < 4 ? " px-4" : " px-2")
           }
-          onMouseEnter={(e) => {
-            console.log(e);
-            console.dir(e);
+          onMouseEnter={() => {
             setClicked(true);
           }}
           onMouseLeave={() => {

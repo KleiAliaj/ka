@@ -81,7 +81,7 @@ function WavesSketch() {
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     codeCanvasWidth = frame.current.clientWidth;
-    console.log(sketchPlaying + " Where it matters");
+    // console.log(sketchPlaying + " Where it matters");
     let p5Instance;
     if (sketchPlaying) {
       p5Instance = new p5(sketch, p5ContainerRef.current);
