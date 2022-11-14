@@ -261,6 +261,7 @@ body {
     var(--blue-d)
   );
   background-size: 400% 400%;
+  transition: all 1s ease;
 
   -webkit-animation: logo 17s ease infinite;
   -moz-animation: logo 17s ease infinite;
@@ -272,6 +273,10 @@ body {
 
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+}
+
+.logo:hover {
+  background-size: 110% 110%;
 }
 
 @-webkit-keyframes logo {
