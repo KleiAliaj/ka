@@ -14,6 +14,8 @@ import CompactProjects from "@/components/projects/CompactProjects";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionImage from "@/components/etc/animation/MotionImage";
+import { FaArrowRight } from "react-icons/fa";
+import ShiftButton from "@/components/layout/shiftButton";
 
 export default function Index({ allPosts }) {
   const favTech = [
@@ -154,10 +156,12 @@ export default function Index({ allPosts }) {
               </div>
             </MotionText>
             <MotionText delay={0.4}>
-              <div className="flex justify-center w-full">
-                <Link className="mt-5 button-1" href={"/code/projects"}>
-                  View All Projects <TbCode className="text-xl" />
-                </Link>
+              <div className="flex justify-center w-full mt-5">
+                <ShiftButton
+                  href={"/code/projects"}
+                  icon={<TbCode />}
+                  title="All Projects "
+                />
               </div>
             </MotionText>
           </TextSection>
@@ -209,13 +213,12 @@ export default function Index({ allPosts }) {
                   href="https://unsplash.com/@tyfiero"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-[4em] w-[10em] flex-col items-center p-2 transition bg-slate-900 dark:bg-white rounded-3xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
+                  className="flex h-[3.7em] w-[10em] flex-col items-center  p-2 pt-1 transition bg-slate-900 dark:bg-white rounded-xl hover:scale-110 active:scale-90 shadow-2xl drop-shadow-lg"
                 >
                   <span className="text-xs font-bold text-white dark:text-black">
-                    View my photos on
+                    View photos on
                   </span>
-                  <div className="w-[8em]  dark:invert-0 invert h-[3em]">
-                    {" "}
+                  <div className="w-[8em]   dark:invert-0 invert h-auto">
                     <picture>
                       <source
                         srcSet="/assets/CodeLogos/u-logo.webp"
