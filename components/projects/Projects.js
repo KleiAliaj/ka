@@ -3,13 +3,13 @@ import Atropos from "atropos/react";
 import { useRouter } from "next/router";
 import Tilt from "react-parallax-tilt";
 import { FaArrowRight } from "react-icons/fa";
-import { projectArray } from "./projectArray";
+import { cardProjects } from "./projectArray";
 import Link from "next/link";
 function Projects({ modalOpen, setModalOpen, setSelected }) {
   return (
     <div className="relative flex flex-wrap items-center justify-center px-5 py-0 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 dark:ring-sky-600 dark:bg-sky-900/30 rounded-2xl ">
       <div className="flex flex-wrap items-center justify-center w-full gap-5 py-5 mt-3 sm:px-16 md:px-2 h-fit">
-        {projectArray.map((project) => {
+        {cardProjects.map((project) => {
           return <ProjectUnit key={project.title} projectData={project} />;
         })}
       </div>
