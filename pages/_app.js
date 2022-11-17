@@ -4,7 +4,7 @@ import "@/styles/global.scss";
 import Layout from "@/components/layout/layout";
 import React from "react";
 import { ThemeProvider } from "next-themes";
-
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import FullLoader from "@/components/etc/FullLoader";
@@ -63,6 +63,7 @@ function MyApp({ Component, pageProps }) {
         <FullLoader show={loading} />
         <Toaster />
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </ThemeProvider>
   );
