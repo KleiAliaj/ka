@@ -5,6 +5,7 @@ import TechChip from "@/components/projects/TechChip";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import GithubButton from "@/components/etc/githubButton";
 
 const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
   ssr: false,
@@ -92,7 +93,8 @@ function IdeaIsland() {
                     className="button-1 w-fit f2"
                   >
                     Website <FaExternalLinkAlt />
-                  </a>
+                  </a>{" "}
+                  <GithubButton url="https://github.com/tyfiero/ideaisland" />
                 </div>
               </div>
             </div>
