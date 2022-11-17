@@ -18,7 +18,7 @@ export default function Project({ proj }) {
   return (
     <div className="page-container">
       {router.isFallback ? (
-        <FullLoader show={loading} />
+        <FullLoader show={true} />
       ) : (
         <>
           <Head>
