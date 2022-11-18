@@ -34,7 +34,7 @@ body {
     @apply h-full w-full flex flex-col items-center md:px-5 sm:px-2 py-5 mb-[20em] fade-effect-quick;
   }
   .anc {
-    @apply text-sky-500 dark:text-sky-300 dark:visited:text-sky-500 font-bold leading-none overflow-hidden align-bottom	 py-1 inline-block	 relative  visited:text-sky-700 hover:text-white transition px-[2px] before:absolute before:-z-[1] before:top-0 before:left-0 before:translate-y-[calc(100%-3px)]  before:w-full before:h-full before:bg-gradient-to-r before:from-sky-300/80 before:via-sky-400/80 before:to-sky-600/80 hover:before:translate-y-0 before:transition  before:rounded-sm  before:px-2;
+    @apply text-sky-500 dark:text-sky-300 dark:visited:text-sky-400 font-bold leading-none overflow-hidden align-bottom	 py-1 inline-block	 relative  visited:text-sky-700 hover:text-white transition px-[2px] before:absolute before:-z-[1] before:top-0 before:left-0 before:translate-y-[calc(100%-3px)]  before:w-full before:h-full before:bg-gradient-to-r before:from-sky-300/80 before:via-sky-400/80 before:to-sky-600/80 hover:before:translate-y-0 before:transition  before:rounded-sm  before:px-2;
   }
   .heading-lg {
     @apply text-center text-5xl sm:mb-5 md:mb-10 font-extrabold text-sky-600 dark:text-sky-300 f1;
