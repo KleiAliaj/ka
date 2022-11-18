@@ -107,7 +107,7 @@ export default function Project({ proj }) {
                         </h2>
                         <div className="flex flex-wrap gap-2 px-3 py-1">
                           {proj.technologies.map((tech) => (
-                            <TechChip key={tech} content={tech} />
+                            <TechChip key={tech.name} content={tech} />
                           ))}
                         </div>
                       </div>

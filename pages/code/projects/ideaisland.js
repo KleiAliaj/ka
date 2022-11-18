@@ -11,7 +11,14 @@ const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
   ssr: false,
 });
 function IdeaIsland() {
-  let tech = ["Next.js", "React", "TailwindCSS", "Firebase", "OpenAI"];
+  let tech = [
+    { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+    { name: "React", icon: "/assets/CodeLogos/react.png" },
+    { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+    { name: "Redux", icon: "/assets/CodeLogos/redux.png" },
+    { name: "Firebase", icon: "/assets/CodeLogos/firebase.png" },
+    { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
+  ];
   const target = createRef();
 
   return (

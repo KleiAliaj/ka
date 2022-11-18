@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import { FaArrowRight } from "react-icons/fa";
 import { cardProjects } from "./projectArray";
 import Link from "next/link";
+import Image from "next/image";
 function Projects({ modalOpen, setModalOpen, setSelected }) {
   return (
     <div className="relative flex flex-wrap items-center justify-center px-5 py-0 transition duration-1000 ring-2 hover:ring-4 ring-sky-200 bg-sky-200/30 dark:ring-sky-600 dark:bg-sky-900/30 rounded-2xl ">
@@ -35,6 +36,7 @@ const ProjectUnit = ({ projectData }) => {
         title={projectData.title}
         description={projectData.description}
         imgSrc={projectData.imgSrc}
+        tech={projectData.technologies}
       />
     </Tilt>
   );
@@ -48,6 +50,7 @@ const ProjectCard = ({
   description,
   textColor,
   route,
+  tech,
 }) => {
   const router = useRouter();
 
@@ -62,7 +65,7 @@ const ProjectCard = ({
     >
       <div
         className={
-          "flex flex-col group  items-center justify-center sm:w-full md:w-[15em] sm:h-fit md:h-[25em] p-2   z-0 hover:z-10   "
+          "flex flex-col group  items-center justify-center sm:w-full md:w-[15em] sm:h-fit md:h-fit p-2   z-0 hover:z-10   "
         }
       >
         <div
@@ -106,6 +109,33 @@ const ProjectCard = ({
             <p className="text-sm text-left card-text" data-atropos-offset="-2">
               {description}
             </p>
+          </div>
+          <div
+            className={
+              " flex justify-evenly w-full  transition duration-300 items-center my-3"
+            }
+            data-atropos-offset="-4"
+          >
+            {tech.map((item, index) => {
+              if (item.icon === null) return;
+              return (
+                <div
+                  className="w-6 h-6 "
+                  key={item.name}
+                  data-atropos-offset="-8"
+                >
+                  <div className="relative w-auto h-5">
+                    <Image
+                      src={item.icon}
+                      alt={`${item.name} icon`}
+                      fill
+                      className="object-contain"
+                      sizes="48px"
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <Link
             className="relative transition duration-500 md:active:scale-95 "

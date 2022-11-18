@@ -3,6 +3,7 @@ import React from "react";
 import { slimProjects } from "@/components/projects/projectArray";
 import Atropos from "atropos/react";
 import "atropos/css";
+import Image from "next/image";
 
 function CompactProjects() {
   return (
@@ -10,7 +11,7 @@ function CompactProjects() {
       <div className="flex flex-wrap justify-center gap-4 md:w-full sm:w-screen h-fit">
         {slimProjects.map((project, index) => {
           return (
-            <Link key={index} href={project.route}>
+            <Link key={project.title} href={project.route}>
               <Atropos
                 shadow={false}
                 activeOffset={40}
@@ -37,7 +38,7 @@ function CompactProjects() {
                       />
                     </picture>
                   </div>
-                  <div className="flex flex-col ">
+                  <div className="flex flex-col w-full">
                     <p
                       className={
                         project.styles.textColor +
@@ -54,6 +55,28 @@ function CompactProjects() {
                     >
                       {project.shortDescription}
                     </p>
+                    <div
+                      className={
+                        " flex justify-evenly w-full   transition duration-300 items-center "
+                      }
+                    >
+                      {project.technologies.map((item, index) => {
+                        if (item.icon === null) return;
+                        return (
+                          <div className="w-4 h-4 " key={item.name}>
+                            <div className="relative w-auto h-4">
+                              <Image
+                                src={item.icon}
+                                alt={`${item.name} icon`}
+                                fill
+                                className="object-contain"
+                                sizes="30px"
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
                     {/* </Atropos> */}
                   </div>
                 </div>

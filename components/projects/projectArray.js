@@ -2,11 +2,18 @@ export const projectArray = [
   {
     title: "CanvasCat",
     slug: "canvascat",
+    feature: true,
     route: "/code/projects/canvascat",
     shortDescription: "AI business planner",
     description:
       "AI-powered web app that creates a business model canvas and brand identity for your business.",
-    technologies: ["React", "Framer Motion", "Tailwind", "GPT-3", "Next.js"],
+    technologies: [
+      { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
+      { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
+    ],
     imgSrc: "/assets/other/projects/canvascat/ccCover.png",
     thumb: "/assets/other/projects/canvascat/ccThumb.png",
     styles: {
@@ -55,15 +62,16 @@ export const projectArray = [
   {
     title: "ConsistenSea",
     slug: "consistensea",
+    feature: true,
     route: "/code/projects/consistensea",
     shortDescription: "Habit-tracking extension",
     description:
       "Habit-tracking chrome extension built with React, framer motion, tailwind, and the Chrome extension API.",
     technologies: [
-      "React",
-      "Framer Motion",
-      "Tailwind",
-      "Chrome Extension API",
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
+      { name: "Chrome Extension API", icon: "/assets/CodeLogos/chrome.png" },
     ],
     imgSrc: "/assets/other/projects/consistensea/consistensea.png",
     thumb: "/assets/other/projects/thumbnails/cs.webp",
@@ -128,11 +136,18 @@ export const projectArray = [
   {
     title: "Brainstorm Buddy",
     slug: "brainstorm-buddy-project",
+    feature: true,
     route: "/code/projects/brainstorm-buddy-project",
     shortDescription: "Conversational idea AI",
     description:
       "Conversational AI designed to help you brainstorm, using GPT-3 and Next.js.",
-    technologies: ["React", "Framer Motion", "Next.js", "TailwindCSS", "GPT-3"],
+    technologies: [
+      { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
+      { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
+    ],
     imgSrc: "/assets/other/projects/buddy/tile.webp",
     thumb: "/assets/other/projects/buddy/profile-square.webp",
     styles: {
@@ -206,11 +221,18 @@ export const projectArray = [
   {
     title: "Oliver",
     slug: "Oliver",
+    feature: true,
     route: "/code/projects/Oliver",
     shortDescription: "AI life advice app",
     description:
       "Interactive AI life advice app built with Next.js, tailwind, GPT-3, and CSS illustration.",
-    technologies: ["React", "Next.js", "Tailwind", "GPT-3", "Voice RSS"],
+    technologies: [
+      { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
+      { name: "Voice RSS", icon: null },
+    ],
     imgSrc: "/assets/other/projects/oliver/oliver.webp",
     thumb: "/assets/other/projects/thumbnails/oli.webp",
     styles: {
@@ -277,11 +299,17 @@ export const projectArray = [
   {
     title: "Deliberate Design",
     slug: "deliberate-design",
+    feature: false,
     route: "/code/projects/deliberate-design",
     shortDescription: "AI art prompt designer",
     description:
       "A web app to generate creative, detailed text prompts for AI image generators. Built with Next.js, Tailwind, and Recoil.",
-    technologies: ["React", "Next.js", "Tailwind", "Recoil.js"],
+    technologies: [
+      { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "Recoil.js", icon: "/assets/CodeLogos/recoil.png" },
+    ],
     imgSrc: "/assets/other/projects/dd/deliberate.png",
     thumb: "/assets/other/projects/thumbnails/palm.webp",
     styles: {
@@ -350,11 +378,18 @@ export const projectArray = [
   {
     title: "tyfiero.com",
     slug: "tyfiero",
+    feature: true,
     route: "/code/projects/tyfiero",
     shortDescription: "Personal Website",
     description:
       "My personal website built with Next.js, Tailwind, and Cosmic CMS.",
-    technologies: ["React", "Next.js", "Tailwind", "Cosmic CMS"],
+    technologies: [
+      { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
+      { name: "Cosmic CMS", icon: null },
+    ],
     imgSrc: "/assets/other/projects/ty/tyfierocom.webp",
     thumb: "/assets/other/projects/thumbnails/ty.webp",
     styles: {
@@ -438,17 +473,18 @@ export const projectArray = [
   {
     title: "ideaisland",
     slug: "ideaisland",
+    feature: true,
     route: "/code/projects/ideaisland",
     shortDescription: "AI-powered idea generation",
     description:
       "A web application for idea generation. Built with Next.js, Tailwind, Firebase, and GPT-3.",
     technologies: [
-      "React",
-      "Next.js",
-      "Tailwind",
-      "Firebase",
-      "GPT-3",
-      "Redux",
+      { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
+      { name: "React", icon: "/assets/CodeLogos/react.png" },
+      { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "Redux", icon: "/assets/CodeLogos/redux.png" },
+      { name: "Firebase", icon: "/assets/CodeLogos/firebase.png" },
+      { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
     ],
     imgSrc: "/assets/other/ii.png",
     thumb: "/assets/other/projects/thumbnails/ii.webp",
@@ -481,11 +517,18 @@ export const projectArray = [
   {
     title: "PriceArt ETH NFTs",
     slug: "pa-eth",
+    feature: true,
     route: "/code/projects/pa-eth",
     shortDescription: "Polygon NFT project",
     description:
       "Generative art NFT project using real Ethereum price data. Built with P5.js, Polygon blockchain, and vanilla JavaScript.",
-    technologies: ["HTML", "CSS", "JS", "p5.js", "GLSL Shaders"],
+    technologies: [
+      { name: "JavaScript", icon: "/assets/CodeLogos/js.png" },
+      { name: "HTML", icon: "/assets/CodeLogos/html.png" },
+      { name: "CSS", icon: "/assets/CodeLogos/css.png" },
+      { name: "p5.js", icon: "/assets/CodeLogos/p5.png" },
+      { name: "GLSL Shaders", icon: null },
+    ],
     imgSrc: "/assets/other/projects/PA/eth6.jpg",
     thumb: "/assets/other/projects/thumbnails/eth.webp",
     styles: {
@@ -539,11 +582,18 @@ export const projectArray = [
   {
     title: "PriceArt ADA NFTs",
     slug: "pa-ada",
+    feature: true,
     route: "/code/projects/pa-ada",
     shortDescription: "Cardano NFT project  ",
     description:
       "Generative art NFT project using real Cardano price data. Built with P5.js, GLSL shaders, and vanilla JavaScript.",
-    technologies: ["HTML", "CSS", "JS", "p5.js", "GLSL Shaders"],
+    technologies: [
+      { name: "JavaScript", icon: "/assets/CodeLogos/js.png" },
+      { name: "HTML", icon: "/assets/CodeLogos/html.png" },
+      { name: "CSS", icon: "/assets/CodeLogos/css.png" },
+      { name: "p5.js", icon: "/assets/CodeLogos/p5.png" },
+      { name: "GLSL Shaders", icon: null },
+    ],
     imgSrc: "/assets/other/projects/PA/ada7.jpg",
     thumb: "/assets/other/projects/thumbnails/ada.webp",
     styles: {
@@ -593,10 +643,13 @@ export const projectArray = [
   {
     title: "PriceArt Website",
     slug: "pa-web",
+    feature: false,
     route: "/code/projects/pa-web",
     shortDescription: "Home page for PriceArt",
     description: "Home page for the PriceArt NFT project built with WordPress.",
-    technologies: ["Wordpress"],
+    technologies: [
+      { name: "WordPress", icon: "/assets/CodeLogos/wordpress.png" },
+    ],
     imgSrc: "/assets/other/projects/PA/paweb1.png",
     thumb: "/assets/other/projects/thumbnails/pa.webp",
     styles: {
@@ -706,11 +759,17 @@ export const projectArray = [
   {
     title: "Formulata",
     slug: "formulata",
+    feature: false,
     route: "/code/projects/formulata",
     shortDescription: "Combinatorial thinking app",
     description:
       "A simple web app to combine words for combinatorial ideation. Built with vanilla JavaScript and P5.js, library.",
-    technologies: ["HTML", "CSS", "JS", "p5.js"],
+    technologies: [
+      { name: "JavaScript", icon: "/assets/CodeLogos/js.png" },
+      { name: "HTML", icon: "/assets/CodeLogos/html.png" },
+      { name: "CSS", icon: "/assets/CodeLogos/css.png" },
+      { name: "p5.js", icon: "/assets/CodeLogos/p5.png" },
+    ],
     imgSrc: "/assets/other/projects/combinator/formulata.png",
     thumb: "/assets/other/projects/thumbnails/shrublogo.webp",
     styles: {
@@ -796,11 +855,16 @@ export const projectArray = [
   {
     title: "JS Drum Set",
     slug: "drums",
+    feature: false,
     route: "/code/projects/drums",
     shortDescription: "Drum kit made with JS",
     description:
       "Drum set from a tutorial from Wes Bos, one of my first JS projects.",
-    technologies: ["HTML", "CSS", "JS"],
+    technologies: [
+      { name: "JavaScript", icon: "/assets/CodeLogos/js.png" },
+      { name: "HTML", icon: "/assets/CodeLogos/html.png" },
+      { name: "CSS", icon: "/assets/CodeLogos/css.png" },
+    ],
     imgSrc: "/assets/other/projects/drum/drum.webp",
     thumb: "/assets/other/projects/thumbnails/drum.webp",
     styles: {
@@ -858,12 +922,14 @@ export const projectArray = [
   },
 ];
 
-export const slimProjects = projectArray.map((project) => ({
+const featuredProjects = projectArray.filter((item) => item.feature);
+export const slimProjects = featuredProjects.map((project) => ({
   title: project.title,
   route: project.route,
   imgSrc: project.thumb,
   shortDescription: project.shortDescription,
   styles: project.styles,
+  technologies: project.technologies,
 }));
 export const cardProjects = projectArray.map((project) => ({
   title: project.title,
@@ -871,4 +937,5 @@ export const cardProjects = projectArray.map((project) => ({
   imgSrc: project.imgSrc,
   description: project.description,
   styles: project.styles,
+  technologies: project.technologies,
 }));

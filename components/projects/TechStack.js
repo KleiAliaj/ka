@@ -10,18 +10,18 @@ function TechStack() {
         </h4>
         <div className=" flex flex-wrap justify-center ring-2 rounded-xl w-[98%] gap-x-2 gap-y-1 py-1 ">
           <CodeLogo
+            title="Next.js"
+            img="/assets/CodeLogos/nextjs.png"
+            alt="Next logo"
+            url="https://nextjs.org/"
+            imgStyle=" group-hover:!scale-100 scale-90  translate-y-2 invert-0 dark:invert"
+          />
+          <CodeLogo
             title="React"
             img="/assets/CodeLogos/react.png"
             alt="React logo"
             url="https://reactjs.org/"
             imgStyle=" scale-[90%] group-hover:!scale-[100%] translate-y-2  "
-          />
-          <CodeLogo
-            title="Next.js"
-            img="/assets/CodeLogos/nextjs.png"
-            alt="Next logo"
-            url="https://nextjs.org/"
-            imgStyle=" group-hover:!scale-110   translate-y-3 invert-0 dark:invert"
           />
           <CodeLogo
             title="Javascript"
@@ -173,6 +173,7 @@ function CodeLogo(props) {
           alt={props.alt}
           className="object-contain"
           fill
+          sizes="80px"
         />
       </a>
       <p className={"font-bold text-sm text-center " + props.textStyle}>
