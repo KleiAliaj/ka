@@ -38,8 +38,8 @@ const CustomForm = () => {
         <>
           <h3 className="heading-md">Sign up for my monthly newsletter!</h3>
           <p className="mb-2">
-            Every Month I send out a short newsletter with fun resources, and my
-            latest blog post. No spam, ever!{" "}
+            Every month I send out a short newsletter with fun resources, and my
+            latest blog post. No spam, ever!
           </p>
           <div className="flex w-full gap-2">
             <input

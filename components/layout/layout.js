@@ -9,12 +9,7 @@ export default function Layout({ preview, children, fontCn }) {
   const router = useRouter();
   return (
     <>
-      <div
-        className={
-          "w-full h-full min-h-screen sm:overflow-x-hidden md:overflow-auto " +
-          fontCn
-        }
-      >
+      <div className={"w-full h-full min-h-screen overflow-x-hidden " + fontCn}>
         <div className="fixed top-0 left-0 background -z-50">
           {/* Inspiration from https://codepen.io/Mamboleoo/pen/BxMQYQ */}
           <span></span>
