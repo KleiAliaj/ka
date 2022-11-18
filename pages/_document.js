@@ -5,7 +5,7 @@ import Script from "next/script";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className={""}>
+      <Html lang="en" className={" "}>
         <Head>
           <meta
             name="keywords"
@@ -92,7 +92,7 @@ export default class MyDocument extends Document {
             content="OhpRDnvN-fz_RpyK7E4eKh7UNfjD0ln1UOWZPaVRtVk"
           />
         </Head>
-        <body className="bg-white dark:bg-slate-800">
+        <body className="transition duration-500 bg-white dark:bg-slate-800 ">
           <Main />
           <NextScript />
         </body>
