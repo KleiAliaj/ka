@@ -22,7 +22,7 @@ function Books({ books }) {
                 // console.log(book);
                 return (
                   <BookCard
-                    key={index}
+                    key={book.properties.Title.title[0].plain_text}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
                     url={book.properties.URL.url}
@@ -51,7 +51,7 @@ function Books({ books }) {
 
                 return (
                   <BookCard
-                    key={index}
+                    key={book.properties.Title.title[0].plain_text}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
                     url={book.properties.URL.url}
@@ -75,7 +75,7 @@ function Books({ books }) {
                 // console.log(book.properties.Rank.select.name);
                 return (
                   <BookCard
-                    key={index}
+                    key={book.properties.Title.title[0].plain_text}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
                     url={book.properties.URL.url}
@@ -97,7 +97,7 @@ function Books({ books }) {
               {books.threeStar.map((book, index) => {
                 return (
                   <BookCard
-                    key={index}
+                    key={book.properties.Title.title[0].plain_text}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
                     url={book.properties.URL.url}
@@ -118,7 +118,7 @@ function Books({ books }) {
               {books.twoStar.map((book, index) => {
                 return (
                   <BookCard
-                    key={index}
+                    key={book.properties.Title.title[0].plain_text}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
                     url={book.properties.URL.url}
@@ -138,7 +138,7 @@ function Books({ books }) {
               {books.oneStar.map((book, index) => {
                 return (
                   <BookCard
-                    key={index}
+                    key={book.properties.Title.title[0].plain_text}
                     title={book.properties.Title.title[0].plain_text}
                     img={book.cover.external}
                     url={book.properties.URL.url}

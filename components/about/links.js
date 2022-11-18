@@ -30,29 +30,32 @@ function BookMarks() {
     "https://s2.googleusercontent.com/s2/favicons?domain_url=https://overapi.com/javascript",
   ];
   return (
-    <Link className="!px-2 overflow-hidden rounded-xl cursor-pointer text-box w-72 h-32 hover:bg-sky-100/60 dark:hover:bg-sky-700/60 transition duration-500 group hover:shadow-xl " href={"/about/links"}>
-        <div className="flex gap-1 absolute top-2 left-2 items-center">
-          <p className="f1 transition group-hover:text-sky-400 text-sky-600 dark:text-sky-300 dark:group-hover:text-sky-200 text-xl ">
-            Fun and Useful Links
-          </p>
-          <FaArrowRight className="opacity-0 group-hover:opacity-100 transition duration-500 text-sm text-sky-400 dark:text-sky-200" />
-        </div>
-        <div className="flex mt-6 h-4/5 gap-x-4 gap-y-3 transition   z-10 relative w-full flex-wrap ">
-          {links.map((link, index) => {
-            return (
-              <div
-                key={index}
-                className=" transition duration-500 group-hover:scale-125   group-hover:-rotate-[22deg]  "
-              >
-                <img
-                  className="rounded-xl h-auto w-5  shadow-md"
-                  src={link}
-                  alt={"favicon"}
-                />
-              </div>
-            );
-          })}
-        </div>
+    <Link
+      className="!px-2 overflow-hidden rounded-xl cursor-pointer text-box w-72 h-32 hover:bg-sky-100/60 dark:hover:bg-sky-700/60 transition duration-500 group hover:shadow-xl "
+      href={"/about/links"}
+    >
+      <div className="absolute flex items-center gap-1 top-2 left-2">
+        <p className="text-xl transition f1 group-hover:text-sky-400 text-sky-600 dark:text-sky-300 dark:group-hover:text-sky-200 ">
+          Fun and Useful Links
+        </p>
+        <FaArrowRight className="text-sm transition duration-500 opacity-0 group-hover:opacity-100 text-sky-400 dark:text-sky-200" />
+      </div>
+      <div className="relative z-10 flex flex-wrap w-full mt-6 transition h-4/5 gap-x-4 gap-y-3 ">
+        {links.map((link, index) => {
+          return (
+            <div
+              key={link}
+              className=" transition duration-500 group-hover:scale-125   group-hover:-rotate-[22deg]  "
+            >
+              <img
+                className="w-5 h-auto shadow-md rounded-xl"
+                src={link}
+                alt={"favicon"}
+              />
+            </div>
+          );
+        })}
+      </div>
     </Link>
   );
 }

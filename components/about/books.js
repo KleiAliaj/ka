@@ -28,7 +28,7 @@ function BooksSection() {
         {books.map((book, index) => {
           return (
             <div
-              key={index}
+              key={book.name}
               className="hover:!-translate-y-6 -translate-y-1 group-hover:-translate-y-3 transition duration-300  absolute -rotate-[10deg]"
               style={{
                 zIndex: index * -1,
