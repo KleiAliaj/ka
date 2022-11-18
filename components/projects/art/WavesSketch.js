@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import p5 from "p5";
 import { useTheme } from "next-themes";
 import { FaUndo, FaUndoAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 let codeCanvasWidth = 700;
 let artCanvasTheme = "light";
@@ -111,7 +111,9 @@ function WavesSketch() {
       >
         <FaUndo />
       </button>
-      <motion.div
+    <LazyMotion features={domAnimation}>
+
+      <m.div
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -134,6 +136,8 @@ function WavesSketch() {
         className="absolute top-0 flex items-center justify-center w-full h-full !scale-[98%] rounded-xl z-0 "
         ref={p5ContainerRef}
       />
+    </LazyMotion>
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
 
 function MotionHeader({
   children,
@@ -17,24 +17,26 @@ function MotionHeader({
   let sizeClasses = noSize ? "" : "w-full h-full";
 
   return (
-    <motion.div
-      className={sizeClasses}
-      initial={{ x: xValue, y: yValue, opacity: 0 }}
-      whileInView={{
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          bounce: 0.4,
-          duration: 1.5,
-          delay: delay,
-        },
-      }}
-      viewport={{ once: true }}
-    >
-      {children}{" "}
-    </motion.div>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        className={sizeClasses}
+        initial={{ x: xValue, y: yValue, opacity: 0 }}
+        whileInView={{
+          x: 0,
+          y: 0,
+          opacity: 1,
+          transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 1.5,
+            delay: delay,
+          },
+        }}
+        viewport={{ once: true }}
+      >
+        {children}{" "}
+      </m.div>
+    </LazyMotion>
   );
 }
 

@@ -171,7 +171,7 @@ function MessageScreen({ setMove, screen, move }) {
                 "relative bg-[#e5e5ea] dark:bg-[#333333] p-2 rounded-full w-fit z-20 ml-1"
               }
             >
-              <div className="flex gap-1 text-xs  z-10 py-2 px-2">
+              <div className="z-10 flex gap-1 px-2 py-2 text-xs">
                 <BsCircleFill className="bub1" />
                 <BsCircleFill className="bub2" />
                 <BsCircleFill className="bub3" />
@@ -213,7 +213,7 @@ function MessageScreen({ setMove, screen, move }) {
                     className="bg-[#e5e5ea] dark:bg-[#333333] mr-24 p-2 relative rounded-2xl w-fit message after:bg-white dark:after:bg-black before:bg-[#e5e5ea] dark:before:bg-[#333333]"
                   >
                     <p className=" text-xl text-black z-[1]">{msg.msg}</p>
-                    {/* <DiSenchatouch className="text-slate-200 absolute -left-3 -z-10 rotate-45 text-5xl -bottom-3 " /> */}
+                    {/* <DiSenchatouch className="absolute text-5xl rotate-45 text-slate-200 -left-3 -z-10 -bottom-3 " /> */}
                   </motion.div>
                 </div>
               );
@@ -228,7 +228,7 @@ function MessageScreen({ setMove, screen, move }) {
                   className="bg-[#0b93f6] ml-24 p-2 relative rounded-2xl w-fit message2  after:bg-white dark:after:bg-black"
                 >
                   {" "}
-                  <p className=" text-xl text-white">{msg.msg}</p>
+                  <p className="text-xl text-white ">{msg.msg}</p>
                 </motion.div>
               </div>
             );
@@ -245,7 +245,7 @@ function MessageScreen({ setMove, screen, move }) {
               "relative bg-[#e5e5ea] dark:bg-[#333333] p-2 rounded-full w-fit z-20 ml-1"
             }
           >
-            <div className="flex gap-1 text-xs  z-10 py-2 px-2">
+            <div className="z-10 flex gap-1 px-2 py-2 text-xs">
               <BsCircleFill className="bub1" />
               <BsCircleFill className="bub2" />
               <BsCircleFill className="bub3" />
@@ -290,17 +290,17 @@ function MessageScreen({ setMove, screen, move }) {
             >
               <FaArrowUp />
             </button> */}
-          <div className="rounded-full flex justify-center items-center h-12 w-12">
-            {/* <p className="text-white text-2xl">{screen.icon}</p> */}
+          <div className="flex items-center justify-center w-12 h-12 rounded-full">
+            {/* <p className="text-2xl text-white">{screen.icon}</p> */}
             <img src={screen.img} alt="AI profile image" />
           </div>
           <div className="flex items-center gap-0 pl-2">
             <p className="text-xs text-slate-700">{screen.name}</p>
-            <IoIosArrowBack className="text-xs text-slate-700/50 dark:text-slate-200/50  cursor-pointer rotate-180" />
+            <IoIosArrowBack className="text-xs rotate-180 cursor-pointer text-slate-700/50 dark:text-slate-200/50" />
           </div>
         </div>
       </div>
-      <div className="absolute  top-14 w-full pt-3 px-10  z-10">
+      <div className="absolute z-10 w-full px-10 pt-3 top-14">
         <div
           className={
             "left-10 top-5 absolute  z-10 scale-125 pointer-events-auto "
@@ -310,11 +310,11 @@ function MessageScreen({ setMove, screen, move }) {
             onClick={() => {
               setMove(false);
             }}
-            className="text-6xl text-sky-600 hover:scale-105 cursor-pointer active:scale-90"
+            className="text-6xl cursor-pointer text-sky-600 hover:scale-105 active:scale-90"
           />
         </div>
       </div>
-      <div className="absolute  bottom-14 w-full pt-3 px-10  z-10">
+      <div className="absolute z-10 w-full px-10 pt-3 bottom-14">
         <div
           className={
             "left-[25px] -mt-5 absolute w-[91.2%] h-full bg-slate-200 dark:bg-slate-900 border-t-2 border-slate-300/50 -z-10  " +
@@ -324,7 +324,7 @@ function MessageScreen({ setMove, screen, move }) {
         <div className="z-50 pointer-events-auto">
           <TextareaAutosize
             autoFocus
-            className="w-full  rounded-3xl ring-1 ring-slate-300 f2  text-2xl pl-4 pr-12 py-2"
+            className="w-full py-2 pl-4 pr-12 text-2xl rounded-3xl ring-1 ring-slate-300 f2"
             value={input}
             tabIndex={1}
             placeholder={`Talk to ${screen.name}`}

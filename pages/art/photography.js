@@ -10,7 +10,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useWindowSize } from "@/lib/hooks/useWindowSize";
 import { FaDownload, FaEye, FaHeart, FaImage, FaUserAlt } from "react-icons/fa";
-import { motion, useReducedMotion } from "framer-motion";
+import { domAnimation, m, useReducedMotion, LazyMotion } from "framer-motion";
 
 export async function getStaticProps(context) {
   let tyImages = [];
@@ -180,7 +180,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             </MotionText>
             <br />
             <MotionText invert delay={0.2}>
-              <div className="text-box  bg-sky-50 dark:bg-sky-700/90">
+              <div className="text-box bg-sky-50 dark:bg-sky-700/90">
                 <div className="mb-2">
                   <div className="h-3 text-3xl text-left text-gray-600 dark:text-slate-200">
                     “
@@ -260,7 +260,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
             <div className="flex justify-center mt-3 sm:gap-1 md:gap-10 sm:flex-col-reverse md:flex-row">
               <div className="flex items-center gap-2">
                 <FaImage className="text-sky-600 dark:text-sky-300" />
-                <div className="w-full flex items-center sm:justify-between">
+                <div className="flex items-center w-full sm:justify-between">
                   <p>Photos:&nbsp;{"  "}</p>
                   <p className="text-lg font-bold text-sky-600 dark:text-sky-300">
                     {tyStats.photoNum}
@@ -269,7 +269,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
               <div className="flex items-center gap-2">
                 <FaEye className="text-sky-600 dark:text-sky-300" />
-                <div className="w-full flex items-center sm:justify-between">
+                <div className="flex items-center w-full sm:justify-between">
                   <p>Views:&nbsp;{"  "}</p>
                   <p className="text-lg font-bold text-sky-600 dark:text-sky-300">
                     {tyStats.views.toLocaleString("en-US")}
@@ -278,7 +278,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
               <div className="flex items-center gap-2 ">
                 <FaDownload className="scale-75 text-sky-600 dark:text-sky-300" />
-                <div className="w-full flex items-center sm:justify-between">
+                <div className="flex items-center w-full sm:justify-between">
                   <p>Downloads:&nbsp;{"  "}</p>
                   <p className="text-lg font-bold text-sky-600 dark:text-sky-300 sm:ml-8 md:ml-0">
                     {tyStats.downloads}
@@ -287,7 +287,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
               <div className="flex items-center gap-2">
                 <FaUserAlt className="text-sky-600 dark:text-sky-300" />
-                <div className="w-full flex items-center sm:justify-between">
+                <div className="flex items-center w-full sm:justify-between">
                   <p>Followers: &nbsp; {"  "}</p>
                   <p className="text-lg font-bold text-sky-600 dark:text-sky-300">
                     {tyStats.followers}
@@ -296,7 +296,7 @@ function Photography({ tyImages, tyStats, altDescription }) {
               </div>
               <div className="flex items-center gap-2">
                 <FaHeart className="text-sky-600 dark:text-sky-300" />
-                <div className="w-full flex items-center sm:justify-between">
+                <div className="flex items-center w-full sm:justify-between">
                   <p>Likes:&nbsp; </p>
                   <p className="text-lg font-bold text-sky-600 dark:text-sky-300">
                     {tyStats.likes}
@@ -306,45 +306,47 @@ function Photography({ tyImages, tyStats, altDescription }) {
             </div>
           </div>
         </MotionText>
-        <div className="flex flex-wrap justify-center w-full gap-3 my-5">
-          {pics.map((pic, index) => {
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0.2, filter: "blur(3px)" }}
-                whileInView={{
-                  filter: "blur(0px)",
-                  opacity: 1,
-                  transition: {
-                    type: "spring",
-                    bounce: 0.4,
-                    duration: 1.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className={
-                  "relative shadow-lg rounded-xl transition duration-500 hover:shadow-sky-400/60 shadow-sky-600/30 md:h-[423px] sm:h-[256px] hover:shadow-xl hover:scale-[99%]"
-                }
-                style={{
-                  width: `${Math.floor(baseWidth * pic.ratio)}px`,
-                }}
-              >
-                <Image
-                  src={pic.displaySrc}
-                  alt={pic.alt || "Photo from Ty Fiero"}
-                  fill
-                  sizes="50vw"
-                  className="transition-transform duration-500 cursor-pointer !rounded-xl  "
-                  onClick={() => {
-                    if (typeof window !== "undefined") {
-                      window.open(pic.src, "_blank");
-                    }
+        <LazyMotion features={domAnimation}>
+          <div className="flex flex-wrap justify-center w-full gap-3 my-5">
+            {pics.map((pic, index) => {
+              return (
+                <m.div
+                  key={pic.displaySrc}
+                  initial={{ opacity: 0.2, filter: "blur(3px)" }}
+                  whileInView={{
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      bounce: 0.4,
+                      duration: 1.5,
+                    },
                   }}
-                />
-              </motion.div>
-            );
-          })}
-        </div>
+                  viewport={{ once: true }}
+                  className={
+                    "relative shadow-lg rounded-xl transition duration-500 hover:shadow-sky-400/60 shadow-sky-600/30 md:h-[423px] sm:h-[256px] hover:shadow-xl hover:scale-[99%]"
+                  }
+                  style={{
+                    width: `${Math.floor(baseWidth * pic.ratio)}px`,
+                  }}
+                >
+                  <Image
+                    src={pic.displaySrc}
+                    alt={pic.alt || "Photo from Ty Fiero"}
+                    fill
+                    sizes="50vw"
+                    className="transition-transform duration-500 cursor-pointer !rounded-xl  "
+                    onClick={() => {
+                      if (typeof window !== "undefined") {
+                        window.open(pic.src, "_blank");
+                      }
+                    }}
+                  />
+                </m.div>
+              );
+            })}
+          </div>
+        </LazyMotion>
         <p className="my-8 text-sm text-slate-400">
           For all the nerds out there, this page was statically rendered using
           Next.js, and my photos were fetched from unsplash using the

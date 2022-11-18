@@ -6,7 +6,7 @@ import TechStack from "@/components/projects/TechStack";
 import Projects from "@/components/projects/Projects";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import dynamic from "next/dynamic";
 import CompactProjects from "@/components/projects/CompactProjects";
 import Head from "next/head";
@@ -119,7 +119,7 @@ function CodeIndex() {
         {/* separator */}
         <div className="my-28" />
 
-        <DualSection invert>
+        <DualSection invert centerText>
           <TextSection title="" headerClassNames="hidden">
             <MotionHeader invert>
               <h2 className={"font-bold heading-md "}>Projects</h2>

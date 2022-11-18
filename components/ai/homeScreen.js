@@ -34,7 +34,7 @@ function HomeScreen({ setScreen, formattedTime, setMove }) {
             return (
               <div
                 className="flex gap-5 h-20 py-2 w-[31.2rem] overflow-hidden active:bg-slate-100"
-                key={index}
+                key={entry.name}
                 onClick={() => {
                   setScreen({
                     name: entry.name,

@@ -8,7 +8,7 @@ import TextSection from "@/components/layout/TextSection";
 import Link from "next/link";
 import CustomForm from "@/components/blog/NewsletterForm";
 import SocialIcons from "@/components/etc/SocialIcons";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { TbCode } from "react-icons/tb";
 import CompactProjects from "@/components/projects/CompactProjects";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
@@ -22,7 +22,7 @@ export default function Index({ allPosts }) {
     {
       title: "Next.js",
       url: "/assets/CodeLogos/nextjs.png",
-      styles: " invert-0 dark:invert scale-110",
+      styles: " invert-0 dark:invert scale-90",
     },
     {
       title: "React",
@@ -66,7 +66,7 @@ export default function Index({ allPosts }) {
                   <h1 className="font-bold leading-tight tracking-tighter sm:!text-7xl md:text-8xl pr-4 logo f1 drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500">
                     Hi! I&apos;m Ty
                   </h1>
-                  <motion.p
+                  <m.p
                     initial={{ rotate: 40 }}
                     animate={{
                       rotate: -40,
@@ -81,11 +81,11 @@ export default function Index({ allPosts }) {
                     className="sm:!text-6xl md:!text-7xl "
                   >
                     ✋🏻
-                  </motion.p>
+                  </m.p>
                 </div>
               </MotionHeader>
               <MotionText>
-                <p className="text-2xl md:text-left sm:text-center font-semibold">
+                <p className="text-2xl font-semibold md:text-left sm:text-center">
                   Web developer, musician, and photographer in Seattle,
                   Washington.
                 </p>
@@ -136,7 +136,7 @@ export default function Index({ allPosts }) {
                     {favTech.map((tech, index) => {
                       return (
                         <div
-                          key={index}
+                          key={tech.title}
                           className={
                             "rounded-xl relative w-16 h-12 " + tech.styles
                           }
