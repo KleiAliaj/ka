@@ -34,7 +34,7 @@ export default function HomePosts({ posts }) {
         viewport={{ once: true, amount: 0.5 }}
         className="mt-8"
       >
-        <div className="grid grid-cols-1 mb-32 justify-items-center md:grid-cols-2 md:gap-x-5 lg:gap-x-5 gap-y-10 md:gap-y-16 ">
+        <div className="grid grid-cols-1 mb-32 justify-items-center md:grid-cols-3 md:gap-x-5 lg:gap-x-5 gap-y-10 md:gap-y-16 ">
           {posts.map((post) => (
             <PostPreview
               key={post.slug}

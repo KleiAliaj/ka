@@ -10,6 +10,7 @@ import CustomForm from "@/components/blog/NewsletterForm";
 import MotionImage from "@/components/etc/animation/MotionImage";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
+import HomePosts from "@/components/blog/homePosts";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -31,15 +32,11 @@ export default function Index({ allPosts }) {
       <div className="page-container">
         <h1 className="text-left heading-lg fade-effect-quick">Blog</h1>
 
-        <MotionText yPx={-100} xPx={0} noSize>
-          <CustomForm />
-        </MotionText>
-
-        <MotionHeader yPx={-100} xPx={0} noSize>
-          <h3 className="mt-10 mb-4 text-3xl f1 text-sky-800 dark:text-sky-300">
-            Latest Post:
+        {/* <MotionHeader yPx={-100} xPx={0} noSize>
+          <h3 className="mb-4 text-3xl f1 text-sky-800 dark:text-sky-300">
+            Latest:
           </h3>
-        </MotionHeader>
+        </MotionHeader> */}
         {heroPost && (
           <HeroPost
             title={heroPost.title}
@@ -50,7 +47,18 @@ export default function Index({ allPosts }) {
             excerpt={heroPost.metadata.excerpt}
           />
         )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+
+        <div className="my-10" />
+        <MotionText yPx={-100} xPx={0} noSize>
+          <CustomForm />
+        </MotionText>
+        <div className="my-10" />
+        <MotionHeader yPx={-100} xPx={0} noSize>
+          <h3 className="text-3xl f1 text-sky-800 dark:text-sky-300">
+            More Posts
+          </h3>
+        </MotionHeader>
+        {morePosts.length > 0 && <HomePosts posts={morePosts} />}
       </div>
     </>
   );
