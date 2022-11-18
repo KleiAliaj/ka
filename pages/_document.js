@@ -40,10 +40,10 @@ export default class MyDocument extends Document {
             content="Writings on tech, music, and life. "
           />
           <meta property="og:image" content="./assets/other/Ty-lofi.webp" />
-          <script
+          {/* <script
             defer
             src="https://app.tinyanalytics.io/pixel/0333UQormJTGEbzB"
-          ></script>
+          ></script> */}
           <link
             rel="apple-touch-icon"
             sizes="180x180"
