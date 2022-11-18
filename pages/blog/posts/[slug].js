@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "@/components/layout/container";
 import PostBody from "@/components/blog/post-body";
-import MoreStories from "@/components/blog/more-stories";
 import Header from "@/components/blog/header";
 import PostHeader from "@/components/blog/post-header";
 import SectionSeparator from "@/components/blog/section-separator";
@@ -14,6 +13,8 @@ import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import dynamic from "next/dynamic";
 import { createRef } from "react";
+import HomePosts from "@/components/blog/homePosts";
+import MotionHeader from "@/components/etc/animation/MotionHeader";
 const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
   ssr: false,
 });
@@ -53,7 +54,10 @@ export default function Post({ post, morePosts, preview }) {
               slug={post.slug}
             />
           </article>
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <MotionHeader yPx={-50} xPx={0}>
+            <h2 className="mb-8 heading-lg ">More Posts</h2>
+          </MotionHeader>
+          {morePosts.length > 0 && <HomePosts posts={morePosts} />}
         </>
       )}
     </div>
