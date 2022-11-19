@@ -387,6 +387,7 @@ export const projectArray = [
       { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
       { name: "React", icon: "/assets/CodeLogos/react.png" },
       { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
+      { name: "SASS", icon: "/assets/CodeLogos/sass.png" },
       { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
       { name: "Cosmic CMS", icon: null },
     ],
