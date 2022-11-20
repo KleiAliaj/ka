@@ -37,6 +37,7 @@ export default function Index({ allPosts }) {
             Latest:
           </h3>
         </MotionHeader> */}
+
         {heroPost && (
           <HeroPost
             title={heroPost.title}
