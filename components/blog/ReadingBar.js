@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  LazyMotion,
   useScroll,
   useSpring,
   domAnimation,
@@ -47,12 +46,10 @@ const ReadingBar = ({ target }) => {
     restDelta: 0.0001,
   });
   return (
-    <LazyMotion features={domAnimation}>
       <m.div
         className={` fixed top-0 left-0 right-0 z-50 h-[8px]  origin-[0%] bg-gradient-to-r from-sky-200/80 via-sky-400/80 to-sky-900/80 dark:from-sky-600/80 dark:via-sky-300/80 dark:to-sky-50/70 `}
         style={{ scaleX }}
       />
-    </LazyMotion>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 function MotionText({
   children,
@@ -17,32 +17,30 @@ function MotionText({
 
   let sizeClasses = noSize ? "" : "w-full h-full";
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        className={sizeClasses}
-        initial={{
-          x: xValue,
-          y: yValue,
-          opacity: 0,
-          scale: prefersReducedMotion ? 1 : 0.6,
-        }}
-        whileInView={{
-          x: 0,
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          transition: {
-            type: "spring",
-            bounce: 0.2,
-            duration: 1.5,
-            delay: delay,
-          },
-        }}
-        viewport={{ once: true }}
-      >
-        {children}
-      </m.div>
-    </LazyMotion>
+    <m.div
+      className={sizeClasses}
+      initial={{
+        x: xValue,
+        y: yValue,
+        opacity: 0,
+        scale: prefersReducedMotion ? 1 : 0.6,
+      }}
+      whileInView={{
+        x: 0,
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: "spring",
+          bounce: 0.2,
+          duration: 1.5,
+          delay: delay,
+        },
+      }}
+      viewport={{ once: true }}
+    >
+      {children}
+    </m.div>
   );
 }
 
