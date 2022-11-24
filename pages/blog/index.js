@@ -38,6 +38,8 @@ export default function Index({ allPosts }) {
           </h3>
         </MotionHeader> */}
 
+       
+
         {heroPost && (
           <HeroPost
             title={heroPost.title}

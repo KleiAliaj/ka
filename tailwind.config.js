@@ -12,6 +12,9 @@ module.exports = {
         lg: "976px",
         xl: "1440px",
       },
+      width: {
+        "square-diagonal": Math.sqrt(2) * 100 + "%",
+      },
       colors: {},
       spacing: {
         28: "7rem",
@@ -35,7 +38,6 @@ module.exports = {
       animation: {
         "tracking-in-expand":
           "tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000)   both",
-          
       },
       keyframes: {
         "tracking-in-expand": {

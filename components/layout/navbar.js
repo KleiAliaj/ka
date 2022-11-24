@@ -24,11 +24,7 @@ import {
   TbPalette,
 } from "react-icons/tb";
 import Image from "next/image";
-import {
-  AnimatePresence,
-  m,
-  useReducedMotion,
-} from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 
 function Navbar() {
   const prefersReducedMotion = useReducedMotion();
@@ -257,75 +253,79 @@ function Navbar() {
   };
   return (
     <>
-        <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row !z-[10000]">
-          <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
-            <Link
-              className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
-              href="/"
+      <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row !z-[10000]">
+        <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
+          <Link
+            className="flex items-center gap-3 transition md:hover:scale-[104%] active:scale-95 z-[120] duration-500 "
+            href="/"
+          >
+            <div className="relative w-12 h-12 transition rounded-full shadow-md dark:shadow-sky-400/60 shadow-sky-800/70">
+              <Image
+                src="/assets/other/ty-circle-image.webp"
+                alt="Ty Fiero"
+                fill
+                sizes="48px"
+                priority
+              />
+            </div>
+            <m.p
+              initial={{ letterSpacing: "-0.07em" }}
+              animate={{ letterSpacing: "0em" }}
+              className="pt-2 pb-1 text-3xl font-bold leading-tight tracking-tighter transition md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500"
             >
-              <div className="relative w-12 h-12 transition rounded-full shadow-md dark:shadow-sky-400/60 shadow-sky-800/70">
-                <Image
-                  src="/assets/other/ty-circle-image.webp"
-                  alt="Ty Fiero"
-                  fill
-                  sizes="48px"
-                  priority
+              Ty Fiero
+            </m.p>
+          </Link>
+        </div>
+
+        <div className="absolute z-[120] sm:flex right-2 top-3 md:hidden">
+          {" "}
+          <Hamburger
+            className=""
+            toggled={isToggled}
+            color="#0484C7"
+            toggle={() => {
+              setIsToggled(!isToggled);
+              if (typeof document !== "undefined") {
+                document.body.classList.toggle("lock-scroll");
+              }
+            }}
+            easing="ease-in"
+            label="Show menu"
+            rounded
+          />
+        </div>
+
+        {isToggled && (
+          <>
+            <div className="absolute top-0 left-0 z-[100] w-full h-screen bg-gradient-to-b from-white dark:from-black via-sky-100 dark:via-sky-900 to-sky-400 dark:to-sky-700 fade-effect-fast md:hidden !overflow-hidden"></div>
+
+            <m.ul
+              variants={menuVariant}
+              initial={"menuStart"}
+              animate={"menuStop"}
+              className="z-[120] flex items-center mt-4 md:gap-1 lg:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-5 lg:mr-10 f1 "
+            >
+              {items.map((item) => (
+                <MenuItem
+                  key={item.name}
+                  name={item.name}
+                  icon={item.icon}
+                  sub={item.sub}
+                  subLinks={item.subLinks}
+                  selected={selected}
+                  setSelected={setSelected}
+                  handleClick={handleClick}
+                  isMobile={isMobile}
+                  isReady={isReady}
                 />
-              </div>
-              <p className="pt-2 pb-1 text-3xl font-bold leading-tight tracking-tighter transition md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500">
-                Ty Fiero
-              </p>
-            </Link>
-          </div>
+              ))}
 
-          <div className="absolute z-[120] sm:flex right-2 top-3 md:hidden">
-            {" "}
-            <Hamburger
-              className=""
-              toggled={isToggled}
-              color="#0484C7"
-              toggle={() => {
-                setIsToggled(!isToggled);
-                if (typeof document !== "undefined") {
-                  document.body.classList.toggle("lock-scroll");
-                }
-              }}
-              easing="ease-in"
-              label="Show menu"
-              rounded
-            />
-          </div>
-
-          {isToggled && (
-            <>
-              <div className="absolute top-0 left-0 z-[100] w-full h-screen bg-gradient-to-b from-white dark:from-black via-sky-100 dark:via-sky-900 to-sky-400 dark:to-sky-700 fade-effect-fast md:hidden !overflow-hidden"></div>
-
-              <m.ul
-                variants={menuVariant}
-                initial={"menuStart"}
-                animate={"menuStop"}
-                className="z-[120] flex items-center mt-4 md:gap-1 lg:gap-2 sm:gap-8 sm:flex-col md:flex-row fade-effect-quick sm:absolute md:flex sm:left-0 sm:right-0 sm:ml-auto sm:mr-auto sm:w-[80%]  md:justify-end md:mr-5 lg:mr-10 f1 "
-              >
-                {items.map((item) => (
-                  <MenuItem
-                    key={item.name}
-                    name={item.name}
-                    icon={item.icon}
-                    sub={item.sub}
-                    subLinks={item.subLinks}
-                    selected={selected}
-                    setSelected={setSelected}
-                    handleClick={handleClick}
-                    isMobile={isMobile}
-                    isReady={isReady}
-                  />
-                ))}
-
-                <li className="sm:pl-0 md:pl-2">{renderThemeChanger()}</li>
-              </m.ul>
-            </>
-          )}
-        </nav>
+              <li className="sm:pl-0 md:pl-2">{renderThemeChanger()}</li>
+            </m.ul>
+          </>
+        )}
+      </nav>
     </>
   );
 }
