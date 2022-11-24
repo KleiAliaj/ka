@@ -63,12 +63,18 @@ export default function Index({ allPosts }) {
             <section className="flex flex-col sm:items-center md:items-start md:ml-24 sm:ml-0 ">
               <MotionHeader>
                 <div className="flex items-center w-full md:justify-start sm:justify-center tracking-in-expand">
-                  <h1
-                    whileHover={{ scale: 1.05, originX: 1 }}
+                  <m.h1
+                    whileHover={{
+                      scale: 1.05,
+                      originX: 1,
+                      letterSpacing: "-0.05em",
+                    }}
+                    initial={{ letterSpacing: "-0.1em" }}
+                    animate={{ letterSpacing: "0em" }}
                     className="font-bold leading-tight tracking-tighter sm:!text-7xl md:text-8xl pr-4 logo f1 drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 "
                   >
                     Hi! I&apos;m Ty
-                  </h1>
+                  </m.h1>
                   <m.p
                     initial={{ rotate: 40 }}
                     animate={{
