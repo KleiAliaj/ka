@@ -1,5 +1,5 @@
 import PostPreview from "./post-preview";
-import { LazyMotion, m, domAnimation, useReducedMotion } from "framer-motion";
+import {  m, useReducedMotion } from "framer-motion";
 
 export default function HomePosts({ posts }) {
   const prefersReducedMotion = useReducedMotion();
@@ -26,7 +26,6 @@ export default function HomePosts({ posts }) {
     },
   };
   return (
-    <LazyMotion features={domAnimation}>
       <m.section
         variants={groupAnimate}
         initial={"offscreen"}
@@ -48,6 +47,5 @@ export default function HomePosts({ posts }) {
           ))}
         </div>
       </m.section>
-    </LazyMotion>
   );
 }
