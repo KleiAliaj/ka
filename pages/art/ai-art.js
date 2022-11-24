@@ -7,18 +7,12 @@ import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
 import Head from "next/head";
 import { FaExpandAlt, FaExpandArrowsAlt } from "react-icons/fa";
+import { m, useReducedMotion } from "framer-motion";
 
 export default function AI({ aiImages }) {
   const [pics, setPics] = React.useState(aiImages);
-  const experiments = [
-    {
-      name: "Oliver - AI life advice",
-      description:
-        "GPT-3 powered life advice character that takes on various topics.",
-      path: "/ai/Oliver",
-      imgSrc: "/assets/other/projects/oliver/OliThumb.png",
-    },
-  ];
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <>
       <Head>
@@ -46,7 +40,7 @@ export default function AI({ aiImages }) {
 
         <div className="flex flex-wrap justify-center w-full gap-3 my-5 ">
           {pics.map((pic, index) => {
-            return <AIImage key={index} pic={pic} />;
+            return <AIImage key={index} index={index} pic={pic} />;
           })}
         </div>
       </div>
@@ -55,7 +49,7 @@ export default function AI({ aiImages }) {
 }
 
 function AIImage({ index, pic }) {
-  const [imageLoading, setImageLoading] = React.useState(false);
+  // const [imageLoading, setImageLoading] = React.useState(false);
   const [clicked, setClicked] = React.useState(false);
   let textSize =
     pic.name.length < 200
@@ -63,13 +57,24 @@ function AIImage({ index, pic }) {
       : pic.name.length > 350
       ? " sm:!text-[8px] md:!text-[10px]"
       : " sm:!text-[10px] md:!text-xs";
-  React.useEffect(() => {
-    setImageLoading(true);
-  }, []);
+  // React.useEffect(() => {
+  //   setImageLoading(true);
+  // }, []);
 
   return (
-    <div
+    <m.div
       key={index}
+      initial={{ scale: 0.9, opacity: 0 }}
+      whileInView={{
+        scale: 1,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          bounce: 0.4,
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
       className={
         "group relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[250px] md:w-[250px] sm:w-[180px] sm:h-[180px] hover:scale-105 transition "
       }
@@ -120,23 +125,21 @@ function AIImage({ index, pic }) {
           </button>
         </div>
       )}
-      <img
-        src={pic.image.url}
-        alt={pic.name}
-        className={
-          " rounded-xl z-0 cursor-pointer object-contain " +
-          +(imageLoading ? " !hidden" : "")
-        }
-        onLoadingComplete={() => {
-          setImageLoading(false);
-        }}
-        onClick={() => {
-          setClicked(!clicked);
-          setTimeout(() => {
-            setClicked(false);
-          }, 7000);
-        }}
-      />
+      <picture>
+        <source srcSet={pic.image.url} type="image/webp" />
+        <img
+          src={pic.image.url}
+          alt={pic.name}
+          className={" rounded-xl z-0 cursor-pointer object-contain "}
+          onClick={() => {
+            setClicked(!clicked);
+            setTimeout(() => {
+              setClicked(false);
+            }, 7000);
+          }}
+        />
+      </picture>
+
       {/* <Image
         src={pic.image.url}
         alt={pic.name}
@@ -156,7 +159,7 @@ function AIImage({ index, pic }) {
           }, 7000);
         }}
       /> */}
-    </div>
+    </m.div>
   );
 }
 
@@ -164,8 +167,8 @@ export async function getStaticProps(context) {
   let aiImages = [];
   const axiosStats = await axios({
     method: "GET",
-    url: "http://www.tyfiero.com/api/airtable",
-    // url: "http://localhost:3000/api/airtable",
+    // url: "http://www.tyfiero.com/api/airtable",
+    url: "http://localhost:3000/api/airtable",
   })
     .then((response) => {
       let images = response.data;
