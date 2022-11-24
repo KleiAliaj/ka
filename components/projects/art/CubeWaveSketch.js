@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import p5 from "p5";
 import { useTheme } from "next-themes";
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { m } from "framer-motion";
 import { useWindowSize } from "@/lib/hooks/useWindowSize";
 
 let codeCanvasWidth = 700;
@@ -131,7 +131,6 @@ function CubeWaveSketch() {
       ref={frame}
       className="w-full h-[400px] shadow-sky-600/30 shadow-xl rounded-xl dark:bg-black bg-white mt-4 scale-100 relative"
     >
-      <LazyMotion features={domAnimation}>
         <m.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -154,7 +153,6 @@ function CubeWaveSketch() {
           className="absolute top-0 flex items-center justify-center w-full h-full scale-[98%] rounded-xl"
           ref={p5ContainerRef}
         />
-      </LazyMotion>
     </div>
   );
 }

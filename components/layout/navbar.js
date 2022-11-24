@@ -26,8 +26,6 @@ import {
 import Image from "next/image";
 import {
   AnimatePresence,
-  LazyMotion,
-  domAnimation,
   m,
   useReducedMotion,
 } from "framer-motion";
@@ -259,7 +257,6 @@ function Navbar() {
   };
   return (
     <>
-      <LazyMotion features={domAnimation}>
         <nav className=" relative items-center justify-between w-full px-4 py-4 select-none sm:block md:flex sm:flex-col md:flex-row !z-[10000]">
           <div className="z-20 flex items-start sm:w-full md:w-1/4 min-h-10 grow-effect">
             <Link
@@ -329,7 +326,6 @@ function Navbar() {
             </>
           )}
         </nav>
-      </LazyMotion>
     </>
   );
 }

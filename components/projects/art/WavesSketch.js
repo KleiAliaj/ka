@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import p5 from "p5";
 import { useTheme } from "next-themes";
 import { FaUndo, FaUndoAlt } from "react-icons/fa";
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { m } from "framer-motion";
 
 let codeCanvasWidth = 700;
 let artCanvasTheme = "light";
@@ -111,33 +111,29 @@ function WavesSketch() {
       >
         <FaUndo />
       </button>
-    <LazyMotion features={domAnimation}>
-
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            type: "spring",
-            bounce: 0.4,
-            duration: 1.5,
-          },
-        }}
-        viewport={{ once: false, amount: 0.2 }}
-        onViewportEnter={() => {
-          sketchPlaying = true;
-          console.log(sketchPlaying);
-          setIsReset(!reset);
-        }}
-        onViewportLeave={() => {
-          sketchPlaying = false;
-          setIsReset(!reset);
-        }}
-        className="absolute top-0 flex items-center justify-center w-full h-full !scale-[98%] rounded-xl z-0 "
-        ref={p5ContainerRef}
-      />
-    </LazyMotion>
-
+        <m.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              type: "spring",
+              bounce: 0.4,
+              duration: 1.5,
+            },
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+          onViewportEnter={() => {
+            sketchPlaying = true;
+            console.log(sketchPlaying);
+            setIsReset(!reset);
+          }}
+          onViewportLeave={() => {
+            sketchPlaying = false;
+            setIsReset(!reset);
+          }}
+          className="absolute top-0 flex items-center justify-center w-full h-full !scale-[98%] rounded-xl z-0 "
+          ref={p5ContainerRef}
+        />
     </div>
   );
 }

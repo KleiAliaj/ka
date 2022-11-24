@@ -10,7 +10,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useWindowSize } from "@/lib/hooks/useWindowSize";
 import { FaDownload, FaEye, FaHeart, FaImage, FaUserAlt } from "react-icons/fa";
-import { domAnimation, m, useReducedMotion, LazyMotion } from "framer-motion";
+import {  m, useReducedMotion, } from "framer-motion";
 
 export async function getStaticProps(context) {
   let tyImages = [];
@@ -306,7 +306,6 @@ function Photography({ tyImages, tyStats, altDescription }) {
             </div>
           </div>
         </MotionText>
-        <LazyMotion features={domAnimation}>
           <div className="flex flex-wrap justify-center w-full gap-3 my-5">
             {pics.map((pic, index) => {
               return (
@@ -346,7 +345,6 @@ function Photography({ tyImages, tyStats, altDescription }) {
               );
             })}
           </div>
-        </LazyMotion>
         <p className="my-8 text-sm text-slate-400">
           For all the nerds out there, this page was statically rendered using
           Next.js, and my photos were fetched from unsplash using the

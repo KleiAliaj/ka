@@ -13,7 +13,7 @@ import {
 import ImageSection from "@/components/layout/ImageSection";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
-import { domAnimation, LazyMotion, m, useReducedMotion } from "framer-motion";
+import {  m, useReducedMotion } from "framer-motion";
 import Head from "next/head";
 import { useWindowSize } from "@/lib/hooks/useWindowSize";
 import Link from "next/link";
@@ -228,7 +228,6 @@ function Art({ tyImages, tyStats, altDescription }) {
           content={`Photos, music, AI images, and generative art from Ty Fiero`}
         />
       </Head>
-      <LazyMotion features={domAnimation}>
         <div className="page-container">
           <h1 className=" heading-lg !mb-1 fade-effect-quick">Art</h1>
           <m.div
@@ -544,7 +543,6 @@ function Art({ tyImages, tyStats, altDescription }) {
             />
           </DualSection>
         </div>
-      </LazyMotion>
     </>
   );
 }

@@ -62,7 +62,8 @@ function MyApp({ Component, pageProps }) {
       <Layout fontCn={` ${baloo.variable}  ${quicksand.variable}`}>
         <FullLoader show={loading} />
         <Toaster />
-        <Component {...pageProps} />
+          <Component {...pageProps} />
+
         <Analytics />
       </Layout>
     </ThemeProvider>
