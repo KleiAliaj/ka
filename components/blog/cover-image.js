@@ -10,7 +10,7 @@ export default function CoverImage({ title, url, slug, thumb = false }) {
       sizes="70vw"
       className={
         cn(
-          "lazyload shadow-lg hover:shadow-xl hover:shadow-sky-700/40 shadow-sky-700/40  w-auto rounded-2xl mx-auto  transition-shadow",
+          "lazyload shadow-md  shadow-sky-700/40   w-auto rounded-xl mx-auto  ",
           {
             "": slug,
           }
@@ -29,7 +29,7 @@ export default function CoverImage({ title, url, slug, thumb = false }) {
     />
   );
   return (
-    <div className="sm:mx-0">
+    <div className=" sm:mx-0">
       {image}
       {/* {slug ? (
         <Link legacyBehavior href={`/blog/posts/${slug}`}>
