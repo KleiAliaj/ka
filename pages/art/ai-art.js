@@ -74,7 +74,7 @@ function AIImage({ index, pic }) {
         "group relative shadow-xl rounded-xl shadow-sky-600/30 md:h-[250px] md:w-[250px] sm:w-[180px] sm:h-[180px] hover:scale-105 transition "
       }
     >
-      {imageLoading ? (
+      {/* {imageLoading ? (
         <div className="z-0 w-full h-full scale-[101%]">
           <Skeleton
             width={"100%"}
@@ -85,7 +85,7 @@ function AIImage({ index, pic }) {
               "
           />
         </div>
-      ) : null}
+      ) : null} */}
       {clicked && (
         <div
           className="absolute top-0 z-50 flex flex-col items-center justify-center w-full h-full p-2 transition duration-300 select-none bg-slate-800/70 rounded-xl fade-effect-turbo"
@@ -120,7 +120,24 @@ function AIImage({ index, pic }) {
           </button>
         </div>
       )}
-      <Image
+      <img
+        src={pic.image.url}
+        alt={pic.name}
+        className={
+          " rounded-xl z-0 cursor-pointer object-contain " +
+          +(imageLoading ? " !hidden" : "")
+        }
+        onLoadingComplete={() => {
+          setImageLoading(false);
+        }}
+        onClick={() => {
+          setClicked(!clicked);
+          setTimeout(() => {
+            setClicked(false);
+          }, 7000);
+        }}
+      />
+      {/* <Image
         src={pic.image.url}
         alt={pic.name}
         fill
@@ -138,7 +155,7 @@ function AIImage({ index, pic }) {
             setClicked(false);
           }, 7000);
         }}
-      />
+      /> */}
     </div>
   );
 }
