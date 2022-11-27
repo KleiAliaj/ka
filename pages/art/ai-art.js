@@ -10,9 +10,9 @@ import { FaExpandAlt, FaExpandArrowsAlt } from "react-icons/fa";
 import { m, useReducedMotion } from "framer-motion";
 
 export default function AI({ aiImages }) {
+  console.dir(aiImages);
   const [pics, setPics] = React.useState(aiImages);
   const prefersReducedMotion = useReducedMotion();
-
   return (
     <>
       <Head>
@@ -60,7 +60,6 @@ function AIImage({ index, pic }) {
   // React.useEffect(() => {
   //   setImageLoading(true);
   // }, []);
-
   return (
     <m.div
       key={index}
@@ -128,7 +127,7 @@ function AIImage({ index, pic }) {
       <picture>
         <source srcSet={pic.image.url} type="image/webp" />
         <img
-          src={pic.image.url}
+          src={pic.image}
           alt={pic.name}
           className={" rounded-xl z-0 cursor-pointer object-contain "}
           onClick={() => {
@@ -175,7 +174,16 @@ export async function getStaticProps(context) {
       let sorted = images.sort(function (a, b) {
         return b.rank - a.rank;
       });
-      aiImages = sorted;
+
+      let slimmed = sorted.map((image) => {
+        return {
+          name: image.name,
+          image: image.image.url,
+          algorithm: image.algorithm,
+        };
+      });
+
+      aiImages = slimmed;
     })
     .catch((error) => {
       console.log(error);
