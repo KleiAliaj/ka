@@ -10,7 +10,6 @@ import { FaExpandAlt, FaExpandArrowsAlt } from "react-icons/fa";
 import { m, useReducedMotion } from "framer-motion";
 
 export default function AI({ aiImages }) {
-  console.dir(aiImages);
   const [pics, setPics] = React.useState(aiImages);
   const prefersReducedMotion = useReducedMotion();
   return (
