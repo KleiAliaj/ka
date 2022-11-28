@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
       const response = await openai
         .createCompletion({
-          model: "text-davinci-002",
+          model: "text-davinci-003",
           prompt: prompt,
           temperature: temp,
           max_tokens: 3000,
