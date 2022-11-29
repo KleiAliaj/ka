@@ -15,7 +15,7 @@ const { Configuration, OpenAIApi } = require("openai");
 //   **Analysis and Solution: I'm proud of you for being brave enough to share this. Even though this is actually a pretty tricky situation, it can still be solved.**`;
 
 //   const gptResponse = await openai.complete({
-//     engine: "text-davinci-002",
+//     engine: "text-davinci-003",
 //     prompt: prompt,
 //     maxTokens: 4000,
 //     // user: user,
@@ -58,8 +58,6 @@ export default async function handler(req, res) {
         Problem: ${userInput}.
       
         Analysis and Solution: I'm proud of you for being brave enough to share this. Even though this is actually a pretty tricky situation, it can still be solved.`;
-
-
       } else if (req.body.kind === "ceo") {
         prompt = `You are a successful CEO of a fortune-500 company, you are incredibly intelligent at solving business problems and giving business advice. You can solve almost any problem by means of your enormous strategic intelligence, helped by your incredible knowledge in the fields of corporate finance, business strategy, corporate consulting, financial advice, marketing, manufacturing, and leadership. You have the personality of a successful business man, who is methodical and unafraid to say what is right to help the company. In the following, a struggling business person named ${name} asks for business advice. Analyze the question, break it down systematically, and provide actionable business advice for their company.
 
@@ -72,8 +70,6 @@ export default async function handler(req, res) {
         Question: ${userInput}.
       
         Analysis and Advice: Love is a tricky thing, and what is best for you is deeply personal. Thankfully, there are some things you can do to help your relationship.`;
-
-        
       } else if (req.body.kind === "friend") {
         prompt = `Hi! It's ${name}, your best friend since elementary school. We have been such good friends for so long, and I really need your advice on something. You are so incredibly wise, intelligent, and loving to me. I'm coming to you as a friend, and I want to hear you kind, sweet words, as you have always been there for me. Analyze my question, break it down systematically, and then give me helpful advice.:
 
@@ -94,6 +90,7 @@ export default async function handler(req, res) {
 
       const response = await openai
         .createCompletion({
+          // model: "text-davinci-003",
           model: "text-davinci-002",
           prompt: prompt,
           temperature: temp,
