@@ -1,3 +1,4 @@
+import ReusableShowBox from "@/components/devlab/ReusableShowBox";
 import Head from "next/head";
 import React from "react";
 
@@ -19,6 +20,11 @@ function Diagram() {
 
           {/* <div className="bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-xl overflow-hidden w-[89%] h-[90%] shadow-lg z-10 diagram-box"></div> */}
           {/* <div className="bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-xl overflow-hidden w-[89%] h-[90%] z-10 diagram-box"></div> */}
+
+          <ReusableShowBox
+            imgSrc={"/assets/other/ex.png"}
+            bgImg={"/assets/other/color.png"}
+          ></ReusableShowBox>
 
           <div className="  z-10 diagram-anim group  flex justify-center items-center">
             <div className=" diagram-main p-3">
