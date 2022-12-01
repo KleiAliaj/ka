@@ -26,8 +26,8 @@ function Diagram() {
             bgImg={"/assets/other/color.png"}
           ></ReusableShowBox>
 
-          <div className="  z-10 diagram-anim group  flex justify-center items-center">
-            <div className=" diagram-main p-3">
+          <div className="z-10 flex items-center justify-center diagram-anim group">
+            <div className="p-3 diagram-main">
               <img
                 src="/assets/other/ex.png"
                 alt="ven diagram"
@@ -38,9 +38,9 @@ function Diagram() {
 
           {/* </section> */}
         </div>
-        <div className=" w-full h-full mt-48">
+        <div className="w-full h-full mt-48 ">
           {" "}
-          <div className="testbox bg-white mx-auto">Hello world</div>
+          <div className="mx-auto bg-white testbox">Hello world</div>
         </div>
       </div>
     </>
