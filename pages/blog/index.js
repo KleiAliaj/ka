@@ -3,9 +3,7 @@ import MoreStories from "@/components/blog/more-stories";
 import HeroPost from "@/components/blog/hero-post";
 
 import Layout from "@/components/layout/layout";
-import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "@/lib/constants";
 import CustomForm from "@/components/blog/NewsletterForm";
 import MotionImage from "@/components/etc/animation/MotionImage";
 import MotionText from "@/components/etc/animation/MotionText";
@@ -17,7 +15,6 @@ import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
-  console.log(allPosts);
   return (
     <>
       <Head>
@@ -33,12 +30,6 @@ export default function Index({ allPosts }) {
         </h1> */}
       <div className="page-container">
         <h1 className="text-left heading-lg fade-effect-quick">Blog</h1>
-
-        {/* <MotionHeader yPx={-100} xPx={0} noSize>
-          <h3 className="mb-4 text-3xl f1 text-sky-800 dark:text-sky-300">
-            Latest:
-          </h3>
-        </MotionHeader> */}
 
         {heroPost && (
           <HeroPost
@@ -68,7 +59,12 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps({ preview }) {
-  const allPosts = getAllPosts();
+  const posts = getAllPosts();
+  //sorted by date (newest first)
+  const allPosts = posts.sort((a, b) => {
+    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+  });
+
   return {
     props: { allPosts },
   };

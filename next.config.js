@@ -11,7 +11,6 @@ module.exports = withPWA({
   experimental: { appDir: false },
   images: {
     domains: [
-      "imgix.cosmicjs.com",
       "images.unsplash.com",
       "dl.airtable.com",
       "v5.airtableusercontent.com",
