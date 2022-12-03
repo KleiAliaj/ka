@@ -4,6 +4,7 @@ import CoverImage from "./cover-image";
 import Link from "next/link";
 import MotionImage from "../etc/animation/MotionImage";
 import Ribbon from "../layout/Ribbon";
+import MdxCoverImage from "./mdx/mdxCoverImage";
 
 export default function HeroPost({
   title,
@@ -30,9 +31,9 @@ export default function HeroPost({
           <div className="flex w-full h-full lg:flex-row sm:flex-col">
             <div className="h-full sm:w-full lg:w-1/3 ">
               <div className=" flex justify-center flex-grow !rounded-xl sm:w-full lg:min-h-[100%]  sm:h-auto lg:h-full lg:w-auto ">
-                <CoverImage
+                <MdxCoverImage
                   title={title}
-                  url={coverImage.imgix_url}
+                  url={coverImage}
                   slug={slug}
                   thumb
                 />
@@ -53,10 +54,7 @@ export default function HeroPost({
                 </p>
               </div>
               <div className="items-end justify-between w-full lg:flex sm:hidden ">
-                <Avatar
-                  name={author.title}
-                  picture={author.metadata.picture.imgix_url}
-                />
+                {/* <Avatar /> */}
                 <div className="pb-1 text-lg italic text-slate-500 f2 dark:text-slate-300">
                   <Date dateString={date} />
                 </div>

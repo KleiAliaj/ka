@@ -16,6 +16,8 @@ import MotionText from "@/components/etc/animation/MotionText";
 import MotionImage from "@/components/etc/animation/MotionImage";
 import { FaArrowRight } from "react-icons/fa";
 import ShiftButton from "@/components/layout/shiftButton";
+import { getAllPosts } from "utils/mdxUtils";
+import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
 
 export default function Index({ allPosts }) {
   const favTech = [
@@ -316,7 +318,7 @@ export default function Index({ allPosts }) {
               Latest From the blog
             </h2>
           </MotionHeader>
-          {allPosts.length > 0 && <HomePosts posts={allPosts} />}
+          {allPosts.length > 0 && <MdXHomePosts posts={allPosts} />}
 
           <br />
         </div>
@@ -326,7 +328,7 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps({ preview }) {
-  const allPosts = (await getAllPostsForHome(preview)) || [];
+  const allPosts = getAllPosts();
   return {
     props: { allPosts },
   };

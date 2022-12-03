@@ -11,11 +11,13 @@ import MotionImage from "@/components/etc/animation/MotionImage";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import HomePosts from "@/components/blog/homePosts";
+import { getAllPosts } from "utils/mdxUtils";
+import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
-
+  console.log(allPosts);
   return (
     <>
       <Head>
@@ -38,16 +40,14 @@ export default function Index({ allPosts }) {
           </h3>
         </MotionHeader> */}
 
-       
-
         {heroPost && (
           <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.metadata.cover_image}
-            date={heroPost.created_at}
-            author={heroPost.metadata.author}
+            title={heroPost.frontmatter.title}
+            coverImage={heroPost.frontmatter.imgUrl}
+            date={heroPost.frontmatter.date}
+            author={"Ty Fiero"}
             slug={heroPost.slug}
-            excerpt={heroPost.metadata.excerpt}
+            excerpt={heroPost.frontmatter.description}
           />
         )}
 
@@ -61,14 +61,14 @@ export default function Index({ allPosts }) {
             More Posts
           </h3>
         </MotionHeader>
-        {morePosts.length > 0 && <HomePosts posts={morePosts} />}
+        {morePosts.length > 0 && <MdXHomePosts posts={morePosts} />}
       </div>
     </>
   );
 }
 
 export async function getStaticProps({ preview }) {
-  const allPosts = (await getAllPostsForHome(preview)) || [];
+  const allPosts = getAllPosts();
   return {
     props: { allPosts },
   };
