@@ -48,6 +48,7 @@ function MyApp({ Component, pageProps }) {
   const canonicalUrl = (
     `https://www.tyfiero.com` + (router.asPath === "/" ? "" : router.asPath)
   ).split("?")[0];
+
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <Head>
@@ -62,7 +63,7 @@ function MyApp({ Component, pageProps }) {
       <Layout fontCn={` ${baloo.variable}  ${quicksand.variable}`}>
         <FullLoader show={loading} />
         <Toaster />
-          <Component {...pageProps} />
+        <Component {...pageProps} />
 
         <Analytics />
       </Layout>
