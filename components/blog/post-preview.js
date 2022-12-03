@@ -4,6 +4,7 @@ import CoverImage from "./cover-image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import MotionImage from "../etc/animation/MotionImage";
+import MdxCoverImage from "./mdx/mdxCoverImage";
 
 export default function PostPreview({
   title,
@@ -22,10 +23,10 @@ export default function PostPreview({
           <div>
             <div className="p-2">
               <div className="sm:mb-2 md:mb-5">
-                <CoverImage
+                <MdxCoverImage
                   slug={slug}
                   title={title}
-                  url={coverImage.imgix_url}
+                  url={coverImage}
                   thumb
                 />
               </div>
@@ -39,15 +40,9 @@ export default function PostPreview({
                 <Date dateString={date} />
               </div>
 
-              <p className="mb-16 text-base leading-relaxed sm:hidden md:block">
+              <p className="text-base leading-relaxed  sm:hidden md:block">
                 {excerpt}
               </p>
-              <div className="absolute sm:right-0 md:right-auto md:bottom-4 sm:bottom-2 sm:scale-75 md:scale-100 ">
-                <Avatar
-                  name={author.title}
-                  picture={author.metadata.picture.imgix_url}
-                />
-              </div>
             </div>
           </div>
         </Link>

@@ -6,11 +6,9 @@ export default function Avatar({ name, picture, date }) {
     <div className="flex items-center">
       <div className="relative mr-3 rounded-full shadow-lg h-14 w-14">
         {picture && (
-          <Image
+          <img
             src={`${picture}?auto=format,compress,enhance&w=100&h=100`}
             className="rounded-full"
-            fill
-            sizes="3.5rem"
             alt={name}
           />
         )}
