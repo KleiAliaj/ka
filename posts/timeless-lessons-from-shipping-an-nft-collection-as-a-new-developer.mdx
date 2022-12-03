@@ -1,0 +1,72 @@
+---
+title: Timeless lessons from shipping an NFT collection as a new developer
+slug: timeless-lessons-from-shipping-an-nft-collection-as-a-new-developer
+description: Turns out that launching a large-scale, generative art NFT collection as a newbie dev is tough, here are a few of the most important things I learned.
+date: "2022-09-14T19:04:39.963Z"
+imgUrl: "/assets/blog/pa.webp"
+---
+
+In the summer of 2021, I was three months into my journey of learning web development and loving every minute. I also spent a considerable amount of time in the crypto community, investing in weird tokens, buying NFTs, and enjoying the glorious year 2021 in crypto. One day, I made an observation that Cardano, a popular blockchain, was recently capable of minting NFTs, but there were very few people creating NFT projects. There were thousands of projects in the Ethereum space, but only a few in Cardano, which I found strange, considering that Cardano has one of the largest communities and social presence in crypto.
+
+I realized that soon enough, the number of projects on Cardano would explode, and I wanted to be a part of it. I noticed that there were no NFT projects anywhere that were using data visualization to visualize crypto price data as art. I had an untouched concept, in a growing Cardano community, in the exploding crypto industry. I invited my friend Dylan to join the project to help with marketing and operations, while I did the development. The opportunity was spotted, the team was formed, a plan was made, and it was time to jump in!
+
+Over the next three long months, I created the full 10,068-piece NFT collection with JavaScript and HTML/CSS. Being a beginner programmer, this was quite an undertaking. I’ll spare you all of the technical details, but here's a quick summary. (_If you want the juicy details you can visit [my website](https://www.tyfiero.com/code) and view the details in the projects section_).
+
+Using historical price data, I created 3D candlestick data visualizations with the help of the p5.js JavaScript library. There were five time periods: year, month, week, day, and 4-hour. Each period had its own parameterized generative art background. I made a user interface for the HTML canvas and added interactivity to make it special. Each NFT had a custom website hosted on IPFS, a static image, and metadata that included the price data. It was ready for showtime!
+
+<div className="flex flex-col w-full justify-center items-center">
+  <img
+    src="https://www.tyfiero.com/assets/other/projects/PA/ada7.jpg"
+    alt="NFT from the collection"
+    className="h-[400px] m-auto w-auto shadow-lg dark:shadow-sky-300/40 rounded-lg shadow-sky-700/40"
+  />
+  <figcaption className="!text-center text-base !my-0 !p-0  opacity-70">
+    <p className="!my-2">NFT from the collection</p>
+  </figcaption>
+</div>
+
+PriceArt launched in mid-October and didn’t see the success I was hoping for in the beginning. We were late to the party at that point, and our marketing efforts weren't enough to create a buzz for data NFTs. There was so much I learned from this experience, but four key lessons emerged from the aftermath of PriceArt.
+
+## **Problem-solving ability is exponentially greater when there is a deadline and pressure to ship**
+
+Creating a generative art NFT project on a blockchain was no easy feat for a newbie developer. Every day was so difficult, I hadn't even fully finished my JavaScript course yet, and here I was trying to write functions to render WebGL graphics that relied on external data sources. I could list a thousand different challenges and obstacles that arose, most of which I would laugh at now. But each challenge _required_ me to overcome it, otherwise, the project simply wouldn’t ship. Failure was not an option, it had to be solved. Not only that, but I had the added pressure of having my friend on the project with me, and I refused to let him down.
+
+Looking back, it is remarkable what I was able to accomplish with the resources and knowledge I had. They say that pressure makes diamonds, and I tend to believe that now. I learned a lot about myself from that experience, particularly that fear works well as a motivator. The constant, ever-present fear of failure I felt daily led me to surmount every single obstacle that got in my way. While fear may work as a motivator, it made me consistently stressed and anxious along the way. I realize now that being passionate and curious helps ease these symptoms, and can turn fear into excitement. If you have important obstacles to overcome, adding a sense of urgency and pressure will drastically improve your ability to surmount them, particularly if you can approach them with curiosity and passion.
+
+## **Good enough is better than perfect if it can be shipped sooner**
+
+This was my biggest regret about the project. We ended up launching in mid-October, three full months after the conception of the idea. It could have finished much sooner if I had known where to leave things. Some days I would spend way too much time doing small tweaks to the algorithm that provided minuscule improvements to the overall appearance. The bones of the project were done in early September. I had the data displayed correctly, they were responsive on mobile, and the background graphics looked great. But great wasn't good enough in my eyes, they needed to be stunning to catch the eyes of a collector. My inner perfectionist spent too much time on the small stuff, delaying the project. Meanwhile, more and more people were creating NFT projects on Cardano.
+
+_**If you are one of the firsts to a new industry, you'd better take advantage and launch quickly**_
+
+When I noticed the opportunity in August, there were fewer than 10 projects dropping per week, and nearly all of them were selling out within minutes. Months later, when PriceArt was finally ready for minting, there were 10-20 projects dropping _every day_. The window of perfect opportunity had slammed shut. At that point, marketing and community building were more important than the artwork. Something we had planned for, yet we underperformed on this front.
+
+I was hoping that the art would sell itself, that the beauty of each piece and the novelty of the price data visualizations would get people excited. But it turns out, that telling people about your work while you're making it is as important if not more important than the work itself, at least in the NFT space. Jason Roberts said on his [blog](https://www.codusoperandi.com/posts/increasing-your-luck-surface-area) that **Luck = [Doing things] \* [Telling People],** and I couldn’t agree more. A painful lesson to learn, but experience tends to be the best teacher. We still sold some NFTs, it wasn’t a complete failure by any means, but it was nowhere near as successful as we’d hoped.
+
+## **Sell shovels in a gold rush**
+
+In the end, I realized infrastructure providers in this space were usually more successful than creators. The Cardano blockchain is unlike any other. It was built using Haskell, a functional programming language with a small community relative to Ethereum's Solidity language. It's so niched that most newbies in the space (including myself) couldn’t interact easily with the blockchain. We required the help of people that knew Haskell _and_ Cardano well.
+
+There were only a few of these folks with the free time enough to assist. Several created businesses around making ‘vending machines’ for Cardano NFTs. A vending machine is a service that takes an amount of ADA, mints a random NFT from the collection on the blockchain, and sends this NFT in a transaction back to the sender. For their services, they would charge a large flat fee or take 10-20% of each sale price, a fortune when added up over dozens of 10k+ piece collections. They were the real winners in that gold rush. Here I was trying to make art to sell, while they served all the people like me selling art, it was genius.
+
+They weren’t the first to pioneer this concept. One notable example is Levi Strauss selling comfortable work pants to miners in the California gold rush of the 1840s and 1850s. While the miners toiled away in the hot sun to find gold, Levi sat indoors selling clothing and dry goods at [absurd prices](https://californiagoldrush1848.weebly.com/successes-and-failures.html). This high cost of living combined with the huge influx of hopeful miners meant that the vast majority of miners made very little from the gold rush. Levi on the other hand, much like [Henry Wells and William Fargo](https://stories.wf.com/men-founded-wells-fargo/) of Wells-Fargo, created an enormous business empire that still stands today. If you spot a gold rush, as I did in August of 2021, think first about how you could sell to the miners before becoming a miner yourself.
+
+## **Enjoy the journey, not the expectation of the outcome**
+
+To get the most out of your experiences, try to enjoy what you are doing. To enjoy the work, it helps to have a good grasp on the tools of your trade. Particularly as a new developer, learning your tools is an important first step before jumping into a giant project. You can’t expect someone who has hardly used a paintbrush before to paint a masterpiece. Learn your craft, immerse yourself in the act of creativity, and enjoy the process. If you only stare at the finish line, you will inevitably trip on even the smallest obstacles.
+
+This is not to say that finish lines aren’t important, or that we shouldn’t “Begin with the end in mind”, as Stephen Covey famously said. Framing the project, setting expectations, and developing a timeline is key to a successful project. If a project is a journey, it’s incredibly helpful to have a map to see where you’re going, and so you can know when you’re off track. But once you have that map, enjoy the walk! Smell the flowers, appreciate the little things, feel the breeze on your face. Ok, maybe I’m taking this journey metaphor too far, but I wish I had smiled more and appreciated the progress I was making.
+
+I should’ve rewarded myself for finally learning loops in JavaScript, or felt more wonder when two lines of code made the art shine in a new way. Instead, I was too busy chasing the carrot on the end of the stick to realize that I could have been having a blast along the way.
+
+Only in periods of reflection can we make deep, almost disturbing realizations of our past and what could have been. And only then, can you use this information to change course and begin to live the way you wish you had. From here on out, I will always remember to smell the flowers.
+
+## **Conclusion**
+
+PriceArt was a long, laborious journey of love and pain. There were highs and lows, excitement and fear, triumph and defeat. There are many things I would have done differently if given the chance, but I am still happy that I put in the hours to learn these key lessons for myself. It’s interesting, after writing this post-mortem of the project, I thought I'd feel more melancholic, but all I can do is smile. I'm smiling because I shipped it, I'm smiling at the way the artwork turned out, and smiling at the realization of how this project transformed me. Though there was great sadness in the outcome at the time, I am better for it and grateful for the experience.
+
+> **“One day, in retrospect, the years of struggle will strike you as the most beautiful.”** - Sigmund Freud
+
+View the original website, including explorers to browse the collection [here.](https://priceart.xyz)
+
+The source code is on my [GitHub](https://github.com/tyfiero/ADA-PriceArt-explorer) if you want to use it.
