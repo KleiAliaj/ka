@@ -3,7 +3,6 @@
 // import SectionSeparator from "@/components/blog/section-separator";
 // import Layout from "@/components/layout/layout";
 // import { getAllPostsWithSlug, getPostAndMorePosts } from "@/lib/api";
-// import { CMS_NAME } from "@/lib/constants";
 // import markdownToHtml from "@/lib/markdownToHtml";
 // import * as fs from "fs";
 import React from "react";

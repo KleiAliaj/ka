@@ -382,14 +382,14 @@ export const projectArray = [
     route: "/code/projects/tyfiero",
     shortDescription: "Personal Website",
     description:
-      "My personal website built with Next.js, Tailwind, and Cosmic CMS.",
+      "My personal website built with Next.js, Tailwind, and MDX.",
     technologies: [
       { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
       { name: "React", icon: "/assets/CodeLogos/react.png" },
       { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
       { name: "SASS", icon: "/assets/CodeLogos/sass.png" },
       { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
-      { name: "Cosmic CMS", icon: null },
+      { name: "MDX", icon: null },
     ],
     imgSrc: "/assets/other/projects/ty/tyfierocom.webp",
     thumb: "/assets/other/projects/thumbnails/ty.webp",
@@ -447,7 +447,7 @@ export const projectArray = [
       features: `<li>
     <p>
       Cosmic Content Management System for easy editing and
-      adding of blog posts.
+      adding of blog posts. (edit: I have since moved to MDX for adding more interactive React components into blog posts.)
     </p>
   </li>
   <li>

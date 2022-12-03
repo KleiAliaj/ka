@@ -1,4 +1,3 @@
-import { getAllPostsForHome } from "@/lib/api";
 import Head from "next/head";
 import Image from "next/image";
 import HomePosts from "@/components/blog/homePosts";
@@ -328,7 +327,10 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps({ preview }) {
-  const allPosts = getAllPosts();
+  const posts = getAllPosts();
+  const allPosts = posts.sort((a, b) => {
+    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+  });
   return {
     props: { allPosts },
   };
