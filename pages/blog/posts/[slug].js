@@ -21,6 +21,7 @@ const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const target = createRef();
+  console.log(post);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
