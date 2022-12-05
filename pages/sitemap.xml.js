@@ -142,14 +142,14 @@ ${posts
 class Sitemap extends React.Component {
   static async getInitialProps({ res }) {
     let allPosts = [];
-    // if (typeof window === "undefined") {
-    //   const posts = getAllPosts();
-    //    allPosts = posts.map((post) => {
-    //     return {
-    //       id: post.slug,
-    //     };
-    //   });
-    // }
+    if (typeof window === "undefined") {
+      const posts = getAllPosts();
+       allPosts = posts.map((post) => {
+        return {
+          id: post.slug,
+        };
+      });
+    }
 
     res.setHeader("Content-Type", "text/xml");
     res.write(createSitemap(allPosts));
