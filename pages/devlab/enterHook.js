@@ -17,18 +17,18 @@ function EnterHook() {
       console.log("NOT");
       setHit(true);
     }
-    setHitNum(hitNum++);
+    setHitNum((prev) => prev + 1);
   };
   // }, [hit]);
 
   const handleHitNum = () => {
-    setHitNum(hitNum++);
+    setHitNum((prev) => prev + 1);
   };
   const enter = useEnter(handleHit);
 
   return (
     <>
-     <Head>
+      <Head>
         <title>Devlab enter</title>
         <meta name="description" content={`test page`} />
       </Head>
