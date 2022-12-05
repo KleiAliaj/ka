@@ -1,5 +1,5 @@
 import React from "react";
-import { getAllPosts } from "utils/mdxUtils";
+// import { getAllPosts } from "utils/mdxUtils";
 
 const createSitemap = (posts) => {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -116,16 +116,20 @@ const createSitemap = (posts) => {
     <priority>0.90</priority>
 </url>
 
-${posts
-  .map(({ id }) => {
-    return `
-            <url>
-            <loc>${`https://www.tyfiero.com/blog/posts/${id}`}</loc>
-            <priority>0.90</priority>
-            </url>
-            `;
-  })
-  .join("")}
+${
+    
+//     posts
+//   .map(({ id }) => {
+//     return `
+//             <url>
+//             <loc>${`https://www.tyfiero.com/blog/posts/${id}`}</loc>
+//             <priority>0.90</priority>
+//             </url>
+//             `;
+//   })
+//   .join("")
+
+}
 
           
           <url>
@@ -139,22 +143,23 @@ ${posts
           </urlset>
           `;
 };
-class Sitemap extends React.Component {
-  static async getInitialProps({ res }) {
-    let allPosts = [];
-    if (typeof window === "undefined") {
-      const posts = getAllPosts();
-       allPosts = posts.map((post) => {
-        return {
-          id: post.slug,
-        };
-      });
-    }
 
-    res.setHeader("Content-Type", "text/xml");
-    res.write(createSitemap(allPosts));
-    res.end();
-  }
+class Sitemap extends React.Component {
+//   static async getInitialProps({ res }) {
+//     let allPosts = [];
+//     if (typeof window === "undefined") {
+//       const posts = getAllPosts();
+//        allPosts = posts.map((post) => {
+//         return {
+//           id: post.slug,
+//         };
+//       });
+//     }
+
+//     res.setHeader("Content-Type", "text/xml");
+//     res.write(createSitemap(allPosts));
+//     res.end();
+//   }
 }
 
 export default Sitemap;
