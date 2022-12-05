@@ -1,4 +1,4 @@
-The source code for my portfolio website.
+#Welcome to my digital playground
 
 This site showcases all of my projects, photos, AI art, and blog content.
 
