@@ -15,7 +15,7 @@ const Comments = ({ title, id, slug }) => {
   };
 
   return (
-    <div className="px-5 py-3 mt-24 mb-10 bg-white shadow-lg shadow-sky-200 dark:bg-slate-200 rounded-2xl text-[#000000] dark:!text-[#ffffff]">
+    <div className="px-5 py-3 mt-48 mb-10 bg-white shadow-lg shadow-sky-200 dark:bg-slate-200 rounded-2xl text-[#000000] dark:!text-[#ffffff]">
       {loaded && (
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       )}
