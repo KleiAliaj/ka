@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { createRef } from "react";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import { getMDXComponent } from "mdx-bundler/client";
-import { getAllPosts, getSinglePost } from "utils/mdxUtils";
+// import { getAllPosts, getSinglePost } from "utils/mdxUtils";
 import MdxPostHeader from "@/components/blog/mdx/mdxPostHeader";
 import Comments from "@/components/blog/Comments";
 import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
@@ -20,7 +20,7 @@ export default function Post({ code, frontmatter, morePosts }) {
   //get iso date
   // console.log(new Date().toISOString());
 
-  const MdxComponent = React.useMemo(() => getMDXComponent(code), [code]);
+  // const MdxComponent = React.useMemo(() => getMDXComponent(code), [code]);
 
   return (
     <div className="page-container">
@@ -43,7 +43,7 @@ export default function Post({ code, frontmatter, morePosts }) {
                 blurb={frontmatter.description}
               />
               <div className="sm:w-full md:w-[46rem] mx-auto  glass-box shadow-lg shadow-sky-700/40 dark:shadow-sky-300/20 !border-0 sm:!px-5 md:!px-10 py-5 bg-white/90 dark:bg-slate-900/80 mb-28 	">
-                <MdxComponent
+                {/* <MdxComponent
                   components={{
                     p: (props) => (
                       <p {...props} className="my-6 text-lg leading-relaxed" />
@@ -78,7 +78,7 @@ export default function Post({ code, frontmatter, morePosts }) {
                       />
                     ),
                   }}
-                />
+                /> */}
                 <Comments
                   title={frontmatter.title}
                   id={frontmatter.date}
@@ -97,31 +97,31 @@ export default function Post({ code, frontmatter, morePosts }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const post = await getSinglePost(params.slug);
-  const allPosts = getAllPosts().filter((p) => {
-    return p.frontmatter.published === true;
-  });
-  const morePosts = allPosts.filter((p) => p.slug !== params.slug);
+// export async function getStaticProps({ params }) {
+//   const post = await getSinglePost(params.slug);
+//   const allPosts = getAllPosts().filter((p) => {
+//     return p.frontmatter.published === true;
+//   });
+//   const morePosts = allPosts.filter((p) => p.slug !== params.slug);
 
-  return {
-    props: { ...post, morePosts },
-  };
-}
+//   return {
+//     props: { ...post, morePosts },
+//   };
+// }
 
-export async function getStaticPaths() {
-  //filter out unpublished posts
-  let allPosts;
-  if (process.env.NODE_ENV === "development") {
-    allPosts = getAllPosts();
-  } else {
-    allPosts = getAllPosts().filter((p) => {
-      return p.frontmatter.published === true;
-    });
-  }
-  const paths = allPosts.map(({ slug }) => ({ params: { slug } }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
+// export async function getStaticPaths() {
+//   //filter out unpublished posts
+//   let allPosts;
+//   if (process.env.NODE_ENV === "development") {
+//     allPosts = getAllPosts();
+//   } else {
+//     allPosts = getAllPosts().filter((p) => {
+//       return p.frontmatter.published === true;
+//     });
+//   }
+//   const paths = allPosts.map(({ slug }) => ({ params: { slug } }));
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
