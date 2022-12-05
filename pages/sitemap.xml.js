@@ -116,20 +116,7 @@ const createSitemap = (posts) => {
     <priority>0.90</priority>
 </url>
 
-${
-    
-//     posts
-//   .map(({ id }) => {
-//     return `
-//             <url>
-//             <loc>${`https://www.tyfiero.com/blog/posts/${id}`}</loc>
-//             <priority>0.90</priority>
-//             </url>
-//             `;
-//   })
-//   .join("")
 
-}
 
           
           <url>
