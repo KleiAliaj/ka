@@ -1,9 +1,7 @@
 import Avatar from "./avatar";
 import Date from "./date";
-import CoverImage from "./cover-image";
 import Link from "next/link";
 import MotionImage from "../etc/animation/MotionImage";
-import Ribbon from "../layout/Ribbon";
 import MdxCoverImage from "./mdx/mdxCoverImage";
 
 export default function HeroPost({

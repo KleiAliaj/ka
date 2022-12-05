@@ -1,18 +1,9 @@
-// import Container from "@/components/layout/container";
-// import Header from "@/components/blog/header";
-// import SectionSeparator from "@/components/blog/section-separator";
-// import Layout from "@/components/layout/layout";
-// import { getAllPostsWithSlug, getPostAndMorePosts } from "@/lib/api";
-// import markdownToHtml from "@/lib/markdownToHtml";
-// import * as fs from "fs";
 import React from "react";
 import { useRouter } from "next/router";
-import PostHeader from "@/components/blog/post-header";
 import PostTitle from "@/components/blog/post-title";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { createRef } from "react";
-import HomePosts from "@/components/blog/homePosts";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
 import { getMDXComponent } from "mdx-bundler/client";
 import { getAllPosts, getSinglePost } from "utils/mdxUtils";
@@ -26,9 +17,11 @@ const ReadingBar = dynamic(() => import("@/components/blog/ReadingBar"), {
 export default function Post({ code, frontmatter, morePosts }) {
   const router = useRouter();
   const target = createRef();
-  console.log(morePosts);
+  //get iso date
+  // console.log(new Date().toISOString());
 
   const MdxComponent = React.useMemo(() => getMDXComponent(code), [code]);
+
   return (
     <div className="page-container">
       <ReadingBar target={target} />
@@ -36,27 +29,33 @@ export default function Post({ code, frontmatter, morePosts }) {
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article className="mt-16 sm:px-0 md:!px-60 " ref={target}>
+          <article className="w-full mt-16 " ref={target}>
             <Head>
               <title>{frontmatter.title}</title>
               <meta property="og:image" content={frontmatter.imgUrl} />
               <meta name="description" content={frontmatter.description} />
             </Head>
-            <MdxPostHeader
-              title={frontmatter.title}
-              coverImage={frontmatter.imgUrl}
-              date={frontmatter.date}
-              blurb={frontmatter.description}
-            />
-
-            <div className="w-full">
-              <div className="w-full mx-auto  glass-box shadow-lg shadow-sky-700/40 dark:shadow-sky-300/20 !border-0 sm:!px-5 md:!px-10 py-5 bg-white/80 dark:bg-slate-900/80 mb-28">
+            <div className="w-4/5 mx-auto">
+              <MdxPostHeader
+                title={frontmatter.title}
+                coverImage={frontmatter.imgUrl}
+                date={frontmatter.date}
+                blurb={frontmatter.description}
+              />
+              <div className="sm:w-full md:w-[46rem] mx-auto  glass-box shadow-lg shadow-sky-700/40 dark:shadow-sky-300/20 !border-0 sm:!px-5 md:!px-10 py-5 bg-white/90 dark:bg-slate-900/80 mb-28 	">
                 <MdxComponent
                   components={{
                     p: (props) => (
                       <p {...props} className="my-6 text-lg leading-relaxed" />
                     ),
-                    a: (props) => <a {...props} className="anc" />,
+                    a: (props) => (
+                      <a
+                        {...props}
+                        target="_blank"
+                        rel="no-referrer"
+                        className="anc"
+                      />
+                    ),
                     strong: (props) => (
                       <strong {...props} className=" !font-bold" />
                     ),
@@ -100,7 +99,9 @@ export default function Post({ code, frontmatter, morePosts }) {
 
 export async function getStaticProps({ params }) {
   const post = await getSinglePost(params.slug);
-  const allPosts = getAllPosts();
+  const allPosts = getAllPosts().filter((p) => {
+    return p.frontmatter.published === true;
+  });
   const morePosts = allPosts.filter((p) => p.slug !== params.slug);
 
   return {
@@ -109,7 +110,16 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPosts().map(({ slug }) => ({ params: { slug } }));
+  //filter out unpublished posts
+  let allPosts;
+  if (process.env.NODE_ENV === "development") {
+    allPosts = getAllPosts();
+  } else {
+    allPosts = getAllPosts().filter((p) => {
+      return p.frontmatter.published === true;
+    });
+  }
+  const paths = allPosts.map(({ slug }) => ({ params: { slug } }));
   return {
     paths,
     fallback: false,

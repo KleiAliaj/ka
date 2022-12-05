@@ -1,14 +1,10 @@
-import Container from "@/components/layout/container";
-import MoreStories from "@/components/blog/more-stories";
 import HeroPost from "@/components/blog/hero-post";
 
-import Layout from "@/components/layout/layout";
 import Head from "next/head";
 import CustomForm from "@/components/blog/NewsletterForm";
 import MotionImage from "@/components/etc/animation/MotionImage";
 import MotionText from "@/components/etc/animation/MotionText";
 import MotionHeader from "@/components/etc/animation/MotionHeader";
-import HomePosts from "@/components/blog/homePosts";
 import { getAllPosts } from "utils/mdxUtils";
 import MdXHomePosts from "@/components/blog/mdx/mdxHomePosts";
 
@@ -59,7 +55,9 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps({ preview }) {
-  const posts = getAllPosts();
+  const posts = getAllPosts().filter((p) => {
+    return p.frontmatter.published === true;
+  });
   //sorted by date (newest first)
   const allPosts = posts.sort((a, b) => {
     return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);

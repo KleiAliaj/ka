@@ -381,13 +381,12 @@ export const projectArray = [
     feature: true,
     route: "/code/projects/tyfiero",
     shortDescription: "Personal Website",
-    description:
-      "My personal website built with Next.js, Tailwind, and MDX.",
+    description: "My personal website built with Next.js, Tailwind, and MDX.",
     technologies: [
       { name: "Next.js", icon: "/assets/CodeLogos/nextjs.png" },
       { name: "React", icon: "/assets/CodeLogos/react.png" },
       { name: "Tailwind", icon: "/assets/CodeLogos/tailwind.png" },
-      { name: "SASS", icon: "/assets/CodeLogos/sass.png" },
+      { name: "SASS", icon: "/assets/CodeLogos/Sass.png" },
       { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
       { name: "MDX", icon: null },
     ],
@@ -417,7 +416,7 @@ export const projectArray = [
       },
       longDescription: ` 
       <p>
-              I needed a place to put all of my work and display all that I have learned, so a personal website was a must. It took me a bit to think about what tech stack I would use for this project, I decided to work backwards from what I needed the site to do. It needed to be customizable, easily styled, friendly for SEO, easy to add add/edit blog posts, and fast to load. From these requirements, I decided to use Next.js and react as the framework to serve static HTML that can be crawled by search engines for SEO purposes. I also wanted experience working with a content management system (CMS) in React, so I decided on Cosmic CMS mostly due to the low cost and easy to understand API. For styling I went with Tailwind because I love tailwind, but also because it would speed up the site by shipping less CSS to the browser.
+              I needed a place to put all of my work and display all that I have learned, so a personal website was a must. It took me a bit to think about what tech stack I would use for this project, I decided to work backwards from what I needed the site to do. It needed to be customizable, easily styled, friendly for SEO, easy to add add/edit blog posts, and fast to load. From these requirements, I decided to use Next.js and react as the framework to serve static HTML that can be crawled by search engines for SEO purposes. I also wanted experience working with a content management system (CMS) in React, so I decided on Cosmic CMS initially. After awhile I migrated to MDX, and it has been a dream to work with. For styling I went with Tailwind because I love tailwind, but also because it would speed up the site by shipping less CSS to the browser.
               <br />
               <br />
               The bones for this project took me about a week to build, but I have been iterating on the site ever since. Having a central hub to put all of my content and projects has been a game changer, it motivates me to continue to create and share who I am with the world. I plan on implementing a full 3D landing page experience with React Three Fiber soon, to give the site more of a wow factor while hopefully keeping loading times fast.

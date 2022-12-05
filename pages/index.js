@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import HomePosts from "@/components/blog/homePosts";
 import ImageSection from "@/components/layout/ImageSection";
 import DualSection from "@/components/layout/DualSection";
 import TextSection from "@/components/layout/TextSection";
@@ -327,7 +326,9 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps({ preview }) {
-  const posts = getAllPosts();
+  const posts = getAllPosts().filter((p) => {
+    return p.frontmatter.published === true;
+  });
   const allPosts = posts.sort((a, b) => {
     return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
   });
