@@ -19,4 +19,11 @@ module.exports = withPWA({
       "external-content.duckduckgo.com",
     ],
   },
+  build: {
+    extend(config, {}) {
+      config.node = {
+        fs: "empty",
+      };
+    },
+  },
 });

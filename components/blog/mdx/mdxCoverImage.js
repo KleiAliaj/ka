@@ -6,7 +6,7 @@ export default function MdxCoverImage({ title, url, slug, thumb = false }) {
   const image = (
     <img
       src={url}
-      alt
+      alt={`Cover Image for ${title}`}
       className={cn("rounded-lg", {
         "sm:mx-0": slug,
         "hover:shadow-md transition-shadow duration-200": slug,
