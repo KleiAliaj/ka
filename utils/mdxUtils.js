@@ -1,4 +1,5 @@
-// import path from "path";
+import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
 
@@ -6,13 +7,10 @@ export const ROOT = process.cwd();
 export const POSTS_PATH = path.join(process.cwd(), "/posts");
 
 export const getFileContent = (filename) => {
-  const { fs } = require("fs");
   return fs.readFileSync(path.join(POSTS_PATH, filename), "utf8");
 };
 
 const getCompiledMDX = async (content) => {
-  const { path } = require("path");
-
   if (process.platform === "win32") {
     process.env.ESBUILD_BINARY_PATH = path.join(
       ROOT,
@@ -72,8 +70,6 @@ export const getSinglePost = async (slug) => {
   };
 };
 export const getAllPosts = () => {
-  const { fs } = require("fs");
-  const { path } = require("path");
   return fs
     .readdirSync(POSTS_PATH)
     .filter((path) => /\.mdx?$/.test(path))
