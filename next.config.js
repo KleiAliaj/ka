@@ -19,10 +19,4 @@ module.exports = withPWA({
       "external-content.duckduckgo.com",
     ],
   },
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false, path: false };
-
-    return config;
-  },
 });
