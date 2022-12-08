@@ -1,7 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { FaBox, FaImage, FaKeyboard, FaPhone, FaPills } from "react-icons/fa";
+import {
+  FaBolt,
+  FaBox,
+  FaImage,
+  FaKeyboard,
+  FaPhone,
+  FaPills,
+} from "react-icons/fa";
 
 function IndexDevLab() {
   return (
@@ -32,6 +39,10 @@ function IndexDevLab() {
             <Link className="button-1" href={"/devlab/Framer-ocean"}>
               Framer Ocean
               <FaImage />
+            </Link>
+            <Link className="button-1" href={"/devlab/Framer-ocean"}>
+              Flashy
+              <FaBolt />
             </Link>
           </div>
         </div>
