@@ -2,8 +2,6 @@ import React from "react";
 import { table } from "@/lib/Airtable";
 import axios from "axios";
 import Image from "next/image";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import Head from "next/head";
 import AiExperiments from "@/components/ai/aiExperiments";
 export default function AI({ aiImages }) {

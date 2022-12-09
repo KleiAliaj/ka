@@ -2,8 +2,6 @@ import React from "react";
 import { table } from "@/lib/Airtable";
 import axios from "axios";
 import Image from "next/image";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
 import Head from "next/head";
 import { FaExpandAlt, FaExpandArrowsAlt } from "react-icons/fa";
