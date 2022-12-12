@@ -73,7 +73,7 @@ export default function Index({ allPosts }) {
                     animate={{ letterSpacing: "0em" }}
                     className="font-bold leading-tight tracking-tighter sm:!text-7xl md:text-8xl pr-4 logo f1 drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500 "
                   >
-                    Hi! I&apos;m Ty
+                    Hi! I&apos;m Klei
                   </m.h1>
                   <m.p
                     initial={{ rotate: 40 }}
@@ -108,7 +108,7 @@ export default function Index({ allPosts }) {
               <div className="absolute z-10 w-2/5 bg-indigo-200/70 h-2/5 rounded-full dark:bg-indigo-300/70 blur-2xl right-28 top-[12rem] dot2 bounds"></div>
               <div className="absolute w-3/5 h-4/5 rounded-3xl bg-sky-300/70 dark:bg-sky-400/70 blur-3xl left-40 top-10 dot3 bounds"></div>
               <Image
-                src="/assets/other/tyheadshot.webp"
+                src="/assets/other/D6i.gif"
                 alt="Ty Fiero image"
                 className="!rounded-lg z-50 object-contain"
                 priority={true}
