@@ -25,15 +25,6 @@ export default function Index({ allPosts }) {
       styles: " invert-0 dark:invert scale-90",
     },
     {
-      title: "Next.js",
-      url: "/assets/CodeLogos/nextjs.png",
-      styles: " invert-0 dark:invert scale-90",
-    },  {
-      title: "Next.js",
-      url: "/assets/CodeLogos/nextjs.png",
-      styles: " invert-0 dark:invert scale-90",
-    },
-    {
       title: "React",
       url: "/assets/CodeLogos/react.png",
       styles: "scale-75",
@@ -63,7 +54,7 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Head>
-        <title>Klei&#39;s blog on code.</title>
+        <title>Ty Fiero&#39;s blog on code, music, and life.</title>
         <meta name="description" content={`Home page for Ty Fiero`} />
       </Head>
       <div className="fade-effect-quick page-container !items-start">
@@ -140,8 +131,12 @@ export default function Index({ allPosts }) {
                 <p>
                   I&apos;m a developer and a project manager with passion for creating building
                   useful digital experiences. My journey in software development
-                  started since 2014. Since then, I&apos;ve
-                  worked with a variety of clients and start ups or enterprise levevel companies.
+                  started since 2014. I began taking
+                  online courses for web development, starting with basic HTML
+                  and CSS. In May of 2021 I left my job as a public health
+                  microbiologist to learn full time. Since then, I&apos;ve
+                  worked on a variety of projects, from small vanilla javascript
+                  projects to full stack web applications in Next.js.
                 </p>
                 <MotionText xPx={0} yPx={50} delay={0.4}>
                   <p className="mt-5 text-center">Favorite Technologies</p>

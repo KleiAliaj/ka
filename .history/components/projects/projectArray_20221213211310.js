@@ -14,10 +14,10 @@ export const projectArray = [
       { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
       { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
     ],
-    imgSrc: "/assets/other/projects/canvascat/cc.png",
+    imgSrc: "/assets/other/projects/canvascat/cc.PNG",
     thumb: "/assets/other/projects/canvascat/cc.PNG",
     styles: {
-      color: "bg-orange-400",
+      color: "bg-orange-800",
       bColor: "ring-orange-500 ",
       textColor: " text-orange-600 dark:text-orange-400",
       shadow:

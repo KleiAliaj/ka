@@ -25,15 +25,6 @@ export default function Index({ allPosts }) {
       styles: " invert-0 dark:invert scale-90",
     },
     {
-      title: "Next.js",
-      url: "/assets/CodeLogos/nextjs.png",
-      styles: " invert-0 dark:invert scale-90",
-    },  {
-      title: "Next.js",
-      url: "/assets/CodeLogos/nextjs.png",
-      styles: " invert-0 dark:invert scale-90",
-    },
-    {
       title: "React",
       url: "/assets/CodeLogos/react.png",
       styles: "scale-75",
@@ -63,7 +54,7 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Head>
-        <title>Klei&#39;s blog on code.</title>
+        <title>Ty Fiero&#39;s blog on code, music, and life.</title>
         <meta name="description" content={`Home page for Ty Fiero`} />
       </Head>
       <div className="fade-effect-quick page-container !items-start">

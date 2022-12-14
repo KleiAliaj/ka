@@ -14,8 +14,8 @@ export const projectArray = [
       { name: "Framer Motion", icon: "/assets/CodeLogos/framer.png" },
       { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
     ],
-    imgSrc: "/assets/other/projects/canvascat/cc.png",
-    thumb: "/assets/other/projects/canvascat/cc.PNG",
+    // imgSrc: "/assets/other/projects/canvascat/ccCover.png",
+    thumb: "/assets/other/projects/canvascat/ccThumb.png",
     styles: {
       color: "bg-orange-400",
       bColor: "ring-orange-500 ",
@@ -25,7 +25,7 @@ export const projectArray = [
     },
     content: {
       imgArray: [
-        "/assets/other/projects/canvascat/cc1.webp",
+        // "/assets/other/projects/canvascat/cc1.webp",
         "/assets/other/projects/canvascat/cc2.webp",
         "/assets/other/projects/canvascat/cc3.webp",
         "/assets/other/projects/canvascat/cc4.webp",

@@ -189,7 +189,6 @@ function About() {
                 alt="Ty Fiero about image"
                 fill
                 sizes="(max-width: 768px) 50vw, 80vw"
-                className="object-cover rounded-x2 "
               />
             </MotionImage>
             <MotionText delay={0.2}>

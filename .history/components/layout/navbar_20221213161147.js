@@ -93,6 +93,34 @@ function Navbar() {
       ],
     },
     {
+      name: "art",
+      icon: <TbPalette className="scale-110 fade-effect-quick" />,
+      sub: true,
+      subLinks: [
+        {
+          name: "Music",
+          icon: <TbMusic />,
+          path: "/art/music",
+        },
+        {
+          name: "Photos",
+          icon: <TbCamera />,
+          path: "/art/photography",
+        },
+        {
+          name: "AI Art",
+          icon: <FaRobot />,
+          path: "/art/ai-art",
+        },
+        {
+          name: "Code Art",
+          icon: <TbDeviceLaptop />,
+          path: "/art/generative",
+        },
+      ],
+    },
+
+    {
       name: "blog",
       icon: <TbFileText className="scale-110 fade-effect-quick" />,
       sub: false,
@@ -233,7 +261,7 @@ function Navbar() {
           >
             <div className="relative w-12 h-12 transition rounded-full shadow-md dark:shadow-sky-400/60 shadow-sky-800/70">
               <Image
-                src="/assets/other/logoo.png"
+                src="/assets/other/klei.jpg"
                 alt="Ty Fiero"
                 fill
                 sizes="48px"
@@ -245,7 +273,7 @@ function Navbar() {
               animate={{ letterSpacing: "0em" }}
               className="pt-2 pb-1 text-3xl font-bold leading-tight tracking-tighter transition md:text-4xl lg:text-6xl md:pr-8 logo f1 whitespace-nowrap drop-shadow-lg drop-shadow-sky-800 dark:drop-shadow-sky-500"
             >
-              Test
+              Ty Fiero
             </m.p>
           </Link>
         </div>

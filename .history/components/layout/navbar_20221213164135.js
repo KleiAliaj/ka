@@ -93,6 +93,34 @@ function Navbar() {
       ],
     },
     {
+      name: "art",
+      icon: <TbPalette className="scale-110 fade-effect-quick" />,
+      sub: true,
+      subLinks: [
+        {
+          name: "Music",
+          icon: <TbMusic />,
+          path: "/art/music",
+        },
+        {
+          name: "Photos",
+          icon: <TbCamera />,
+          path: "/art/photography",
+        },
+        {
+          name: "AI Art",
+          icon: <FaRobot />,
+          path: "/art/ai-art",
+        },
+        {
+          name: "Code Art",
+          icon: <TbDeviceLaptop />,
+          path: "/art/generative",
+        },
+      ],
+    },
+
+    {
       name: "blog",
       icon: <TbFileText className="scale-110 fade-effect-quick" />,
       sub: false,

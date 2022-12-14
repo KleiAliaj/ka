@@ -15,7 +15,7 @@ export const projectArray = [
       { name: "GPT-3", icon: "/assets/CodeLogos/openAi.png" },
     ],
     imgSrc: "/assets/other/projects/canvascat/cc.png",
-    thumb: "/assets/other/projects/canvascat/cc.PNG",
+    thumb: "/assets/other/projects/canvascat/cc.png",
     styles: {
       color: "bg-orange-400",
       bColor: "ring-orange-500 ",

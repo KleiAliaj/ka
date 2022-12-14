@@ -92,6 +92,7 @@ function Navbar() {
         },
       ],
     },
+
     {
       name: "blog",
       icon: <TbFileText className="scale-110 fade-effect-quick" />,
